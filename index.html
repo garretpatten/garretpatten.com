@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Garret Patten — Resume</title>
-  <meta name="description" content="Garret Patten — Staff Software Engineer. Security, platforms, reliable systems." />
+  <meta name="description" content="Garret Patten — Senior Security Engineer. CI/CD hardening, accessibility, secure systems." />
   <meta property="og:title" content="Garret Patten — Resume" />
-  <meta property="og:description" content="Security-focused staff engineer. Platforms, CI/CD, systems." />
+  <meta property="og:description" content="Security engineer focused on CI/CD hardening, code ownership, and web accessibility." />
   <meta property="og:type" content="website" />
   <meta name="color-scheme" content="light dark" />
   <style>
@@ -29,26 +29,31 @@
       }
     }
     html, body { height: 100%; }
+    * , *::before, *::after { box-sizing: border-box; }
     body {
       margin: 0;
       font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
       background: var(--bg);
       color: var(--fg);
+      overflow-x: hidden;
     }
     .wrap { max-width: 880px; margin: 0 auto; padding: 24px; }
-    header { margin-bottom: 24px; }
+    header { margin-bottom: 24px; display: flex; gap: 20px; align-items: center; }
+    header img { width: 144px; height: 144px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); flex: 0 0 auto; }
+    .head-text { flex: 1 1 0; min-width: 0; }
     h1 { font-size: 28px; margin: 0 0 4px; }
     .title { font-size: 18px; color: var(--muted); margin: 0 0 8px; }
-    .meta { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 14px; color: var(--muted); }
-    .links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; margin-top: 8px; }
-    .links a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--border); }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+    .links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; margin-top: 8px; overflow-wrap: anywhere; }
+    .links a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--border); overflow-wrap: anywhere; }
     .section { margin: 28px 0; }
     .section h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 10px; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
     .grid { display: grid; gap: 14px; }
     .experience .item { display: grid; grid-template-columns: 1fr auto; gap: 6px 14px; align-items: baseline; }
-    .item .role { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .item .where { color: var(--muted); }
+    .item > div:first-child { min-width: 0; }
+    .item .role { font-weight: 600; }
+    .item .where { color: var(--muted); overflow-wrap: anywhere; }
     .item .dates { font-size: 14px; color: var(--muted); white-space: nowrap; }
     .item ul { margin: 6px 0 0 18px; padding: 0; }
     .item li { margin: 4px 0; }
@@ -58,11 +63,29 @@
     .btn { border: 1px solid var(--border); padding: 6px 10px; border-radius: 10px; background: transparent; color: var(--fg); cursor: pointer; font-size: 13px; }
     .btn:hover { border-color: var(--fg); }
 
-    /* Print */
+    /* Mobile */
+    @media (max-width: 600px) {
+      .wrap { padding: 16px; }
+      header { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+      header img { width: 128px; height: 128px; margin: 0 auto; display: block; }
+      .head-text { flex: none; min-width: 0; width: 100%; text-align: center; }
+      .meta, .links { justify-content: center; text-align: center; width: 100%; }
+      .experience .item { grid-template-columns: 1fr; }
+      .item .dates { justify-self: center; }
+    }
+
+    /* Desktop explicit */
+    @media (min-width: 601px) {
+      header { flex-direction: row; align-items: center; text-align: left; }
+      .head-text { flex: 1 1 0; }
+      .meta, .links { justify-content: flex-start; text-align: left; }
+      .item .dates { justify-self: end; }
+    }
+
     @media print {
       .wrap { max-width: none; padding: 0; }
       .card { border: 0; background: transparent; padding: 0; }
-      .btn, .links { display: none !important; }
+      .btn, .links, header img { display: none !important; }
       body { color: #000; }
     }
   </style>
@@ -70,10 +93,13 @@
 <body>
   <div class="wrap">
     <header>
-      <h1 id="name">Garret Patten</h1>
-      <div class="title" id="title">Staff Software Engineer · Security · Systems</div>
-      <div class="meta" id="meta"></div>
-      <div class="links" id="links"></div>
+      <img src="./assets/images/garret-patten.jpg" alt="Garret Patten avatar" />
+      <div class="head-text">
+        <h1 id="name">Garret Patten</h1>
+        <div class="title" id="title">Senior Security Engineer · nCino</div>
+        <div class="meta" id="meta"></div>
+        <div class="links" id="links"></div>
+      </div>
     </header>
 
     <section class="section">
@@ -106,7 +132,6 @@
   </div>
 
   <script>
-    // --- Edit this object with content from LinkedIn ---
     const DATA = {
       name: "Garret Patten",
       title: "Senior Security Engineer · nCino",
@@ -170,7 +195,6 @@
       ],
     };
 
-    // --- Render ---
     const $ = (s) => document.querySelector(s);
     const el = {
       name: $('#name'), title: $('#title'), meta: $('#meta'), links: $('#links'),
@@ -184,39 +208,38 @@
     function renderMeta() {
       const items = [];
       if (DATA.location) items.push(DATA.location);
-      if (DATA.email) items.push(`<a href="mailto:${DATA.email}">${DATA.email}</a>`);
-      if (DATA.phone) items.push(`<a href="tel:${DATA.phone}">${DATA.phone}</a>`);
+      if (DATA.email) items.push(`<a href=\"mailto:${DATA.email}\">${DATA.email}</a>`);
+      if (DATA.phone) items.push(`<a href=\"tel:${DATA.phone}\">${DATA.phone}</a>`);
       html(el.meta, items.join(' · '));
     }
     function renderLinks() {
-      html(el.links, DATA.links.map(l => `<a href="${l.href}" target="_blank" rel="noreferrer">${l.label}</a>`).join(''));
+      html(el.links, DATA.links.map(l => `<a href=\"${l.href}\" target=\"_blank\" rel=\"noreferrer\">${l.label}</a>`).join(''));
     }
     function renderSkills() {
-      html(el.skills, DATA.skills.map(s => `<span class="tag">${s}</span>`).join(''));
+      html(el.skills, DATA.skills.map(s => `<span class=\"tag\">${s}</span>`).join(''));
     }
     function renderExperience() {
       html(el.exp, DATA.experience.map(it => `
-        <div class="card item">
+        <div class=\"card item\">
           <div>
-            <div class="role">${it.role} · ${it.company}</div>
-            <div class="where">${it.location || ''}</div>
+            <div class=\"role\">${it.role} · ${it.company}</div>
+            <div class=\"where\">${it.location || ''}</div>
           </div>
-          <div class="dates">${it.start} – ${it.end}</div>
+          <div class=\"dates\">${it.start} – ${it.end}</div>
           <ul>${it.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
         </div>
       `).join(''));
     }
     function renderEducation() {
       html(el.edu, DATA.education.map(e => `
-        <div class="card item">
-          <div class="role">${e.school}</div>
-          <div class="dates">${e.end}</div>
-          <div class="where">${e.degree}</div>
+        <div class=\"card item\">
+          <div class=\"role\">${e.school}</div>
+          <div class=\"dates\">${e.end}</div>
+          <div class=\"where\">${e.degree}</div>
         </div>
       `).join(''));
     }
 
-    // Fill header
     text(el.name, DATA.name);
     text(el.title, DATA.title);
     renderMeta();
@@ -227,7 +250,6 @@
     renderEducation();
     text(el.year, new Date().getFullYear());
 
-    // Small UX helpers
     el.copyEmail.addEventListener('click', async () => {
       if (!DATA.email) return;
       try { await navigator.clipboard.writeText(DATA.email); el.copyEmail.textContent = 'Copied'; setTimeout(() => el.copyEmail.textContent = 'Copy email', 1200); } catch {}
