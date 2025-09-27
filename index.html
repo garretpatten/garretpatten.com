@@ -50,7 +50,6 @@
     .section h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 10px; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
     .grid { display: grid; gap: 14px; }
-    .experience .item { display: grid; grid-template-columns: 1fr auto; gap: 6px 14px; align-items: baseline; }
     .item > div:first-child { min-width: 0; }
     .item .role { font-weight: 600; }
     .item .where { color: var(--muted); overflow-wrap: anywhere; }
@@ -63,23 +62,34 @@
     .btn { border: 1px solid var(--border); padding: 6px 10px; border-radius: 10px; background: transparent; color: var(--fg); cursor: pointer; font-size: 13px; }
     .btn:hover { border-color: var(--fg); }
 
-    /* Mobile */
+    /* Desktop (>=601px) */
+    @media (min-width: 601px) {
+      .experience .item,
+      #education .item {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 6px 14px;
+        align-items: baseline;
+      }
+      .experience .item .dates,
+      #education .item .dates {
+        justify-self: end;
+      }
+      #education .item > .where,
+      #education .item > .text-sm { grid-column: 1 / -1; }
+    }
+
+    /* Mobile (<600px) */
     @media (max-width: 600px) {
       .wrap { padding: 16px; }
       header { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
       header img { width: 128px; height: 128px; margin: 0 auto; display: block; }
       .head-text { flex: none; min-width: 0; width: 100%; text-align: center; }
       .meta, .links { justify-content: center; text-align: center; width: 100%; }
-      .experience .item { grid-template-columns: 1fr; }
-      .item .dates { justify-self: center; }
-    }
-
-    /* Desktop explicit */
-    @media (min-width: 601px) {
-      header { flex-direction: row; align-items: center; text-align: left; }
-      .head-text { flex: 1 1 0; }
-      .meta, .links { justify-content: flex-start; text-align: left; }
-      .item .dates { justify-self: end; }
+      .experience .item,
+      #education .item { grid-template-columns: 1fr; }
+      .experience .item .dates,
+      #education .item .dates { justify-self: start; }
     }
 
     @media print {
@@ -131,7 +141,7 @@
     </footer>
   </div>
 
- <script>
+  <script>
     const DATA = {
       name: "Garret Patten",
       title: "Senior Security Engineer · nCino",
@@ -159,7 +169,7 @@
           bullets: [
             "Technical lead for Product Security in a global enterprise.",
             "Administer multi-org GitHub Enterprise (1k+ repos) and build automations with Actions/workflows for SAST, secrets scanning, docs publishing, repo provisioning, and team management.",
-            "Implemented SBOM generation and dependency management using the Orca platform.",
+            "Implement SBOM generation and dependency management using the Orca platform.",
             "Built a GitHub Action/pipeline to enforce third-party Node.js license policy against legal allow/deny lists.",
             "Co-manage GitLab instance and security pipelines.",
             "Run security reviews across apps, products, and infrastructure.",
@@ -245,8 +255,18 @@
         },
       ],
       education: [
-        { school: "Boston College", degree: "B.S. in Business Management (Finance); Minor in Computer Science", end: "2018" },
-        { school: "Christian Brothers Academy", degree: "High School", end: "2014" }
+        {
+          school: "Boston College",
+          degree: "B.S. in Business Management (Finance); Minor in Computer Science",
+          end: "2018",
+          details: "Activities: Accelerate@Shea, BC Bigs (Big Brothers Big Sisters) Student Leader, Computer Science Society, Information Systems Academy, Investment Club"
+        },
+        {
+          school: "Christian Brothers Academy",
+          degree: "High School",
+          end: "2014",
+          details: "Activities: Varsity Soccer Captain, Varsity Lacrosse, National Honor Society, Spanish National Honor Society, Scholars Program, Spanish Club, Lasallian Youth"
+        }
       ],
     };
 
@@ -263,34 +283,35 @@
     function renderMeta() {
       const items = [];
       if (DATA.location) items.push(DATA.location);
-      if (DATA.email) items.push(`<a href=\"mailto:${DATA.email}\">${DATA.email}</a>`);
-      if (DATA.phone) items.push(`<a href=\"tel:${DATA.phone}\">${DATA.phone}</a>`);
+      if (DATA.email) items.push(`<a href="mailto:${DATA.email}">${DATA.email}</a>`);
+      if (DATA.phone) items.push(`<a href="tel:${DATA.phone}">${DATA.phone}</a>`);
       html(el.meta, items.join(' · '));
     }
     function renderLinks() {
-      html(el.links, DATA.links.map(l => `<a href=\"${l.href}\" target=\"_blank\" rel=\"noreferrer\">${l.label}</a>`).join(''));
+      html(el.links, DATA.links.map(l => `<a href="${l.href}" target="_blank" rel="noreferrer">${l.label}</a>`).join(''));
     }
     function renderSkills() {
-      html(el.skills, DATA.skills.map(s => `<span class=\"tag\">${s}</span>`).join(''));
+      html(el.skills, DATA.skills.map(s => `<span class="tag">${s}</span>`).join(''));
     }
     function renderExperience() {
       html(el.exp, DATA.experience.map(it => `
-        <div class=\"card item\">
+        <div class="card item">
           <div>
-            <div class=\"role\">${it.role} · ${it.company}</div>
-            <div class=\"where\">${it.location || ''}</div>
+            <div class="role">${it.role} · ${it.company}</div>
+            <div class="where">${it.location || ''}</div>
           </div>
-          <div class=\"dates\">${it.start} – ${it.end}</div>
+          <div class="dates">${it.start} – ${it.end}</div>
           <ul>${it.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
         </div>
       `).join(''));
     }
     function renderEducation() {
       html(el.edu, DATA.education.map(e => `
-        <div class=\"card item\">
-          <div class=\"role\">${e.school}</div>
-          <div class=\"dates\">${e.end}</div>
-          <div class=\"where\">${e.degree}</div>
+        <div class="card item">
+          <div class="role">${e.school}</div>
+          <div class="dates">${e.end}</div>
+          <div class="where">${e.degree}</div>
+          ${e.details ? `<div class="text-sm text-gray-600 mt-1">${e.details}</div>` : ""}
         </div>
       `).join(''));
     }
