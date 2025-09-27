@@ -10,22 +10,46 @@
   <meta property="og:type" content="website" />
   <meta name="color-scheme" content="light dark" />
   <style>
+    /* Everforest Theme
     :root {
-      --bg: #ffffff;
-      --fg: #111827;
-      --muted: #6b7280;
-      --card: #f9fafb;
-      --border: #e5e7eb;
-      --accent: #111827;
+      --bg: #fdf6e3;
+      --fg: #5c6a72;
+      --muted: #a7c080;
+      --card: #f3ead3;
+      --border: #d3c6aa;
+      --accent: #8da101;
     }
+
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0b0f1a;
-        --fg: #e5e7eb;
-        --muted: #9ca3af;
-        --card: #0f1524;
-        --border: #1f2937;
-        --accent: #e5e7eb;
+        --bg: #2f383e;
+        --fg: #d3c6aa;
+        --muted: #a7c080;
+        --card: #374247;
+        --border: #4c555b;
+        --accent: #a7c080;
+      }
+    }
+    */
+
+    /* Tokyo Night Theme */
+    :root {
+      --bg: #1a1b26;
+      --fg: #c0caf5;
+      --muted: #565f89;
+      --card: #24283b;
+      --border: #414868;
+      --accent: #7aa2f7;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #d5d6db;
+        --fg: #1a1b26;
+        --muted: #565f89;
+        --card: #f0f1f5;
+        --border: #b3b5c6;
+        --accent: #2e7de9;
       }
     }
     html, body { height: 100%; }
@@ -61,6 +85,17 @@
     footer { margin: 32px 0 12px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .btn { border: 1px solid var(--border); padding: 6px 10px; border-radius: 10px; background: transparent; color: var(--fg); cursor: pointer; font-size: 13px; }
     .btn:hover { border-color: var(--fg); }
+
+    /* Summary emphasis */
+    #summary {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      padding: 18px 20px;
+      border-radius: 12px;
+      color: var(--fg);
+    }
 
     /* Desktop (>=601px) */
     @media (min-width: 601px) {
@@ -151,7 +186,7 @@
       links: [
         { label: "LinkedIn", href: "https://www.linkedin.com/in/garretpatten/" }
       ],
-      summary: "Security engineer focused on CI/CD hardening, code ownership, and web accessibility. I design guardrails that scale across orgs.",
+      summary: "Systems-minded software engineer with a builder’s mindset and a QA engineer’s eye for detail. I design secure pipelines, build resilient tools, and champion accessibility and correctness across the stack.",
       skills: [
         "Security Engineering", "CI/CD", "GitHub Enterprise", "GitHub Actions",
         "GitLab CI", "SBOM", "SCA/License Compliance", "Semgrep",
