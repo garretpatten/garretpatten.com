@@ -8,6 +8,17 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  // Ensure proper base path for Cloudflare Pages
+  base: '/',
+  build: {
+    // Ensure proper module resolution in production
+    rollupOptions: {
+      output: {
+        // Ensure consistent chunk naming
+        manualChunks: undefined
+      }
+    }
   }
 })
 

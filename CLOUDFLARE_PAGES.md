@@ -60,10 +60,19 @@ This ensures that all routes (like `/about`, `/resume`, etc.) serve the `index.h
    - **Build command:** `npm install && npm run build`
    - **Build output directory:** `dist`
    - **Root directory:** `/` (or leave empty if root)
-5. Under **Environment variables** (if needed):
+5. Under **Environment variables**:
    - Add `NODE_VERSION` = `18` (or higher)
+   - **Important:** Make sure this is set, as Cloudflare may default to an older version
 6. Save changes
-7. Trigger a new deployment (or push a commit to trigger auto-deploy)
+7. **Clear build cache** (if available) - Go to **Settings** → **Builds & deployments** → **Clear build cache**
+8. Trigger a new deployment (or push a commit to trigger auto-deploy)
+
+### Important: Verify Build Output
+
+After deployment, check the build logs in Cloudflare Pages to ensure:
+- Build completes successfully (no errors)
+- Output shows files being created in `dist/` directory
+- No warnings about missing dependencies
 
 ### Option 2: Update via `wrangler.toml` (if using Wrangler CLI)
 
@@ -97,6 +106,52 @@ After deployment, verify:
 
 ## Troubleshooting
 
+### Issue: "Failed to resolve module specifier 'vue'" on Cloudflare Pages
+
+**Symptoms:** Error in browser console about module resolution, but works fine locally.
+
+**Root Cause:** Cloudflare Pages is serving source files instead of built files, or the build is failing silently.
+
+**Solutions (try in order):**
+
+1. **Verify Build Output Directory:**
+   - Go to Cloudflare Pages → Settings → Builds & deployments
+   - Ensure **Build output directory** is exactly `dist` (not `dist/` or `./dist`)
+   - Save and redeploy
+
+2. **Check Build Logs:**
+   - Go to Cloudflare Pages → Deployments
+   - Click on the failed/preview deployment
+   - Check the build logs for errors
+   - Look for messages like "Build completed" and verify it says files were created in `dist/`
+
+3. **Verify Node Version:**
+   - In Cloudflare Pages settings, add environment variable: `NODE_VERSION` = `18`
+   - Or ensure `.nvmrc` file exists with `18` (already created)
+   - Clear build cache and redeploy
+
+4. **Verify Build Command:**
+   - Build command should be: `npm install && npm run build`
+   - Make sure there are no typos or extra spaces
+   - The command should complete successfully in logs
+
+5. **Check if Build is Actually Running:**
+   - In build logs, you should see:
+     - `npm install` output
+     - `vite build` output
+     - Files being created in `dist/`
+   - If you don't see this, the build isn't running
+
+6. **Verify dist/ Contents:**
+   - After a successful build, check that `dist/index.html` exists
+   - The built `index.html` should reference `/assets/index-*.js` (not `/src/main.js`)
+   - If it still references `/src/main.js`, the build didn't complete
+
+7. **Force Clean Build:**
+   - Delete the Cloudflare Pages project and recreate it
+   - Or clear all build caches
+   - Push a new commit to trigger fresh build
+
 ### Issue: Routes return 404
 
 **Solution:** Ensure the `_redirects` file is in the `public/` directory and being copied to `dist/` during build. Check the build logs to confirm.
@@ -119,6 +174,7 @@ After deployment, verify:
 - Verify build output directory is set to `dist`
 - Check that Vite is generating assets correctly (run `npm run build` locally)
 - Ensure Cloudflare Pages is serving from the correct directory
+- Check that asset paths in built `index.html` are correct (should be `/assets/...`)
 
 ### Issue: Form submission fails
 
