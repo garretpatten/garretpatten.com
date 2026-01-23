@@ -39,45 +39,46 @@ const hobbies = ref([
     id: 'genealogy',
     title: 'Genealogy Research',
     content: [
-      'I spend my free time mapping family trees for both my wife\'s family and my own. Through extensive research using historical records, census data, and DNA testing, I\'ve built comprehensive family trees spanning multiple generations.',
-      'Notable discoveries include tracing lineages back to the 1700s, identifying connections to historical events, and uncovering family stories that were previously unknown. The research has revealed fascinating connections across different regions and time periods.',
-      'Current statistics: Over 5,000 individuals documented across both family trees, with connections traced back to the 1700s in multiple lines. I\'ve collected and organized over 200 historical photographs, documents, and records that help tell the story of our families.'
-    ]
+      'I have devoted significant free time over the last decade and a half to mapping the family trees of both my wife\'s family and my own. Through research in historical records, census data, and DNA testing, I have traced our direct ancestral lines back to their American beginnings and European origins.',
+      'This work has uncovered connections to historical events and previously unknown family stories, deepening our appreciation of the journeys that shaped our heritage.',
+      'The trees currently include approximately 600 direct ancestors across both families. They are supported by several hundred historical photographs, roughly one hundred key documents, and several thousand record citations.'
+]
   },
   {
     id: 'guitar',
     title: 'Guitar',
     content: [
-      'Music has always been a passion of mine, and the guitar is my instrument of choice. I enjoy playing a variety of genres, with particular interest in rock, blues, and acoustic fingerstyle.',
-      'Favorite artists and influences include classic rock legends, modern blues players, and contemporary fingerstyle guitarists. I find that playing guitar is both a creative outlet and a way to unwind after long days.',
-      'My collection includes several guitars, each with its own character and purpose. From electric guitars for rock and blues to acoustic guitars for fingerstyle and folk music, each instrument serves a different role in my musical journey.'
+      'Music has long been important to me, and the guitar is my main instrument. I play mostly singer-songwriter material, fingerpicking styles, and a few country songs, favoring the acoustic sound.',
+      'My influences come from 1960s and 1970s classic rock—especially Jimi Hendrix, who played a central role in fostering my love of the guitar—and 1990s artists like the Goo Goo Dolls, a childhood favorite. John Mayer is my favorite artist to play, and his work continues to shape my approach to both rhythm and melody.',
+      'I took lessons at age twelve and learned basic blues techniques, but most of my progress has come from self-directed practice. Playing the guitar ebbs and flows in my life; it returns as a way to unwind, express myself creatively, and connect more deeply with music. I also play ukulele, where guitar skills transfer easily, and I occasionally play my great-grandmother’s century-old banjolele, which brings together my interests in music and family history.'
     ],
     list: [
-      'Fender Stratocaster (Electric)',
-      'Martin D-28 (Acoustic)',
-      'Taylor 814ce (Acoustic-Electric)',
-      'Gibson Les Paul (Electric)'
+      'Fender "Jimi Hendrix" Stratocaster (Electric)',
+      'Martin D-42 (Acoustic)',
+      'Martin 000-18 (Acoustic)',
+      'Tacoma DF-21 (Acoustic)'
     ]
   },
   {
     id: 'reading',
     title: 'Reading',
     content: [
-      'Reading is a constant source of learning and inspiration. I enjoy a wide range of genres, from science fiction and technology to history and business. Books provide both escape and education, helping me stay curious and informed.'
+      'Reading is a vital part of my life, offering both knowledge and reflection. I gravitate toward books on engineering, systems thinking, self-improvement, history, philosophy, and Christianity, with a particular interest in works that explore faith, discipline, and human nature.',
+      'These books provide insight into how we build better systems—whether technical, personal, or spiritual—and help me grow in understanding of myself and the world.',
+      'Currently reading: Washington: The Indispensable Man by James Thomas Flexner and What’s Our Problem? by Tim Urban. Below are some books that I have recently read and enjoyed:'
     ],
     list: [
-      'Dune by Frank Herbert — Epic science fiction that explores politics, religion, and ecology in a richly imagined universe.',
-      'The Pragmatic Programmer by Andrew Hunt and David Thomas — Essential reading for any software engineer, full of practical wisdom.',
-      'Sapiens by Yuval Noah Harari — A fascinating exploration of human history and the forces that shaped our species.',
-      'Clean Code by Robert C. Martin — Fundamental principles for writing maintainable and effective code.',
-      'The Phoenix Project by Gene Kim — A novel about DevOps that teaches important lessons about IT and business.',
-      '1984 by George Orwell — Timeless dystopian fiction that remains relevant today.',
-      'The Art of War by Sun Tzu — Ancient strategy that applies to modern challenges.',
-      'The Lean Startup by Eric Ries — Innovation and entrepreneurship principles.',
-      'Thinking, Fast and Slow by Daniel Kahneman — Insights into human psychology and decision-making.',
-      'The Mythical Man-Month by Frederick P. Brooks — Classic software engineering wisdom that still rings true.'
-    ],
-    currently: 'Currently reading: The Three-Body Problem by Liu Cixin — A mind-bending science fiction novel that explores first contact and the nature of the universe.'
+      'The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — A gripping narrative of the lead-up to the American Civil War.',
+      'Life Lessons: Fifty Things I Learned in My First Fifty Years by Patrick Madrid — Practical wisdom from a Catholic perspective on living a meaningful life.',
+      'G.K. Chesterton: The Apostle of Common Sense by Dale Ahlquist — An accessible introduction to Chesterton’s life, thought, and defense of Christian orthodoxy.',
+      'Prayer for Beginners by Peter Kreeft — A clear, thoughtful guide to developing a deeper prayer life.',
+      'Essentialism: The Disciplined Pursuit of Less by Greg McKeown — A powerful framework for focusing on what truly matters.',
+      'Fire & Blood by George R. R. Martin — A detailed history of House Targaryen, rich in political intrigue and world-building.',
+      'Tao Te Ching by Lao Tzu — Timeless wisdom on simplicity, balance, and living in harmony with the natural order.',
+      'From Strength to Strength: Finding Success, Happiness, and Deep Purpose in the Second Half of Life by Arthur C. Brooks — Insights on shifting from career achievement to deeper fulfillment.',
+      'The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life by Mark Manson — A refreshingly honest take on values, responsibility, and living meaningfully.',
+      'The Distant Echo by Val McDermid — A compelling crime novel that weaves past and present with emotional depth.'
+    ]
   }
 ])
 

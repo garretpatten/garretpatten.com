@@ -78,13 +78,30 @@
 import { ref } from 'vue'
 import TimelineItem from '../components/TimelineItem.vue'
 
-// Real content from existing site
 const skills = ref([
-  'Security Engineering', 'CI/CD', 'GitHub Enterprise', 'GitHub Actions',
-  'GitLab CI', 'SBOM', 'SCA/License Compliance', 'Semgrep',
-  'Sourcegraph', 'DefectDojo', 'SAST/DAST', 'Secrets Scanning',
-  'OWASP Top 10', 'Penetration Testing', 'OIDC',
-  'Web Accessibility (WCAG 2.0 AA)', 'Salesforce Platform'
+  'API Security',
+  'CI/CD',
+  'Dependency Management',
+  'Developer Enablement',
+  'GitHub Actions',
+  'GitHub Enterprise',
+  'GitLab CI/CD',
+  'JavaScript / Node.js',
+  'OWASP Top 10',
+  'Penetration Testing',
+  'Product Security',
+  'SAST / DAST',
+  'SBOM Generation',
+  'SCA / License Compliance',
+  'Secrets Scanning',
+  'Security Engineering',
+  'Security Reviews & Assessments',
+  'Semgrep',
+  'Shift-Left Security',
+  'Sourcegraph',
+  'Third-Party Risk Management',
+  'Vulnerability Management',
+  'Web Accessibility (WCAG 2.0 AA)'
 ])
 
 const experience = ref([

@@ -55,34 +55,34 @@ onUnmounted(() => {
 // Placeholder projects - replace with real content
 const projects = ref([
   {
-    name: 'Project Alpha',
-    description: 'A cool application that demonstrates modern web development practices with Vue 3, TypeScript, and Tailwind CSS. Features include real-time data synchronization and responsive design.',
-    github: 'https://github.com/username/project-alpha'
+    name: 'Arch Setup Scripts',
+    description: 'Scripts to automate the setup of my Arch Linux desktop environments. Install packages, configure settings, and more.',
+    github: 'https://github.com/garretpatten/arch-setup-scripts'
   },
   {
-    name: 'Security Scanner',
-    description: 'Automated security scanning tool that integrates with CI/CD pipelines to detect vulnerabilities and enforce security policies across multiple repositories.',
-    github: 'https://github.com/username/security-scanner'
+    name: 'Codeowner Verifier',
+    description: 'A GitHub Action that verifies that modified files within a pull request are owned by code owners.',
+    github: 'https://github.com/garretpatten/codeowner-verifier'
   },
   {
-    name: 'Accessibility Audit Tool',
-    description: 'Web accessibility auditing tool that helps developers identify and fix WCAG compliance issues in their applications.',
-    github: 'https://github.com/username/accessibility-audit'
+    name: 'Dotfiles',
+    description: 'My personal dotfiles for Arch Linux, macOS, and Ubuntu; this files in this repository are a submodule of the setup scripts repositories.',
+    github: 'https://github.com/garretpatten/dotfiles'
   },
   {
-    name: 'License Compliance Checker',
-    description: 'GitHub Action that enforces third-party license policies against legal allow/deny lists, ensuring compliance across Node.js dependencies.',
-    github: 'https://github.com/username/license-checker'
+    name: 'macOS Setup Scripts',
+    description: 'Scripts to automate the setup of my macOS desktop environments. Install packages, configure settings, and more.',
+    github: 'https://github.com/garretpatten/macOS-setup-scripts'
   },
   {
-    name: 'Semgrep Ruleset',
-    description: 'Open-source Semgrep ruleset for Salesforce Apex and VisualForce, helping developers identify security vulnerabilities and code quality issues.',
-    github: 'https://github.com/username/semgrep-salesforce'
+    name: 'System Scripts',
+    description: 'A repository of scripts I use to automate tasks on my systems.',
+    github: 'https://github.com/garretpatten/system-scripts'
   },
   {
-    name: 'Portfolio Website',
-    description: 'Personal portfolio website built with Vue 3, featuring dark mode, responsive design, and smooth page transitions.',
-    github: 'https://github.com/username/portfolio'
+    name: 'Ubuntu Setup Scripts',
+    description: 'Scripts to automate the setup of my Ubuntu desktop environments. Install packages, configure settings, and more.',
+    github: 'https://github.com/garretpatten/ubuntu-setup-scripts'
   }
 ])
 </script>
