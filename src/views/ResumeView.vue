@@ -7,8 +7,8 @@
       </h2>
       <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 p-6 rounded-lg">
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Systems-minded software engineer with a builder's mindset and a QA engineer's eye for detail.
-          I design secure pipelines, build resilient tools, and champion accessibility and correctness across the stack.
+          Systems-minded security engineer with a builder's mindset and seven years of experience spanning QA, software engineering, and security.
+          I design secure pipelines and scalable processes, drive developer enablement programs, and advocate for security as a shared organizational responsibility.
         </p>
       </div>
     </section>
