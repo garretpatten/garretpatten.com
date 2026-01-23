@@ -12,6 +12,8 @@ export default defineConfig({
   // Ensure proper base path for Cloudflare Pages
   base: '/',
   build: {
+    // Explicitly set output directory
+    outDir: 'dist',
     // Ensure proper module resolution in production
     rollupOptions: {
       output: {

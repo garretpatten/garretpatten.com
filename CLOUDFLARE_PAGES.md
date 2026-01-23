@@ -12,8 +12,10 @@ Update your Cloudflare Pages project settings:
 
 **Build Command:**
 ```
-npm install && npm run build
+npm run build
 ```
+
+**Important:** Cloudflare Pages automatically runs `npm install` before your build command, so you don't need to include it. Using just `npm run build` avoids running `npm install` twice (which can cause timing issues).
 
 **Build Output Directory:**
 ```
