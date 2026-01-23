@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  /* Add any custom component styles here */
+}
+
+/* Custom utilities */
+@layer utilities {
+  /* Add any custom utility classes here */
+}
+
