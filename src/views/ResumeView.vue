@@ -95,13 +95,14 @@ const experience = ref([
     start: 'Jun 2024',
     end: 'Present',
     bullets: [
-      'Technical lead for Product Security in a global enterprise.',
+      'Technical lead for Product Security on a 4-person team; own prioritization of security assessments, coordinate deliverables across product and infrastructure, and serve as primary technical escalation point.',
+      'Co-drive team roadmap and participate in hiring for security engineering roles; serve as senior point of contact during manager absences.',
       'Administer multi-org GitHub Enterprise (1k+ repos) and build automations with Actions/workflows for SAST, secrets scanning, docs publishing, repo provisioning, and team management.',
       'Implement SBOM generation and dependency management using the Orca platform.',
       'Built a GitHub Action/pipeline to enforce third-party Node.js license policy against legal allow/deny lists.',
       'Co-manage GitLab instance and security pipelines.',
-      'Run security reviews across apps, products, and infrastructure.',
-      'Author a monthly internal blog series on OWASP Top 10 and API Top 10.'
+      'Lead security reviews across products and infrastructure, partnering with engineering leadership to embed shift-left security practices and reduce defects reaching production.',
+      'Drive security awareness org-wide through monthly technical content on OWASP Top 10 and API security, establishing Product Security as a developer enablement function.'
     ]
   },
   {
@@ -116,7 +117,7 @@ const experience = ref([
       'Deployed Sourcegraph and DefectDojo to drive vulnerability insights and code-health metrics.',
       'Authored and open-sourced a Semgrep ruleset for Salesforce Apex/VisualForce.',
       'Conducted penetration tests on products and the corporate site.',
-      'Drove developer enablement via Product Security office hours and support channel.'
+      'Drove developer enablement via Product Security office hours and support channel, building trust with engineering teams and scaling security consultation without proportional headcount.'
     ]
   },
   {
@@ -131,7 +132,7 @@ const experience = ref([
       'Contributed to design and delivery of an Integration Type package.',
       'Implemented features spanning credit pulls, deposit funding, ID document scanning, and SSO with enhanced JIT; shipped security and accessibility epics.',
       'Codified accessible development standards in the Development Guide.',
-      'Mentored engineers within a scaling LeSS team.'
+      'Mentored junior engineers on secure development practices and accessibility standards during rapid team scaling.'
     ]
   },
   {
