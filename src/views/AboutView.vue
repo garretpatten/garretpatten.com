@@ -10,22 +10,15 @@
 
     <div class="prose prose-lg dark:prose-invert max-w-none">
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Systems-minded software engineer with a builder's mindset and a QA engineer's eye for detail.
-        I design secure pipelines, build resilient tools, and champion accessibility and correctness across the stack.
+        Systems-minded security engineer with a builder's mindset and seven years of experience spanning QA, software engineering, and security. I design secure pipelines and scalable processes, drive developer enablement programs, and advocate for security as a shared organizational responsibility.
       </p>
 
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur.
+        I grew up on the Jersey Shore in the New York City metro area. At Christian Brothers Academy in Lincroft, I took my first Computer Science class and learned Python, sparking an early interest in technology. I later attended Boston College’s Carroll School of Management, where I studied Finance and Computer Science. After graduation, a QA Engineering internship introduced me to software development; I fell in love with building systems and solving problems, and I have pursued that path ever since. Today I live in Georgia with my wife, daughter, and beagle.
       </p>
 
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-        beatae vitae dicta sunt explicabo.
+        In my spare time I pursue genealogy research, play guitar, and read widely. My deepest passion, though, is designing systems—whether for secure infrastructure at work or for order and clarity in everyday life. I find satisfaction in creating structures that are both robust and intuitive, a principle that shapes both my professional career and my personal pursuits.
       </p>
     </div>
   </div>
