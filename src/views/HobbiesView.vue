@@ -45,18 +45,18 @@ const hobbies = ref([
 ]
   },
   {
-    id: 'guitar',
-    title: 'Guitar',
+    id: 'music',
+    title: 'Music',
     content: [
       'Music has long been important to me, and the guitar is my main instrument. I play mostly singer-songwriter material, fingerpicking styles, and a few country songs, favoring the acoustic sound.',
       'My influences come from 1960s and 1970s classic rock—especially Jimi Hendrix, who played a central role in fostering my love of the guitar—and 1990s artists like the Goo Goo Dolls, a childhood favorite. John Mayer is my favorite artist to play, and his work continues to shape my approach to both rhythm and melody.',
-      'I took lessons at age twelve and learned basic blues techniques, but most of my progress has come from self-directed practice. Playing the guitar ebbs and flows in my life; it returns as a way to unwind, express myself creatively, and connect more deeply with music. I also play ukulele, where guitar skills transfer easily, and I occasionally play my great-grandmother’s century-old banjolele, which brings together my interests in music and family history.'
+      'I took lessons at age twelve and learned basic blues techniques, but most of my progress has come from self-directed practice. Playing the guitar ebbs and flows in my life; it returns as a way to unwind, express myself creatively, and connect more deeply with music. I also play ukulele, where guitar skills transfer easily, and I occasionally play my great-grandmother’s century-old banjolele, which brings together my interests in music and family history.',
+      'Below are my favorite guitars in my collection:'
     ],
     list: [
-      'Fender "Jimi Hendrix" Stratocaster (Electric)',
-      'Martin D-42 (Acoustic)',
-      'Martin 000-18 (Acoustic)',
-      'Tacoma DF-21 (Acoustic)'
+      'Martin D-42',
+      'Martin 000-18',
+      'Tacoma DF-21'
     ]
   },
   {
@@ -65,9 +65,11 @@ const hobbies = ref([
     content: [
       'Reading is a vital part of my life, offering both knowledge and reflection. I gravitate toward books on engineering, systems thinking, self-improvement, history, philosophy, and Christianity, with a particular interest in works that explore faith, discipline, and human nature.',
       'These books provide insight into how we build better systems—whether technical, personal, or spiritual—and help me grow in understanding of myself and the world.',
-      'Currently reading: Washington: The Indispensable Man by James Thomas Flexner and What’s Our Problem? by Tim Urban. Below are some books that I have recently read and enjoyed:'
+      'Currently reading: Digital Minimalism by Cal Newport. Below are some books that I have recently read and enjoyed:'
     ],
     list: [
+      'Washington: The Indispensable Man by James Thomas Flexner — A comprehensive biography that captures Washington\'s character, leadership, and the pivotal role he played in the founding of America.',
+      'What Christians Believe by Bishop Robert Barron — A clear and accessible exploration of core Christian doctrines, explaining the essential beliefs that define the faith.',
       'The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — A gripping narrative of the lead-up to the American Civil War.',
       'Life Lessons: Fifty Things I Learned in My First Fifty Years by Patrick Madrid — Practical wisdom from a Catholic perspective on living a meaningful life.',
       'G.K. Chesterton: The Apostle of Common Sense by Dale Ahlquist — An accessible introduction to Chesterton’s life, thought, and defense of Christian orthodoxy.',
