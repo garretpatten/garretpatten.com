@@ -1,5 +1,5 @@
 <template>
-  <header class="border-b border-gray-200 dark:border-gray-800 mb-8 pb-6">
+  <header class="border-b border-gray-200 dark:border-gray-800 mb-8 pb-6 relative z-20">
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
       <router-link to="/" class="hover:opacity-80 transition-opacity duration-200">
@@ -12,7 +12,7 @@
 
       <button
         @click="toggleMenu"
-        class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-pine-500 rounded-md transition-colors duration-200"
+        class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-pine-500 rounded-md transition-colors duration-200 relative z-50"
         aria-label="Toggle menu"
         aria-expanded="isMenuOpen"
       >
@@ -67,38 +67,48 @@
         <DarkModeToggle />
       </nav>
     </div>
-
-    <!-- Mobile Menu: Navigation Links -->
-    <Transition name="mobile-menu">
-      <nav
-        v-if="isMenuOpen"
-        class="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-800"
-      >
-        <div class="flex flex-col items-end gap-4">
-          <router-link
-            v-for="route in routes"
-            :key="route.path"
-            :to="route.path"
-            @click="closeMenu"
-            class="text-sm font-medium transition-colors duration-200 py-2 text-right"
-            :class="{
-              'text-navy-600 dark:text-pine-400 border-r-4 border-navy-600 dark:border-pine-400 pr-3': $route.path === route.path,
-              'text-gray-600 dark:text-gray-400 pr-3': $route.path !== route.path
-            }"
-          >
-            {{ route.name }}
-          </router-link>
-          <div class="pt-2 pr-3">
-            <DarkModeToggle />
-          </div>
-        </div>
-      </nav>
-    </Transition>
   </header>
+
+  <!-- Mobile Menu Backdrop -->
+  <Transition name="backdrop">
+    <div
+      v-if="isMenuOpen"
+      @click="closeMenu"
+      class="fixed top-20 left-0 right-0 bottom-0 bg-black/50 dark:bg-black/70 z-30 md:hidden"
+      aria-hidden="true"
+    ></div>
+  </Transition>
+
+  <!-- Mobile Menu: Navigation Links -->
+  <Transition name="mobile-menu">
+    <nav
+      v-if="isMenuOpen"
+      class="fixed top-20 right-0 w-[30%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden h-[calc(100vh-5rem)] overflow-y-auto border-l border-gray-200 dark:border-gray-800"
+    >
+      <div class="flex flex-col items-end gap-4 pt-6 pr-6 pb-6">
+        <router-link
+          v-for="route in routes"
+          :key="route.path"
+          :to="route.path"
+          @click="closeMenu"
+          class="text-sm font-medium transition-colors duration-200 py-2 text-right w-full"
+          :class="{
+            'text-navy-600 dark:text-pine-400 border-r-4 border-navy-600 dark:border-pine-400 pr-3': $route.path === route.path,
+            'text-gray-600 dark:text-gray-400 pr-3': $route.path !== route.path
+          }"
+        >
+          {{ route.name }}
+        </router-link>
+        <div class="pt-2 pr-3 w-full flex justify-end">
+          <DarkModeToggle />
+        </div>
+      </div>
+    </nav>
+  </Transition>
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import DarkModeToggle from './DarkModeToggle.vue'
 
@@ -121,6 +131,20 @@ const closeMenu = () => {
   isMenuOpen.value = false
 }
 
+// Lock/unlock body scroll when menu is open
+watch(isMenuOpen, (open) => {
+  if (open) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+})
+
+// Cleanup on unmount
+onUnmounted(() => {
+  document.body.style.overflow = ''
+})
+
 // Close menu when route changes
 watch(() => route.path, () => {
   closeMenu()
@@ -128,19 +152,32 @@ watch(() => route.path, () => {
 </script>
 
 <style scoped>
-.mobile-menu-enter-active,
-.mobile-menu-leave-active {
-  transition: all 0.3s ease;
-  max-height: 500px;
-  overflow: hidden;
+/* Backdrop transition */
+.backdrop-enter-active,
+.backdrop-leave-active {
+  transition: opacity 0.2s ease;
 }
 
-.mobile-menu-enter-from,
-.mobile-menu-leave-to {
-  max-height: 0;
+.backdrop-enter-from,
+.backdrop-leave-to {
   opacity: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+}
+
+/* Mobile menu slide-in from right */
+.mobile-menu-enter-active {
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu-leave-active {
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu-enter-from {
+  transform: translateX(100%);
+}
+
+.mobile-menu-leave-to {
+  transform: translateX(100%);
 }
 </style>
 
