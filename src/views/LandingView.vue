@@ -28,10 +28,10 @@
     <section class="mb-16">
       <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-8 shadow-sm">
         <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          About
+          Summary
         </h2>
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Systems-minded security engineer with a builder's mindset and seven years of experience spanning QA, software engineering, and security. I design secure pipelines and scalable processes, drive developer enablement programs, and advocate for security as a shared organizational responsibility.
+          Systems-minded security engineer with a builder's mindset and seven years of experience spanning QA, software engineering, and security.
         </p>
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
           Currently serving as Technical Lead for Product Security at nCino, where I own security assessments, coordinate deliverables across product and infrastructure, and build automations that scale security practices across 1,000+ repositories. I specialize in API security, CI/CD pipeline security, vulnerability management, and shift-left security practices.
@@ -40,7 +40,7 @@
     </section>
 
     <!-- Core Expertise -->
-    <section class="mb-16">
+    <!-- <section class="mb-16">
       <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
         Core Expertise
       </h2>
@@ -141,7 +141,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Quick Links -->
     <section class="text-center">
