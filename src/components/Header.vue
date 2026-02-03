@@ -85,23 +85,23 @@
     <nav
       v-if="isMenuOpen"
       :style="{ top: `${headerBottom}px`, height: `calc(100vh - ${headerBottom}px)` }"
-      class="fixed right-0 w-[30%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-200 dark:border-gray-800"
+      class="fixed right-0 w-[70%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-200 dark:border-gray-800"
     >
-      <div class="flex flex-col items-end gap-4 pt-6 pr-6 pb-6">
+      <div class="flex flex-col items-center gap-4 pt-6 px-6 pb-6">
         <router-link
           v-for="route in routes"
           :key="route.path"
           :to="route.path"
           @click="closeMenu"
-          class="text-sm font-medium transition-colors duration-200 py-2 text-right w-full"
+          class="text-sm font-medium transition-colors duration-200 py-2 text-center w-full"
           :class="{
-            'text-navy-600 dark:text-pine-400 border-r-4 border-navy-600 dark:border-pine-400 pr-3': $route.path === route.path,
-            'text-gray-600 dark:text-gray-400 pr-3': $route.path !== route.path
+            'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400': $route.path === route.path,
+            'text-gray-600 dark:text-gray-400': $route.path !== route.path
           }"
         >
           {{ route.name }}
         </router-link>
-        <div class="pt-2 pr-3 w-full flex justify-end">
+        <div class="pt-2 w-full flex justify-center">
           <DarkModeToggle />
         </div>
       </div>
@@ -184,7 +184,7 @@ watch(() => route.path, () => {
 /* Backdrop transition */
 .backdrop-enter-active,
 .backdrop-leave-active {
-  transition: opacity 0.2s ease;
+  transition: opacity 0.1s ease;
 }
 
 .backdrop-enter-from,
@@ -194,11 +194,11 @@ watch(() => route.path, () => {
 
 /* Mobile menu slide-in from right */
 .mobile-menu-enter-active {
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 
 .mobile-menu-leave-active {
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 
 .mobile-menu-enter-from {
