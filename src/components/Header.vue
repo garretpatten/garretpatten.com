@@ -1,5 +1,5 @@
 <template>
-  <header class="border-b border-gray-200 dark:border-gray-800 mb-8 pb-6 relative z-20">
+  <header ref="headerRef" class="border-b border-gray-200 dark:border-gray-800 mb-8 pb-6 relative z-20">
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
       <router-link to="/" class="hover:opacity-80 transition-opacity duration-200">
@@ -74,7 +74,8 @@
     <div
       v-if="isMenuOpen"
       @click="closeMenu"
-      class="fixed top-20 left-0 right-0 bottom-0 bg-black/50 dark:bg-black/70 z-30 md:hidden"
+      :style="{ top: `${headerBottom}px` }"
+      class="fixed left-0 right-0 bottom-0 bg-black/50 dark:bg-black/70 z-30 md:hidden"
       aria-hidden="true"
     ></div>
   </Transition>
@@ -83,7 +84,8 @@
   <Transition name="mobile-menu">
     <nav
       v-if="isMenuOpen"
-      class="fixed top-20 right-0 w-[30%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden h-[calc(100vh-5rem)] overflow-y-auto border-l border-gray-200 dark:border-gray-800"
+      :style="{ top: `${headerBottom}px`, height: `calc(100vh - ${headerBottom}px)` }"
+      class="fixed right-0 w-[30%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-200 dark:border-gray-800"
     >
       <div class="flex flex-col items-end gap-4 pt-6 pr-6 pb-6">
         <router-link
@@ -108,12 +110,39 @@
 </template>
 
 <script setup>
-import { ref, watch, onUnmounted } from 'vue'
+import { ref, watch, onUnmounted, onMounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import DarkModeToggle from './DarkModeToggle.vue'
 
 const route = useRoute()
 const isMenuOpen = ref(false)
+const headerRef = ref(null)
+const headerBottom = ref(0)
+
+const updateHeaderBottom = () => {
+  if (headerRef.value) {
+    const rect = headerRef.value.getBoundingClientRect()
+    headerBottom.value = rect.bottom
+  }
+}
+
+onMounted(() => {
+  updateHeaderBottom()
+  window.addEventListener('resize', updateHeaderBottom)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateHeaderBottom)
+})
+
+// Update position when menu opens
+watch(isMenuOpen, () => {
+  if (isMenuOpen.value) {
+    nextTick(() => {
+      updateHeaderBottom()
+    })
+  }
+})
 
 const routes = ref([
   { path: '/about', name: 'About' },
