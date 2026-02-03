@@ -1,9 +1,9 @@
 <template>
   <header class="border-b border-gray-200 dark:border-gray-800 mb-8 pb-6">
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
+      <router-link to="/" class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-200">
         Garret Patten
-      </h1>
+      </router-link>
 
       <nav class="flex items-center gap-4">
         <router-link
