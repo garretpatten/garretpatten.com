@@ -56,7 +56,7 @@ onUnmounted(() => {
 const projects = ref([
   {
     name: 'Arch Setup Scripts',
-    description: 'Scripts to automate the setup of my Arch Linux desktop environments. Install packages, configure settings, and more.',
+    description: 'Scripts to automate the setup of my Arch Linux desktop environments (install packages, configure settings, and more).',
     github: 'https://github.com/garretpatten/arch-setup-scripts'
   },
   {
@@ -66,7 +66,7 @@ const projects = ref([
   },
   {
     name: 'Dotfiles',
-    description: 'My personal dotfiles for Arch Linux, macOS, and Ubuntu; this files in this repository are a submodule of the setup scripts repositories.',
+    description: 'My personal dotfiles for Arch Linux, macOS, and Ubuntu; this repository serves as a submodule for the setup scripts repositories.',
     github: 'https://github.com/garretpatten/dotfiles'
   },
   {
@@ -76,7 +76,7 @@ const projects = ref([
   },
   {
     name: 'macOS Setup Scripts',
-    description: 'Scripts to automate the setup of my macOS desktop environments. Install packages, configure settings, and more.',
+    description: 'Scripts to automate the setup of my macOS desktop environments (install packages, configure settings, and more).',
     github: 'https://github.com/garretpatten/macOS-setup-scripts'
   },
   {
@@ -86,7 +86,7 @@ const projects = ref([
   },
   {
     name: 'Ubuntu Setup Scripts',
-    description: 'Scripts to automate the setup of my Ubuntu desktop environments. Install packages, configure settings, and more.',
+    description: 'Scripts to automate the setup of my Ubuntu desktop environments (install packages, configure settings, and more).',
     github: 'https://github.com/garretpatten/ubuntu-setup-scripts'
   }
 ])
