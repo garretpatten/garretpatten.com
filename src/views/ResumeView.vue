@@ -7,8 +7,9 @@
       </h2>
       <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 p-6 rounded-lg">
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Systems-minded security engineer with a builder's mindset and seven years of experience spanning QA, software engineering, and security.
-          I design secure pipelines and scalable processes, drive developer enablement programs, and advocate for security as a shared organizational responsibility.
+          Systems-minded engineer with seven years of experience in product development, software engineering, and security.
+          I design secure, scalable systems, build automation that improves developer productivity, and promote security as a shared responsibility across engineering teams.
+          Currently serving as Technical Lead for Product Security at nCino, where I own security assessments, coordinate deliverables across product and infrastructure teams, and scale security practices across 1,000+ repositories through automation and developer enablement.
         </p>
       </div>
     </section>
@@ -80,27 +81,17 @@ import TimelineItem from '../components/TimelineItem.vue'
 
 const skills = ref([
   'API Security',
-  'CI/CD',
-  'Dependency Management',
-  'Developer Enablement',
-  'GitHub Actions',
-  'GitHub Enterprise',
-  'GitLab CI/CD',
-  'JavaScript / Node.js',
   'OWASP Top 10',
+  'Application Security',
+  'CI/CD Pipeline Design & Security',
+  'Developer Enablement & Security Awareness',
+  'GitHub Actions & Workflow Automation',
+  'GitHub Enterprise Administration',
   'Penetration Testing',
-  'Product Security',
-  'SAST / DAST',
-  'SBOM Generation',
-  'SCA / License Compliance',
-  'Secrets Scanning',
-  'Security Engineering',
-  'Security Reviews & Assessments',
-  'Semgrep',
-  'Shift-Left Security',
-  'Sourcegraph',
-  'Third-Party Risk Management',
-  'Vulnerability Management',
+  'SAST / DAST / Secrets Scanning',
+  'SBOM & Software Supply Chain Security',
+  'Secure Software Development',
+  'Shift-Left Security Practices',
   'Web Accessibility (WCAG 2.0 AA)'
 ])
 
