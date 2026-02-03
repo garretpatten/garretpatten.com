@@ -85,15 +85,15 @@
     <nav
       v-if="isMenuOpen"
       :style="{ top: `${headerBottom}px`, height: `calc(100vh - ${headerBottom}px)` }"
-      class="fixed right-0 w-[70%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-200 dark:border-gray-800"
+      class="fixed right-0 w-[80%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-200 dark:border-gray-800"
     >
-      <div class="flex flex-col items-center gap-4 pt-6 px-6 pb-6">
+      <div class="flex flex-col items-center gap-4 pt-8 px-6 pb-6">
         <router-link
           v-for="route in routes"
           :key="route.path"
           :to="route.path"
           @click="closeMenu"
-          class="text-sm font-medium transition-colors duration-200 py-2 text-center w-full"
+          class="text-xl font-medium transition-colors duration-200 py-3 text-center w-full"
           :class="{
             'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400': $route.path === route.path,
             'text-gray-600 dark:text-gray-400': $route.path !== route.path
