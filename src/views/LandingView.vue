@@ -34,7 +34,7 @@
           Systems-minded security engineer with a builder's mindset and seven years of experience spanning QA, software engineering, and security.
         </p>
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Currently serving as Technical Lead for Product Security at nCino, where I own security assessments, coordinate deliverables across product and infrastructure, and build automations that scale security practices across 1,000+ repositories. I specialize in API security, CI/CD pipeline security, vulnerability management, and shift-left security practices.
+          Currently serving as Technical Lead for Product Security at nCino, where I own security assessments, coordinate deliverables across product and infrastructure, and build automations that scale security practices across 1,000+ repositories.
         </p>
       </div>
     </section>
@@ -144,7 +144,7 @@
     </section> -->
 
     <!-- Quick Links -->
-    <section class="text-center">
+    <!-- <section class="text-center">
       <p class="text-gray-600 dark:text-gray-400 mb-6">
         Learn more about my background, projects, and interests
       </p>
@@ -177,7 +177,7 @@
           Contact →
         </router-link>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
