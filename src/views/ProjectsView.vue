@@ -70,6 +70,11 @@ const projects = ref([
     github: 'https://github.com/garretpatten/dotfiles'
   },
   {
+    name: 'garretpatten.com',
+    description: 'This portfolio website (built with Vue 3, Vite, Tailwind CSS, and Vue Router).',
+    github: 'https://github.com/garretpatten/garretpatten.com'
+  },
+  {
     name: 'macOS Setup Scripts',
     description: 'Scripts to automate the setup of my macOS desktop environments. Install packages, configure settings, and more.',
     github: 'https://github.com/garretpatten/macOS-setup-scripts'
