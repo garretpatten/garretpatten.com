@@ -1,8 +1,26 @@
 <template>
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-8">
-      Projects
-    </h2>
+
+    <!-- Engineering Philosophy -->
+    <section class="mb-12">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
+        Engineering Philosophy
+      </h2>
+      <div class="space-y-4">
+        <div class="text-gray-700 dark:text-gray-300">
+          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">Simplicity is the apex of design</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Complexity signals incomplete understanding.</p>
+        </div>
+        <div class="text-gray-700 dark:text-gray-300">
+          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">Outcomes are the objective</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Implementations are transient and disposable.</p>
+        </div>
+        <div class="text-gray-700 dark:text-gray-300">
+          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">Quality is a prerequisite</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Security, correctness, and reliability are constraints, not aspirations.</p>
+        </div>
+      </div>
+    </section>
 
     <Carousel
       :items-to-show="itemsToShow"

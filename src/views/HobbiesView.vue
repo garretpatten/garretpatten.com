@@ -1,8 +1,5 @@
 <template>
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-8">
-      Hobbies & Interests
-    </h2>
 
     <!-- Tab Navigation -->
     <div class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800">
