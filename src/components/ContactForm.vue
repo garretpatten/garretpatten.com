@@ -89,10 +89,7 @@ const handleSubmit = async () => {
   submitMessage.value = ''
 
   try {
-    // TODO: Replace 'YOUR_FORM_ID' with your actual Formspree form ID
-    // Get your form ID from https://formspree.io/forms
-    // Configure the form to send emails to: garret.patten@proton.me
-    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    const response = await fetch('https://formspree.io/f/xnjzegzg', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -101,7 +98,7 @@ const handleSubmit = async () => {
         name: form.value.name,
         email: form.value.email,
         message: form.value.message,
-        _replyto: form.value.email, // Formspree will use this as reply-to
+        _replyto: form.value.email,
       }),
     })
 
