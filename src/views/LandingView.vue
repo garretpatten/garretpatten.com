@@ -1,12 +1,12 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Hero Section -->
-    <section class="text-center mb-16">
+    <section class="text-center mb-16 md:mb-16">
       <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4">
         Garret Patten
       </h1>
       <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">
-        Senior Security Engineer & Software Engineer
+        Senior Security Engineer
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <router-link
@@ -24,164 +24,48 @@
       </div>
     </section>
 
-    <!-- Professional Summary -->
+    <!-- Value Proposition -->
     <section class="mb-16">
-      <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-8 shadow-sm">
-        <!-- <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          Summary
-        </h2> -->
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          - Husband, father, and beagle owner living in Georgia.
-        </p>
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          - Engineer with a systems-minded, builder’s approach.
-        </p>
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          - Seven years of professional experience in product engineering, software development, and—most recently—security.
-        </p>
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          - Currently leading Product Security at nCino.
-        </p>
+      <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-2xl mx-auto">
+        Systems-minded security engineer with a builder's mindset. I design secure pipelines, drive developer enablement programs, and advocate for security as a shared organizational responsibility.
+      </p>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">7+</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">3,000+</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">Repositories Managed</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">300+</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">Engineers Supported Globally</div>
       </div>
     </section>
 
-    <!-- Core Expertise -->
+    <!-- Focus Areas -->
     <!-- <section class="mb-16">
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
-        Core Expertise
-      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        <div class="p-6 border-l-4 border-navy-600 dark:border-pine-500">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
             Security Engineering
           </h3>
-          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Security reviews & assessments</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Penetration testing</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>API security & OWASP Top 10</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Vulnerability management</span>
-            </li>
-          </ul>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Security reviews, penetration testing, API security, and vulnerability management across products and infrastructure.
+          </p>
         </div>
-
-        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        <div class="p-6 border-l-4 border-navy-600 dark:border-pine-500">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
             Developer Enablement
           </h3>
-          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Shift-left security practices</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>SAST/DAST & secrets scanning</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>CI/CD pipeline security</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Security awareness programs</span>
-            </li>
-          </ul>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Shift-left security practices, CI/CD pipeline security, and security awareness programs that scale.
+          </p>
         </div>
-
-        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-            Platform & Infrastructure
-          </h3>
-          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>GitHub Enterprise administration</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>GitHub Actions & workflows</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>SBOM generation & dependency management</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Third-party risk management</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-            Software Engineering
-          </h3>
-          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>JavaScript / Node.js</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Web accessibility (WCAG 2.0 AA)</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>System design & architecture</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-navy-600 dark:text-pine-500 mr-2">•</span>
-              <span>Secure development practices</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Quick Links -->
-    <!-- <section class="text-center">
-      <p class="text-gray-600 dark:text-gray-400 mb-6">
-        Learn more about my background, projects, and interests
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <router-link
-          to="/about"
-          class="text-navy-600 dark:text-pine-500 hover:text-navy-700 dark:hover:text-pine-400 font-medium transition-colors duration-200"
-        >
-          About Me →
-        </router-link>
-        <span class="text-gray-400 dark:text-gray-600">•</span>
-        <router-link
-          to="/resume"
-          class="text-navy-600 dark:text-pine-500 hover:text-navy-700 dark:hover:text-pine-400 font-medium transition-colors duration-200"
-        >
-          Resume →
-        </router-link>
-        <span class="text-gray-400 dark:text-gray-600">•</span>
-        <router-link
-          to="/projects"
-          class="text-navy-600 dark:text-pine-500 hover:text-navy-700 dark:hover:text-pine-400 font-medium transition-colors duration-200"
-        >
-          Projects →
-        </router-link>
-        <span class="text-gray-400 dark:text-gray-600">•</span>
-        <router-link
-          to="/contact"
-          class="text-navy-600 dark:text-pine-500 hover:text-navy-700 dark:hover:text-pine-400 font-medium transition-colors duration-200"
-        >
-          Contact →
-        </router-link>
       </div>
     </section> -->
   </div>
