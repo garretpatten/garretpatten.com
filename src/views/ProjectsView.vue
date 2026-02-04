@@ -100,12 +100,12 @@ const projects = ref([
 /* Custom carousel navigation and pagination styling */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(30, 58, 138); /* navy-800 */
+  color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(6, 95, 70); /* pine-900 */
+  color: rgb(6, 30, 41); /* pine-900 - #061E29 */
 }
 
 :deep(.carousel__pagination-button) {
@@ -117,11 +117,11 @@ const projects = ref([
 }
 
 :deep(.carousel__pagination-button--active) {
-  background-color: rgb(30, 58, 138); /* navy-800 */
+  background-color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
 }
 
 .dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(6, 95, 70); /* pine-900 */
+  background-color: rgb(6, 30, 41); /* pine-900 - #061E29 */
 }
 </style>
 
