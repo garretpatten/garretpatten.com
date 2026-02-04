@@ -1,8 +1,26 @@
 <template>
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-8">
-      Projects
-    </h2>
+
+    <!-- Engineering Philosophy -->
+    <section class="mb-12">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
+        Engineering Philosophy
+      </h2>
+      <div class="space-y-4">
+        <div class="text-gray-700 dark:text-gray-300">
+          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">Simplicity is the apex of design</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Complexity signals incomplete understanding.</p>
+        </div>
+        <div class="text-gray-700 dark:text-gray-300">
+          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">Outcomes are the objective</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Implementations are transient and disposable.</p>
+        </div>
+        <div class="text-gray-700 dark:text-gray-300">
+          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">Quality is a prerequisite</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Security, correctness, and reliability are constraints, not aspirations.</p>
+        </div>
+      </div>
+    </section>
 
     <Carousel
       :items-to-show="itemsToShow"
@@ -100,12 +118,12 @@ const projects = ref([
 /* Custom carousel navigation and pagination styling */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(30, 58, 138); /* navy-800 */
+  color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(6, 95, 70); /* pine-900 */
+  color: rgb(6, 30, 41); /* pine-900 - #061E29 */
 }
 
 :deep(.carousel__pagination-button) {
@@ -117,11 +135,11 @@ const projects = ref([
 }
 
 :deep(.carousel__pagination-button--active) {
-  background-color: rgb(30, 58, 138); /* navy-800 */
+  background-color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
 }
 
 .dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(6, 95, 70); /* pine-900 */
+  background-color: rgb(6, 30, 41); /* pine-900 - #061E29 */
 }
 </style>
 

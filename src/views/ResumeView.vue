@@ -5,11 +5,10 @@
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
         Summary
       </h2>
-      <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 p-6 rounded-lg">
+      <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 py-4 px-5 rounded-lg">
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
           Systems-minded engineer with seven years of experience in product development, software engineering, and security.
           I design secure, scalable systems, build automation that improves developer productivity, and promote security as a shared responsibility across engineering teams.
-          Currently serving as Technical Lead for Product Security at nCino, where I own security assessments, coordinate deliverables across product and infrastructure teams, and scale security practices across 1,000+ repositories through automation and developer enablement.
         </p>
       </div>
     </section>

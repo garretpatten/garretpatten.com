@@ -1,8 +1,5 @@
 <template>
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-8">
-      Hobbies & Interests
-    </h2>
 
     <!-- Tab Navigation -->
     <div class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800">
@@ -42,6 +39,14 @@ const hobbies = ref([
       'I have devoted significant free time over the last decade and a half to mapping the family trees of both my wife\'s family and my own. Through research in historical records, census data, and DNA testing, I have traced our direct ancestral lines back to their American beginnings and European origins.',
       'This work has uncovered connections to historical events and previously unknown family stories, deepening our appreciation of the journeys that shaped our heritage.',
       'The trees currently include approximately 600 direct ancestors across both families. They are supported by several hundred historical photographs, roughly one hundred key documents, and several thousand record citations.'
+    ]
+  },
+  {
+    id: 'journaling',
+    title: 'Journaling',
+    content: [
+      'To counterbalance the constant digital input and overstimulation of modern life, I maintain a deliberate daily journaling practice using analog tools. I journal every day, finding clarity and focus through the physical act of writing by hand. My primary setup includes a Traveler’s Company Traveler’s Notebook (passport size), Field Notes pocket notebooks, and Midori or Moleskine notebooks for longer reflective sessions.',
+     'For over two years, I have kept structured daily logs in my workdays: each entry captures my most important goals, notes taken throughout the day, and brief wrap-up reflections to set clear intentions for the following day. Every pocket notebook I carry—usually a Field Notes—serves as my constant companion. I index each completed notebook, label it with the date range it covers, and archive it. This simple, tactile system helps me stay grounded, intentional, and present amid an increasingly screen-dominated world.'
 ]
   },
   {
@@ -60,12 +65,21 @@ const hobbies = ref([
     ]
   },
   {
+    id: 'systems',
+    title: 'Personal System Design',
+    content: [
+      'I am deeply committed to essentialism—the disciplined pursuit of less in order to focus on what truly matters. This principle shapes my approach to personal systems design, where I build minimal, intentional structures that eliminate noise and protect time and attention for my family, work, and personal growth.',
+      'I automate data backups across devices and services, capture and organize personal ideas and logs in Standard Notes, coordinate complex family planning with my wife in Notion, manage shared household projects and tasks in Todoist, and track our family\'s commitments, appointments, and events (including birthdays and anniversaries) in Proton Calendar. These carefully chosen tools support clarity, reduce friction, and allow me to live and work with greater focus and simplicity.'
+    ]
+  },
+  {
     id: 'reading',
     title: 'Reading',
     content: [
       'Reading is a vital part of my life, offering both knowledge and reflection. I gravitate toward books on engineering, systems thinking, self-improvement, history, philosophy, and Christianity, with a particular interest in works that explore faith, discipline, and human nature.',
       'These books provide insight into how we build better systems—whether technical, personal, or spiritual—and help me grow in understanding of myself and the world.',
-      'Currently reading: Digital Minimalism by Cal Newport. Below are some books that I have recently read and enjoyed:'
+      'Currently reading: Digital Minimalism by Cal Newport.',
+      'Below are some books that I have recently read and enjoyed:'
     ],
     list: [
       'Washington: The Indispensable Man by James Thomas Flexner — A comprehensive biography that captures Washington\'s character, leadership, and the pivotal role he played in the founding of America.',
@@ -73,13 +87,7 @@ const hobbies = ref([
       'The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — A gripping narrative of the lead-up to the American Civil War.',
       'Life Lessons: Fifty Things I Learned in My First Fifty Years by Patrick Madrid — Practical wisdom from a Catholic perspective on living a meaningful life.',
       'G.K. Chesterton: The Apostle of Common Sense by Dale Ahlquist — An accessible introduction to Chesterton’s life, thought, and defense of Christian orthodoxy.',
-      'Prayer for Beginners by Peter Kreeft — A clear, thoughtful guide to developing a deeper prayer life.',
       'Essentialism: The Disciplined Pursuit of Less by Greg McKeown — A powerful framework for focusing on what truly matters.',
-      'Fire & Blood by George R. R. Martin — A detailed history of House Targaryen, rich in political intrigue and world-building.',
-      'Tao Te Ching by Lao Tzu — Timeless wisdom on simplicity, balance, and living in harmony with the natural order.',
-      'From Strength to Strength: Finding Success, Happiness, and Deep Purpose in the Second Half of Life by Arthur C. Brooks — Insights on shifting from career achievement to deeper fulfillment.',
-      'The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life by Mark Manson — A refreshingly honest take on values, responsibility, and living meaningfully.',
-      'The Distant Echo by Val McDermid — A compelling crime novel that weaves past and present with emotional depth.'
     ]
   }
 ])
