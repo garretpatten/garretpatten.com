@@ -1,8 +1,23 @@
 <template>
   <div class="max-w-4xl mx-auto">
+    <!-- Mobile: Dropdown Navigation -->
+    <div class="md:hidden mb-6">
+      <select
+        v-model="activeTab"
+        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-500 dark:focus:ring-pine-500"
+      >
+        <option
+          v-for="hobby in hobbies"
+          :key="hobby.id"
+          :value="hobby.id"
+        >
+          {{ hobby.title }}
+        </option>
+      </select>
+    </div>
 
-    <!-- Tab Navigation -->
-    <div class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800">
+    <!-- Desktop: Tab Navigation -->
+    <div class="hidden md:flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800">
       <button
         v-for="hobby in hobbies"
         :key="hobby.id"
