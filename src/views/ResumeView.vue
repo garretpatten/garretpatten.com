@@ -7,8 +7,8 @@
       </h2>
       <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 py-4 px-5 rounded-lg">
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Systems-minded engineer with seven years of experience in product development, software engineering, and security.
-          I design secure, scalable systems, build automation that improves developer productivity, and promote security as a shared responsibility across engineering teams.
+          Experienced engineer with seven years across product development, software engineering, and security.
+          As Technical Lead for Product Security at nCino, I own end-to-end security assessments, design developer-first security controls, and drive cross-team practices that reduce risk while preserving velocity.
         </p>
       </div>
     </section>

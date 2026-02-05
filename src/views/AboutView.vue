@@ -18,7 +18,7 @@
       </p>
 
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        After graduation, a QA Engineering internship introduced me to professional software development. Working alongside talented engineers, I gradually gravitated toward the creative act of building rather than merely testing. That shift launched my career in software engineering and, eventually, security.
+        The summer prior to graduation, a QA Engineering internship introduced me to professional software development. Working alongside talented engineers, I gradually gravitated toward the creative act of building rather than merely testing. That shift launched my career in software engineering and, eventually, security.
       </p>
 
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
