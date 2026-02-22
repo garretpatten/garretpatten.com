@@ -5,23 +5,9 @@
       <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4">
         Garret Patten
       </h1>
-      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400">
         Senior Security Engineer
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <router-link
-          to="/resume"
-          class="px-6 py-3 bg-navy-600 dark:bg-pine-500 text-white rounded-lg font-medium hover:bg-navy-700 dark:hover:bg-pine-600 transition-colors duration-200"
-        >
-          View Resume
-        </router-link>
-        <router-link
-          to="/projects"
-          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-navy-600 dark:hover:border-pine-500 transition-colors duration-200"
-        >
-          View Projects
-        </router-link>
-      </div>
     </section>
 
     <!-- Value Proposition -->
@@ -44,6 +30,24 @@
       <div class="text-center">
         <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">300+</div>
         <div class="text-sm text-gray-600 dark:text-gray-400">Engineers Supported Globally</div>
+      </div>
+    </section>
+
+    <!-- Calls to Action -->
+    <section class="text-center mb-16">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <router-link
+          to="/resume"
+          class="px-6 py-3 bg-navy-600 dark:bg-pine-500 text-white rounded-lg font-medium hover:bg-navy-700 dark:hover:bg-pine-600 transition-colors duration-200"
+        >
+          View Resume
+        </router-link>
+        <router-link
+          to="/projects"
+          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-navy-600 dark:hover:border-pine-500 transition-colors duration-200"
+        >
+          View Projects
+        </router-link>
       </div>
     </section>
 
