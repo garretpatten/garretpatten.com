@@ -1,8 +1,28 @@
 <template>
   <div class="max-w-6xl mx-auto">
 
+    <!-- Projects Carousel -->
+    <Carousel
+      :items-to-show="itemsToShow"
+      :wrap-around="true"
+      :autoplay="6000"
+      :pause-autoplay-on-hover="true"
+      class="projects-carousel mb-12"
+    >
+      <Slide v-for="(project, index) in projects" :key="index">
+        <div class="px-2">
+          <ProjectCard :project="project" />
+        </div>
+      </Slide>
+
+      <template #addons>
+        <Navigation />
+        <Pagination />
+      </template>
+    </Carousel>
+
     <!-- Engineering Philosophy -->
-    <section class="mb-12">
+    <section class="text-center max-w-2xl mx-auto">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
         Engineering Philosophy
       </h2>
@@ -17,29 +37,10 @@
         </div>
         <div class="text-gray-700 dark:text-gray-300">
           <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">Quality is a prerequisite</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Security, correctness, and reliability are constraints, not aspirations.</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Security, correctness, and reliability are foundational requirements, not aspirations.</p>
         </div>
       </div>
     </section>
-
-    <Carousel
-      :items-to-show="itemsToShow"
-      :wrap-around="true"
-      :autoplay="3000"
-      :pause-autoplay-on-hover="true"
-      class="projects-carousel"
-    >
-      <Slide v-for="(project, index) in projects" :key="index">
-        <div class="px-2">
-          <ProjectCard :project="project" />
-        </div>
-      </Slide>
-
-      <template #addons>
-        <Navigation />
-        <Pagination />
-      </template>
-    </Carousel>
   </div>
 </template>
 

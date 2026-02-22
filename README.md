@@ -4,12 +4,14 @@ A modern, minimal personal portfolio website built with Vue 3, Vite, Tailwind CS
 
 ## Features
 
-- 🎨 Clean, minimal design inspired by modern personal sites
+- 🎨 Clean, minimal design with navy/pine color theming
 - 🌓 Dark mode support with localStorage persistence
-- 📱 Fully responsive (mobile-first)
+- 📱 Fully responsive (mobile-first design)
 - 🎭 Smooth page transitions
 - 🧩 Component-based architecture
 - ⚡ Fast build with Vite
+- 📝 Contact form integration via Formspree
+- 🎯 Hobby tabs with understated icons
 
 ## Tech Stack
 
@@ -74,7 +76,9 @@ garretpatten.com/
 │   │   └── theme.js
 │   ├── views/
 │   │   ├── AboutView.vue
+│   │   ├── ContactView.vue
 │   │   ├── HobbiesView.vue
+│   │   ├── LandingView.vue
 │   │   ├── ProjectsView.vue
 │   │   └── ResumeView.vue
 │   ├── App.vue
@@ -105,14 +109,14 @@ To enable the contact form, you need to:
 - **Content**: Update the view components in `src/views/` with your actual content
 - **Routes**: Modify `src/router/index.js` to add or remove routes
 
-## Content Updates
+## Pages
 
-The site includes placeholder content that should be replaced:
-
-- **About View**: Replace Lorem Ipsum with your actual bio
-- **Projects View**: Update with your real projects and GitHub links
-- **Hobbies View**: Customize hobby descriptions and details
-- **Resume View**: Already includes real content from the original site
+- **Landing**: Hero section with value proposition and quick links
+- **About**: Personal bio and background
+- **Resume**: Professional experience timeline and skills
+- **Projects**: Portfolio of work with project cards
+- **Hobbies**: Tabbed interface showcasing personal interests (Reading, Genealogy Research, Personal System Design, Music, Journaling) with icons
+- **Contact**: Contact form powered by Formspree
 
 ## Browser Support
 
