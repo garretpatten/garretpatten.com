@@ -1,4 +1,4 @@
-# garretpatten.com
+# [garretpatten.com](https://garretpatten.com/)
 
 Personal portfolio site. Vue 3 + Vite + Tailwind CSS.
 
