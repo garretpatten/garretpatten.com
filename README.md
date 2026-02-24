@@ -26,7 +26,7 @@ npm run build
 
 ## Structure
 
-```
+```text
 src/
 ├── components/    # DarkModeToggle, Header, Footer, ProjectCard, etc.
 ├── views/         # LandingView, AboutView, ResumeView, ProjectsView, HobbiesView

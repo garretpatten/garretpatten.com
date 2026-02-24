@@ -12,7 +12,7 @@
 
       <button
         @click="toggleMenu"
-        class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-pine-500 rounded-md transition-colors duration-200 relative z-50"
+          class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-pine-500 rounded-md transition-colors duration-200 relative z-50 interactive-lift"
         aria-label="Toggle menu"
         aria-expanded="isMenuOpen"
       >
@@ -102,7 +102,7 @@
   </Transition>
 
   <!-- Mobile Menu: Navigation Links -->
-  <Transition name="mobile-menu">
+  <Transition name="menu">
     <nav
       v-if="isMenuOpen"
       :style="{ top: `${headerBottom}px`, height: `calc(100vh - ${headerBottom}px)` }"
@@ -218,34 +218,4 @@ watch(() => route.path, () => {
   closeMenu()
 })
 </script>
-
-<style scoped>
-/* Backdrop transition */
-.backdrop-enter-active,
-.backdrop-leave-active {
-  transition: opacity 0.1s ease;
-}
-
-.backdrop-enter-from,
-.backdrop-leave-to {
-  opacity: 0;
-}
-
-/* Mobile menu slide-in from right */
-.mobile-menu-enter-active {
-  transition: transform 0.1s ease;
-}
-
-.mobile-menu-leave-active {
-  transition: transform 0.1s ease;
-}
-
-.mobile-menu-enter-from {
-  transform: translateX(100%);
-}
-
-.mobile-menu-leave-to {
-  transform: translateX(100%);
-}
-</style>
 

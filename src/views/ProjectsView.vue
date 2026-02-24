@@ -7,7 +7,7 @@
       :wrap-around="true"
       :autoplay="6000"
       :pause-autoplay-on-hover="true"
-      class="projects-carousel mb-12"
+      class="projects-carousel mb-12 soft-enter"
     >
       <Slide v-for="(project, index) in projects" :key="index">
         <div class="px-2">
@@ -22,7 +22,7 @@
     </Carousel>
 
     <!-- Engineering Philosophy -->
-    <section class="text-center max-w-2xl mx-auto">
+    <section class="text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
         Engineering Philosophy
       </h2>

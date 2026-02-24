@@ -4,7 +4,7 @@
     <div class="md:hidden mb-6">
       <select
         v-model="activeTab"
-        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-500 dark:focus:ring-pine-500"
+        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-500 dark:focus:ring-pine-500 interactive-lift"
       >
         <option
           v-for="hobby in hobbies"
@@ -22,7 +22,7 @@
         v-for="hobby in hobbies"
         :key="hobby.id"
         @click="activeTab = hobby.id"
-        class="px-4 py-2 text-sm font-medium transition-colors duration-200"
+        class="px-4 py-2 text-sm font-medium transition-colors duration-200 interactive-lift"
         :class="
           activeTab === hobby.id
             ? 'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400'
@@ -34,8 +34,12 @@
     </div>
 
     <!-- Tab Content -->
-    <div class="transition-opacity duration-200">
-      <HobbyTab :hobby="activeHobby" />
+    <div class="hobby-content">
+      <Transition name="hobby-swap">
+        <div :key="activeHobby.id" class="hobby-panel">
+          <HobbyTab :hobby="activeHobby" />
+        </div>
+      </Transition>
     </div>
   </div>
 </template>
@@ -112,3 +116,32 @@ const activeHobby = computed(() => {
 })
 </script>
 
+<style scoped>
+.hobby-content {
+  position: relative;
+}
+
+.hobby-panel {
+  width: 100%;
+}
+
+.hobby-swap-enter-active {
+  transition: opacity 120ms var(--motion-ease-standard);
+}
+
+.hobby-swap-enter-from {
+  opacity: 0;
+}
+
+.hobby-swap-leave-active {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.hobby-swap-leave-from,
+.hobby-swap-leave-to {
+  opacity: 0;
+}
+</style>
