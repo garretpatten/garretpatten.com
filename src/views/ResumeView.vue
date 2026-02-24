@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Summary Section -->
-    <section class="mb-12">
+    <section class="mb-12 soft-enter">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
         Summary
       </h2>
@@ -14,7 +14,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="mb-12">
+    <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
         Core Skills
       </h2>
@@ -22,7 +22,7 @@
         <span
           v-for="skill in skills"
           :key="skill"
-          class="px-3 py-1 text-sm bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-full text-gray-700 dark:text-gray-300"
+          class="px-3 py-1 text-sm bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-full text-gray-700 dark:text-gray-300 interactive-lift"
         >
           {{ skill }}
         </span>
@@ -30,7 +30,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="mb-12">
+    <section class="mb-12 soft-enter soft-enter-delay-2">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
         Experience
       </h2>
@@ -44,7 +44,7 @@
     </section>
 
     <!-- Education Section -->
-    <section>
+    <section class="soft-enter soft-enter-delay-2">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
         Education
       </h2>
@@ -52,7 +52,7 @@
         <div
           v-for="(edu, index) in education"
           :key="index"
-          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
+          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 interactive-lift"
         >
           <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
