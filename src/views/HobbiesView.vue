@@ -36,7 +36,7 @@
     <!-- Tab Content -->
     <div class="hobby-content">
       <Transition name="hobby-swap">
-        <div :key="activeHobby.id" class="hobby-panel">
+        <div :key="activeHobby.id">
           <HobbyTab :hobby="activeHobby" />
         </div>
       </Transition>
@@ -121,10 +121,6 @@ const activeHobby = computed(() => {
   position: relative;
 }
 
-.hobby-panel {
-  width: 100%;
-}
-
 .hobby-swap-enter-active {
   transition: opacity 120ms var(--motion-ease-standard);
 }
@@ -138,10 +134,6 @@ const activeHobby = computed(() => {
   inset: 0;
   width: 100%;
   pointer-events: none;
-}
-
-.hobby-swap-leave-from,
-.hobby-swap-leave-to {
   opacity: 0;
 }
 </style>

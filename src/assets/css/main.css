@@ -59,31 +59,9 @@
       transform 300ms var(--motion-ease-standard);
   }
 
-  .route-swap-leave-active {
-    transition: none;
-  }
-
   .route-swap-enter-from {
     opacity: 0;
     transform: translateY(8px);
-  }
-
-  .route-swap-leave-to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .content-swap-enter-active,
-  .content-swap-leave-active {
-    transition:
-      opacity 250ms var(--motion-ease-standard),
-      transform 250ms var(--motion-ease-standard);
-  }
-
-  .content-swap-enter-from,
-  .content-swap-leave-to {
-    opacity: 0;
-    transform: translateY(6px);
   }
 
   .menu-enter-active,
