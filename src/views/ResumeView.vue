@@ -1,20 +1,20 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Summary Section -->
-    <section class="mb-12">
+    <section class="mb-12 soft-enter">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
         Summary
       </h2>
-      <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 p-6 rounded-lg">
+      <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 py-4 px-5 rounded-lg">
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Systems-minded security engineer with a builder's mindset and seven years of experience spanning QA, software engineering, and security.
-          I design secure pipelines and scalable processes, drive developer enablement programs, and advocate for security as a shared organizational responsibility.
+          Experienced engineer with seven years across product development, software engineering, and security.
+          As Technical Lead for Product Security at nCino, I own end-to-end security assessments, design developer-first security controls, and drive cross-team practices that reduce risk while preserving velocity.
         </p>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="mb-12">
+    <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
         Core Skills
       </h2>
@@ -22,7 +22,7 @@
         <span
           v-for="skill in skills"
           :key="skill"
-          class="px-3 py-1 text-sm bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-full text-gray-700 dark:text-gray-300"
+          class="px-3 py-1 text-sm bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-full text-gray-700 dark:text-gray-300 interactive-lift"
         >
           {{ skill }}
         </span>
@@ -30,7 +30,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="mb-12">
+    <section class="mb-12 soft-enter soft-enter-delay-2">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
         Experience
       </h2>
@@ -44,7 +44,7 @@
     </section>
 
     <!-- Education Section -->
-    <section>
+    <section class="soft-enter soft-enter-delay-2">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6">
         Education
       </h2>
@@ -52,7 +52,7 @@
         <div
           v-for="(edu, index) in education"
           :key="index"
-          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
+          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 interactive-lift"
         >
           <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
@@ -80,27 +80,17 @@ import TimelineItem from '../components/TimelineItem.vue'
 
 const skills = ref([
   'API Security',
-  'CI/CD',
-  'Dependency Management',
-  'Developer Enablement',
-  'GitHub Actions',
-  'GitHub Enterprise',
-  'GitLab CI/CD',
-  'JavaScript / Node.js',
   'OWASP Top 10',
+  'Application Security',
+  'CI/CD Pipeline Design & Security',
+  'Developer Enablement & Security Awareness',
+  'GitHub Actions & Workflow Automation',
+  'GitHub Enterprise Administration',
   'Penetration Testing',
-  'Product Security',
-  'SAST / DAST',
-  'SBOM Generation',
-  'SCA / License Compliance',
-  'Secrets Scanning',
-  'Security Engineering',
-  'Security Reviews & Assessments',
-  'Semgrep',
-  'Shift-Left Security',
-  'Sourcegraph',
-  'Third-Party Risk Management',
-  'Vulnerability Management',
+  'SAST / DAST / Secrets Scanning',
+  'SBOM & Software Supply Chain Security',
+  'Secure Software Development',
+  'Shift-Left Security Practices',
   'Web Accessibility (WCAG 2.0 AA)'
 ])
 
