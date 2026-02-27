@@ -22,7 +22,7 @@
         v-for="hobby in hobbies"
         :key="hobby.id"
         @click="activeTab = hobby.id"
-        class="px-4 py-2 text-sm font-medium transition-colors duration-200 interactive-lift"
+        class="px-4 py-2 text-sm font-medium transition-colors duration-[230ms] interactive-lift"
         :class="
           activeTab === hobby.id
             ? 'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400'
@@ -122,7 +122,7 @@ const activeHobby = computed(() => {
 }
 
 .hobby-swap-enter-active {
-  transition: opacity 120ms var(--motion-ease-standard);
+  transition: opacity 140ms var(--motion-ease-standard);
 }
 
 .hobby-swap-enter-from {

@@ -11,7 +11,7 @@
     ></div>
 
     <!-- Content card -->
-    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200 interactive-lift">
+    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-[230ms] interactive-lift">
       <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
         <div>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">

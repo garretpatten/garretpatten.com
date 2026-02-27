@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-200">
+  <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms]">
     <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
       {{ project.name }}
     </h3>
@@ -11,7 +11,7 @@
       :href="project.github"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 text-sm font-medium text-navy-600 dark:text-pine-400 hover:text-navy-800 dark:hover:text-pine-300 transition-colors duration-200"
+      class="inline-flex items-center gap-2 text-sm font-medium text-navy-600 dark:text-pine-400 hover:text-navy-800 dark:hover:text-pine-300 transition-colors duration-[230ms]"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

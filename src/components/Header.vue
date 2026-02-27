@@ -2,7 +2,7 @@
   <header ref="headerRef" class="border-b border-gray-200 dark:border-gray-800 mb-8 pb-6 relative z-20">
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
-      <router-link to="/" class="hover:opacity-80 transition-opacity duration-200">
+      <router-link to="/" class="hover:opacity-80 transition-opacity duration-[230ms]">
         <img
           src="/cropped-monogram-gray.png"
           alt="Garret Patten"
@@ -12,7 +12,7 @@
 
       <button
         @click="toggleMenu"
-          class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-pine-500 rounded-md transition-colors duration-200 relative z-50 interactive-lift"
+          class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-pine-500 rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
         aria-label="Toggle menu"
         aria-expanded="isMenuOpen"
       >
@@ -43,7 +43,7 @@
 
     <!-- Desktop Header: Logo and Nav -->
     <div class="hidden md:flex md:items-center md:justify-between gap-4">
-      <router-link to="/" class="hover:opacity-80 transition-opacity duration-200">
+      <router-link to="/" class="hover:opacity-80 transition-opacity duration-[230ms]">
         <img
           src="/cropped-monogram-gray.png"
           alt="Garret Patten"
@@ -56,7 +56,7 @@
           v-for="route in routes"
           :key="route.path"
           :to="route.path"
-          class="text-sm font-medium transition-colors duration-200 hover:text-navy-600 dark:hover:text-pine-400"
+          class="text-sm font-medium transition-colors duration-[230ms] hover:text-navy-600 dark:hover:text-pine-400"
           :class="{
             'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400': $route.path === route.path,
             'text-gray-600 dark:text-gray-400': $route.path !== route.path
@@ -68,7 +68,7 @@
           href="https://github.com/garretpatten"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-200"
+          class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
           aria-label="GitHub"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@
           href="https://www.linkedin.com/in/garretpatten"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-200"
+          class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
           aria-label="LinkedIn"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +114,7 @@
           :key="route.path"
           :to="route.path"
           @click="closeMenu"
-          class="text-xl font-medium transition-colors duration-200 py-3 text-center w-full"
+          class="text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full"
           :class="{
             'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400': $route.path === route.path,
             'text-gray-600 dark:text-gray-400': $route.path !== route.path
@@ -127,7 +127,7 @@
             href="https://github.com/garretpatten"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-200"
+            class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
             aria-label="GitHub"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +138,7 @@
             href="https://www.linkedin.com/in/garretpatten"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-200"
+            class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
             aria-label="LinkedIn"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

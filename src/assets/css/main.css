@@ -21,12 +21,12 @@
 @layer components {
   .interactive-lift {
     transition:
-      transform 220ms var(--motion-ease-standard),
-      box-shadow 220ms var(--motion-ease-standard),
-      border-color 220ms var(--motion-ease-standard),
-      background-color 220ms var(--motion-ease-standard),
-      color 220ms var(--motion-ease-standard),
-      opacity 220ms var(--motion-ease-standard);
+      transform 230ms var(--motion-ease-standard),
+      box-shadow 230ms var(--motion-ease-standard),
+      border-color 230ms var(--motion-ease-standard),
+      background-color 230ms var(--motion-ease-standard),
+      color 230ms var(--motion-ease-standard),
+      opacity 230ms var(--motion-ease-standard);
     transform: translateY(0) scale(1);
   }
 
@@ -39,15 +39,15 @@
   }
 
   .soft-enter {
-    animation: soft-enter 480ms var(--motion-ease-standard) both;
+    animation: soft-enter 580ms var(--motion-ease-standard) both;
   }
 
   .soft-enter-delay-1 {
-    animation-delay: 70ms;
+    animation-delay: 80ms;
   }
 
   .soft-enter-delay-2 {
-    animation-delay: 140ms;
+    animation-delay: 160ms;
   }
 }
 
@@ -55,8 +55,8 @@
 @layer utilities {
   .route-swap-enter-active {
     transition:
-      opacity 300ms var(--motion-ease-standard),
-      transform 300ms var(--motion-ease-standard);
+      opacity 370ms var(--motion-ease-standard),
+      transform 370ms var(--motion-ease-standard);
   }
 
   .route-swap-enter-from {
@@ -67,8 +67,8 @@
   .menu-enter-active,
   .menu-leave-active {
     transition:
-      opacity 180ms var(--motion-ease-standard),
-      transform 180ms var(--motion-ease-standard);
+      opacity 210ms var(--motion-ease-standard),
+      transform 210ms var(--motion-ease-standard);
   }
 
   .menu-enter-from,
@@ -79,7 +79,7 @@
 
   .backdrop-enter-active,
   .backdrop-leave-active {
-    transition: opacity 180ms var(--motion-ease-standard);
+    transition: opacity 210ms var(--motion-ease-standard);
   }
 
   .backdrop-enter-from,
