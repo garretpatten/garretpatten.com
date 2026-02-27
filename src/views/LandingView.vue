@@ -38,13 +38,13 @@
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <router-link
           to="/resume"
-          class="px-6 py-3 bg-navy-600 dark:bg-pine-500 text-white rounded-lg font-medium hover:bg-navy-700 dark:hover:bg-pine-600 transition-colors duration-200"
+          class="px-6 py-3 bg-navy-600 dark:bg-pine-500 text-white rounded-lg font-medium hover:bg-navy-700 dark:hover:bg-pine-600 transition-colors duration-[230ms]"
         >
           View Resume
         </router-link>
         <router-link
           to="/projects"
-          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-navy-600 dark:hover:border-pine-500 transition-colors duration-200"
+          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-navy-600 dark:hover:border-pine-500 transition-colors duration-[230ms]"
         >
           View Projects
         </router-link>
