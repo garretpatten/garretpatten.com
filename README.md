@@ -4,7 +4,7 @@ Personal portfolio site. Vue 3 + Vite + Tailwind CSS.
 
 ## Setup
 
-Requires Node.js 18+.
+Requires Node.js 20.19+ (or 22.12+).
 
 ```bash
 npm install
