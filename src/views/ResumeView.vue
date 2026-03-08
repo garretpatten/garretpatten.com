@@ -1,6 +1,5 @@
 <template>
   <div class="max-w-4xl mx-auto">
-
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
@@ -82,31 +81,38 @@ import { ref } from 'vue'
 import TimelineItem from '../components/TimelineItem.vue'
 
 const skills = ref([
-  'SSDLC',
+  'Apex',
+  'Application Security',
+  'CI/CD Pipeline Design & Security',
   'Cloud Computing',
-  'Product Development',
+  'CSS3',
+  'Developer Enablement & Security Awareness',
+  'DefectDojo',
+  'Docker',
   'Full-Stack Development',
-  'Software Supply Chain Security',
-  'Penetration Testing',
-  'Risk Mitigation',
-  'Threat Modeling',
-  'Security Orchestration',
+  'GitHub Actions & Workflow Automation',
+  'GitHub Enterprise Administration',
+  'GitLab Administration',
+  'HTML5',
   'JavaScript',
   'Node.js',
-  'Apex',
-  'VisualForce',
-  'HTML5',
-  'CSS3',
-  'React',
-  'GitHub Enterprise',
-  'GitLab',
-  'GitHub Actions',
-  'CI/CD',
+  'Opengrep',
   'Orca Security',
+  'OWASP Top 10',
+  'Penetration Testing',
+  'Product Development',
+  'Risk Mitigation',
+  'SAST / DAST / Secrets Scanning',
+  'SBOM & Software Supply Chain Security',
+  'Secure Software Development',
+  'Security Orchestration',
   'Semgrep',
+  'Shift-Left Security Practices',
+  'Software Supply Chain Security',
   'Sourcegraph',
-  'DefectDojo',
-  'Docker'
+  'SSDLC',
+  'Threat Modeling',
+  'VisualForce'
 ])
 
 const experience = ref([
