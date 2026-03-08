@@ -11,17 +11,24 @@
     ></div>
 
     <!-- Content card -->
-    <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 shadow-sm">
-      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+    <div
+      class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 shadow-sm"
+    >
+      <div
+        class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3"
+      >
         <div>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
             {{ item.role }}
           </h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">
-            {{ item.company }}<span v-if="item.location"> · {{ item.location }}</span>
+            {{ item.company
+            }}<span v-if="item.location"> · {{ item.location }}</span>
           </p>
         </div>
-        <span class="text-sm text-gray-500 dark:text-gray-500 whitespace-nowrap">
+        <span
+          class="text-sm text-gray-500 dark:text-gray-500 whitespace-nowrap"
+        >
           {{ item.start }} – {{ item.end }}
         </span>
       </div>
@@ -42,8 +49,7 @@
 defineProps({
   item: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
-
