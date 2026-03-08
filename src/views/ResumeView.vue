@@ -1,5 +1,6 @@
 <template>
   <div class="max-w-4xl mx-auto">
+
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
@@ -7,8 +8,7 @@
       </h2>
       <div class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 py-4 px-5 rounded-lg">
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Experienced engineer with seven years across product development, software engineering, and security.
-          As Technical Lead for Product Security at nCino, I own end-to-end security assessments, design developer-first security controls, and drive cross-team practices that reduce risk while preserving velocity.
+          Systems-oriented security leader with a builder's mindset and seven years of experience at a global, publicly traded FinTech leader. I architect secure pipelines, drive developer enablement, and scale security as a shared organizational responsibility. I bridge the gap between core product engineering and enterprise-grade security orchestration.
         </p>
       </div>
     </section>
@@ -16,13 +16,16 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
-        Core Skills
+        Skills
       </h2>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-3">
         <span
-          v-for="skill in skills"
+          v-for="(skill, index) in skills"
           :key="skill"
-          class="px-3 py-1 text-sm bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-full text-gray-700 dark:text-gray-300 interactive-lift"
+          :class="[
+            'rounded-full border text-sm font-medium text-gray-800 dark:text-gray-200',
+            getSkillBubbleClass(index)
+          ]"
         >
           {{ skill }}
         </span>
@@ -52,7 +55,7 @@
         <div
           v-for="(edu, index) in education"
           :key="index"
-          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 interactive-lift"
+          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
         >
           <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
@@ -79,90 +82,100 @@ import { ref } from 'vue'
 import TimelineItem from '../components/TimelineItem.vue'
 
 const skills = ref([
-  'API Security',
-  'OWASP Top 10',
-  'Application Security',
-  'CI/CD Pipeline Design & Security',
-  'Developer Enablement & Security Awareness',
-  'GitHub Actions & Workflow Automation',
-  'GitHub Enterprise Administration',
+  'SSDLC',
+  'Cloud Computing',
+  'Product Development',
+  'Full-Stack Development',
+  'Software Supply Chain Security',
   'Penetration Testing',
-  'SAST / DAST / Secrets Scanning',
-  'SBOM & Software Supply Chain Security',
-  'Secure Software Development',
-  'Shift-Left Security Practices',
-  'Web Accessibility (WCAG 2.0 AA)'
+  'Risk Mitigation',
+  'Threat Modeling',
+  'Security Orchestration',
+  'JavaScript',
+  'Node.js',
+  'Apex',
+  'VisualForce',
+  'HTML5',
+  'CSS3',
+  'React',
+  'GitHub Enterprise',
+  'GitLab',
+  'GitHub Actions',
+  'CI/CD',
+  'Orca Security',
+  'Semgrep',
+  'Sourcegraph',
+  'DefectDojo',
+  'Docker'
 ])
 
 const experience = ref([
   {
     role: 'Senior Security Engineer',
     company: 'nCino, Inc.',
-    location: 'Remote',
-    start: 'Jun 2024',
-    end: 'Present',
+    start: "June '24",
+    end: 'Current',
     bullets: [
-      'Technical lead for Product Security on a 4-person team; own prioritization of security assessments, coordinate deliverables across product and infrastructure, and serve as primary technical escalation point.',
-      'Co-drive team roadmap and participate in hiring for security engineering roles; serve as senior point of contact during manager absences.',
-      'Administer multi-org GitHub Enterprise (1k+ repos) and build automations with Actions/workflows for SAST, secrets scanning, docs publishing, repo provisioning, and team management.',
-      'Implement SBOM generation and dependency management using the Orca platform.',
-      'Built a GitHub Action/pipeline to enforce third-party Node.js license policy against legal allow/deny lists.',
-      'Co-manage GitLab instance and security pipelines.',
-      'Lead security reviews across products and infrastructure, partnering with engineering leadership to embed shift-left security practices and reduce defects reaching production.',
-      'Drive security awareness org-wide through monthly technical content on OWASP Top 10 and API security, establishing Product Security as a developer enablement function.'
+      'Strategic Technical Leadership: Lead Product Security for a 4-person team to prioritize security assessments and synchronize deliverables across global divisions.',
+      'Roadmap and Executive Support: Co-author the security engineering roadmap and serve as the primary technical escalation point and acting lead.',
+      'Enterprise Security Orchestration: Architected automated security governance for 1,000+ repositories via GitHub Actions to enforce SSDLC standards and automated provisioning.',
+      'Supply Chain Integrity: Hardened the software supply chain through SBOM generation and automated dependency management via Orca.',
+      'Policy as Code: Engineered automated pipelines to enforce Node.js license compliance, which mitigated regulatory and compliance friction.',
+      'Shift-Left Advocacy: Lead complex security reviews across diverse product lines to embed security champions and eliminate vulnerabilities pre-production.'
     ]
   },
   {
     role: 'Security Engineer',
     company: 'nCino, Inc.',
-    location: 'Wilmington, NC',
     start: 'May 2022',
-    end: 'Jun 2024',
+    end: "June '24",
     bullets: [
-      'Established org-wide CI/CD code ownership enforcement.',
-      'Rolled out static analysis and secrets scanning with real-time alerting.',
-      'Deployed Sourcegraph and DefectDojo to drive vulnerability insights and code-health metrics.',
-      'Authored and open-sourced a Semgrep ruleset for Salesforce Apex/VisualForce.',
-      'Conducted penetration tests on products and the corporate site.',
-      'Drove developer enablement via Product Security office hours and support channel, building trust with engineering teams and scaling security consultation without proportional headcount.'
+      'CI/CD Governance: Established enterprise-wide code ownership enforcement within CI/CD pipelines to ensure rigorous peer-reviewed deployments.',
+      'Data-Driven Security: Deployed Sourcegraph and DefectDojo to centralize security insights and drive executive-level, data-backed code-health metrics.',
+      'Open Source Contribution: Authored and open-sourced a Semgrep ruleset for Salesforce Apex/VisualForce to address critical ecosystem vulnerabilities.',
+      'Offensive Operations: Conducted targeted penetration tests on core products and corporate web assets to remediate high-impact attack vectors.',
+      'Scalable Consultation: Launched security office hours and support channels to scale expert consultation across the organization without increasing headcount.'
     ]
   },
   {
     role: 'Software Engineer',
     company: 'nCino, Inc.',
-    location: 'Wilmington, NC',
     start: 'Feb 2020',
     end: 'May 2022',
     bullets: [
-      'Drove Customer Engagement toward near full WCAG 2.0 AA compliance through iterative audits and remediation.',
-      'Led design and rollout of external permissions management, reducing manual config and enforcing least privilege.',
-      'Contributed to design and delivery of an Integration Type package.',
-      'Implemented features spanning credit pulls, deposit funding, ID document scanning, and SSO with enhanced JIT; shipped security and accessibility epics.',
-      'Codified accessible development standards in the Development Guide.',
-      'Mentored junior engineers on secure development practices and accessibility standards during rapid team scaling.'
+      'High-Scale Product Architecture: Developed mission-critical features for a global production platform used by the world\'s largest financial institutions.',
+      'Global Impact: Engineered the primary application that millions of business owners used to maintain operations during the COVID-19 pandemic.',
+      'Access Control Design: Designed and deployed external permissions management systems that enforced least privilege and reduced manual configuration.',
+      'Inclusive Engineering: Led the transition to WCAG 2.0 AA compliance and codified accessibility standards into the global development guide.',
+      'Engineering Mentorship: Guided junior engineers through rapid organizational scaling with a focus on secure development and scalable architecture.'
     ]
   },
   {
-    role: 'Associate Software Engineer',
+    role: 'Associate Software Engineer / QA Intern',
     company: 'nCino, Inc.',
-    location: 'Wilmington, NC',
-    start: 'Jun 2018',
-    end: 'Feb 2020',
-    bullets: [
-      'Led analysis and implementation of critical security updates.',
-      'Contributed to feature development and system maintenance.',
-      'Researched and evaluated potential technical solutions.'
-    ]
+    start: "June '17",
+    end: "Feb '20",
+    bullets: []
   }
 ])
 
 const education = ref([
   {
-    school: 'Boston College',
-    degree: 'B.S. in Business Management (Finance); Minor in Computer Science',
-    end: '2018',
-    details: 'Activities: Accelerate@Shea, BC Bigs (Big Brothers Big Sisters) Student Leader, Computer Science Society, Information Systems Academy, Investment Club'
+    school: 'Boston College, Carroll School of Management',
+    degree: 'Bachelor of Science in Business Management; Concentration in Finance; Minor in Computer Science',
+    end: "Aug '14 - May '18"
   }
 ])
+
+const bubbleTones = [
+  'bg-navy-50 dark:bg-gray-800 border-navy-200 dark:border-navy-700',
+  'bg-pine-50 dark:bg-gray-800 border-pine-200 dark:border-pine-700',
+  'bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-700'
+]
+
+const bubbleSizes = ['px-3 py-1', 'px-4 py-1.5', 'px-3.5 py-1.5']
+
+const getSkillBubbleClass = (index) =>
+  `${bubbleTones[index % bubbleTones.length]} ${bubbleSizes[index % bubbleSizes.length]}`
 </script>
 
