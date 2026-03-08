@@ -1,38 +1,46 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Garret Patten</title>
-  <meta name="description" content="Garret Patten — Senior Security Engineer. CI/CD hardening, accessibility, secure systems." />
-  <meta property="og:title" content="Garret Patten" />
-  <meta property="og:description" content="Security engineer focused on CI/CD hardening, code ownership, and web accessibility." />
-  <meta property="og:type" content="website" />
-  <meta name="color-scheme" content="light dark" />
-  <style>
-    html, body {
-      margin: 0;
-      background-color: #f9fafb;
-    }
-
-    html.dark, html.dark body {
-      background-color: #111827;
-    }
-  </style>
-  <script>
-    (() => {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.classList.add('dark')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garret Patten</title>
+    <meta
+      name="description"
+      content="Garret Patten — Senior Security Engineer. CI/CD hardening, accessibility, secure systems."
+    />
+    <meta property="og:title" content="Garret Patten" />
+    <meta
+      property="og:description"
+      content="Security engineer focused on CI/CD hardening, code ownership, and web accessibility."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="color-scheme" content="light dark" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background-color: #f9fafb;
       }
-    })()
-  </script>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-</head>
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-</body>
+
+      html.dark,
+      html.dark body {
+        background-color: #111827;
+      }
+    </style>
+    <script>
+      (() => {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

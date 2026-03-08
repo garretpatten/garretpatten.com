@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms]">
+  <div
+    class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms]"
+  >
     <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
       {{ project.name }}
     </h3>
@@ -32,8 +34,7 @@
 defineProps({
   project: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
-
