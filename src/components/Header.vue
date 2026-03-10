@@ -1,7 +1,7 @@
 <template>
   <header
     ref="headerRef"
-    class="border-b border-cobalt-200/80 dark:border-cobalt-800/80 mb-8 pb-6 relative z-20 bg-white/70 dark:bg-[#282c34]/80 backdrop-blur-sm rounded-xl px-4 py-3"
+    class="mb-8 pb-6 relative z-20 px-4 py-3"
   >
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
