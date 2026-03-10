@@ -8,7 +8,7 @@
       :pause-autoplay-on-hover="true"
       class="projects-carousel mb-12 soft-enter"
     >
-      <Slide v-for="(project, index) in projects" :key="index">
+      <Slide v-for="project in projects" :key="project.name">
         <div class="px-2">
           <ProjectCard :project="project" />
         </div>
@@ -97,7 +97,6 @@ onUnmounted(() => {
   window.removeEventListener("resize", updateItemsToShow);
 });
 
-// Placeholder projects - replace with real content
 const projects = ref([
   {
     name: "Arch Setup Scripts",

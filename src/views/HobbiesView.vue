@@ -48,7 +48,7 @@ import HobbyTab from "../components/HobbyTab.vue";
 
 const activeTab = ref("genealogy");
 
-const hobbies = ref([
+const hobbies = [
   {
     id: "genealogy",
     title: "Genealogy Research",
@@ -103,12 +103,10 @@ const hobbies = ref([
       "Essentialism: The Disciplined Pursuit of Less by Greg McKeown — A powerful framework for focusing on what truly matters.",
     ],
   },
-]);
+];
 
 const activeHobby = computed(() => {
-  return (
-    hobbies.value.find((h) => h.id === activeTab.value) || hobbies.value[0]
-  );
+  return hobbies.find((h) => h.id === activeTab.value) || hobbies[0];
 });
 </script>
 

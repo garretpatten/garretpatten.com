@@ -3,22 +3,22 @@ import { ref } from "vue";
 
 export const useThemeStore = defineStore("theme", () => {
   const isDark = ref(false);
+  let isInitialized = false;
 
   const applyTheme = () => {
-    if (isDark.value) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", isDark.value);
   };
 
   const initTheme = () => {
+    if (isInitialized) return;
+    isInitialized = true;
+
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     isDark.value = mq.matches;
     applyTheme();
 
-    mq.addEventListener("change", (e) => {
-      isDark.value = e.matches;
+    mq.addEventListener("change", (event) => {
+      isDark.value = event.matches;
       applyTheme();
     });
   };
