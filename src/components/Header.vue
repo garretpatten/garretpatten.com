@@ -1,7 +1,7 @@
 <template>
   <header
     ref="headerRef"
-    class="border-b border-gray-200 dark:border-gray-800 mb-8 pb-6 relative z-20"
+    class="border-b border-cobalt-200/80 dark:border-cobalt-800/80 mb-8 pb-6 relative z-20 bg-white/70 dark:bg-[#282c34]/80 backdrop-blur-sm rounded-xl px-4 py-3"
   >
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
@@ -18,7 +18,7 @@
 
       <button
         @click="toggleMenu"
-        class="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-600 dark:focus:ring-pine-500 rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
+        class="p-2 text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 focus:outline-none focus:ring-2 focus:ring-cobalt-600 dark:focus:ring-cobalt-400 rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
         aria-label="Toggle menu"
         aria-expanded="isMenuOpen"
       >
@@ -65,11 +65,11 @@
           v-for="route in routes"
           :key="route.path"
           :to="route.path"
-          class="text-sm font-medium transition-colors duration-[230ms] hover:text-navy-600 dark:hover:text-pine-400"
+          class="text-sm font-medium transition-colors duration-[230ms] hover:text-cobalt-700 dark:hover:text-cobalt-300"
           :class="{
-            'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400':
+            'text-cobalt-700 dark:text-cobalt-300 border-b-2 border-cobalt-600 dark:border-cobalt-400':
               $route.path === route.path,
-            'text-gray-600 dark:text-gray-400': $route.path !== route.path,
+            'text-gray-700 dark:text-gray-300': $route.path !== route.path,
           }"
         >
           {{ route.name }}
@@ -78,7 +78,7 @@
           href="https://github.com/garretpatten"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
+          class="text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 transition-colors duration-[230ms]"
           aria-label="GitHub"
         >
           <svg
@@ -96,7 +96,7 @@
           href="https://www.linkedin.com/in/garretpatten"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
+          class="text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 transition-colors duration-[230ms]"
           aria-label="LinkedIn"
         >
           <svg
@@ -133,7 +133,7 @@
         top: `${headerBottom}px`,
         height: `calc(100vh - ${headerBottom}px)`,
       }"
-      class="fixed right-0 w-[80%] bg-white dark:bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-200 dark:border-gray-800"
+      class="fixed right-0 w-[80%] bg-white dark:bg-[#282c34] shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
     >
       <div class="flex flex-col items-center gap-4 pt-8 px-6 pb-6">
         <router-link
@@ -143,9 +143,9 @@
           @click="closeMenu"
           class="text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full"
           :class="{
-            'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400':
+            'text-cobalt-700 dark:text-cobalt-300 border-b-2 border-cobalt-600 dark:border-cobalt-400':
               $route.path === route.path,
-            'text-gray-600 dark:text-gray-400': $route.path !== route.path,
+            'text-gray-700 dark:text-gray-300': $route.path !== route.path,
           }"
         >
           {{ route.name }}
@@ -155,7 +155,7 @@
             href="https://github.com/garretpatten"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
+            class="text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 transition-colors duration-[230ms]"
             aria-label="GitHub"
           >
             <svg
@@ -173,7 +173,7 @@
             href="https://www.linkedin.com/in/garretpatten"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-gray-600 dark:text-gray-400 hover:text-navy-600 dark:hover:text-pine-400 transition-colors duration-[230ms]"
+            class="text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 transition-colors duration-[230ms]"
             aria-label="LinkedIn"
           >
             <svg

@@ -1,10 +1,10 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Mobile: Dropdown Navigation -->
-    <div class="md:hidden mb-6">
+    <div class="md:hidden mb-6 soft-enter">
       <select
         v-model="activeTab"
-        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-500 dark:focus:ring-pine-500 interactive-lift"
+        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-[#282c34] border border-cobalt-200 dark:border-cobalt-800 rounded-lg text-cobalt-900 dark:text-cobalt-100 focus:outline-none focus:ring-2 focus:ring-cobalt-500 dark:focus:ring-cobalt-300 interactive-lift"
       >
         <option v-for="hobby in hobbies" :key="hobby.id" :value="hobby.id">
           {{ hobby.title }}
@@ -14,7 +14,7 @@
 
     <!-- Desktop: Tab Navigation -->
     <div
-      class="hidden md:flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800"
+      class="hidden md:flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800 soft-enter soft-enter-delay-1"
     >
       <button
         v-for="hobby in hobbies"
@@ -23,8 +23,8 @@
         class="px-4 py-2 text-sm font-medium transition-colors duration-[230ms] interactive-lift"
         :class="
           activeTab === hobby.id
-            ? 'text-navy-600 dark:text-pine-400 border-b-2 border-navy-600 dark:border-pine-400'
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+            ? 'text-cobalt-700 dark:text-cobalt-300 border-b-2 border-cobalt-600 dark:border-cobalt-400'
+            : 'text-iris-700 dark:text-iris-300 hover:text-cobalt-700 dark:hover:text-cobalt-300'
         "
       >
         {{ hobby.title }}
@@ -33,7 +33,7 @@
 
     <!-- Tab Content -->
     <div class="hobby-content">
-      <Transition name="hobby-swap">
+      <Transition name="hobby-swap" mode="out-in">
         <div :key="activeHobby.id">
           <HobbyTab :hobby="activeHobby" />
         </div>
@@ -118,7 +118,7 @@ const activeHobby = computed(() => {
 }
 
 .hobby-swap-enter-active {
-  transition: opacity 140ms var(--motion-ease-standard);
+  transition: opacity 220ms var(--motion-ease-standard);
 }
 
 .hobby-swap-enter-from {
@@ -126,10 +126,15 @@ const activeHobby = computed(() => {
 }
 
 .hobby-swap-leave-active {
-  position: absolute;
-  inset: 0;
-  width: 100%;
+  transition: opacity 120ms linear;
   pointer-events: none;
+}
+
+.hobby-swap-leave-from {
+  opacity: 1;
+}
+
+.hobby-swap-leave-to {
   opacity: 0;
 }
 </style>

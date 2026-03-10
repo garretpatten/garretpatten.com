@@ -3,12 +3,12 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4"
+        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-4"
       >
         Summary
       </h2>
       <div
-        class="bg-gray-50 dark:bg-gray-900 border-l-4 border-navy-600 dark:border-pine-500 py-4 px-5 rounded-lg"
+        class="bg-cobalt-50/70 dark:bg-cobalt-900/20 border-l-4 border-cobalt-700 dark:border-cobalt-400 py-4 px-5 rounded-lg"
       >
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
           Systems-oriented security leader with a builder's mindset and seven
@@ -24,7 +24,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4"
+        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-4"
       >
         Skills
       </h2>
@@ -33,7 +33,7 @@
           v-for="(skill, index) in skills"
           :key="skill"
           :class="[
-            'rounded-full border text-sm font-medium text-gray-800 dark:text-gray-200',
+            'rounded-full border text-sm font-medium',
             getSkillBubbleClass(index),
           ]"
         >
@@ -43,9 +43,9 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="mb-12 soft-enter soft-enter-delay-2">
+    <section class="mb-12">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
       >
         Experience
       </h2>
@@ -61,7 +61,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-sun-700 dark:text-sun-300 mb-6"
       >
         Education
       </h2>
@@ -197,9 +197,10 @@ const education = ref([
 ]);
 
 const bubbleTones = [
-  "bg-navy-50 dark:bg-gray-800 border-navy-200 dark:border-navy-700",
-  "bg-pine-50 dark:bg-gray-800 border-pine-200 dark:border-pine-700",
-  "bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-700",
+  "bg-cobalt-50 dark:bg-cobalt-900/30 border-cobalt-200 dark:border-cobalt-700 text-cobalt-800 dark:text-cobalt-200",
+  "bg-iris-50 dark:bg-iris-900/30 border-iris-200 dark:border-iris-700 text-iris-800 dark:text-iris-200",
+  "bg-forest-50 dark:bg-forest-900/30 border-forest-200 dark:border-forest-700 text-forest-800 dark:text-forest-200",
+  "bg-sun-50 dark:bg-sun-900/30 border-sun-200 dark:border-sun-700 text-sun-800 dark:text-sun-200",
 ];
 
 const bubbleSizes = ["px-3 py-1", "px-4 py-1.5", "px-3.5 py-1.5"];

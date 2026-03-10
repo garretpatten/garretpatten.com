@@ -4,6 +4,7 @@
 
 :root {
   --motion-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
 }
 
 /* Custom base styles */
@@ -39,7 +40,7 @@
   }
 
   .soft-enter {
-    animation: soft-enter 580ms var(--motion-ease-standard) both;
+    animation: soft-enter 520ms var(--motion-ease-emphasized) both;
   }
 
   .soft-enter-delay-1 {
@@ -55,20 +56,20 @@
 @layer utilities {
   .route-swap-enter-active {
     transition:
-      opacity 370ms var(--motion-ease-standard),
-      transform 370ms var(--motion-ease-standard);
+      opacity 420ms var(--motion-ease-standard),
+      transform 420ms var(--motion-ease-standard);
   }
 
   .route-swap-enter-from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(12px);
   }
 
   .menu-enter-active,
   .menu-leave-active {
     transition:
-      opacity 210ms var(--motion-ease-standard),
-      transform 210ms var(--motion-ease-standard);
+      opacity 260ms var(--motion-ease-standard),
+      transform 260ms var(--motion-ease-standard);
   }
 
   .menu-enter-from,
@@ -112,5 +113,13 @@
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .soft-enter,
+  .soft-enter-delay-1,
+  .soft-enter-delay-2 {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
   }
 }

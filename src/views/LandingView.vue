@@ -28,7 +28,9 @@
       class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2"
     >
       <div class="text-center">
-        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">
+        <div
+          class="text-3xl font-bold text-forest-700 dark:text-forest-300 mb-2"
+        >
           7+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -36,7 +38,7 @@
         </div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">
+        <div class="text-3xl font-bold text-iris-700 dark:text-iris-300 mb-2">
           3,000+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -44,7 +46,9 @@
         </div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">
+        <div
+          class="text-3xl font-bold text-sun-700 dark:text-sun-300 mb-2"
+        >
           300+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -58,13 +62,13 @@
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <router-link
           to="/resume"
-          class="px-6 py-3 bg-navy-600 dark:bg-pine-500 text-white rounded-lg font-medium hover:bg-navy-700 dark:hover:bg-pine-600 transition-colors duration-[230ms]"
+          class="px-6 py-3 bg-cobalt-700 dark:bg-cobalt-600 text-white rounded-lg font-medium hover:bg-cobalt-800 dark:hover:bg-cobalt-700 transition-colors duration-[230ms]"
         >
           View Resume
         </router-link>
         <router-link
           to="/projects"
-          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-navy-600 dark:hover:border-pine-500 transition-colors duration-[230ms]"
+          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-cobalt-600 dark:hover:border-cobalt-400 transition-colors duration-[230ms]"
         >
           View Projects
         </router-link>

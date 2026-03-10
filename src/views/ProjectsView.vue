@@ -25,29 +25,39 @@
       class="text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1"
     >
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
       >
         Engineering Philosophy
       </h2>
       <div class="space-y-4">
-        <div class="text-gray-700 dark:text-gray-300">
-          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
+        <div
+          class="text-gray-700 dark:text-gray-300 bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4"
+        >
+          <p
+            class="text-lg font-medium text-cobalt-800 dark:text-cobalt-200 mb-1"
+          >
             Simplicity is the apex of design
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">
             Complexity signals incomplete understanding.
           </p>
         </div>
-        <div class="text-gray-700 dark:text-gray-300">
-          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
+        <div
+          class="text-gray-700 dark:text-gray-300 bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4"
+        >
+          <p class="text-lg font-medium text-iris-800 dark:text-iris-200 mb-1">
             Outcomes are the objective
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">
             Implementations are transient and disposable.
           </p>
         </div>
-        <div class="text-gray-700 dark:text-gray-300">
-          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
+        <div
+          class="text-gray-700 dark:text-gray-300 bg-sun-50/70 dark:bg-sun-900/20 border border-sun-200 dark:border-sun-800 rounded-lg p-4"
+        >
+          <p
+            class="text-lg font-medium text-sun-800 dark:text-sun-200 mb-1"
+          >
             Quality is a prerequisite
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">
@@ -142,12 +152,12 @@ const projects = ref([
 /* Custom carousel navigation and pagination styling */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
+  color: rgb(52, 103, 146); /* cobalt-700 - #346792 */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(6, 30, 41); /* pine-900 - #061E29 */
+  color: rgb(140, 203, 255); /* cobalt-300 - #8CCBFF */
 }
 
 :deep(.carousel__pagination-button) {
@@ -159,10 +169,10 @@ const projects = ref([
 }
 
 :deep(.carousel__pagination-button--active) {
-  background-color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
+  background-color: rgb(114, 68, 127); /* iris-700 - #72447F */
 }
 
 .dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(6, 30, 41); /* pine-900 - #061E29 */
+  background-color: rgb(246, 211, 142); /* sun-300 - #F6D38E */
 }
 </style>

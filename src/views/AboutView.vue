@@ -4,12 +4,12 @@
       <img
         src="/assets/images/garret-patten.jpg"
         alt="Garret Patten"
-        class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover border-2 border-gray-200 dark:border-gray-800"
+        class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover border-4 border-cobalt-300 dark:border-cobalt-700 shadow-[0_0_0_6px_rgba(97,175,239,0.14)] dark:shadow-[0_0_0_6px_rgba(97,175,239,0.24)]"
       />
     </div>
 
     <div
-      class="prose prose-lg dark:prose-invert max-w-none soft-enter soft-enter-delay-1"
+      class="prose prose-lg dark:prose-invert max-w-none bg-white/75 dark:bg-[#282c34]/80 border border-iris-200 dark:border-iris-800 rounded-xl p-6 md:p-8 soft-enter soft-enter-delay-1"
     >
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
         I grew up on the Jersey Shore in the New York City metro area. At
