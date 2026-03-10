@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Summary Section -->
-    <section class="mb-12 soft-enter">
+    <section v-reveal class="mb-12">
       <h2
         class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4"
       >
@@ -22,7 +22,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="mb-12 soft-enter soft-enter-delay-1">
+    <section v-reveal="{ delay: 80 }" class="mb-12">
       <h2
         class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4"
       >
@@ -43,7 +43,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="mb-12 soft-enter soft-enter-delay-2">
+    <section class="mb-12">
       <h2
         class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6"
       >
@@ -54,12 +54,14 @@
           v-for="(exp, index) in experience"
           :key="index"
           :item="exp"
+          :delay="index * 70"
+          :peek="index === 0"
         />
       </div>
     </section>
 
     <!-- Education Section -->
-    <section class="soft-enter soft-enter-delay-2">
+    <section v-reveal="{ delay: 160 }">
       <h2
         class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6"
       >
@@ -69,6 +71,7 @@
         <div
           v-for="(edu, index) in education"
           :key="index"
+          v-reveal="{ delay: index * 70 }"
           class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
         >
           <div

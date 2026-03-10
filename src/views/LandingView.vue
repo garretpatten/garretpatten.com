@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Hero Section -->
-    <section class="text-center mb-16 md:mb-16 soft-enter">
+    <section v-reveal class="text-center mb-16 md:mb-16">
       <h1
         class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4"
       >
@@ -13,7 +13,7 @@
     </section>
 
     <!-- Value Proposition -->
-    <section class="mb-16 soft-enter soft-enter-delay-1">
+    <section v-reveal="{ delay: 80 }" class="mb-16">
       <p
         class="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-2xl mx-auto"
       >
@@ -24,9 +24,7 @@
     </section>
 
     <!-- Key Highlights -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2"
-    >
+    <section v-reveal="{ delay: 140 }" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
       <div class="text-center">
         <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">
           7+
@@ -54,7 +52,7 @@
     </section>
 
     <!-- Calls to Action -->
-    <section class="text-center mb-16 soft-enter soft-enter-delay-2">
+    <section v-reveal="{ delay: 180 }" class="text-center mb-16">
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <router-link
           to="/resume"

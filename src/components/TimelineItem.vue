@@ -1,5 +1,9 @@
 <template>
-  <div class="relative pl-8 pb-8 last:pb-0">
+  <div
+    v-reveal="{ delay, distance: 14 }"
+    class="relative pl-8 pb-8 last:pb-0"
+    :class="{ 'reveal-peek': peek }"
+  >
     <!-- Timeline line -->
     <div
       class="absolute left-3 top-6 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 last:hidden"
@@ -51,5 +55,20 @@ defineProps({
     type: Object,
     required: true,
   },
+  delay: {
+    type: Number,
+    default: 0,
+  },
+  peek: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
+
+<style scoped>
+.reveal.reveal-peek:not(.reveal-visible) {
+  opacity: 0.4;
+  transform: translate3d(0, 10px, 0);
+}
+</style>

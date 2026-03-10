@@ -4,6 +4,7 @@
 
 :root {
   --motion-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
 }
 
 /* Custom base styles */
@@ -38,16 +39,32 @@
     transform: translateY(0) scale(0.99);
   }
 
-  .soft-enter {
-    animation: soft-enter 580ms var(--motion-ease-standard) both;
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, var(--reveal-distance, 18px), 0);
+    transition:
+      opacity var(--reveal-duration, 640ms) var(--motion-ease-emphasized)
+        var(--reveal-delay, 0ms),
+      transform var(--reveal-duration, 640ms) var(--motion-ease-emphasized)
+        var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
   }
 
-  .soft-enter-delay-1 {
-    animation-delay: 80ms;
+  .reveal[data-reveal-origin="top"] {
+    transform: translate3d(0, calc(var(--reveal-distance, 18px) * -1), 0);
   }
 
-  .soft-enter-delay-2 {
-    animation-delay: 160ms;
+  .reveal[data-reveal-origin="left"] {
+    transform: translate3d(calc(var(--reveal-distance, 18px) * -1), 0, 0);
+  }
+
+  .reveal[data-reveal-origin="right"] {
+    transform: translate3d(var(--reveal-distance, 18px), 0, 0);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -55,20 +72,20 @@
 @layer utilities {
   .route-swap-enter-active {
     transition:
-      opacity 370ms var(--motion-ease-standard),
-      transform 370ms var(--motion-ease-standard);
+      opacity 420ms var(--motion-ease-standard),
+      transform 420ms var(--motion-ease-standard);
   }
 
   .route-swap-enter-from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(12px);
   }
 
   .menu-enter-active,
   .menu-leave-active {
     transition:
-      opacity 210ms var(--motion-ease-standard),
-      transform 210ms var(--motion-ease-standard);
+      opacity 260ms var(--motion-ease-standard),
+      transform 260ms var(--motion-ease-standard);
   }
 
   .menu-enter-from,
@@ -88,18 +105,6 @@
   }
 }
 
-@keyframes soft-enter {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -112,5 +117,11 @@
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-visible {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

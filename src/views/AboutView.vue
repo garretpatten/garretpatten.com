@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-3xl mx-auto">
-    <div class="mb-8 soft-enter">
+    <div v-reveal class="mb-8">
       <img
         src="/assets/images/garret-patten.jpg"
         alt="Garret Patten"
@@ -9,7 +9,8 @@
     </div>
 
     <div
-      class="prose prose-lg dark:prose-invert max-w-none soft-enter soft-enter-delay-1"
+      v-reveal="{ delay: 80 }"
+      class="prose prose-lg dark:prose-invert max-w-none"
     >
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
         I grew up on the Jersey Shore in the New York City metro area. At

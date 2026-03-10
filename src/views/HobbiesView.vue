@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Mobile: Dropdown Navigation -->
-    <div class="md:hidden mb-6">
+    <div v-reveal class="md:hidden mb-6">
       <select
         v-model="activeTab"
         class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-navy-500 dark:focus:ring-pine-500 interactive-lift"
@@ -14,6 +14,7 @@
 
     <!-- Desktop: Tab Navigation -->
     <div
+      v-reveal="{ delay: 60 }"
       class="hidden md:flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800"
     >
       <button
@@ -34,7 +35,7 @@
     <!-- Tab Content -->
     <div class="hobby-content">
       <Transition name="hobby-swap">
-        <div :key="activeHobby.id">
+        <div :key="activeHobby.id" v-reveal="{ delay: 40, distance: 14 }">
           <HobbyTab :hobby="activeHobby" />
         </div>
       </Transition>
@@ -118,11 +119,14 @@ const activeHobby = computed(() => {
 }
 
 .hobby-swap-enter-active {
-  transition: opacity 140ms var(--motion-ease-standard);
+  transition:
+    opacity 260ms var(--motion-ease-standard),
+    transform 260ms var(--motion-ease-standard);
 }
 
 .hobby-swap-enter-from {
   opacity: 0;
+  transform: translateY(8px);
 }
 
 .hobby-swap-leave-active {
