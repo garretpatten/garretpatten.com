@@ -24,9 +24,13 @@
     </section>
 
     <!-- Key Highlights -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2">
+    <section
+      class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2"
+    >
       <div class="text-center">
-        <div class="text-3xl font-bold text-cobalt-700 dark:text-cobalt-300 mb-2">
+        <div
+          class="text-3xl font-bold text-cobalt-700 dark:text-cobalt-300 mb-2"
+        >
           7+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -42,7 +46,9 @@
         </div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300 mb-2">
+        <div
+          class="text-3xl font-bold text-forest-700 dark:text-forest-300 mb-2"
+        >
           300+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">

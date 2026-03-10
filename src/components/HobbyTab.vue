@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="rounded-lg p-6"
-    :class="getHobbySurfaceClass(hobby.id)"
-  >
+  <div class="rounded-lg p-6" :class="getHobbySurfaceClass(hobby.id)">
     <h3
       class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2"
     >
@@ -138,11 +135,16 @@ const hobbyAccentClasses = {
 };
 
 const hobbySurfaceClasses = {
-  reading: "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
-  genealogy: "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
-  systems: "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
-  music: "bg-iris-50/65 dark:bg-iris-900/30 border border-iris-200 dark:border-iris-800",
-  journaling: "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
+  reading:
+    "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
+  genealogy:
+    "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
+  systems:
+    "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
+  music:
+    "bg-iris-50/65 dark:bg-iris-900/30 border border-iris-200 dark:border-iris-800",
+  journaling:
+    "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
 };
 
 const getHobbyAccentClass = (id) =>

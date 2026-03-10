@@ -21,22 +21,30 @@
     </Carousel>
 
     <!-- Engineering Philosophy -->
-    <section class="text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1">
+    <section
+      class="text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1"
+    >
       <h2
         class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
       >
         Engineering Philosophy
       </h2>
       <div class="space-y-4">
-        <div class="text-gray-700 dark:text-gray-300 bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4">
-          <p class="text-lg font-medium text-cobalt-800 dark:text-cobalt-200 mb-1">
+        <div
+          class="text-gray-700 dark:text-gray-300 bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4"
+        >
+          <p
+            class="text-lg font-medium text-cobalt-800 dark:text-cobalt-200 mb-1"
+          >
             Simplicity is the apex of design
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">
             Complexity signals incomplete understanding.
           </p>
         </div>
-        <div class="text-gray-700 dark:text-gray-300 bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4">
+        <div
+          class="text-gray-700 dark:text-gray-300 bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4"
+        >
           <p class="text-lg font-medium text-iris-800 dark:text-iris-200 mb-1">
             Outcomes are the objective
           </p>
@@ -44,8 +52,12 @@
             Implementations are transient and disposable.
           </p>
         </div>
-        <div class="text-gray-700 dark:text-gray-300 bg-forest-50/60 dark:bg-forest-900/20 border border-forest-200 dark:border-forest-800 rounded-lg p-4">
-          <p class="text-lg font-medium text-forest-800 dark:text-forest-200 mb-1">
+        <div
+          class="text-gray-700 dark:text-gray-300 bg-forest-50/60 dark:bg-forest-900/20 border border-forest-200 dark:border-forest-800 rounded-lg p-4"
+        >
+          <p
+            class="text-lg font-medium text-forest-800 dark:text-forest-200 mb-1"
+          >
             Quality is a prerequisite
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">

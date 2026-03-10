@@ -137,5 +137,4 @@ const activeHobby = computed(() => {
 .hobby-swap-leave-to {
   opacity: 0;
 }
-
 </style>
