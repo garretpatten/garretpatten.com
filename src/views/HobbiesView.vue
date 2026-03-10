@@ -4,7 +4,7 @@
     <div class="md:hidden mb-6 soft-enter">
       <select
         v-model="activeTab"
-        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-[#1f2335] border border-cobalt-200 dark:border-cobalt-800 rounded-lg text-cobalt-900 dark:text-cobalt-100 focus:outline-none focus:ring-2 focus:ring-cobalt-500 dark:focus:ring-cobalt-300 interactive-lift"
+        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-[#282c34] border border-cobalt-200 dark:border-cobalt-800 rounded-lg text-cobalt-900 dark:text-cobalt-100 focus:outline-none focus:ring-2 focus:ring-cobalt-500 dark:focus:ring-cobalt-300 interactive-lift"
       >
         <option v-for="hobby in hobbies" :key="hobby.id" :value="hobby.id">
           {{ hobby.title }}

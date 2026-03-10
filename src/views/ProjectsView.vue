@@ -53,10 +53,10 @@
           </p>
         </div>
         <div
-          class="text-gray-700 dark:text-gray-300 bg-forest-50/60 dark:bg-forest-900/20 border border-forest-200 dark:border-forest-800 rounded-lg p-4"
+          class="text-gray-700 dark:text-gray-300 bg-sun-50/70 dark:bg-sun-900/20 border border-sun-200 dark:border-sun-800 rounded-lg p-4"
         >
           <p
-            class="text-lg font-medium text-forest-800 dark:text-forest-200 mb-1"
+            class="text-lg font-medium text-sun-800 dark:text-sun-200 mb-1"
           >
             Quality is a prerequisite
           </p>
@@ -152,12 +152,12 @@ const projects = ref([
 /* Custom carousel navigation and pagination styling */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(39, 78, 169); /* cobalt-700 - #274EA9 */
+  color: rgb(52, 103, 146); /* cobalt-700 - #346792 */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(148, 189, 255); /* cobalt-300 - #94BDFF */
+  color: rgb(140, 203, 255); /* cobalt-300 - #8CCBFF */
 }
 
 :deep(.carousel__pagination-button) {
@@ -169,10 +169,10 @@ const projects = ref([
 }
 
 :deep(.carousel__pagination-button--active) {
-  background-color: rgb(83, 54, 169); /* iris-700 - #5336A9 */
+  background-color: rgb(114, 68, 127); /* iris-700 - #72447F */
 }
 
 .dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(130, 207, 167); /* forest-300 - #82CFA7 */
+  background-color: rgb(246, 211, 142); /* sun-300 - #F6D38E */
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <header
     ref="headerRef"
-    class="border-b border-cobalt-200/80 dark:border-cobalt-800/80 mb-8 pb-6 relative z-20 bg-white/70 dark:bg-[#1f2335]/70 backdrop-blur-sm rounded-xl px-4 py-3"
+    class="border-b border-cobalt-200/80 dark:border-cobalt-800/80 mb-8 pb-6 relative z-20 bg-white/70 dark:bg-[#282c34]/80 backdrop-blur-sm rounded-xl px-4 py-3"
   >
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
@@ -133,7 +133,7 @@
         top: `${headerBottom}px`,
         height: `calc(100vh - ${headerBottom}px)`,
       }"
-      class="fixed right-0 w-[80%] bg-white dark:bg-[#1f2335] shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
+      class="fixed right-0 w-[80%] bg-white dark:bg-[#282c34] shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
     >
       <div class="flex flex-col items-center gap-4 pt-8 px-6 pb-6">
         <router-link

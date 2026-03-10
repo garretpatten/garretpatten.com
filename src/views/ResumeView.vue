@@ -61,7 +61,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-sun-700 dark:text-sun-300 mb-6"
       >
         Education
       </h2>
@@ -200,6 +200,7 @@ const bubbleTones = [
   "bg-cobalt-50 dark:bg-cobalt-900/30 border-cobalt-200 dark:border-cobalt-700 text-cobalt-800 dark:text-cobalt-200",
   "bg-iris-50 dark:bg-iris-900/30 border-iris-200 dark:border-iris-700 text-iris-800 dark:text-iris-200",
   "bg-forest-50 dark:bg-forest-900/30 border-forest-200 dark:border-forest-700 text-forest-800 dark:text-forest-200",
+  "bg-sun-50 dark:bg-sun-900/30 border-sun-200 dark:border-sun-700 text-sun-800 dark:text-sun-200",
 ];
 
 const bubbleSizes = ["px-3 py-1", "px-4 py-1.5", "px-3.5 py-1.5"];

@@ -47,7 +47,7 @@
       </div>
       <div class="text-center">
         <div
-          class="text-3xl font-bold text-forest-700 dark:text-forest-300 mb-2"
+          class="text-3xl font-bold text-sun-700 dark:text-sun-300 mb-2"
         >
           300+
         </div>
