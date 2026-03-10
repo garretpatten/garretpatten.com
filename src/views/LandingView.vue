@@ -29,7 +29,7 @@
     >
       <div class="text-center">
         <div
-          class="text-3xl font-bold text-cobalt-700 dark:text-cobalt-300 mb-2"
+          class="text-3xl font-bold text-forest-700 dark:text-forest-300 mb-2"
         >
           7+
         </div>
@@ -62,7 +62,7 @@
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <router-link
           to="/resume"
-          class="px-6 py-3 bg-navy-600 dark:bg-pine-500 text-white rounded-lg font-medium hover:bg-navy-700 dark:hover:bg-pine-600 transition-colors duration-[230ms]"
+          class="px-6 py-3 bg-cobalt-700 dark:bg-cobalt-600 text-white rounded-lg font-medium hover:bg-cobalt-800 dark:hover:bg-cobalt-700 transition-colors duration-[230ms]"
         >
           View Resume
         </router-link>
