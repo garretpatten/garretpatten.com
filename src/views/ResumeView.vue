@@ -52,7 +52,7 @@
       <div class="relative">
         <TimelineItem
           v-for="(exp, index) in experience"
-          :key="index"
+          :key="`${exp.role}-${exp.company}-${index}`"
           :item="exp"
         />
       </div>
@@ -68,7 +68,7 @@
       <div class="space-y-6">
         <div
           v-for="(edu, index) in education"
-          :key="index"
+          :key="`${edu.school}-${index}`"
           class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
         >
           <div
@@ -77,19 +77,14 @@
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
               {{ edu.school }}
             </h3>
-            <span
-              class="text-sm text-gray-500 dark:text-gray-500 whitespace-nowrap"
-            >
+            <span class="text-sm text-gray-500 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
           <p class="text-gray-600 dark:text-gray-400 mb-2">
             {{ edu.degree }}
           </p>
-          <p
-            v-if="edu.details"
-            class="text-sm text-gray-500 dark:text-gray-500"
-          >
+          <p v-if="edu.details" class="text-sm text-gray-500">
             {{ edu.details }}
           </p>
         </div>
@@ -99,10 +94,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import TimelineItem from "../components/TimelineItem.vue";
 
-const skills = ref([
+const skills = [
   "Apex",
   "Application Security",
   "CI/CD Pipeline Design & Security",
@@ -135,9 +129,9 @@ const skills = ref([
   "SSDLC",
   "Threat Modeling",
   "VisualForce",
-]);
+];
 
-const experience = ref([
+const experience = [
   {
     role: "Senior Security Engineer",
     company: "nCino, Inc.",
@@ -185,16 +179,16 @@ const experience = ref([
     end: "Feb '20",
     bullets: [],
   },
-]);
+];
 
-const education = ref([
+const education = [
   {
     school: "Boston College, Carroll School of Management",
     degree:
       "Bachelor of Science in Business Management; Concentration in Finance; Minor in Computer Science",
     end: "Aug '14 - May '18",
   },
-]);
+];
 
 const bubbleTones = [
   "bg-cobalt-50 dark:bg-cobalt-900/30 border-cobalt-200 dark:border-cobalt-700 text-cobalt-800 dark:text-cobalt-200",

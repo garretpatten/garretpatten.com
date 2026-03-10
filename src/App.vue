@@ -19,14 +19,10 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
 import { useThemeStore } from "./stores/theme";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
 const themeStore = useThemeStore();
-
-onMounted(() => {
-  themeStore.initTheme();
-});
+themeStore.initTheme();
 </script>

@@ -45,7 +45,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-// About page content
-</script>
