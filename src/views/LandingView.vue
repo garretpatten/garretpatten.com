@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <!-- Hero Section -->
-    <section v-reveal class="text-center mb-16 md:mb-16">
+    <section class="text-center mb-16 md:mb-16 soft-enter">
       <h1
         class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4"
       >
@@ -13,7 +13,7 @@
     </section>
 
     <!-- Value Proposition -->
-    <section v-reveal="{ delay: 80 }" class="mb-16">
+    <section class="mb-16 soft-enter soft-enter-delay-1">
       <p
         class="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-2xl mx-auto"
       >
@@ -24,9 +24,9 @@
     </section>
 
     <!-- Key Highlights -->
-    <section v-reveal="{ delay: 140 }" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2">
       <div class="text-center">
-        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">
+        <div class="text-3xl font-bold text-cobalt-700 dark:text-cobalt-300 mb-2">
           7+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">
+        <div class="text-3xl font-bold text-iris-700 dark:text-iris-300 mb-2">
           3,000+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-navy-600 dark:text-pine-500 mb-2">
+        <div class="text-3xl font-bold text-forest-700 dark:text-forest-300 mb-2">
           300+
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -52,7 +52,7 @@
     </section>
 
     <!-- Calls to Action -->
-    <section v-reveal="{ delay: 180 }" class="text-center mb-16">
+    <section class="text-center mb-16 soft-enter soft-enter-delay-2">
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <router-link
           to="/resume"
@@ -62,7 +62,7 @@
         </router-link>
         <router-link
           to="/projects"
-          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-navy-600 dark:hover:border-pine-500 transition-colors duration-[230ms]"
+          class="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg font-medium hover:border-cobalt-600 dark:hover:border-cobalt-400 transition-colors duration-[230ms]"
         >
           View Projects
         </router-link>

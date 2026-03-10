@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms]"
+    class="rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms] bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800"
   >
     <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
       {{ project.name }}
@@ -13,7 +13,7 @@
       :href="project.github"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 text-sm font-medium text-navy-600 dark:text-pine-400 hover:text-navy-800 dark:hover:text-pine-300 transition-colors duration-[230ms]"
+      class="inline-flex items-center gap-2 text-sm font-medium text-cobalt-700 dark:text-cobalt-300 hover:text-cobalt-900 dark:hover:text-cobalt-200 transition-colors duration-[230ms]"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

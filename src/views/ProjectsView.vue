@@ -2,12 +2,11 @@
   <div class="max-w-6xl mx-auto">
     <!-- Projects Carousel -->
     <Carousel
-      v-reveal
       :items-to-show="itemsToShow"
       :wrap-around="true"
       :autoplay="6000"
       :pause-autoplay-on-hover="true"
-      class="projects-carousel mb-12"
+      class="projects-carousel mb-12 soft-enter"
     >
       <Slide v-for="(project, index) in projects" :key="index">
         <div class="px-2">
@@ -22,31 +21,31 @@
     </Carousel>
 
     <!-- Engineering Philosophy -->
-    <section v-reveal="{ delay: 100 }" class="text-center max-w-2xl mx-auto">
+    <section class="text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
       >
         Engineering Philosophy
       </h2>
       <div class="space-y-4">
-        <div class="text-gray-700 dark:text-gray-300">
-          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
+        <div class="text-gray-700 dark:text-gray-300 bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4">
+          <p class="text-lg font-medium text-cobalt-800 dark:text-cobalt-200 mb-1">
             Simplicity is the apex of design
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">
             Complexity signals incomplete understanding.
           </p>
         </div>
-        <div class="text-gray-700 dark:text-gray-300">
-          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
+        <div class="text-gray-700 dark:text-gray-300 bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4">
+          <p class="text-lg font-medium text-iris-800 dark:text-iris-200 mb-1">
             Outcomes are the objective
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">
             Implementations are transient and disposable.
           </p>
         </div>
-        <div class="text-gray-700 dark:text-gray-300">
-          <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
+        <div class="text-gray-700 dark:text-gray-300 bg-forest-50/60 dark:bg-forest-900/20 border border-forest-200 dark:border-forest-800 rounded-lg p-4">
+          <p class="text-lg font-medium text-forest-800 dark:text-forest-200 mb-1">
             Quality is a prerequisite
           </p>
           <p class="text-sm text-gray-600 dark:text-gray-400">
@@ -141,12 +140,12 @@ const projects = ref([
 /* Custom carousel navigation and pagination styling */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
+  color: rgb(39, 78, 169); /* cobalt-700 - #274EA9 */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(6, 30, 41); /* pine-900 - #061E29 */
+  color: rgb(148, 189, 255); /* cobalt-300 - #94BDFF */
 }
 
 :deep(.carousel__pagination-button) {
@@ -158,10 +157,10 @@ const projects = ref([
 }
 
 :deep(.carousel__pagination-button--active) {
-  background-color: rgb(29, 84, 109); /* navy-600/800 - #1D546D */
+  background-color: rgb(83, 54, 169); /* iris-700 - #5336A9 */
 }
 
 .dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(6, 30, 41); /* pine-900 - #061E29 */
+  background-color: rgb(130, 207, 167); /* forest-300 - #82CFA7 */
 }
 </style>

@@ -39,32 +39,16 @@
     transform: translateY(0) scale(0.99);
   }
 
-  .reveal {
-    opacity: 0;
-    transform: translate3d(0, var(--reveal-distance, 18px), 0);
-    transition:
-      opacity var(--reveal-duration, 640ms) var(--motion-ease-emphasized)
-        var(--reveal-delay, 0ms),
-      transform var(--reveal-duration, 640ms) var(--motion-ease-emphasized)
-        var(--reveal-delay, 0ms);
-    will-change: opacity, transform;
+  .soft-enter {
+    animation: soft-enter 520ms var(--motion-ease-emphasized) both;
   }
 
-  .reveal[data-reveal-origin="top"] {
-    transform: translate3d(0, calc(var(--reveal-distance, 18px) * -1), 0);
+  .soft-enter-delay-1 {
+    animation-delay: 80ms;
   }
 
-  .reveal[data-reveal-origin="left"] {
-    transform: translate3d(calc(var(--reveal-distance, 18px) * -1), 0, 0);
-  }
-
-  .reveal[data-reveal-origin="right"] {
-    transform: translate3d(var(--reveal-distance, 18px), 0, 0);
-  }
-
-  .reveal-visible {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+  .soft-enter-delay-2 {
+    animation-delay: 160ms;
   }
 }
 
@@ -105,6 +89,18 @@
   }
 }
 
+@keyframes soft-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -119,9 +115,11 @@
     scroll-behavior: auto !important;
   }
 
-  .reveal,
-  .reveal-visible {
+  .soft-enter,
+  .soft-enter-delay-1,
+  .soft-enter-delay-2 {
     opacity: 1 !important;
     transform: none !important;
+    animation: none !important;
   }
 }

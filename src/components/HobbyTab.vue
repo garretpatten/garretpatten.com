@@ -1,6 +1,7 @@
 <template>
   <div
-    class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
+    class="rounded-lg p-6"
+    :class="getHobbySurfaceClass(hobby.id)"
   >
     <h3
       class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2"
@@ -8,7 +9,7 @@
       <!-- Reading: Open Book -->
       <svg
         v-if="hobby.id === 'reading'"
-        class="w-5 h-5 text-gray-400 dark:text-gray-500"
+        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -23,7 +24,7 @@
       <!-- Genealogy: Leaf -->
       <svg
         v-else-if="hobby.id === 'genealogy'"
-        class="w-5 h-5 text-gray-400 dark:text-gray-500"
+        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -44,7 +45,7 @@
       <!-- Personal System Design: Gear -->
       <svg
         v-else-if="hobby.id === 'systems'"
-        class="w-5 h-5 text-gray-400 dark:text-gray-500"
+        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -64,7 +65,7 @@
       <!-- Music: Musical Note -->
       <svg
         v-else-if="hobby.id === 'music'"
-        class="w-5 h-5 text-gray-400 dark:text-gray-500"
+        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -79,7 +80,7 @@
       <!-- Journaling: Notebook -->
       <svg
         v-else-if="hobby.id === 'journaling'"
-        class="w-5 h-5 text-gray-400 dark:text-gray-500"
+        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -128,6 +129,28 @@
 </template>
 
 <script setup>
+const hobbyAccentClasses = {
+  reading: "text-cobalt-700 dark:text-cobalt-300",
+  genealogy: "text-forest-700 dark:text-forest-300",
+  systems: "text-cobalt-700 dark:text-cobalt-300",
+  music: "text-iris-700 dark:text-iris-300",
+  journaling: "text-forest-700 dark:text-forest-300",
+};
+
+const hobbySurfaceClasses = {
+  reading: "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
+  genealogy: "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
+  systems: "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
+  music: "bg-iris-50/65 dark:bg-iris-900/30 border border-iris-200 dark:border-iris-800",
+  journaling: "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
+};
+
+const getHobbyAccentClass = (id) =>
+  hobbyAccentClasses[id] || "text-gray-500 dark:text-gray-400";
+const getHobbySurfaceClass = (id) =>
+  hobbySurfaceClasses[id] ||
+  "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800";
+
 defineProps({
   hobby: {
     type: Object,

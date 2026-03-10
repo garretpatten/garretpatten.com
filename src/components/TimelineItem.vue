@@ -1,17 +1,13 @@
 <template>
-  <div
-    v-reveal="{ delay, distance: 14 }"
-    class="relative pl-8 pb-8 last:pb-0"
-    :class="{ 'reveal-peek': peek }"
-  >
+  <div class="relative pl-8 pb-8 last:pb-0">
     <!-- Timeline line -->
     <div
-      class="absolute left-3 top-6 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 last:hidden"
+      class="absolute left-3 top-6 bottom-0 w-0.5 bg-cobalt-200 dark:bg-cobalt-800 last:hidden"
     ></div>
 
     <!-- Timeline dot -->
     <div
-      class="absolute left-0 top-2 h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900"
+      class="absolute left-0 top-2 h-6 w-6 rounded-full border-2 border-cobalt-300 dark:border-cobalt-700 bg-white dark:bg-gray-900"
     ></div>
 
     <!-- Content card -->
@@ -25,13 +21,13 @@
           <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
             {{ item.role }}
           </h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-forest-700 dark:text-forest-300">
             {{ item.company
             }}<span v-if="item.location"> · {{ item.location }}</span>
           </p>
         </div>
         <span
-          class="text-sm text-gray-500 dark:text-gray-500 whitespace-nowrap"
+          class="text-sm text-iris-700 dark:text-iris-300 whitespace-nowrap"
         >
           {{ item.start }} – {{ item.end }}
         </span>
@@ -39,7 +35,7 @@
 
       <ul
         v-if="item.bullets && item.bullets.length"
-        class="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300 ml-2"
+        class="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300 marker:text-cobalt-600 dark:marker:text-cobalt-400 ml-2"
       >
         <li v-for="(bullet, index) in item.bullets" :key="index">
           {{ bullet }}
@@ -55,20 +51,5 @@ defineProps({
     type: Object,
     required: true,
   },
-  delay: {
-    type: Number,
-    default: 0,
-  },
-  peek: {
-    type: Boolean,
-    default: false,
-  },
 });
 </script>
-
-<style scoped>
-.reveal.reveal-peek:not(.reveal-visible) {
-  opacity: 0.4;
-  transform: translate3d(0, 10px, 0);
-}
-</style>
