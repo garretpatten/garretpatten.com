@@ -97,22 +97,23 @@
 import TimelineItem from "../components/TimelineItem.vue";
 
 const skills = [
-  "Apex",
+  <!-- "Apex", -->
   "Application Security",
+  "Bash scripting",
   "CI/CD Pipeline Design & Security",
   "Cloud Computing",
   "CSS3",
   "Developer Enablement & Security Awareness",
-  "DefectDojo",
+  <!-- "DefectDojo", -->
   "Docker",
   "Full-Stack Development",
   "GitHub Actions & Workflow Automation",
   "GitHub Enterprise Administration",
   "GitLab Administration",
-  "HTML5",
+  <!-- "HTML5", -->
   "JavaScript",
   "Node.js",
-  "Opengrep",
+  <!-- "Opengrep", -->
   "Orca Security",
   "OWASP Top 10",
   "Penetration Testing",
@@ -120,15 +121,15 @@ const skills = [
   "Risk Mitigation",
   "SAST / DAST / Secrets Scanning",
   "SBOM & Software Supply Chain Security",
-  "Secure Software Development",
-  "Security Orchestration",
+  <!-- "Secure Software Development", -->
+  <!-- "Security Orchestration", -->
   "Semgrep",
   "Shift-Left Security Practices",
   "Software Supply Chain Security",
   "Sourcegraph",
   "SSDLC",
   "Threat Modeling",
-  "VisualForce",
+  <!-- "VisualForce", -->
 ];
 
 const experience = [
