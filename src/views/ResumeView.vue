@@ -10,7 +10,7 @@
       <div
         class="bg-cobalt-50/70 dark:bg-cobalt-900/20 border-l-4 border-cobalt-700 dark:border-cobalt-400 py-4 px-5 rounded-lg"
       >
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p class="text-gray-700 dark:text-evf-fg leading-relaxed">
           Systems-oriented security leader with a builder's mindset and seven
           years of experience at a global, publicly traded FinTech leader. I
           architect secure pipelines, drive developer enablement, and scale
@@ -69,22 +69,22 @@
         <div
           v-for="(edu, index) in education"
           :key="`${edu.school}-${index}`"
-          class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
+          class="bg-white dark:bg-evf-panel border border-gray-200 dark:border-evf-line rounded-lg p-6"
         >
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
           >
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-evf-fg-bright">
               {{ edu.school }}
             </h3>
-            <span class="text-sm text-gray-500 whitespace-nowrap">
+            <span class="text-sm text-gray-500 dark:text-evf-muted whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
-          <p class="text-gray-600 dark:text-gray-400 mb-2">
+          <p class="text-gray-600 dark:text-evf-muted mb-2">
             {{ edu.degree }}
           </p>
-          <p v-if="edu.details" class="text-sm text-gray-500">
+          <p v-if="edu.details" class="text-sm text-gray-500 dark:text-evf-muted">
             {{ edu.details }}
           </p>
         </div>

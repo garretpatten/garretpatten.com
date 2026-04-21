@@ -2,10 +2,10 @@
   <div
     class="rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms] bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800"
   >
-    <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+    <h3 class="text-xl font-bold text-gray-900 dark:text-evf-fg-bright mb-3">
       {{ project.name }}
     </h3>
-    <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+    <p class="text-gray-600 dark:text-evf-muted mb-4 flex-grow">
       {{ project.description }}
     </p>
     <a

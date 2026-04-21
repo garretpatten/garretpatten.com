@@ -31,36 +31,36 @@
       </h2>
       <div class="space-y-4">
         <div
-          class="text-gray-700 dark:text-gray-300 bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4"
+          class="text-gray-700 dark:text-evf-fg bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4"
         >
           <p
             class="text-lg font-medium text-cobalt-800 dark:text-cobalt-200 mb-1"
           >
             Simplicity is the apex of design
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-600 dark:text-evf-muted">
             Complexity signals incomplete understanding.
           </p>
         </div>
         <div
-          class="text-gray-700 dark:text-gray-300 bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4"
+          class="text-gray-700 dark:text-evf-fg bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4"
         >
           <p class="text-lg font-medium text-iris-800 dark:text-iris-200 mb-1">
             Outcomes are the objective
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-600 dark:text-evf-muted">
             Implementations are transient and disposable.
           </p>
         </div>
         <div
-          class="text-gray-700 dark:text-gray-300 bg-sun-50/70 dark:bg-sun-900/20 border border-sun-200 dark:border-sun-800 rounded-lg p-4"
+          class="text-gray-700 dark:text-evf-fg bg-sun-50/70 dark:bg-sun-900/20 border border-sun-200 dark:border-sun-800 rounded-lg p-4"
         >
           <p
             class="text-lg font-medium text-sun-800 dark:text-sun-200 mb-1"
           >
             Quality is a prerequisite
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-600 dark:text-evf-muted">
             Security, correctness, and reliability are foundational
             requirements, not aspirations.
           </p>
@@ -151,27 +151,27 @@ const projects = ref([
 /* Custom carousel navigation and pagination styling */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(52, 103, 146); /* cobalt-700 - #346792 */
+  color: rgb(71, 109, 106); /* Everforest blue (cobalt-700) */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(140, 203, 255); /* cobalt-300 - #8CCBFF */
+  color: rgb(158, 213, 207); /* Everforest blue (cobalt-300) */
 }
 
 :deep(.carousel__pagination-button) {
-  background-color: rgb(209, 213, 219); /* gray-300 */
+  background-color: rgb(209, 213, 219);
 }
 
 .dark :deep(.carousel__pagination-button) {
-  background-color: rgb(75, 85, 99); /* gray-600 */
+  background-color: rgb(133, 146, 137); /* evf muted */
 }
 
 :deep(.carousel__pagination-button--active) {
-  background-color: rgb(114, 68, 127); /* iris-700 - #72447F */
+  background-color: rgb(131, 87, 113); /* iris-700 */
 }
 
 .dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(246, 211, 142); /* sun-300 - #F6D38E */
+  background-color: rgb(219, 188, 127); /* sun / yellow */
 }
 </style>

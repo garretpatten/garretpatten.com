@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-lg p-6" :class="getHobbySurfaceClass(hobby.id)">
     <h3
-      class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2"
+      class="text-xl font-bold text-gray-900 dark:text-evf-fg-bright mb-4 flex items-center gap-2"
     >
       <!-- Reading: Open Book -->
       <svg
@@ -96,14 +96,14 @@
       <p
         v-for="(paragraph, index) in hobby.content"
         :key="index"
-        class="text-gray-700 dark:text-gray-300 mb-4"
+        class="text-gray-700 dark:text-evf-fg mb-4"
       >
         {{ paragraph }}
       </p>
 
       <ul
         v-if="hobby.list"
-        class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300"
+        class="list-disc list-inside space-y-2 text-gray-700 dark:text-evf-fg"
       >
         <li v-for="(item, index) in hobby.list" :key="index">
           {{ item }}
@@ -112,12 +112,12 @@
 
       <div
         v-if="hobby.currently"
-        class="mt-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg"
+        class="mt-4 p-4 bg-gray-50 dark:bg-evf-raised rounded-lg"
       >
-        <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">
+        <p class="text-sm font-semibold text-gray-900 dark:text-evf-fg-bright mb-1">
           Currently:
         </p>
-        <p class="text-sm text-gray-700 dark:text-gray-300">
+        <p class="text-sm text-gray-700 dark:text-evf-fg">
           {{ hobby.currently }}
         </p>
       </div>
@@ -148,10 +148,10 @@ const hobbySurfaceClasses = {
 };
 
 const getHobbyAccentClass = (id) =>
-  hobbyAccentClasses[id] || "text-gray-500 dark:text-gray-400";
+  hobbyAccentClasses[id] || "text-gray-500 dark:text-evf-muted";
 const getHobbySurfaceClass = (id) =>
   hobbySurfaceClasses[id] ||
-  "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800";
+  "bg-white dark:bg-evf-panel border border-gray-200 dark:border-evf-line";
 
 defineProps({
   hobby: {

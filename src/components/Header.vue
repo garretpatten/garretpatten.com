@@ -97,7 +97,7 @@
       v-if="isMenuOpen"
       @click="closeMenu"
       :style="{ top: `${headerBottom}px` }"
-      class="fixed left-0 right-0 bottom-0 bg-black/50 dark:bg-black/70 z-30 md:hidden"
+      class="fixed left-0 right-0 bottom-0 bg-black/50 dark:bg-evf-bg/75 z-30 md:hidden"
       aria-hidden="true"
     ></div>
   </Transition>
@@ -110,7 +110,7 @@
         top: `${headerBottom}px`,
         height: `calc(100vh - ${headerBottom}px)`,
       }"
-      class="fixed right-0 w-[80%] bg-white dark:bg-[#282c34] shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
+      class="fixed right-0 w-[80%] bg-white dark:bg-evf-panel shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
     >
       <div class="flex flex-col items-center gap-4 pt-8 px-6 pb-6">
         <router-link
@@ -193,7 +193,7 @@ const mobileRouteClasses =
 const getRouteStateClasses = (path) =>
   route.path === path
     ? "text-cobalt-700 dark:text-cobalt-300 border-b-2 border-cobalt-600 dark:border-cobalt-400"
-    : "text-gray-700 dark:text-gray-300";
+    : "text-gray-700 dark:text-evf-fg";
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;

@@ -14,7 +14,7 @@
   }
 
   body {
-    @apply font-sans antialiased;
+    @apply font-sans antialiased text-gray-900 dark:bg-evf-bg dark:text-evf-fg;
   }
 }
 
