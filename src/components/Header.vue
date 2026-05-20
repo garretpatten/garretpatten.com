@@ -1,8 +1,5 @@
 <template>
-  <header
-    ref="headerRef"
-    class="mb-8 pb-6 relative z-20 px-4 py-3"
-  >
+  <header ref="headerRef" class="mb-8 pb-6 relative z-20 px-4 py-3">
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
       <router-link
@@ -191,9 +188,7 @@ const mobileRouteClasses =
   "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-400";
 
 const getRouteStateClasses = (path) =>
-  route.path === path
-    ? "text-sun-400 border-b-2 border-torch-400"
-    : "";
+  route.path === path ? "text-sun-400 border-b-2 border-torch-400" : "";
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;

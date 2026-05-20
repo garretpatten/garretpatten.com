@@ -11,9 +11,7 @@
     ></div>
 
     <!-- Content card -->
-    <div
-      class="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow-sm"
-    >
+    <div class="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow-sm">
       <div
         class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3"
       >

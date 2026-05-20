@@ -160,11 +160,20 @@ const projects = ref([
   background-color: rgb(249, 224, 144); /* sun-300 */
 }
 
-:deep(.carousel__pagination-button:hover:not(.carousel__pagination-button--active)::after) {
+:deep(
+  .carousel__pagination-button:hover:not(
+      .carousel__pagination-button--active
+    )::after
+) {
   background-color: rgb(59, 113, 109); /* cobalt-700 */
 }
 
-.dark :deep(.carousel__pagination-button:hover:not(.carousel__pagination-button--active)::after) {
+.dark
+  :deep(
+    .carousel__pagination-button:hover:not(
+        .carousel__pagination-button--active
+      )::after
+  ) {
   background-color: rgb(137, 199, 188); /* cobalt-300 */
 }
 

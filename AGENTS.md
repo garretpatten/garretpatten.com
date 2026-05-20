@@ -69,12 +69,12 @@ PRs run the reusable **Security Checks** workflow (Semgrep, Trufflehog). Avoid i
 
 ## Canonical references
 
-| Concern | File |
-|--------|------|
-| App shell & route transitions | `src/App.vue` |
+| Concern                        | File                        |
+| ------------------------------ | --------------------------- |
+| App shell & route transitions  | `src/App.vue`               |
 | Navigation & responsive header | `src/components/Header.vue` |
-| Theme / dark mode | `src/stores/theme.js` |
-| Routes | `src/router/index.js` |
-| Global CSS & motion | `src/assets/css/main.css` |
-| Tailwind theme | `tailwind.config.js` |
-| Vite / build | `vite.config.js` |
+| Theme / dark mode              | `src/stores/theme.js`       |
+| Routes                         | `src/router/index.js`       |
+| Global CSS & motion            | `src/assets/css/main.css`   |
+| Tailwind theme                 | `tailwind.config.js`        |
+| Vite / build                   | `vite.config.js`            |

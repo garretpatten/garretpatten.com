@@ -1,8 +1,6 @@
 <template>
   <div class="rounded-lg p-6" :class="getHobbySurfaceClass(hobby.id)">
-    <h3
-      class="text-xl font-bold text-gray-100 mb-4 flex items-center gap-2"
-    >
+    <h3 class="text-xl font-bold text-gray-100 mb-4 flex items-center gap-2">
       <!-- Reading: Open Book -->
       <svg
         v-if="hobby.id === 'reading'"
@@ -110,13 +108,8 @@
         </li>
       </ul>
 
-      <div
-        v-if="hobby.currently"
-        class="mt-4 p-4 bg-gray-800 rounded-lg"
-      >
-        <p class="text-sm font-semibold text-gray-100 mb-1">
-          Currently:
-        </p>
+      <div v-if="hobby.currently" class="mt-4 p-4 bg-gray-800 rounded-lg">
+        <p class="text-sm font-semibold text-gray-100 mb-1">Currently:</p>
         <p class="text-sm text-gray-300">
           {{ hobby.currently }}
         </p>
@@ -142,8 +135,7 @@ const hobbySurfaceClasses = {
   journaling: "bg-torch-900/35 border border-torch-600",
 };
 
-const getHobbyAccentClass = (id) =>
-  hobbyAccentClasses[id] || "text-gray-400";
+const getHobbyAccentClass = (id) => hobbyAccentClasses[id] || "text-gray-400";
 const getHobbySurfaceClass = (id) =>
   hobbySurfaceClasses[id] || "bg-gray-900 border border-gray-700";
 

@@ -2,14 +2,10 @@
   <div class="max-w-4xl mx-auto">
     <!-- Hero Section -->
     <section class="text-center mb-16 soft-enter">
-      <h1
-        class="text-5xl md:text-6xl font-bold text-gray-100 mb-4"
-      >
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-100 mb-4">
         Garret Patten
       </h1>
-      <p class="text-xl md:text-2xl text-gray-300">
-        Senior Security Engineer
-      </p>
+      <p class="text-xl md:text-2xl text-gray-300">Senior Security Engineer</p>
     </section>
 
     <!-- Value Proposition -->
@@ -28,32 +24,16 @@
       class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2"
     >
       <div class="text-center">
-        <div
-          class="text-3xl font-bold text-ruby-400 mb-2"
-        >
-          8+
-        </div>
-        <div class="text-sm text-gray-400">
-          Years Experience
-        </div>
+        <div class="text-3xl font-bold text-ruby-400 mb-2">8+</div>
+        <div class="text-sm text-gray-400">Years Experience</div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-torch-400 mb-2">
-          3,000+
-        </div>
-        <div class="text-sm text-gray-400">
-          Repositories Managed
-        </div>
+        <div class="text-3xl font-bold text-torch-400 mb-2">3,000+</div>
+        <div class="text-sm text-gray-400">Repositories Managed</div>
       </div>
       <div class="text-center">
-        <div
-          class="text-3xl font-bold text-cobalt-400 mb-2"
-        >
-          300+
-        </div>
-        <div class="text-sm text-gray-400">
-          Engineers Supported Globally
-        </div>
+        <div class="text-3xl font-bold text-cobalt-400 mb-2">300+</div>
+        <div class="text-sm text-gray-400">Engineers Supported Globally</div>
       </div>
     </section>
 
@@ -74,6 +54,5 @@
         </router-link>
       </div>
     </section>
-
   </div>
 </template>
