@@ -144,34 +144,49 @@ const projects = ref([
 </script>
 
 <style scoped>
+/* Override vue3-carousel defaults (pure black / cold blues) with Gruvbox tokens */
 .projects-carousel {
   padding: 1rem 0;
+  --vc-clr-primary: #458588;
+  --vc-clr-secondary: rgba(146, 131, 116, 0.55);
+  --vc-clr-white: #ebdbb2;
+  --vc-nav-color: #3b716d;
+  --vc-nav-color-hover: #83a598;
 }
 
-/* Custom carousel navigation and pagination styling */
+/* Pagination pills render on ::after, not the button element */
+:deep(.carousel__pagination-button::after) {
+  background-color: rgb(189, 174, 147); /* gray-300 — Gruvbox fg3 */
+}
+
+.dark :deep(.carousel__pagination-button::after) {
+  background-color: rgb(124, 111, 100); /* gray-600 — Gruvbox neutral */
+}
+
+:deep(.carousel__pagination-button--active::after) {
+  background-color: rgb(149, 84, 113); /* iris-700 */
+}
+
+.dark :deep(.carousel__pagination-button--active::after) {
+  background-color: rgb(249, 224, 144); /* sun-300 */
+}
+
+:deep(.carousel__pagination-button:hover:not(.carousel__pagination-button--active)::after) {
+  background-color: rgb(59, 113, 109); /* cobalt-700 */
+}
+
+.dark :deep(.carousel__pagination-button:hover:not(.carousel__pagination-button--active)::after) {
+  background-color: rgb(137, 199, 188); /* cobalt-300 */
+}
+
+/* Navigation arrows */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(59, 113, 109); /* cobalt-700 — Gruvbox aqua dark */
+  color: rgb(59, 113, 109); /* cobalt-700 */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(137, 199, 188); /* cobalt-300 — Gruvbox aqua bright tint */
-}
-
-:deep(.carousel__pagination-button) {
-  background-color: rgb(189, 174, 147); /* gray-300 — Gruvbox fg3 */
-}
-
-.dark :deep(.carousel__pagination-button) {
-  background-color: rgb(124, 111, 100); /* gray-600 — Gruvbox dark4 */
-}
-
-:deep(.carousel__pagination-button--active) {
-  background-color: rgb(149, 84, 113); /* iris-700 — Gruvbox magenta dark */
-}
-
-.dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(249, 224, 144); /* sun-300 — Gruvbox yellow bright tint */
+  color: rgb(137, 199, 188); /* cobalt-300 */
 }
 </style>

@@ -9,7 +9,7 @@
     </div>
 
     <div
-      class="prose prose-lg dark:prose-invert max-w-none bg-white/75 dark:bg-[#282828]/80 border border-iris-200 dark:border-iris-800 rounded-xl p-6 md:p-8 soft-enter soft-enter-delay-1"
+      class="prose prose-lg dark:prose-invert max-w-none bg-gray-50/75 dark:bg-gray-900/80 border border-iris-200 dark:border-iris-800 rounded-xl p-6 md:p-8 soft-enter soft-enter-delay-1"
     >
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
         I grew up on the Jersey Shore in the New York City metro area. At

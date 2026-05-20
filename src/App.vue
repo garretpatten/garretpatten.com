@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-gradient-to-b from-cobalt-50/50 via-gray-50 to-iris-50/40 dark:from-[#1d2021] dark:via-[#282828] dark:to-[#3c3836] transition-colors duration-[230ms]"
+    class="min-h-screen bg-gradient-to-b from-cobalt-50/50 via-gray-50 to-iris-50/40 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800 transition-colors duration-[230ms]"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
       <Header />

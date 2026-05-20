@@ -7,12 +7,12 @@
 
     <!-- Timeline dot -->
     <div
-      class="absolute left-0 top-2 h-6 w-6 rounded-full border-2 border-cobalt-300 dark:border-cobalt-700 bg-white dark:bg-gray-900"
+      class="absolute left-0 top-2 h-6 w-6 rounded-full border-2 border-cobalt-300 dark:border-cobalt-700 bg-gray-50 dark:bg-gray-900"
     ></div>
 
     <!-- Content card -->
     <div
-      class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 shadow-sm"
+      class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 shadow-sm"
     >
       <div
         class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3"

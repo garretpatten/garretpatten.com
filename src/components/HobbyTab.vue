@@ -151,7 +151,7 @@ const getHobbyAccentClass = (id) =>
   hobbyAccentClasses[id] || "text-gray-500 dark:text-gray-400";
 const getHobbySurfaceClass = (id) =>
   hobbySurfaceClasses[id] ||
-  "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800";
+  "bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800";
 
 defineProps({
   hobby: {
