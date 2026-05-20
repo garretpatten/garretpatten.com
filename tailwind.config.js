@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /**
  * Chromatic scales mirror Gruvbox Dark Hard + ANSI bright/normal pairs from
  * ~/Projects/dotfiles (Kitty Gruvbox-Dark-Hard.conf, Alacritty gruvbox_dark_hard.toml).
@@ -11,6 +13,7 @@ export default {
     extend: {
       colors: {
         gray: {
+          ...defaultTheme.colors.gray,
           50: "#fbf1c7",
           100: "#ebdbb2",
           200: "#d5c4a1",

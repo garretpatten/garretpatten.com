@@ -73,7 +73,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { Carousel, Slide, Navigation, Pagination } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
 import ProjectCard from "../components/ProjectCard.vue";
 
 const itemsToShow = ref(1);
@@ -144,14 +143,8 @@ const projects = ref([
 </script>
 
 <style scoped>
-/* Override vue3-carousel defaults (pure black / cold blues) with Gruvbox tokens */
 .projects-carousel {
   padding: 1rem 0;
-  --vc-clr-primary: #458588;
-  --vc-clr-secondary: rgba(146, 131, 116, 0.55);
-  --vc-clr-white: #ebdbb2;
-  --vc-nav-color: #3b716d;
-  --vc-nav-color-hover: #83a598;
 }
 
 /* Pagination pills render on ::after, not the button element */
