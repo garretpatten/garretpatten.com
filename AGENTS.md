@@ -35,7 +35,7 @@ Path alias: `@` → `src/` (see `vite.config.js`).
 
 - **Vue 3** with `<script setup>` and the Composition API. No Options API in new code.
 - **Vue Router** for pages; add routes in `src/router/index.js` and create a view under `src/views/`.
-- **Pinia** for shared state. Theme follows system preference via `useThemeStore` in `src/stores/theme.js` (`dark` class on `<html>`).
+- **Pinia** for shared state. `useThemeStore` in `src/stores/theme.js` keeps **`dark`** on `<html>` — the UI is **Gruvbox Dark Hard only** (system light mode is ignored).
 - **Tailwind CSS** for styling. Prefer utility classes in templates; shared motion/UI patterns live in `src/assets/css/main.css` (`@layer components` / `@layer utilities`).
 - **vue3-carousel** on hobbies-related views; **@vueuse/core** where composables help.
 
@@ -43,9 +43,10 @@ Reuse existing components (`ProjectCard`, `TimelineItem`, `HobbyTab`, etc.) befo
 
 ## Styling and UX
 
-- **Dark mode**: `darkMode: "class"` in `tailwind.config.js`. Use `dark:` variants; do not add a manual theme toggle unless explicitly requested.
-- **Palette**: Use theme colors (`cobalt`, `iris`, `forest`, `sun`, `pine`, `navy`) from `tailwind.config.js`, not arbitrary hex values.
+- **Dark / theme**: `darkMode: "class"` in `tailwind.config.js`; **`index.html` + `theme.js` always add `dark`** so the pastel light shell is never used. Keep `dark:` variants where dual utilities remain.
+- **Palette**: Theme colors (`cobalt`, `iris`, `forest`, `sun`, `pine`, `navy`, **`torch`** orange, **`ruby`** red, `gray`) in `tailwind.config.js` match Gruvbox Dark Hard ANSI bright/normal pairs (dotfiles Kitty `Gruvbox-Dark-Hard.conf`). Prefer tokens over arbitrary hex.
 - **Motion**: Default interaction timing is **230ms** (`duration-[230ms]`). Reuse classes like `interactive-lift`, `soft-enter`, and route/menu transitions defined in `main.css` instead of one-off animations.
+- **Carousel**: `vue3-carousel/dist/carousel.css` is imported in `main.js` **before** `./assets/css/main.css` so Gruvbox `--vc-*` overrides win over the library’s cold `:root` defaults.
 - **Layout**: `container mx-auto` with responsive padding matches `App.vue`. Keep pages readable (`max-w-*` on content sections).
 - **Accessibility**: Preserve `aria-*` on interactive controls (e.g. mobile nav in `Header.vue`).
 
@@ -68,12 +69,12 @@ PRs run the reusable **Security Checks** workflow (Semgrep, Trufflehog). Avoid i
 
 ## Canonical references
 
-| Concern | File |
-|--------|------|
-| App shell & route transitions | `src/App.vue` |
+| Concern                        | File                        |
+| ------------------------------ | --------------------------- |
+| App shell & route transitions  | `src/App.vue`               |
 | Navigation & responsive header | `src/components/Header.vue` |
-| Theme / dark mode | `src/stores/theme.js` |
-| Routes | `src/router/index.js` |
-| Global CSS & motion | `src/assets/css/main.css` |
-| Tailwind theme | `tailwind.config.js` |
-| Vite / build | `vite.config.js` |
+| Theme / dark mode              | `src/stores/theme.js`       |
+| Routes                         | `src/router/index.js`       |
+| Global CSS & motion            | `src/assets/css/main.css`   |
+| Tailwind theme                 | `tailwind.config.js`        |
+| Vite / build                   | `vite.config.js`            |

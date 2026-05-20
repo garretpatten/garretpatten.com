@@ -16,6 +16,37 @@
   body {
     @apply font-sans antialiased;
   }
+
+  /* Gruvbox dark hard shell — matches Kitty dark0_hard / default fg */
+  html.dark {
+    background-color: #1d2021;
+    color: #ebdbb2;
+  }
+
+  html.dark body {
+    background-color: #1d2021;
+    color: inherit;
+  }
+
+  /* Neutralize Tailwind’s default blue ring / white ring-offset on Gruvbox surfaces */
+  html.dark *,
+  html.dark *::before,
+  html.dark *::after {
+    --tw-ring-offset-color: #1d2021;
+    --tw-ring-color: rgb(131 165 152 / 0.45);
+  }
+}
+
+/*
+ * vue3-carousel ships :root defaults (#000 / #090f207f). Import order in main.js
+ * loads this file after carousel.css so these tokens win globally.
+ */
+:root {
+  --vc-clr-primary: #458588;
+  --vc-clr-secondary: rgb(146 131 116 / 0.55);
+  --vc-clr-white: #ebdbb2;
+  --vc-nav-color: #3b716d;
+  --vc-nav-color-hover: #83a598;
 }
 
 /* Custom component styles */
@@ -49,6 +80,20 @@
 
   .soft-enter-delay-2 {
     animation-delay: 160ms;
+  }
+
+  /*
+   * About portrait: Gruvbox tricolor halo — red / yellow / bright blue (ANSI),
+   * separated by dark0_hard gaps so each ring reads evenly.
+   */
+  .avatar-gruvbox-tricolor {
+    border-radius: 9999px;
+    box-shadow:
+      0 0 0 3px #fb4934,
+      0 0 0 6px #1d2021,
+      0 0 0 9px #fabd2f,
+      0 0 0 12px #1d2021,
+      0 0 0 15px #83a598;
   }
 }
 

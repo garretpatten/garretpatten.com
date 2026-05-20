@@ -1,8 +1,5 @@
 <template>
-  <header
-    ref="headerRef"
-    class="mb-8 pb-6 relative z-20 px-4 py-3"
-  >
+  <header ref="headerRef" class="mb-8 pb-6 relative z-20 px-4 py-3">
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
       <router-link
@@ -18,7 +15,7 @@
 
       <button
         @click="toggleMenu"
-        class="p-2 text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 focus:outline-none focus:ring-2 focus:ring-cobalt-600 dark:focus:ring-cobalt-400 rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
+        class="p-2 text-gray-100 hover:text-cobalt-400 focus:outline-none focus:ring-2 focus:ring-cobalt-500 rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
         aria-label="Toggle menu"
         :aria-expanded="isMenuOpen"
       >
@@ -76,7 +73,7 @@
           target="_blank"
           rel="noopener noreferrer"
           :aria-label="social.label"
-          class="text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 transition-colors duration-[230ms]"
+          class="text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
         >
           <svg
             class="w-5 h-5"
@@ -97,7 +94,7 @@
       v-if="isMenuOpen"
       @click="closeMenu"
       :style="{ top: `${headerBottom}px` }"
-      class="fixed left-0 right-0 bottom-0 bg-black/50 dark:bg-black/70 z-30 md:hidden"
+      class="fixed left-0 right-0 bottom-0 bg-gray-950/75 z-30 md:hidden"
       aria-hidden="true"
     ></div>
   </Transition>
@@ -110,7 +107,7 @@
         top: `${headerBottom}px`,
         height: `calc(100vh - ${headerBottom}px)`,
       }"
-      class="fixed right-0 w-[80%] bg-white dark:bg-[#282c34] shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
+      class="fixed right-0 w-[80%] bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-700"
     >
       <div class="flex flex-col items-center gap-4 pt-8 px-6 pb-6">
         <router-link
@@ -130,7 +127,7 @@
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="social.label"
-            class="text-cobalt-700 dark:text-cobalt-300 hover:text-iris-700 dark:hover:text-iris-300 transition-colors duration-[230ms]"
+            class="text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
           >
             <svg
               class="w-6 h-6"
@@ -186,14 +183,12 @@ const socialLinks = [
 ];
 
 const desktopRouteClasses =
-  "text-sm font-medium transition-colors duration-[230ms] hover:text-cobalt-700 dark:hover:text-cobalt-300";
+  "text-sm font-medium text-gray-100 transition-colors duration-[230ms] hover:text-cobalt-400";
 const mobileRouteClasses =
-  "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full";
+  "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-400";
 
 const getRouteStateClasses = (path) =>
-  route.path === path
-    ? "text-cobalt-700 dark:text-cobalt-300 border-b-2 border-cobalt-600 dark:border-cobalt-400"
-    : "text-gray-700 dark:text-gray-300";
+  route.path === path ? "text-sun-400 border-b-2 border-torch-400" : "";
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;

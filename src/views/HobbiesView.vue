@@ -4,7 +4,7 @@
     <div class="md:hidden mb-6 soft-enter">
       <select
         v-model="activeTab"
-        class="w-full px-4 py-3 text-sm font-medium bg-white dark:bg-[#282c34] border border-cobalt-200 dark:border-cobalt-800 rounded-lg text-cobalt-900 dark:text-cobalt-100 focus:outline-none focus:ring-2 focus:ring-cobalt-500 dark:focus:ring-cobalt-300 interactive-lift"
+        class="w-full px-4 py-3 text-sm font-medium bg-gray-900 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-torch-500 interactive-lift"
       >
         <option v-for="hobby in hobbies" :key="hobby.id" :value="hobby.id">
           {{ hobby.title }}
@@ -14,7 +14,7 @@
 
     <!-- Desktop: Tab Navigation -->
     <div
-      class="hidden md:flex flex-wrap gap-2 mb-8 border-b border-gray-200 dark:border-gray-800 soft-enter soft-enter-delay-1"
+      class="hidden md:flex flex-wrap gap-2 mb-8 border-b border-gray-700 soft-enter soft-enter-delay-1"
     >
       <button
         v-for="hobby in hobbies"
@@ -23,8 +23,8 @@
         class="px-4 py-2 text-sm font-medium transition-colors duration-[230ms] interactive-lift"
         :class="
           activeTab === hobby.id
-            ? 'text-cobalt-700 dark:text-cobalt-300 border-b-2 border-cobalt-600 dark:border-cobalt-400'
-            : 'text-iris-700 dark:text-iris-300 hover:text-cobalt-700 dark:hover:text-cobalt-300'
+            ? 'text-sun-400 border-b-2 border-torch-400'
+            : 'text-gray-300 hover:text-ruby-400'
         "
       >
         {{ hobby.title }}

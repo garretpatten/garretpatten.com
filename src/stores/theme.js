@@ -1,8 +1,11 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
+/**
+ * Portfolio uses Gruvbox Dark Hard only (matches terminal); system theme is ignored.
+ */
 export const useThemeStore = defineStore("theme", () => {
-  const isDark = ref(false);
+  const isDark = ref(true);
   let isInitialized = false;
 
   const applyTheme = () => {
@@ -13,14 +16,8 @@ export const useThemeStore = defineStore("theme", () => {
     if (isInitialized) return;
     isInitialized = true;
 
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    isDark.value = mq.matches;
+    isDark.value = true;
     applyTheme();
-
-    mq.addEventListener("change", (event) => {
-      isDark.value = event.matches;
-      applyTheme();
-    });
   };
 
   return {

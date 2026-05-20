@@ -25,42 +25,38 @@
       class="text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1"
     >
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-torch-400 mb-6"
       >
         Engineering Philosophy
       </h2>
       <div class="space-y-4">
         <div
-          class="text-gray-700 dark:text-gray-300 bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4"
+          class="text-gray-200 bg-ruby-900/30 border border-ruby-600 rounded-lg p-4"
         >
-          <p
-            class="text-lg font-medium text-cobalt-800 dark:text-cobalt-200 mb-1"
-          >
+          <p class="text-lg font-medium text-ruby-300 mb-1">
             Simplicity is the apex of design
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-400">
             Complexity signals incomplete understanding.
           </p>
         </div>
         <div
-          class="text-gray-700 dark:text-gray-300 bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4"
+          class="text-gray-200 bg-torch-900/30 border border-torch-600 rounded-lg p-4"
         >
-          <p class="text-lg font-medium text-iris-800 dark:text-iris-200 mb-1">
+          <p class="text-lg font-medium text-torch-300 mb-1">
             Outcomes are the objective
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-400">
             Implementations are transient and disposable.
           </p>
         </div>
         <div
-          class="text-gray-700 dark:text-gray-300 bg-sun-50/70 dark:bg-sun-900/20 border border-sun-200 dark:border-sun-800 rounded-lg p-4"
+          class="text-gray-200 bg-sun-900/30 border border-sun-600 rounded-lg p-4"
         >
-          <p
-            class="text-lg font-medium text-sun-800 dark:text-sun-200 mb-1"
-          >
+          <p class="text-lg font-medium text-sun-300 mb-1">
             Quality is a prerequisite
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-400">
             Security, correctness, and reliability are foundational
             requirements, not aspirations.
           </p>
@@ -73,7 +69,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { Carousel, Slide, Navigation, Pagination } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
 import ProjectCard from "../components/ProjectCard.vue";
 
 const itemsToShow = ref(1);
@@ -148,30 +143,47 @@ const projects = ref([
   padding: 1rem 0;
 }
 
-/* Custom carousel navigation and pagination styling */
+/* Pagination pills render on ::after, not the button element */
+:deep(.carousel__pagination-button::after) {
+  background-color: rgb(189, 174, 147); /* gray-300 — Gruvbox fg3 */
+}
+
+.dark :deep(.carousel__pagination-button::after) {
+  background-color: rgb(124, 111, 100); /* gray-600 */
+}
+
+:deep(.carousel__pagination-button--active::after) {
+  background-color: rgb(149, 84, 113); /* iris-700 */
+}
+
+.dark :deep(.carousel__pagination-button--active::after) {
+  background-color: rgb(249, 224, 144); /* sun-300 */
+}
+
+:deep(
+  .carousel__pagination-button:hover:not(
+      .carousel__pagination-button--active
+    )::after
+) {
+  background-color: rgb(59, 113, 109); /* cobalt-700 */
+}
+
+.dark
+  :deep(
+    .carousel__pagination-button:hover:not(
+        .carousel__pagination-button--active
+      )::after
+  ) {
+  background-color: rgb(137, 199, 188); /* cobalt-300 */
+}
+
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(52, 103, 146); /* cobalt-700 - #346792 */
+  color: rgb(59, 113, 109); /* cobalt-700 */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(140, 203, 255); /* cobalt-300 - #8CCBFF */
-}
-
-:deep(.carousel__pagination-button) {
-  background-color: rgb(209, 213, 219); /* gray-300 */
-}
-
-.dark :deep(.carousel__pagination-button) {
-  background-color: rgb(75, 85, 99); /* gray-600 */
-}
-
-:deep(.carousel__pagination-button--active) {
-  background-color: rgb(114, 68, 127); /* iris-700 - #72447F */
-}
-
-.dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(246, 211, 142); /* sun-300 - #F6D38E */
+  color: rgb(137, 199, 188); /* cobalt-300 */
 }
 </style>

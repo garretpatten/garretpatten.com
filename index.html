@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,25 +14,17 @@
       content="Security engineer focused on CI/CD hardening, code ownership, and web accessibility."
     />
     <meta property="og:type" content="website" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="dark" />
     <style>
       html,
       body {
         margin: 0;
-        background-color: #f9fafb;
-      }
-
-      html.dark,
-      html.dark body {
-        background-color: #111827;
+        background-color: #1d2021;
+        color: #ebdbb2;
       }
     </style>
     <script>
-      (() => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          document.documentElement.classList.add("dark");
-        }
-      })();
+      document.documentElement.classList.add("dark");
     </script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
