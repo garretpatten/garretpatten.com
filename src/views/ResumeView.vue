@@ -3,15 +3,15 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-4"
+        class="text-sm font-semibold uppercase tracking-wider text-torch-400 mb-4"
       >
         Summary
       </h2>
       <div
-        class="bg-cobalt-50/70 dark:bg-cobalt-900/20 border-l-4 border-cobalt-700 dark:border-cobalt-400 py-4 px-5 rounded-lg"
+        class="bg-gray-950 border-l-4 border-cobalt-400 py-4 px-5 rounded-lg"
       >
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Systems-oriented security leader with a builder's mindset and seven
+        <p class="text-gray-300 leading-relaxed">
+          Systems-oriented security leader with a builder's mindset and eight
           years of experience at a global, publicly traded FinTech leader. I
           architect secure pipelines, drive developer enablement, and scale
           security as a shared organizational responsibility. I bridge the gap
@@ -24,7 +24,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-4"
+        class="text-sm font-semibold uppercase tracking-wider text-sun-400 mb-4"
       >
         Skills
       </h2>
@@ -45,7 +45,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Experience
       </h2>
@@ -61,7 +61,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-sun-700 dark:text-sun-300 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-sun-400 mb-6"
       >
         Education
       </h2>
@@ -69,22 +69,22 @@
         <div
           v-for="(edu, index) in education"
           :key="`${edu.school}-${index}`"
-          class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6"
+          class="bg-gray-900 border border-gray-700 rounded-lg p-6"
         >
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
           >
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+            <h3 class="text-lg font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
-            <span class="text-sm text-gray-500 whitespace-nowrap">
+            <span class="text-sm text-gray-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
-          <p class="text-gray-600 dark:text-gray-400 mb-2">
+          <p class="text-gray-300 mb-2">
             {{ edu.degree }}
           </p>
-          <p v-if="edu.details" class="text-sm text-gray-500">
+          <p v-if="edu.details" class="text-sm text-gray-400">
             {{ edu.details }}
           </p>
         </div>
@@ -192,10 +192,12 @@ const education = [
 ];
 
 const bubbleTones = [
-  "bg-cobalt-50 dark:bg-cobalt-900/30 border-cobalt-200 dark:border-cobalt-700 text-cobalt-800 dark:text-cobalt-200",
-  "bg-iris-50 dark:bg-iris-900/30 border-iris-200 dark:border-iris-700 text-iris-800 dark:text-iris-200",
-  "bg-forest-50 dark:bg-forest-900/30 border-forest-200 dark:border-forest-700 text-forest-800 dark:text-forest-200",
-  "bg-sun-50 dark:bg-sun-900/30 border-sun-200 dark:border-sun-700 text-sun-800 dark:text-sun-200",
+  "border-2 border-cobalt-400 bg-gray-950 text-cobalt-300",
+  "border-2 border-iris-400 bg-gray-950 text-iris-300",
+  "border-2 border-forest-400 bg-gray-950 text-forest-300",
+  "border-2 border-sun-400 bg-gray-950 text-sun-300",
+  "border-2 border-torch-400 bg-gray-950 text-torch-300",
+  "border-2 border-ruby-400 bg-gray-950 text-ruby-300",
 ];
 
 const bubbleSizes = ["px-3 py-1", "px-4 py-1.5", "px-3.5 py-1.5"];

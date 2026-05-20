@@ -25,42 +25,38 @@
       class="text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1"
     >
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-700 dark:text-cobalt-300 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-torch-400 mb-6"
       >
         Engineering Philosophy
       </h2>
       <div class="space-y-4">
         <div
-          class="text-gray-700 dark:text-gray-300 bg-cobalt-50/60 dark:bg-cobalt-900/20 border border-cobalt-200 dark:border-cobalt-800 rounded-lg p-4"
+          class="text-gray-200 bg-ruby-900/30 border border-ruby-600 rounded-lg p-4"
         >
-          <p
-            class="text-lg font-medium text-cobalt-800 dark:text-cobalt-200 mb-1"
-          >
+          <p class="text-lg font-medium text-ruby-300 mb-1">
             Simplicity is the apex of design
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-400">
             Complexity signals incomplete understanding.
           </p>
         </div>
         <div
-          class="text-gray-700 dark:text-gray-300 bg-iris-50/60 dark:bg-iris-900/20 border border-iris-200 dark:border-iris-800 rounded-lg p-4"
+          class="text-gray-200 bg-torch-900/30 border border-torch-600 rounded-lg p-4"
         >
-          <p class="text-lg font-medium text-iris-800 dark:text-iris-200 mb-1">
+          <p class="text-lg font-medium text-torch-300 mb-1">
             Outcomes are the objective
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-400">
             Implementations are transient and disposable.
           </p>
         </div>
         <div
-          class="text-gray-700 dark:text-gray-300 bg-sun-50/70 dark:bg-sun-900/20 border border-sun-200 dark:border-sun-800 rounded-lg p-4"
+          class="text-gray-200 bg-sun-900/30 border border-sun-600 rounded-lg p-4"
         >
-          <p
-            class="text-lg font-medium text-sun-800 dark:text-sun-200 mb-1"
-          >
+          <p class="text-lg font-medium text-sun-300 mb-1">
             Quality is a prerequisite
           </p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-400">
             Security, correctness, and reliability are foundational
             requirements, not aspirations.
           </p>
@@ -153,7 +149,7 @@ const projects = ref([
 }
 
 .dark :deep(.carousel__pagination-button::after) {
-  background-color: rgb(124, 111, 100); /* gray-600 — Gruvbox neutral */
+  background-color: rgb(124, 111, 100); /* gray-600 */
 }
 
 :deep(.carousel__pagination-button--active::after) {
@@ -172,7 +168,6 @@ const projects = ref([
   background-color: rgb(137, 199, 188); /* cobalt-300 */
 }
 
-/* Navigation arrows */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
   color: rgb(59, 113, 109); /* cobalt-700 */

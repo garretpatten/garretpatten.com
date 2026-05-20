@@ -27,6 +27,14 @@
     background-color: #1d2021;
     color: inherit;
   }
+
+  /* Neutralize Tailwind’s default blue ring / white ring-offset on Gruvbox surfaces */
+  html.dark *,
+  html.dark *::before,
+  html.dark *::after {
+    --tw-ring-offset-color: #1d2021;
+    --tw-ring-color: rgb(131 165 152 / 0.45);
+  }
 }
 
 /*
@@ -72,6 +80,20 @@
 
   .soft-enter-delay-2 {
     animation-delay: 160ms;
+  }
+
+  /*
+   * About portrait: Gruvbox tricolor halo — red / yellow / bright blue (ANSI),
+   * separated by dark0_hard gaps so each ring reads evenly.
+   */
+  .avatar-gruvbox-tricolor {
+    border-radius: 9999px;
+    box-shadow:
+      0 0 0 3px #fb4934,
+      0 0 0 6px #1d2021,
+      0 0 0 9px #fabd2f,
+      0 0 0 12px #1d2021,
+      0 0 0 15px #83a598;
   }
 }
 

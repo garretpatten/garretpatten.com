@@ -1,11 +1,11 @@
 <template>
   <div
-    class="rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms] bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800"
+    class="rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms] bg-cobalt-900/35 border border-cobalt-700"
   >
-    <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+    <h3 class="text-xl font-bold text-gray-100 mb-3">
       {{ project.name }}
     </h3>
-    <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+    <p class="text-gray-400 mb-4 flex-grow">
       {{ project.description }}
     </p>
     <a
@@ -13,7 +13,7 @@
       :href="project.github"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 text-sm font-medium text-cobalt-700 dark:text-cobalt-300 hover:text-cobalt-900 dark:hover:text-cobalt-200 transition-colors duration-[230ms]"
+      class="inline-flex items-center gap-2 text-sm font-medium text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

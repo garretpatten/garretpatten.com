@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-lg p-6" :class="getHobbySurfaceClass(hobby.id)">
     <h3
-      class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2"
+      class="text-xl font-bold text-gray-100 mb-4 flex items-center gap-2"
     >
       <!-- Reading: Open Book -->
       <svg
@@ -96,14 +96,14 @@
       <p
         v-for="(paragraph, index) in hobby.content"
         :key="index"
-        class="text-gray-700 dark:text-gray-300 mb-4"
+        class="text-gray-300 mb-4"
       >
         {{ paragraph }}
       </p>
 
       <ul
         v-if="hobby.list"
-        class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300"
+        class="list-disc list-inside space-y-2 text-gray-300"
       >
         <li v-for="(item, index) in hobby.list" :key="index">
           {{ item }}
@@ -112,12 +112,12 @@
 
       <div
         v-if="hobby.currently"
-        class="mt-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg"
+        class="mt-4 p-4 bg-gray-800 rounded-lg"
       >
-        <p class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">
+        <p class="text-sm font-semibold text-gray-100 mb-1">
           Currently:
         </p>
-        <p class="text-sm text-gray-700 dark:text-gray-300">
+        <p class="text-sm text-gray-300">
           {{ hobby.currently }}
         </p>
       </div>
@@ -127,31 +127,25 @@
 
 <script setup>
 const hobbyAccentClasses = {
-  reading: "text-cobalt-700 dark:text-cobalt-300",
-  genealogy: "text-forest-700 dark:text-forest-300",
-  systems: "text-cobalt-700 dark:text-cobalt-300",
-  music: "text-iris-700 dark:text-iris-300",
-  journaling: "text-forest-700 dark:text-forest-300",
+  reading: "text-ruby-400",
+  genealogy: "text-forest-400",
+  systems: "text-cobalt-400",
+  music: "text-sun-400",
+  journaling: "text-torch-400",
 };
 
 const hobbySurfaceClasses = {
-  reading:
-    "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
-  genealogy:
-    "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
-  systems:
-    "bg-cobalt-50/65 dark:bg-cobalt-900/30 border border-cobalt-200 dark:border-cobalt-800",
-  music:
-    "bg-iris-50/65 dark:bg-iris-900/30 border border-iris-200 dark:border-iris-800",
-  journaling:
-    "bg-forest-50/65 dark:bg-forest-900/30 border border-forest-200 dark:border-forest-800",
+  reading: "bg-ruby-900/35 border border-ruby-600",
+  genealogy: "bg-forest-900/40 border border-forest-700",
+  systems: "bg-cobalt-900/35 border border-cobalt-700",
+  music: "bg-sun-900/35 border border-sun-600",
+  journaling: "bg-torch-900/35 border border-torch-600",
 };
 
 const getHobbyAccentClass = (id) =>
-  hobbyAccentClasses[id] || "text-gray-500 dark:text-gray-400";
+  hobbyAccentClasses[id] || "text-gray-400";
 const getHobbySurfaceClass = (id) =>
-  hobbySurfaceClasses[id] ||
-  "bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800";
+  hobbySurfaceClasses[id] || "bg-gray-900 border border-gray-700";
 
 defineProps({
   hobby: {
