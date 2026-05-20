@@ -3,13 +3,11 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-torch-400 mb-4"
+        class="text-sm font-semibold uppercase tracking-wider text-ruby-400 mb-4"
       >
         Summary
       </h2>
-      <div
-        class="bg-gray-950 border-l-4 border-cobalt-400 py-4 px-5 rounded-lg"
-      >
+      <div class="bg-gray-900/90 border border-gray-700 rounded-xl p-6 md:p-8">
         <p class="text-gray-300 leading-relaxed">
           Systems-oriented security leader with a builder's mindset and eight
           years of experience at a global, publicly traded FinTech leader. I
@@ -24,7 +22,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-sun-400 mb-4"
+        class="text-sm font-semibold uppercase tracking-wider text-torch-400 mb-4"
       >
         Skills
       </h2>
@@ -33,8 +31,8 @@
           v-for="(skill, index) in skills"
           :key="skill"
           :class="[
-            'rounded-full border text-sm font-medium',
-            getSkillBubbleClass(index),
+            'rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-sm font-medium text-gray-200',
+            skillAccentBorders[index % skillAccentBorders.length],
           ]"
         >
           {{ skill }}
@@ -45,7 +43,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-sun-400 mb-6"
       >
         Experience
       </h2>
@@ -61,7 +59,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-sun-400 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Education
       </h2>
@@ -69,7 +67,7 @@
         <div
           v-for="(edu, index) in education"
           :key="`${edu.school}-${index}`"
-          class="bg-gray-900 border border-gray-700 rounded-lg p-6"
+          class="bg-gray-900/90 border border-gray-700 rounded-xl p-6"
         >
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
@@ -77,7 +75,7 @@
             <h3 class="text-lg font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
-            <span class="text-sm text-gray-400 whitespace-nowrap">
+            <span class="text-sm text-cobalt-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
@@ -95,6 +93,13 @@
 
 <script setup>
 import TimelineItem from "../components/TimelineItem.vue";
+
+/** Mirrors Landing stat accents: ruby, torch, cobalt — border-only on chips */
+const skillAccentBorders = [
+  "border-ruby-500/70",
+  "border-torch-500/70",
+  "border-cobalt-500/70",
+];
 
 const skills = [
   // "Apex",
@@ -190,18 +195,4 @@ const education = [
     end: "Aug '14 - May '18",
   },
 ];
-
-const bubbleTones = [
-  "border-2 border-cobalt-400 bg-gray-950 text-cobalt-300",
-  "border-2 border-iris-400 bg-gray-950 text-iris-300",
-  "border-2 border-forest-400 bg-gray-950 text-forest-300",
-  "border-2 border-sun-400 bg-gray-950 text-sun-300",
-  "border-2 border-torch-400 bg-gray-950 text-torch-300",
-  "border-2 border-ruby-400 bg-gray-950 text-ruby-300",
-];
-
-const bubbleSizes = ["px-3 py-1", "px-4 py-1.5", "px-3.5 py-1.5"];
-
-const getSkillBubbleClass = (index) =>
-  `${bubbleTones[index % bubbleTones.length]} ${bubbleSizes[index % bubbleSizes.length]}`;
 </script>

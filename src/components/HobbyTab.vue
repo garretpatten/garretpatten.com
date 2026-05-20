@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-lg p-6" :class="getHobbySurfaceClass(hobby.id)">
+  <div class="rounded-lg p-6 bg-gray-900/90 border border-gray-700">
     <h3 class="text-xl font-bold text-gray-100 mb-4 flex items-center gap-2">
       <!-- Reading: Open Book -->
       <svg
@@ -127,17 +127,7 @@ const hobbyAccentClasses = {
   journaling: "text-torch-400",
 };
 
-const hobbySurfaceClasses = {
-  reading: "bg-ruby-900/35 border border-ruby-600",
-  genealogy: "bg-forest-900/40 border border-forest-700",
-  systems: "bg-cobalt-900/35 border border-cobalt-700",
-  music: "bg-sun-900/35 border border-sun-600",
-  journaling: "bg-torch-900/35 border border-torch-600",
-};
-
 const getHobbyAccentClass = (id) => hobbyAccentClasses[id] || "text-gray-400";
-const getHobbySurfaceClass = (id) =>
-  hobbySurfaceClasses[id] || "bg-gray-900 border border-gray-700";
 
 defineProps({
   hobby: {
