@@ -110,7 +110,7 @@
         top: `${headerBottom}px`,
         height: `calc(100vh - ${headerBottom}px)`,
       }"
-      class="fixed right-0 w-[80%] bg-white dark:bg-[#282c34] shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
+      class="fixed right-0 w-[80%] bg-white dark:bg-[#282828] shadow-xl z-40 md:hidden overflow-y-auto border-l border-cobalt-200 dark:border-cobalt-800"
     >
       <div class="flex flex-col items-center gap-4 pt-8 px-6 pb-6">
         <router-link

@@ -151,27 +151,27 @@ const projects = ref([
 /* Custom carousel navigation and pagination styling */
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: rgb(52, 103, 146); /* cobalt-700 - #346792 */
+  color: rgb(59, 113, 109); /* cobalt-700 — Gruvbox aqua dark */
 }
 
 .dark :deep(.carousel__prev),
 .dark :deep(.carousel__next) {
-  color: rgb(140, 203, 255); /* cobalt-300 - #8CCBFF */
+  color: rgb(137, 199, 188); /* cobalt-300 — Gruvbox aqua bright tint */
 }
 
 :deep(.carousel__pagination-button) {
-  background-color: rgb(209, 213, 219); /* gray-300 */
+  background-color: rgb(189, 174, 147); /* gray-300 — Gruvbox fg3 */
 }
 
 .dark :deep(.carousel__pagination-button) {
-  background-color: rgb(75, 85, 99); /* gray-600 */
+  background-color: rgb(124, 111, 100); /* gray-600 — Gruvbox dark4 */
 }
 
 :deep(.carousel__pagination-button--active) {
-  background-color: rgb(114, 68, 127); /* iris-700 - #72447F */
+  background-color: rgb(149, 84, 113); /* iris-700 — Gruvbox magenta dark */
 }
 
 .dark :deep(.carousel__pagination-button--active) {
-  background-color: rgb(246, 211, 142); /* sun-300 - #F6D38E */
+  background-color: rgb(249, 224, 144); /* sun-300 — Gruvbox yellow bright tint */
 }
 </style>
