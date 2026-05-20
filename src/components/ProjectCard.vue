@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms] bg-cobalt-900/35 border border-cobalt-700"
+    class="rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms] bg-gray-900/90 border border-gray-700"
   >
     <h3 class="text-xl font-bold text-gray-100 mb-3">
       {{ project.name }}

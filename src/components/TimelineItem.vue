@@ -11,7 +11,7 @@
     ></div>
 
     <!-- Content card -->
-    <div class="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow-sm">
+    <div class="bg-gray-900/90 border border-gray-700 rounded-lg p-6 shadow-sm">
       <div
         class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3"
       >
@@ -19,12 +19,12 @@
           <h3 class="text-lg font-semibold text-gray-100">
             {{ item.role }}
           </h3>
-          <p class="text-sm text-forest-400">
+          <p class="text-sm text-gray-300">
             {{ item.company
             }}<span v-if="item.location"> · {{ item.location }}</span>
           </p>
         </div>
-        <span class="text-sm text-torch-400 whitespace-nowrap">
+        <span class="text-sm text-cobalt-400 whitespace-nowrap">
           {{ item.start }} – {{ item.end }}
         </span>
       </div>
