@@ -99,7 +99,13 @@
 
 /* Custom utilities */
 @layer utilities {
-  .route-swap-enter-active {
+  /*
+   * Route transitions: define both enter and leave. Mobile WebKit can leave
+   * compositor ghosts (e.g. large box-shadow halos on About) when the outgoing
+   * view is removed with a zero-duration leave while the next route paints.
+   */
+  .route-swap-enter-active,
+  .route-swap-leave-active {
     transition:
       opacity 420ms var(--motion-ease-standard),
       transform 420ms var(--motion-ease-standard);
@@ -108,6 +114,11 @@
   .route-swap-enter-from {
     opacity: 0;
     transform: translateY(12px);
+  }
+
+  .route-swap-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 
   .menu-enter-active,
