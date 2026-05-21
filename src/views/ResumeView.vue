@@ -75,7 +75,7 @@
             <h3 class="text-lg font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
-            <span class="text-sm text-forest-400 whitespace-nowrap">
+            <span class="text-sm text-cobalt-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
