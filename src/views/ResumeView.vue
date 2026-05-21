@@ -59,7 +59,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-sm font-semibold uppercase tracking-wider text-forest-400 mb-6"
       >
         Education
       </h2>
@@ -75,7 +75,7 @@
             <h3 class="text-lg font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
-            <span class="text-sm text-cobalt-400 whitespace-nowrap">
+            <span class="text-sm text-forest-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
