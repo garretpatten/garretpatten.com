@@ -81,28 +81,14 @@
   .soft-enter-delay-2 {
     animation-delay: 160ms;
   }
-
-  /*
-   * About portrait: Gruvbox tricolor halo — red / yellow / bright blue (ANSI),
-   * separated by dark0_hard gaps so each ring reads evenly.
-   */
-  .avatar-gruvbox-tricolor {
-    border-radius: 9999px;
-    box-shadow:
-      0 0 0 3px #fb4934,
-      0 0 0 6px #1d2021,
-      0 0 0 9px #fabd2f,
-      0 0 0 12px #1d2021,
-      0 0 0 15px #83a598;
-  }
 }
 
 /* Custom utilities */
 @layer utilities {
   /*
    * Route transitions: define both enter and leave. Mobile WebKit can leave
-   * compositor ghosts (e.g. large box-shadow halos on About) when the outgoing
-   * view is removed with a zero-duration leave while the next route paints.
+   * compositor ghosts when the outgoing view is removed instantly while the next
+   * route paints.
    */
   .route-swap-enter-active,
   .route-swap-leave-active {

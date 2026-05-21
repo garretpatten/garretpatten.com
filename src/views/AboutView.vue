@@ -1,11 +1,25 @@
 <template>
   <div class="max-w-3xl mx-auto">
-    <div class="mb-8 soft-enter">
-      <img
-        src="/assets/images/garret-patten.jpg"
-        alt="Garret Patten"
-        class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover avatar-gruvbox-tricolor"
-      />
+    <div class="mb-8 soft-enter flex justify-center">
+      <!--
+        Gruvbox tricolor halo as nested rings (not box-shadow). Large stacked
+        shadows ghost on real iOS WebKit during SPA route swaps; borders don't.
+      -->
+      <div class="rounded-full bg-cobalt-400 p-[3px]">
+        <div class="rounded-full bg-gray-950 p-[3px]">
+          <div class="rounded-full bg-sun-400 p-[3px]">
+            <div class="rounded-full bg-gray-950 p-[3px]">
+              <div class="rounded-full bg-ruby-400 p-[3px]">
+                <img
+                  src="/assets/images/garret-patten.jpg"
+                  alt="Garret Patten"
+                  class="block h-32 w-32 md:h-40 md:w-40 rounded-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div

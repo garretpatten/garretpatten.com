@@ -94,10 +94,10 @@
 <script setup>
 import TimelineItem from "../components/TimelineItem.vue";
 
-/** Mirrors Landing stat accents: ruby, torch, cobalt — border-only on chips */
+/** Mirrors Landing stat accents: ruby, forest (green), cobalt — border-only on chips */
 const skillAccentBorders = [
   "border-ruby-500/70",
-  "border-torch-500/70",
+  "border-forest-500/70",
   "border-cobalt-500/70",
 ];
 
