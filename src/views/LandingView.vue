@@ -13,9 +13,10 @@
       <p
         class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
-        Systems-minded security engineer with a builder's mindset. I design
-        secure pipelines, drive developer enablement programs, and advocate for
-        security as a shared organizational responsibility.
+        I work in security engineering with emphasis on what teams use every
+        day—pipelines, internal tools, defaults that hold, and checks that run
+        without ceremony. For eight years that work has been at a global FinTech
+        company, among hundreds of engineers and thousands of repositories.
       </p>
     </section>
 

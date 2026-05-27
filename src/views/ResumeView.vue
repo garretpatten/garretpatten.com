@@ -11,12 +11,12 @@
       </h2>
       <div class="bg-gray-900/90 border border-gray-700 rounded-xl p-6 md:p-8">
         <p class="font-sans text-gray-300 leading-relaxed">
-          Systems-oriented security leader with a builder's mindset and eight
-          years of experience at a global, publicly traded FinTech leader. I
-          architect secure pipelines, drive developer enablement, and scale
-          security as a shared organizational responsibility. I bridge the gap
-          between core product engineering and enterprise-grade security
-          orchestration.
+          For eight years I have served as a systems-oriented security leader at
+          a global, publicly traded FinTech company. I design automated governance
+          across large repository estates, collaborate with product engineering
+          on reviews and roadmaps, and favor security that lives in the workflow
+          rather than at the end of it. I am as comfortable in application code
+          as in enterprise-scale orchestration.
         </p>
       </div>
     </section>

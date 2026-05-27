@@ -85,31 +85,31 @@
           class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
         >
           <p class="font-heading text-lg font-medium text-ruby-400 mb-1">
-            Simplicity is the apex of design
+            Simplicity as a standard
           </p>
           <p class="font-sans text-sm text-gray-400 leading-relaxed">
-            Complexity signals incomplete understanding.
+            A design that needs a speech is usually hiding something.
           </p>
         </div>
         <div
           class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
         >
           <p class="font-heading text-lg font-medium text-sun-400 mb-1">
-            Outcomes are the objective
+            Outcomes before artifacts
           </p>
           <p class="font-sans text-sm text-gray-400 leading-relaxed">
-            Implementations are transient and disposable.
+            What ships matters; how it was built can be replaced.
           </p>
         </div>
         <div
           class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
         >
           <p class="font-heading text-lg font-medium text-cobalt-400 mb-1">
-            Quality is a prerequisite
+            Quality without exception
           </p>
           <p class="font-sans text-sm text-gray-400 leading-relaxed">
-            Security, correctness, and reliability are foundational
-            requirements, not aspirations.
+            Security, correctness, and reliability are not negotiable once you
+            admit they apply.
           </p>
         </div>
       </div>

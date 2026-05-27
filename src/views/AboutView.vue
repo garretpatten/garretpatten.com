@@ -28,35 +28,36 @@
       class="prose prose-lg dark:prose-invert max-w-none bg-gray-900/90 border border-gray-700 rounded-xl p-6 md:p-8 soft-enter soft-enter-delay-1"
     >
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        I grew up on the Jersey Shore in the New York City metro area. At
-        Christian Brothers Academy in Lincroft, I took my first computer science
-        class and learned Python. The thrill of writing code and watching it run
-        in the terminal awakened a lasting passion for technology.
+        I grew up on the Jersey Shore, in the New York City metro area. My first
+        computer science course, at Christian Brothers Academy in Lincroft,
+        introduced me to Python and to the modest satisfaction of a program that
+        behaves as written.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        I later attended Boston College’s Carroll School of Management,
-        initially intent on a career in finance and business. Halfway through,
-        however, I realized that path did not suit me. On a professor’s
-        suggestion, I enrolled in Computer Science 1 — and fell in love with the
-        discipline.
+        I graduated from Boston College’s Carroll School of Management with a
+        concentration in finance and a minor in computer science. I had enrolled
+        for finance and business; midway through, a professor recommended
+        Computer Science 1, and over time engineering became the sharper focus.
+        Finance did not fall away—my career has been in financial technology,
+        where both parts of the degree still matter.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        The summer prior to graduation, a QA Engineering internship introduced
-        me to professional software development. Working alongside talented
-        engineers, I gradually gravitated toward the creative act of building
-        rather than merely testing. That shift launched my career in software
-        engineering and, eventually, security.
+        The summer before graduation I took a QA engineering internship—my
+        introduction to software as it is practiced rather than assigned.
+        Working with experienced engineers, I found I preferred writing features
+        to cataloguing faults in them. Software engineering followed, then
+        security, in the same industry I had trained for.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed">
-        Today I live in Georgia with my wife, daughter, and beagle. Here I
-        continue to design and refine systems that support both work and family
-        life. In my spare time I pursue genealogy research, play music, and read
-        widely. Above all, I find deep satisfaction in creating elegant,
-        reliable systems — whether for secure infrastructure or for the routines
-        that save my family time and energy.
+        Today I live in Georgia with my wife, daughter, and a beagle. The same
+        inclination appears in different rooms: at work I build secure pipelines
+        and automation; at home I keep genealogical records, filled notebooks,
+        and the occasional script so that ordinary weeks require less
+        improvisation. When time allows, I read, play the guitar, and add another
+        name to a chart that keeps growing.
       </p>
     </div>
   </div>
