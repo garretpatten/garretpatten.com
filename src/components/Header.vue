@@ -5,6 +5,8 @@
       <router-link
         to="/"
         :tabindex="isMenuOpen ? -1 : undefined"
+        aria-label="Garret Patten, home"
+        :aria-current="route.path === '/' ? 'page' : undefined"
         class="interactive-focus rounded-md hover:opacity-80 transition-opacity duration-[230ms]"
       >
         <img
@@ -23,6 +25,7 @@
         :aria-expanded="isMenuOpen"
       >
         <svg
+          aria-hidden="true"
           class="w-6 h-6"
           fill="none"
           stroke="currentColor"
@@ -43,6 +46,8 @@
     <div class="hidden md:flex md:items-center md:justify-between gap-4">
       <router-link
         to="/"
+        aria-label="Garret Patten, home"
+        :aria-current="route.path === '/' ? 'page' : undefined"
         class="interactive-focus rounded-md hover:opacity-80 transition-opacity duration-[230ms]"
       >
         <img
@@ -52,18 +57,19 @@
         />
       </router-link>
 
-      <nav class="flex items-center gap-4">
+      <nav class="flex items-center gap-4" aria-label="Main">
         <router-link
-          v-for="route in routes"
-          :key="route.path"
-          :to="route.path"
+          v-for="navRoute in routes"
+          :key="navRoute.path"
+          :to="navRoute.path"
+          :aria-current="route.path === navRoute.path ? 'page' : undefined"
           :class="[
             desktopRouteClasses,
-            getRouteStateClasses(route.path),
-            'interactive-focus rounded-md',
+            getRouteStateClasses(navRoute.path),
+            'interactive-focus',
           ]"
         >
-          {{ route.name }}
+          {{ navRoute.name }}
         </router-link>
         <a
           v-for="social in socialLinks"
@@ -71,10 +77,11 @@
           :href="social.href"
           target="_blank"
           rel="noopener noreferrer"
-          :aria-label="social.label"
+          :aria-label="`${social.label} (opens in new tab)`"
           class="interactive-focus rounded-md text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
         >
           <svg
+            aria-hidden="true"
             class="w-5 h-5"
             fill="currentColor"
             viewBox="0 0 24 24"
@@ -102,18 +109,22 @@
     <nav
       v-if="isMenuOpen"
       ref="mobileMenuRef"
+      role="dialog"
+      aria-modal="true"
       aria-label="Mobile navigation"
       class="fixed top-0 right-0 h-screen w-72 max-w-[85vw] bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-700"
       @keydown="handleMobileMenuKeydown"
     >
       <div class="flex justify-end p-4">
         <button
+          ref="closeMenuRef"
           type="button"
           @click="closeMenu"
           class="p-2 text-gray-100 hover:text-cobalt-400 interactive-focus rounded-md transition-colors duration-[230ms] interactive-lift"
           aria-label="Close menu"
         >
           <svg
+            aria-hidden="true"
             class="w-6 h-6"
             fill="none"
             stroke="currentColor"
@@ -131,12 +142,12 @@
       </div>
       <div class="flex flex-col items-center gap-4 px-6 pb-6">
         <router-link
-          v-for="(navRoute, index) in routes"
+          v-for="navRoute in routes"
           :key="navRoute.path"
-          :ref="(el) => setFirstMobileLinkRef(el, index)"
           :to="navRoute.path"
+          :aria-current="route.path === navRoute.path ? 'page' : undefined"
           @click="closeMenu"
-          :class="[...getMobileLinkClasses(navRoute.path, index), 'interactive-focus']"
+          :class="[mobileRouteClasses, getRouteStateClasses(navRoute.path), 'interactive-focus']"
         >
           {{ navRoute.name }}
         </router-link>
@@ -147,10 +158,11 @@
             :href="social.href"
             target="_blank"
             rel="noopener noreferrer"
-            :aria-label="social.label"
+            :aria-label="`${social.label} (opens in new tab)`"
             class="interactive-focus rounded-md text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
           >
             <svg
+              aria-hidden="true"
               class="w-6 h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
@@ -171,9 +183,9 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 const isMenuOpen = ref(false);
-const firstMobileLink = ref(null);
 const mobileMenuRef = ref(null);
 const menuToggleRef = ref(null);
+const closeMenuRef = ref(null);
 
 const routes = [
   { path: "/about", name: "About" },
@@ -205,21 +217,8 @@ const mobileRouteClasses =
 const getRouteStateClasses = (path) =>
   route.path === path ? "text-sun-400 border-b-2 border-torch-400" : "";
 
-const getMobileLinkClasses = (path, index) => [
-  mobileRouteClasses,
-  getRouteStateClasses(path),
-  index === 0 ? "bg-gray-800 rounded-lg" : "",
-];
-
-const setFirstMobileLinkRef = (el, index) => {
-  if (index === 0) {
-    firstMobileLink.value = el;
-  }
-};
-
-const focusFirstMobileLink = () => {
-  const link = firstMobileLink.value?.$el ?? firstMobileLink.value;
-  link?.focus();
+const focusCloseButton = () => {
+  closeMenuRef.value?.focus();
 };
 
 const getMobileMenuFocusables = () => {
@@ -278,7 +277,7 @@ watch(isMenuOpen, async (open) => {
   document.body.style.overflow = open ? "hidden" : "";
   if (open) {
     await nextTick();
-    focusFirstMobileLink();
+    focusCloseButton();
   }
 });
 

@@ -10,26 +10,31 @@ const routes = [
     path: "/",
     name: "Home",
     component: LandingView,
+    meta: { title: "Home" },
   },
   {
     path: "/about",
     name: "About",
     component: AboutView,
+    meta: { title: "About" },
   },
   {
     path: "/resume",
     name: "Resume",
     component: ResumeView,
+    meta: { title: "Resume" },
   },
   {
     path: "/projects",
     name: "Projects",
     component: ProjectsView,
+    meta: { title: "Projects" },
   },
   {
     path: "/hobbies",
     name: "Hobbies",
     component: HobbiesView,
+    meta: { title: "Hobbies" },
   },
 ];
 

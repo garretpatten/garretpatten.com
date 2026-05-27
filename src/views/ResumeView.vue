@@ -1,5 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto">
+    <h1 tabindex="-1" class="sr-only outline-none">Resume</h1>
+
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2

@@ -1,24 +1,75 @@
 <template>
   <div class="max-w-6xl mx-auto">
-    <!-- Projects Carousel -->
-    <Carousel
-      :items-to-show="itemsToShow"
-      :wrap-around="true"
-      :autoplay="6000"
-      :pause-autoplay-on-hover="true"
-      class="projects-carousel mb-12 soft-enter"
-    >
-      <Slide v-for="project in projects" :key="project.name">
-        <div class="px-2">
-          <ProjectCard :project="project" />
-        </div>
-      </Slide>
+    <h1 tabindex="-1" class="sr-only outline-none">Projects</h1>
 
-      <template #addons>
-        <Navigation />
-        <Pagination />
-      </template>
-    </Carousel>
+    <!-- Projects Carousel -->
+    <section
+      aria-labelledby="projects-carousel-heading"
+      class="projects-carousel-shell soft-enter"
+    >
+      <h2 id="projects-carousel-heading" class="sr-only">
+        Featured projects
+      </h2>
+
+      <div class="relative">
+        <button
+          type="button"
+          class="carousel__prev interactive-focus"
+          aria-label="Previous project"
+          @click="goPrev"
+        >
+          <CarouselIcon name="arrowLeft" />
+        </button>
+
+        <button
+          type="button"
+          class="carousel__next interactive-focus"
+          aria-label="Next project"
+          @click="goNext"
+        >
+          <CarouselIcon name="arrowRight" />
+        </button>
+
+        <Carousel
+          ref="carouselRef"
+          v-model="currentSlide"
+          :items-to-show="itemsToShow"
+          :wrap-around="true"
+          :autoplay="6000"
+          :pause-autoplay-on-hover="true"
+          class="projects-carousel"
+          aria-label="Project carousel"
+          @init="syncCarouselFocusability"
+          @slide-end="syncCarouselFocusability"
+        >
+          <Slide v-for="project in projects" :key="project.name">
+            <div class="px-2">
+              <ProjectCard :project="project" />
+            </div>
+          </Slide>
+        </Carousel>
+
+        <ol class="carousel__pagination" role="list">
+          <li
+            v-for="(project, index) in projects"
+            :key="project.name"
+            class="carousel__pagination-item"
+          >
+            <button
+              type="button"
+              class="carousel__pagination-button interactive-focus"
+              :class="{
+                'carousel__pagination-button--active':
+                  activeSlideIndex === index,
+              }"
+              :aria-label="`Go to project slide ${index + 1} of ${projects.length}`"
+              :aria-current="activeSlideIndex === index ? 'true' : undefined"
+              @click="goToSlide(index)"
+            />
+          </li>
+        </ol>
+      </div>
+    </section>
 
     <!-- Engineering Philosophy -->
     <section
@@ -67,11 +118,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
-import { Carousel, Slide, Navigation, Pagination } from "vue3-carousel";
+import { ref, computed, onMounted, onUnmounted, nextTick } from "vue";
+import { Carousel, Slide, Icon as CarouselIcon } from "vue3-carousel";
 import ProjectCard from "../components/ProjectCard.vue";
 
 const itemsToShow = ref(1);
+const carouselRef = ref(null);
+const currentSlide = ref(0);
 
 const updateItemsToShow = () => {
   if (window.innerWidth >= 1024) {
@@ -81,11 +134,68 @@ const updateItemsToShow = () => {
   } else {
     itemsToShow.value = 1;
   }
+  syncCarouselFocusability();
 };
+
+const syncCarouselFocusability = () => {
+  nextTick(() => {
+    const root = carouselRef.value?.$el;
+    if (!root) {
+      return;
+    }
+
+    root.setAttribute("tabindex", "-1");
+
+    root.querySelectorAll(".carousel__slide").forEach((slide) => {
+      const hidden =
+        slide.getAttribute("aria-hidden") === "true" ||
+        slide.classList.contains("carousel_slide--clone");
+
+      if ("inert" in slide) {
+        slide.inert = hidden;
+      }
+
+      slide
+        .querySelectorAll("a[href], button, input, select, textarea")
+        .forEach((element) => {
+          if (hidden) {
+            element.setAttribute("tabindex", "-1");
+            element.dataset.carouselTabDisabled = "true";
+          } else if (element.dataset.carouselTabDisabled) {
+            element.removeAttribute("tabindex");
+            delete element.dataset.carouselTabDisabled;
+          }
+        });
+    });
+  });
+};
+
+const goPrev = () => {
+  carouselRef.value?.prev();
+};
+
+const goNext = () => {
+  carouselRef.value?.next();
+};
+
+const goToSlide = (index) => {
+  carouselRef.value?.slideTo(index);
+};
+
+const activeSlideIndex = computed(() => {
+  const count = projects.value.length;
+  if (!count) {
+    return 0;
+  }
+
+  const raw = currentSlide.value;
+  return ((raw % count) + count) % count;
+});
 
 onMounted(() => {
   updateItemsToShow();
   window.addEventListener("resize", updateItemsToShow);
+  nextTick(syncCarouselFocusability);
 });
 
 onUnmounted(() => {
@@ -139,36 +249,45 @@ const projects = ref([
 </script>
 
 <style scoped>
-.projects-carousel {
+.projects-carousel-shell {
   padding: 1rem 0;
+  margin-bottom: 3rem;
+}
+
+.projects-carousel {
+  padding: 0 2.5rem;
 }
 
 /* Pagination pills render on ::after, not the button element */
-:deep(.carousel__pagination-button::after) {
+.projects-carousel-shell :deep(.carousel__pagination-button::after) {
   background-color: rgb(189, 174, 147); /* gray-300 — Gruvbox fg3 */
 }
 
-.dark :deep(.carousel__pagination-button::after) {
+.dark .projects-carousel-shell :deep(.carousel__pagination-button::after) {
   background-color: rgb(124, 111, 100); /* gray-600 */
 }
 
-:deep(.carousel__pagination-button--active::after) {
+.projects-carousel-shell :deep(.carousel__pagination-button--active::after) {
   background-color: rgb(149, 84, 113); /* iris-700 */
 }
 
-.dark :deep(.carousel__pagination-button--active::after) {
+.dark
+  .projects-carousel-shell
+  :deep(.carousel__pagination-button--active::after) {
   background-color: rgb(249, 224, 144); /* sun-300 */
 }
 
-:deep(
-  .carousel__pagination-button:hover:not(
-      .carousel__pagination-button--active
-    )::after
-) {
+.projects-carousel-shell
+  :deep(
+    .carousel__pagination-button:hover:not(
+        .carousel__pagination-button--active
+      )::after
+  ) {
   background-color: rgb(59, 113, 109); /* cobalt-700 */
 }
 
 .dark
+  .projects-carousel-shell
   :deep(
     .carousel__pagination-button:hover:not(
         .carousel__pagination-button--active
@@ -177,19 +296,19 @@ const projects = ref([
   background-color: rgb(137, 199, 188); /* cobalt-300 */
 }
 
-:deep(.carousel__prev),
-:deep(.carousel__next),
-:deep(.carousel__pagination-button) {
+.projects-carousel-shell .carousel__prev,
+.projects-carousel-shell .carousel__next,
+.projects-carousel-shell .carousel__pagination-button {
   @apply rounded-md outline-none focus-visible:ring-2 focus-visible:ring-cobalt-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950;
 }
 
-:deep(.carousel__prev),
-:deep(.carousel__next) {
+.projects-carousel-shell .carousel__prev,
+.projects-carousel-shell .carousel__next {
   color: rgb(59, 113, 109); /* cobalt-700 */
 }
 
-.dark :deep(.carousel__prev),
-.dark :deep(.carousel__next) {
+.dark .projects-carousel-shell .carousel__prev,
+.dark .projects-carousel-shell .carousel__next {
   color: rgb(137, 199, 188); /* cobalt-300 */
 }
 </style>

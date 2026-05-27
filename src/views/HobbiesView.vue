@@ -1,10 +1,17 @@
 <template>
   <div class="max-w-4xl mx-auto">
+    <h1 id="hobbies-page-title" tabindex="-1" class="sr-only outline-none">
+      Hobbies
+    </h1>
+
     <!-- Mobile: Dropdown Navigation -->
     <div class="md:hidden mb-6 soft-enter">
+      <label for="hobby-select" class="sr-only">Hobby category</label>
       <select
+        id="hobby-select"
         v-model="activeTab"
         class="interactive-focus w-full px-4 py-3 text-sm font-medium bg-gray-900 border border-gray-600 rounded-lg text-gray-100 interactive-lift"
+        @change="announceHobbyChange"
       >
         <option v-for="hobby in hobbies" :key="hobby.id" :value="hobby.id">
           {{ hobby.title }}
@@ -26,8 +33,8 @@
         :id="`hobby-tab-${hobby.id}`"
         :aria-selected="activeTab === hobby.id"
         :aria-controls="`hobby-panel-${hobby.id}`"
-        @click="activeTab = hobby.id"
-        class="interactive-focus px-4 py-2 text-sm font-medium transition-colors duration-[230ms] interactive-lift rounded-md"
+        @click="selectHobby(hobby.id)"
+        class="interactive-focus px-4 py-2 text-sm font-medium transition-colors duration-[230ms] interactive-lift"
         :class="
           activeTab === hobby.id
             ? 'text-sun-400 border-b-2 border-torch-400'
@@ -40,11 +47,23 @@
 
     <!-- Tab Content -->
     <div class="hobby-content">
+      <div
+        aria-live="polite"
+        aria-atomic="true"
+        class="sr-only"
+      >
+        {{ hobbyAnnouncement }}
+      </div>
+
       <Transition name="hobby-swap" mode="out-in">
         <div
           :id="`hobby-panel-${activeHobby.id}`"
           role="tabpanel"
-          :aria-labelledby="`hobby-tab-${activeHobby.id}`"
+          :aria-labelledby="
+            isDesktopTablist
+              ? `hobby-tab-${activeHobby.id}`
+              : 'hobbies-page-title'
+          "
           :key="activeHobby.id"
         >
           <HobbyTab :hobby="activeHobby" />
@@ -55,10 +74,12 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import HobbyTab from "../components/HobbyTab.vue";
 
 const activeTab = ref("genealogy");
+const hobbyAnnouncement = ref("");
+const isDesktopTablist = ref(false);
 
 const hobbies = [
   {
@@ -120,6 +141,36 @@ const hobbies = [
 const activeHobby = computed(() => {
   return hobbies.find((h) => h.id === activeTab.value) || hobbies[0];
 });
+
+const announceHobby = (hobbyId) => {
+  const hobby = hobbies.find((h) => h.id === hobbyId);
+  if (hobby) {
+    hobbyAnnouncement.value = `${hobby.title} selected`;
+  }
+};
+
+const selectHobby = (hobbyId) => {
+  activeTab.value = hobbyId;
+  announceHobby(hobbyId);
+};
+
+const announceHobbyChange = () => {
+  announceHobby(activeTab.value);
+};
+
+const updateTablistMode = () => {
+  isDesktopTablist.value = window.matchMedia("(min-width: 768px)").matches;
+};
+
+onMounted(() => {
+  updateTablistMode();
+  window.addEventListener("resize", updateTablistMode);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateTablistMode);
+});
+
 </script>
 
 <style scoped>

@@ -3,6 +3,7 @@
     <h3 class="text-xl font-bold text-gray-100 mb-4 flex items-center gap-2">
       <!-- Reading: Open Book -->
       <svg
+        aria-hidden="true"
         v-if="hobby.id === 'reading'"
         :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
@@ -18,6 +19,7 @@
       </svg>
       <!-- Genealogy: Leaf -->
       <svg
+        aria-hidden="true"
         v-else-if="hobby.id === 'genealogy'"
         :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
@@ -39,6 +41,7 @@
       </svg>
       <!-- Personal System Design: Gear -->
       <svg
+        aria-hidden="true"
         v-else-if="hobby.id === 'systems'"
         :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
@@ -59,6 +62,7 @@
       </svg>
       <!-- Music: Musical Note -->
       <svg
+        aria-hidden="true"
         v-else-if="hobby.id === 'music'"
         :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"
@@ -74,6 +78,7 @@
       </svg>
       <!-- Journaling: Notebook -->
       <svg
+        aria-hidden="true"
         v-else-if="hobby.id === 'journaling'"
         :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
         fill="none"

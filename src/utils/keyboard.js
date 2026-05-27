@@ -6,7 +6,8 @@ export function initLinkSpaceActivation() {
   document.addEventListener(
     "keydown",
     (event) => {
-      if (event.key !== " " || event.defaultPrevented) {
+      const isSpace = event.key === " " || event.code === "Space";
+      if (!isSpace || event.defaultPrevented) {
         return;
       }
       if (event.metaKey || event.ctrlKey || event.altKey) {
@@ -18,7 +19,7 @@ export function initLinkSpaceActivation() {
         return;
       }
 
-      const link = target.closest("a[href]");
+      const link = target.closest("a[href]:not([aria-disabled='true'])");
       if (!link || link.isContentEditable) {
         return;
       }

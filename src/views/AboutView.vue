@@ -1,5 +1,7 @@
 <template>
   <div class="max-w-3xl mx-auto">
+    <h1 tabindex="-1" class="sr-only outline-none">About</h1>
+
     <div class="mb-8 soft-enter flex justify-center">
       <!--
         Gruvbox tricolor halo as nested rings (not box-shadow). Large stacked

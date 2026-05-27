@@ -2,7 +2,7 @@
   <div class="max-w-4xl mx-auto">
     <!-- Hero Section -->
     <section class="text-center mb-16 soft-enter">
-      <h1 class="text-5xl md:text-6xl font-bold text-gray-100 mb-4">
+      <h1 tabindex="-1" class="text-5xl md:text-6xl font-bold text-gray-100 mb-4 outline-none">
         Garret Patten
       </h1>
       <p class="text-xl md:text-2xl text-gray-300">Senior Security Engineer</p>
