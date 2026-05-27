@@ -12,12 +12,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          '"SauceCodePro Nerd Font"',
-          '"SauceCodePro NF"',
-          "SauceCodeProNerdFont",
-          ...defaultTheme.fontFamily.mono,
-        ],
+        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        heading: ['"IBM Plex Sans"', ...defaultTheme.fontFamily.sans],
+        mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         gray: {
