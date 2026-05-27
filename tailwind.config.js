@@ -11,6 +11,14 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          '"SauceCodePro Nerd Font"',
+          '"SauceCodePro NF"',
+          "SauceCodeProNerdFont",
+          ...defaultTheme.fontFamily.mono,
+        ],
+      },
       colors: {
         gray: {
           ...defaultTheme.colors.gray,
