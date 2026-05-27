@@ -10,7 +10,7 @@
         Summary
       </h2>
       <div class="bg-gray-900/90 border border-gray-700 rounded-xl p-6 md:p-8">
-        <p class="text-gray-300 leading-relaxed">
+        <p class="font-sans text-gray-300 leading-relaxed">
           Systems-oriented security leader with a builder's mindset and eight
           years of experience at a global, publicly traded FinTech leader. I
           architect secure pipelines, drive developer enablement, and scale
@@ -33,7 +33,7 @@
           v-for="(skill, index) in skills"
           :key="skill"
           :class="[
-            'rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-sm font-medium text-gray-200',
+            'font-mono rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-sm font-medium text-gray-200',
             skillAccentBorders[index % skillAccentBorders.length],
           ]"
         >
@@ -74,17 +74,17 @@
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
           >
-            <h3 class="text-lg font-semibold text-gray-100">
+            <h3 class="font-heading text-lg font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
-            <span class="text-sm text-cobalt-400 whitespace-nowrap">
+            <span class="font-mono text-sm text-cobalt-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
-          <p class="text-gray-300 mb-2">
+          <p class="font-sans text-gray-300 mb-2">
             {{ edu.degree }}
           </p>
-          <p v-if="edu.details" class="text-sm text-gray-400">
+          <p v-if="edu.details" class="font-sans text-sm text-gray-400">
             {{ edu.details }}
           </p>
         </div>

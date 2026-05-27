@@ -84,30 +84,30 @@
         <div
           class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
         >
-          <p class="text-lg font-medium text-ruby-400 mb-1">
+          <p class="font-heading text-lg font-medium text-ruby-400 mb-1">
             Simplicity is the apex of design
           </p>
-          <p class="text-sm text-gray-400 leading-relaxed">
+          <p class="font-sans text-sm text-gray-400 leading-relaxed">
             Complexity signals incomplete understanding.
           </p>
         </div>
         <div
           class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
         >
-          <p class="text-lg font-medium text-sun-400 mb-1">
+          <p class="font-heading text-lg font-medium text-sun-400 mb-1">
             Outcomes are the objective
           </p>
-          <p class="text-sm text-gray-400 leading-relaxed">
+          <p class="font-sans text-sm text-gray-400 leading-relaxed">
             Implementations are transient and disposable.
           </p>
         </div>
         <div
           class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
         >
-          <p class="text-lg font-medium text-cobalt-400 mb-1">
+          <p class="font-heading text-lg font-medium text-cobalt-400 mb-1">
             Quality is a prerequisite
           </p>
-          <p class="text-sm text-gray-400 leading-relaxed">
+          <p class="font-sans text-sm text-gray-400 leading-relaxed">
             Security, correctness, and reliability are foundational
             requirements, not aspirations.
           </p>

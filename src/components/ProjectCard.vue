@@ -2,10 +2,10 @@
   <div
     class="rounded-lg p-6 h-full flex flex-col hover:shadow-lg transition-shadow duration-[230ms] bg-gray-900/90 border border-gray-700"
   >
-    <h3 class="text-xl font-bold text-gray-100 mb-3">
+    <h3 class="font-heading text-xl font-bold text-gray-100 mb-3">
       {{ project.name }}
     </h3>
-    <p class="text-gray-400 mb-4 flex-grow">
+    <p class="font-sans text-gray-400 mb-4 flex-grow">
       {{ project.description }}
     </p>
     <a
@@ -14,7 +14,7 @@
       target="_blank"
       rel="noopener noreferrer"
       :aria-label="`View ${project.name} on GitHub (opens in new tab)`"
-      class="interactive-focus inline-flex items-center gap-2 rounded-md text-sm font-medium text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
+      class="font-sans interactive-focus inline-flex items-center gap-2 rounded-md text-sm font-medium text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
     >
       <svg
         aria-hidden="true"

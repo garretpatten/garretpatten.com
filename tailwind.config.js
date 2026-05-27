@@ -11,6 +11,11 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        heading: ['"IBM Plex Sans"', ...defaultTheme.fontFamily.sans],
+        mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
+      },
       colors: {
         gray: {
           ...defaultTheme.colors.gray,

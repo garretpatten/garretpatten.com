@@ -16,22 +16,22 @@
         class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3"
       >
         <div>
-          <h3 class="text-lg font-semibold text-gray-100">
+          <h3 class="font-heading text-lg font-semibold text-gray-100">
             {{ item.role }}
           </h3>
-          <p class="text-sm text-gray-300">
+          <p class="font-sans text-sm text-gray-300">
             {{ item.company
             }}<span v-if="item.location"> · {{ item.location }}</span>
           </p>
         </div>
-        <span class="text-sm text-cobalt-400 whitespace-nowrap">
+        <span class="font-mono text-sm text-cobalt-400 whitespace-nowrap">
           {{ item.start }} – {{ item.end }}
         </span>
       </div>
 
       <ul
         v-if="item.bullets && item.bullets.length"
-        class="list-disc list-inside space-y-1 text-sm text-gray-300 marker:text-cobalt-400 ml-2"
+        class="font-sans list-disc list-inside space-y-1 text-sm text-gray-300 marker:text-cobalt-400 ml-2"
       >
         <li v-for="(bullet, index) in item.bullets" :key="index">
           {{ bullet }}

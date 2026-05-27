@@ -5,13 +5,13 @@
       <h1 tabindex="-1" class="text-5xl md:text-6xl font-bold text-gray-100 mb-4 outline-none">
         Garret Patten
       </h1>
-      <p class="text-xl md:text-2xl text-gray-300">Senior Security Engineer</p>
+      <p class="font-sans text-xl md:text-2xl text-gray-300">Senior Security Engineer</p>
     </section>
 
     <!-- Value Proposition -->
     <section class="mb-16 soft-enter soft-enter-delay-1">
       <p
-        class="text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
+        class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
         Systems-minded security engineer with a builder's mindset. I design
         secure pipelines, drive developer enablement programs, and advocate for
@@ -24,16 +24,16 @@
       class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2"
     >
       <div class="text-center">
-        <div class="text-3xl font-bold text-ruby-400 mb-2">8+</div>
-        <div class="text-sm text-gray-400">Years Experience</div>
+        <div class="font-heading text-3xl font-bold text-ruby-400 mb-2">8+</div>
+        <div class="font-mono text-sm text-gray-400">Years Experience</div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-torch-400 mb-2">3,000+</div>
-        <div class="text-sm text-gray-400">Repositories Managed</div>
+        <div class="font-heading text-3xl font-bold text-torch-400 mb-2">3,000+</div>
+        <div class="font-mono text-sm text-gray-400">Repositories Managed</div>
       </div>
       <div class="text-center">
-        <div class="text-3xl font-bold text-cobalt-400 mb-2">300+</div>
-        <div class="text-sm text-gray-400">Engineers Supported Globally</div>
+        <div class="font-heading text-3xl font-bold text-cobalt-400 mb-2">300+</div>
+        <div class="font-mono text-sm text-gray-400">Engineers Supported Globally</div>
       </div>
     </section>
 
