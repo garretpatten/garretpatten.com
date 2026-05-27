@@ -13,7 +13,7 @@
       :href="project.github"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 text-sm font-medium text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
+      class="interactive-focus inline-flex items-center gap-2 rounded-md text-sm font-medium text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

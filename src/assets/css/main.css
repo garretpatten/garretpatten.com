@@ -70,6 +70,14 @@
     transform: translateY(0) scale(0.99);
   }
 
+  .interactive-focus:focus {
+    @apply outline-none;
+  }
+
+  .interactive-focus:focus-visible {
+    @apply ring-2 ring-cobalt-500 ring-offset-2 ring-offset-gray-950;
+  }
+
   .soft-enter {
     animation: soft-enter 520ms var(--motion-ease-emphasized) both;
   }

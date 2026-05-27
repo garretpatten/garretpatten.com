@@ -178,6 +178,12 @@ const projects = ref([
 }
 
 :deep(.carousel__prev),
+:deep(.carousel__next),
+:deep(.carousel__pagination-button) {
+  @apply rounded-md outline-none focus-visible:ring-2 focus-visible:ring-cobalt-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950;
+}
+
+:deep(.carousel__prev),
 :deep(.carousel__next) {
   color: rgb(59, 113, 109); /* cobalt-700 */
 }

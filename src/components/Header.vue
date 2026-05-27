@@ -1,10 +1,11 @@
 <template>
-  <header ref="headerRef" class="mb-8 pb-6 relative z-20 px-4 py-3">
+  <header class="mb-8 pb-6 relative z-20 px-4 py-3">
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
       <router-link
         to="/"
-        class="hover:opacity-80 transition-opacity duration-[230ms]"
+        :tabindex="isMenuOpen ? -1 : undefined"
+        class="interactive-focus rounded-md hover:opacity-80 transition-opacity duration-[230ms]"
       >
         <img
           src="/cropped-monogram-gray.png"
@@ -14,9 +15,11 @@
       </router-link>
 
       <button
+        ref="menuToggleRef"
+        v-show="!isMenuOpen"
         @click="toggleMenu"
-        class="p-2 text-gray-100 hover:text-cobalt-400 focus:outline-none focus:ring-2 focus:ring-cobalt-500 rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
-        aria-label="Toggle menu"
+        class="p-2 text-gray-100 hover:text-cobalt-400 interactive-focus rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
+        aria-label="Open menu"
         :aria-expanded="isMenuOpen"
       >
         <svg
@@ -27,18 +30,10 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            v-if="!isMenuOpen"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"
-          />
-          <path
-            v-else
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
           />
         </svg>
       </button>
@@ -48,7 +43,7 @@
     <div class="hidden md:flex md:items-center md:justify-between gap-4">
       <router-link
         to="/"
-        class="hover:opacity-80 transition-opacity duration-[230ms]"
+        class="interactive-focus rounded-md hover:opacity-80 transition-opacity duration-[230ms]"
       >
         <img
           src="/cropped-monogram-gray.png"
@@ -62,7 +57,11 @@
           v-for="route in routes"
           :key="route.path"
           :to="route.path"
-          :class="[desktopRouteClasses, getRouteStateClasses(route.path)]"
+          :class="[
+            desktopRouteClasses,
+            getRouteStateClasses(route.path),
+            'interactive-focus rounded-md',
+          ]"
         >
           {{ route.name }}
         </router-link>
@@ -73,7 +72,7 @@
           target="_blank"
           rel="noopener noreferrer"
           :aria-label="social.label"
-          class="text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
+          class="interactive-focus rounded-md text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
         >
           <svg
             class="w-5 h-5"
@@ -93,8 +92,7 @@
     <div
       v-if="isMenuOpen"
       @click="closeMenu"
-      :style="{ top: `${headerBottom}px` }"
-      class="fixed left-0 right-0 bottom-0 bg-gray-950/75 z-30 md:hidden"
+      class="fixed inset-0 bg-gray-950/75 backdrop-blur-md z-30 md:hidden"
       aria-hidden="true"
     ></div>
   </Transition>
@@ -103,21 +101,44 @@
   <Transition name="menu">
     <nav
       v-if="isMenuOpen"
-      :style="{
-        top: `${headerBottom}px`,
-        height: `calc(100vh - ${headerBottom}px)`,
-      }"
-      class="fixed right-0 w-[80%] bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-700"
+      ref="mobileMenuRef"
+      aria-label="Mobile navigation"
+      class="fixed top-0 right-0 h-screen w-72 max-w-[85vw] bg-gray-900 shadow-xl z-40 md:hidden overflow-y-auto border-l border-gray-700"
+      @keydown="handleMobileMenuKeydown"
     >
-      <div class="flex flex-col items-center gap-4 pt-8 px-6 pb-6">
-        <router-link
-          v-for="route in routes"
-          :key="route.path"
-          :to="route.path"
+      <div class="flex justify-end p-4">
+        <button
+          type="button"
           @click="closeMenu"
-          :class="[mobileRouteClasses, getRouteStateClasses(route.path)]"
+          class="p-2 text-gray-100 hover:text-cobalt-400 interactive-focus rounded-md transition-colors duration-[230ms] interactive-lift"
+          aria-label="Close menu"
         >
-          {{ route.name }}
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col items-center gap-4 px-6 pb-6">
+        <router-link
+          v-for="(navRoute, index) in routes"
+          :key="navRoute.path"
+          :ref="(el) => setFirstMobileLinkRef(el, index)"
+          :to="navRoute.path"
+          @click="closeMenu"
+          :class="[...getMobileLinkClasses(navRoute.path, index), 'interactive-focus']"
+        >
+          {{ navRoute.name }}
         </router-link>
         <div class="pt-2 w-full flex justify-center items-center gap-4">
           <a
@@ -127,7 +148,7 @@
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="social.label"
-            class="text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
+            class="interactive-focus rounded-md text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
           >
             <svg
               class="w-6 h-6"
@@ -145,20 +166,14 @@
 </template>
 
 <script setup>
-import { ref, watch, onUnmounted, onMounted, nextTick } from "vue";
+import { ref, watch, onUnmounted, nextTick } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 const isMenuOpen = ref(false);
-const headerRef = ref(null);
-const headerBottom = ref(0);
-
-const updateHeaderBottom = () => {
-  if (headerRef.value) {
-    const rect = headerRef.value.getBoundingClientRect();
-    headerBottom.value = rect.bottom;
-  }
-};
+const firstMobileLink = ref(null);
+const mobileMenuRef = ref(null);
+const menuToggleRef = ref(null);
 
 const routes = [
   { path: "/about", name: "About" },
@@ -190,33 +205,84 @@ const mobileRouteClasses =
 const getRouteStateClasses = (path) =>
   route.path === path ? "text-sun-400 border-b-2 border-torch-400" : "";
 
+const getMobileLinkClasses = (path, index) => [
+  mobileRouteClasses,
+  getRouteStateClasses(path),
+  index === 0 ? "bg-gray-800 rounded-lg" : "",
+];
+
+const setFirstMobileLinkRef = (el, index) => {
+  if (index === 0) {
+    firstMobileLink.value = el;
+  }
+};
+
+const focusFirstMobileLink = () => {
+  const link = firstMobileLink.value?.$el ?? firstMobileLink.value;
+  link?.focus();
+};
+
+const getMobileMenuFocusables = () => {
+  if (!mobileMenuRef.value) {
+    return [];
+  }
+
+  const selector =
+    'a[href], button:not([disabled]), select:not([disabled]), textarea:not([disabled]), input:not([disabled])';
+
+  return [...mobileMenuRef.value.querySelectorAll(selector)].filter(
+    (el) => el.tabIndex !== -1,
+  );
+};
+
+const handleMobileMenuKeydown = (event) => {
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeMenu();
+    return;
+  }
+
+  if (event.key !== "Tab") {
+    return;
+  }
+
+  const focusables = getMobileMenuFocusables();
+  if (focusables.length === 0) {
+    return;
+  }
+
+  const first = focusables[0];
+  const last = focusables[focusables.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+};
+
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
 const closeMenu = () => {
   isMenuOpen.value = false;
+  nextTick(() => {
+    menuToggleRef.value?.focus();
+  });
 };
 
-watch(isMenuOpen, (open) => {
+watch(isMenuOpen, async (open) => {
+  document.body.style.overflow = open ? "hidden" : "";
   if (open) {
-    nextTick(updateHeaderBottom);
+    await nextTick();
+    focusFirstMobileLink();
   }
-
-  if (open) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
-});
-
-onMounted(() => {
-  updateHeaderBottom();
-  window.addEventListener("resize", updateHeaderBottom);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("resize", updateHeaderBottom);
   document.body.style.overflow = "";
 });
 
