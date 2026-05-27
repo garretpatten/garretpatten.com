@@ -46,18 +46,6 @@
   }
 }
 
-/*
- * vue3-carousel ships :root defaults (#000 / #090f207f). Import order in main.js
- * loads this file after carousel.css so these tokens win globally.
- */
-:root {
-  --vc-clr-primary: #458588;
-  --vc-clr-secondary: rgb(146 131 116 / 0.55);
-  --vc-clr-white: #ebdbb2;
-  --vc-nav-color: #3b716d;
-  --vc-nav-color-hover: #83a598;
-}
-
 /* Custom component styles */
 @layer components {
   .interactive-lift {
