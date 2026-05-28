@@ -5,7 +5,7 @@
     <section aria-labelledby="projects-grid-heading" class="soft-enter">
       <h2
         id="projects-grid-heading"
-        class="mb-6 text-sm font-semibold uppercase tracking-wider text-forest-600"
+        class="mb-6 text-lg font-semibold uppercase tracking-wider text-forest-600"
       >
         Projects
       </h2>
@@ -19,51 +19,6 @@
         </li>
       </ul>
     </section>
-
-    <section
-      aria-labelledby="engineering-philosophy-heading"
-      class="mt-16 text-center max-w-2xl mx-auto soft-enter soft-enter-delay-1"
-    >
-      <h2
-        id="engineering-philosophy-heading"
-        class="text-sm font-semibold uppercase tracking-wider text-torch-400 mb-6"
-      >
-        Engineering Philosophy
-      </h2>
-      <div class="space-y-4">
-        <div
-          class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
-        >
-          <p class="font-heading text-lg font-medium text-ruby-400 mb-1">
-            Simplicity is the apex of design
-          </p>
-          <p class="font-sans text-sm text-gray-400 leading-relaxed">
-            Complexity signals incomplete understanding.
-          </p>
-        </div>
-        <div
-          class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
-        >
-          <p class="font-heading text-lg font-medium text-sun-400 mb-1">
-            Outcomes are the objective
-          </p>
-          <p class="font-sans text-sm text-gray-400 leading-relaxed">
-            Implementations are transient and disposable.
-          </p>
-        </div>
-        <div
-          class="bg-gray-900/90 border border-gray-700 rounded-xl p-5 md:p-6 text-left"
-        >
-          <p class="font-heading text-lg font-medium text-cobalt-400 mb-1">
-            Quality is a prerequisite
-          </p>
-          <p class="font-sans text-sm text-gray-400 leading-relaxed">
-            Security, correctness, and reliability are foundational
-            requirements, not aspirations.
-          </p>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -72,6 +27,13 @@ import { ref } from "vue";
 import ProjectCard from "../components/ProjectCard.vue";
 
 const projects = ref([
+  {
+    name: "Arch Setup Scripts",
+    description:
+      "Scripts to automate the setup of my Arch desktop environments (install packages, configure settings, and more).",
+    github: "https://github.com/garretpatten/arch-setup-scripts",
+    language: "Shell",
+  },
   {
     name: "Codeowner Verifier",
     description:
@@ -85,6 +47,13 @@ const projects = ref([
       "My personal dotfiles for Arch Linux, macOS, and Ubuntu; this repository serves as a submodule for the setup scripts repositories.",
     github: "https://github.com/garretpatten/dotfiles",
     language: "Lua",
+  },
+  {
+    name: "Fedora Setup Scripts",
+    description:
+      "Scripts to automate the setup of my Fedora desktop environments (install packages, configure settings, and more).",
+    github: "https://github.com/garretpatten/fedora-setup-scripts",
+    language: "Shell",
   },
   {
     name: "garretpatten.com",

@@ -5,26 +5,24 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-ruby-400 mb-4"
+        class="text-lg font-semibold uppercase tracking-wider text-ruby-400 mb-4"
       >
         Summary
       </h2>
-      <div class="bg-gray-900/90 border border-gray-700 rounded-xl p-6 md:p-8">
-        <p class="font-sans text-gray-300 leading-relaxed">
-          Systems-oriented security leader with a builder's mindset and eight
-          years of experience at a global, publicly traded FinTech leader. I
-          architect secure pipelines, drive developer enablement, and scale
-          security as a shared organizational responsibility. I bridge the gap
-          between core product engineering and enterprise-grade security
-          orchestration.
-        </p>
-      </div>
+      <p class="font-sans text-gray-300 leading-relaxed">
+        Systems-oriented security leader with a builder's mindset and eight
+        years of experience at a global, publicly traded FinTech leader. I
+        architect secure pipelines, drive developer enablement, and scale
+        security as a shared organizational responsibility. I bridge the gap
+        between core product engineering and enterprise-grade security
+        orchestration.
+      </p>
     </section>
 
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-torch-400 mb-4"
+        class="text-lg font-semibold uppercase tracking-wider text-torch-400 mb-4"
       >
         Skills
       </h2>
@@ -45,7 +43,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-sun-400 mb-6"
+        class="text-lg font-semibold uppercase tracking-wider text-sun-400 mb-6"
       >
         Experience
       </h2>
@@ -61,7 +59,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-sm font-semibold uppercase tracking-wider text-forest-400 mb-6"
+        class="text-lg font-semibold uppercase tracking-wider text-forest-400 mb-6"
       >
         Education
       </h2>
@@ -69,7 +67,6 @@
         <div
           v-for="(edu, index) in education"
           :key="`${edu.school}-${index}`"
-          class="bg-gray-900/90 border border-gray-700 rounded-xl p-6"
         >
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
