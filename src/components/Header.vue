@@ -12,7 +12,7 @@
         <img
           src="/cropped-monogram-gray.png"
           alt="Garret Patten"
-          class="h-10 w-auto"
+          class="h-12 w-auto"
         />
       </router-link>
 
@@ -53,7 +53,7 @@
         <img
           src="/cropped-monogram-gray.png"
           alt="Garret Patten"
-          class="h-12 w-auto"
+          class="h-14 w-auto"
         />
       </router-link>
 
