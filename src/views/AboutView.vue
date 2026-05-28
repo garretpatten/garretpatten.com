@@ -24,9 +24,7 @@
       </div>
     </div>
 
-    <div
-      class="prose prose-lg dark:prose-invert max-w-none bg-gray-900/90 border border-gray-700 rounded-xl p-6 md:p-8 soft-enter soft-enter-delay-1"
-    >
+    <div class="max-w-none soft-enter soft-enter-delay-1">
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
         I grew up on the Jersey Shore, in the New York City metro area. My first
         computer science course, at Christian Brothers Academy in Lincroft,

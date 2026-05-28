@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pl-8 pb-8 last:pb-0">
+  <div class="relative my-8 pl-8 first:mt-0 last:mb-0">
     <!-- Timeline line -->
     <div
       class="absolute left-3 top-6 bottom-0 w-0.5 bg-cobalt-400 last:hidden"
@@ -10,8 +10,7 @@
       class="absolute left-0 top-2 h-6 w-6 rounded-full border-2 border-cobalt-400 bg-gray-950"
     ></div>
 
-    <!-- Content card -->
-    <div class="bg-gray-900/90 border border-gray-700 rounded-lg p-6 shadow-sm">
+    <div>
       <div
         class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3"
       >

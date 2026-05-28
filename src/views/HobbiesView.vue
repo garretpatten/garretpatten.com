@@ -34,7 +34,7 @@
         :aria-selected="activeTab === hobby.id"
         :aria-controls="`hobby-panel-${hobby.id}`"
         @click="selectHobby(hobby.id)"
-        class="interactive-focus px-4 py-2 text-sm font-medium transition-colors duration-[230ms] interactive-lift"
+        class="interactive-focus px-4 py-2 text-md font-medium transition-colors duration-[230ms] interactive-lift"
         :class="
           activeTab === hobby.id
             ? 'text-sun-400 border-b-2 border-torch-400'
