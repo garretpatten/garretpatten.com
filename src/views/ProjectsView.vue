@@ -70,6 +70,13 @@ const projects = ref([
     language: "Shell",
   },
   {
+    name: "Quality Checks",
+    description:
+      "Reusable GitHub Actions for pull requests: opt-in linters on changed files (Prettier, markdownlint, yamllint, Ruff, and more) plus axe-core and Lighthouse accessibility audits.",
+    github: "https://github.com/garretpatten/quality-checks",
+    language: "Shell",
+  },
+  {
     name: "Security Guardrails",
     description:
       "Reusable GitHub Actions guardrails for pull requests: OpenGrep SAST, verified TruffleHog secrets, dependency review, and Trivy supply-chain checks — high signal, low noise.",
