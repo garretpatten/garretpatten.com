@@ -30,15 +30,15 @@ const projects = ref([
   {
     name: "Arch Setup Scripts",
     description:
-      "Scripts to automate the setup of my Arch desktop environments (install packages, configure settings, and more).",
+      "Bash automation to provision a development-ready Arch: Pacman/Yay installs, Arch defaults, shell/terminal setup, and optional dotfiles—with separate install and config workflows and GitHub Actions CI.",
     github: "https://github.com/garretpatten/arch-setup-scripts",
     language: "Shell",
   },
   {
-    name: "Codeowner Verifier",
+    name: "Codeowners Enforcer",
     description:
-      "A GitHub Action that verifies that modified files within a pull request are owned by code owners.",
-    github: "https://github.com/garretpatten/codeowner-verifier",
+      "GitHub Action that enforces every changed file in a PR has an effective owner in .github/CODEOWNERS.",
+    github: "https://github.com/garretpatten/codeowners-enforcer",
     language: "TypeScript",
   },
   {
@@ -51,22 +51,29 @@ const projects = ref([
   {
     name: "Fedora Setup Scripts",
     description:
-      "Scripts to automate the setup of my Fedora desktop environments (install packages, configure settings, and more).",
+      "Bash automation to provision a development-ready Fedora: Dnf installs, Fedora defaults, shell/terminal setup, and optional dotfiles—with separate install and config workflows and GitHub Actions CI.",
     github: "https://github.com/garretpatten/fedora-setup-scripts",
     language: "Shell",
   },
   {
     name: "garretpatten.com",
     description:
-      "This portfolio website (built with Vue 3, Vite, Tailwind CSS, and Vue Router).",
+      "Source for garretpatten.com — Vue 3 portfolio SPA with Vite, Tailwind CSS, Vue Router, and Pinia. Deployed on Cloudflare Pages.",
     github: "https://github.com/garretpatten/garretpatten.com",
     language: "Vue",
   },
   {
     name: "macOS Setup Scripts",
     description:
-      "Scripts to automate the setup of my macOS desktop environments (install packages, configure settings, and more).",
+      "Bash automation to provision a development-ready Mac: Homebrew installs, macOS defaults, shell/terminal setup, and optional dotfiles—with separate install and config workflows and GitHub Actions CI.",
     github: "https://github.com/garretpatten/macOS-setup-scripts",
+    language: "Shell",
+  },
+  {
+    name: "Security Guardrails",
+    description:
+      "Reusable GitHub Actions guardrails for pull requests: OpenGrep SAST, verified TruffleHog secrets, dependency review, and Trivy supply-chain checks — high signal, low noise.",
+    github: "https://github.com/garretpatten/security-guardrails",
     language: "Shell",
   },
   {
@@ -79,7 +86,7 @@ const projects = ref([
   {
     name: "Ubuntu Setup Scripts",
     description:
-      "Scripts to automate the setup of my Ubuntu desktop environments (install packages, configure settings, and more).",
+      "Bash automation to provision a development-ready Ubuntu: Apt installs, Ubuntu defaults, shell/terminal setup, and optional dotfiles—with separate install and config workflows and GitHub Actions CI.",
     github: "https://github.com/garretpatten/ubuntu-setup-scripts",
     language: "Shell",
   },
