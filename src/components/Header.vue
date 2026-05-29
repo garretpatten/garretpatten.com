@@ -26,7 +26,7 @@
       >
         <svg
           aria-hidden="true"
-          class="w-6 h-6"
+          class="w-8 h-8"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -82,7 +82,7 @@
         >
           <svg
             aria-hidden="true"
-            class="w-5 h-5"
+            class="w-6 h-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +125,7 @@
         >
           <svg
             aria-hidden="true"
-            class="w-6 h-6"
+            class="w-7 h-7"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -163,7 +163,7 @@
           >
             <svg
               aria-hidden="true"
-              class="w-6 h-6"
+              class="w-7 h-7"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,7 @@ const socialLinks = [
 ];
 
 const desktopRouteClasses =
-  "text-sm font-medium text-gray-100 transition-colors duration-[230ms] hover:text-cobalt-400";
+  "text-md font-medium text-gray-100 transition-colors duration-[230ms] hover:text-cobalt-400";
 const mobileRouteClasses =
   "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-400";
 
