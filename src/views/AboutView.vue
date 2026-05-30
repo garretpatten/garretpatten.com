@@ -37,9 +37,9 @@
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
         Following high school, I enrolled in Boston College’s Carroll School of
         Management. I originally intended to pursue a career in finance as I thought
-        that was the best path -- one that my father and brothers had followed.
+        that was the best path — one that my father and brothers had followed.
         Midway through my tenure, I felt unsure about it. Over coffee, a professor
-        recommended I try out a Computer Science course since it was something I had
+        recommended I try out a computer science course since it was something I had
         enjoyed in high school. Over the next few semesters, programming slowly became
         the sharper focus of my education.
       </p>
@@ -54,7 +54,7 @@
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
         After returning to school, I completed my finance degree with a minor in
-        Computer Science. Once I graduated, I began my product engineering journey
+        computer science. Once I graduated, I began my product engineering journey
         not yet knowing it would lead me to security. While building out a
         customer-facing portal, I dealt firsthand with concepts like authentication,
         authorization, trust boundaries, validation, and sanitization. While I enjoyed
