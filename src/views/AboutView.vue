@@ -27,35 +27,53 @@
     <div class="max-w-none soft-enter soft-enter-delay-1">
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
         I grew up on the Jersey Shore in the New York City metro area. At 
-        Christian Brothers Academy, I took my first computer science course
-        which introduced me to Python and to the modest satisfaction of a
+        Christian Brothers Academy in Lincroft, I took my first computer science
+        class which introduced me to Python and to the modest satisfaction of a
         program that behaves as written.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        I graduated from Boston College’s Carroll School of Management with a
-        concentration in finance and a minor in computer science. I had enrolled
-        for finance and business; midway through, a professor recommended
-        Computer Science 1, and over time engineering became the sharper focus.
-        Finance did not fall away—my career has been in financial technology,
-        where both parts of the degree still matter.
+        Following high school, I enrolled in Boston College’s Carroll School of
+        Management. I had enrolled
+        in the business school with the intention of pursuing a career in finance.
+        Midway through my tenure though, I did not feel so sure. Over coffee, a professor
+        recommended I try out a Computer Science course since it was something I had briefly enjoyed in high school. 
+        Over the next few semesters, programming slowly became the
+        sharper focus of my education.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        The summer before graduation I took a QA engineering internship—my
-        introduction to software as it is practiced rather than assigned.
-        Working with experienced engineers, I found I preferred writing features
-        to cataloguing faults in them. Software engineering followed, then
-        security, in the same industry I had trained for.
+        The summer before graduation, I accepted an offer for a QA engineering
+        internship which served as my introduction to software development as it is
+        practiced rather than taught. Working with experienced engineers, I began
+        to fall in love with the discipline as I watched features slowly
+        come together one small, expertly planned iteration at a time. After that
+        summer, finance -- while still a passion -- took a backseat.
+      </p>
+
+
+      <p class="font-sans text-gray-300 leading-relaxed mb-6">
+        After securing an offer to be an associate software developer, I completed
+        my finance degree having picked up a minor in Computer Science. Following
+        graduation, I began my product
+        engineering journey not yet knowing it would lead me to security.
+        While building out a customer-facing portal environment with my first team,
+        I dealt firsthand with concepts like authentication, authorization, trust boundaries,
+        validation and sanitization; while I enjoyed the frontend work and delivering
+        smooth user experiences, I always found myself jumping to pick up the security work.
+        Over time, designing the
+        frameworks for access provisioning, auditability, and permissions
+        management shifted my focus more and more towards securing the
+        application’s core infrastructure as opposed to just shipping new features.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed">
-        Today I live in Georgia with my wife, daughter, and a beagle. The same
-        inclination appears in different rooms: at work I build secure pipelines
-        and automation; at home I keep genealogical records, filled notebooks,
-        and the occasional script so that ordinary weeks require less
-        improvisation. When time allows, I read, play the guitar, and add another
-        name to a chart that keeps growing.
+        Today I live in Georgia with my wife, daughter, and our beagle. The same
+        systems thinking manifests in different areas: at work I build secure pipelines
+        and automations; at home I amass genealogical records, fill up notebooks,
+        and write the occasional script so that ordinary weeks require less
+        improvisation. In my spare time, I read, journal, play the guitar, and 
+        play with my daughter.
       </p>
     </div>
   </div>

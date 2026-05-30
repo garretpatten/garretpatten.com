@@ -88,14 +88,14 @@ const hobbies = [
     content: [
       "For roughly fifteen years I have devoted a meaningful portion of my spare time to two family trees—my wife’s and my own. Census records, parish registers, military documents, land schedules, and the patient analysis of them have carried our direct lines into early America and across the Atlantic.",
       "The work has produced veterans, immigrants, and entire branches absent from the stories we were told at home. We document them now to preserve that history for future generations.",
-      "The combined trees hold about six hundred direct ancestors, over one thousand documents and photographs, and several thousand citations I can return to.",
+      "The combined trees hold about six hundred direct ancestors, over one thousand documents and photographs, and several thousand citations to which I can return.",
     ],
   },
   {
     id: "journaling",
     title: "Journaling",
     content: [
-      "To counterbalance the digital nature and overstimulation of modern life, I maintain a deliberate daily journaling practice using analog tools. I journal every day, finding clarity and focus through the physical act of writing by hand. My primary setup includes a Traveler’s Company Traveler’s Notebook (passport size), Field Notes pocket notebooks, and Midori notebooks for longer reflective sessions.",
+      "To counterbalance the digital nature and overstimulation of modern life, I maintain a deliberate daily journaling practice using analog tools. I journal every day, finding clarity and focus through the physical act of writing by hand. My primary setup includes a passport-size Traveler’s Notebook for daily use and a Midori A5 notebook for longer reflective sessions.",
       "For over two years, I have kept structured daily logs of my workdays: each entry captures my most important goals, notes taken throughout the day, and brief wrap-up reflections to set clear intentions for the following day. Every pocket notebook I carry—usually a Field Notes—serves as my constant companion. I index each completed notebook, label it with the date range it covers, and archive it in a birch wood box. This simple, tactile system helps me stay grounded, intentional, and present amid an increasingly screen-dominated world."
     ],
   },
@@ -104,7 +104,7 @@ const hobbies = [
     title: "Music",
     content: [
       "Music has long been important to me, and the guitar is my main instrument. I play mostly singer-songwriter material, fingerpicking styles, and a few country songs, favoring the acoustic sound.",
-      "My influences come from 1960s and 1970s classic rock—especially Jimi Hendrix, who played a central role in fostering my love of the guitar—and Jack Johnson, a childhood favorite. John Mayer is my favorite artist to play, and his work continues to shape my approach to both rhythm and melody.",
+      "My primary influences include Jack Johnson, Jimi Hendrix, and John Mayer. Their work continues to shape my approach to both rhythm and melody.",
       "I took lessons at age twelve and learned basic blues techniques, but most of my progress has come from self-directed practice. Playing the guitar ebbs and flows in my life; it returns as a way to unwind, express myself creatively, and connect more deeply with music. I also play ukulele, where guitar skills transfer easily, and I occasionally play my great-grandmother’s century-old banjolele, which brings together my interests in music and family history.",
       "Below are my favorite guitars in my collection"
     ],
@@ -115,7 +115,7 @@ const hobbies = [
     title: "Personal System Design",
     content: [
       "I am deeply committed to essentialism—the disciplined pursuit of less in order to focus on what truly matters. This principle shapes my approach to personal systems design, where I build minimal, intentional structures that eliminate noise and protect time and attention for my family, work, and personal growth.",
-      "I automate data backups across devices and services, capture and organize personal ideas and logs in Standard Notes, coordinate complex family planning with my wife in Notion, manage shared household projects and tasks in Todoist, and track our family's commitments, appointments, and events (including birthdays and anniversaries) in Proton Calendar. These carefully chosen tools support clarity, reduce friction, and allow me to live and work with greater focus and simplicity."
+      "I automate system configuration and maintenance through code, capture personal ideas and logs in Standard Notes, orchestrate household projects and tasks with my wife in Notion & Todoist, and organize our family's schedule in Proton Calendar. These carefully chosen tools support clarity, reduce friction, and allow me to live and work with greater focus and simplicity."
     ],
   },
   {

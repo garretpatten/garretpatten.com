@@ -30,7 +30,7 @@
 
       <ul
         v-if="item.bullets && item.bullets.length"
-        class="font-sans list-disc list-inside space-y-1 text-sm text-gray-300 marker:text-cobalt-400 ml-2"
+        class="font-sans list-disc list-inside space-y-1 text-md text-gray-300 marker:text-cobalt-400 ml-2"
       >
         <li v-for="(bullet, index) in item.bullets" :key="index">
           {{ bullet }}

@@ -5,13 +5,14 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-lg font-semibold uppercase tracking-wider text-ruby-400 mb-4"
+        class="text-xl font-semibold uppercase tracking-wider text-ruby-400 mb-4"
       >
         Summary
       </h2>
-      <p class="font-sans text-gray-300 leading-relaxed">
-        Systems-oriented security leader with a builder's mindset and eight
-        years of experience at a global, publicly traded FinTech company. I
+      <p class="text-lg font-sans text-gray-300 leading-relaxed">
+        I am a systems-oriented security leader with a builder's mindset and eight
+        years of experience at a global, publicly traded FinTech company supporting
+        over 2,700 financial institutions across more than 20 countries. I
         architect secure pipelines, drive developer enablement, and scale
         security as a shared organizational responsibility.
       </p>
@@ -20,7 +21,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-lg font-semibold uppercase tracking-wider text-torch-400 mb-4"
+        class="text-xl font-semibold uppercase tracking-wider text-torch-400 mb-4"
       >
         Skills
       </h2>
@@ -41,7 +42,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-lg font-semibold uppercase tracking-wider text-sun-400 mb-6"
+        class="text-xl font-semibold uppercase tracking-wider text-sun-400 mb-6"
       >
         Experience
       </h2>
@@ -57,7 +58,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-lg font-semibold uppercase tracking-wider text-forest-400 mb-6"
+        class="text-xl font-semibold uppercase tracking-wider text-forest-400 mb-6"
       >
         Education
       </h2>
@@ -143,7 +144,7 @@ const experience = [
     start: "June '24",
     end: "Current",
     bullets: [
-      "Strategic Technical Leadership: Lead Product Security for a 5-person team to prioritize and synchronize deliverables across global divisions.",
+      "Strategic Technical Leadership: Lead Product Security for a 5-person team to prioritize and synchronize deliverables across global divisions.", 
       "Roadmap and Executive Support: Co-author the security engineering roadmap and serve as the primary technical escalation point and acting lead.",
       "Enterprise Security Orchestration: Architected automated security governance for 2,000+ repositories via GitHub Actions to enforce SSDLC standards and automated provisioning.",
       "Supply Chain Integrity: Hardened the software supply chain through package regsitry proxies, runtime configuration enforcement, and SBOM generation.",
