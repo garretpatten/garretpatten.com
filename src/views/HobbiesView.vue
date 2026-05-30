@@ -86,9 +86,9 @@ const hobbies = [
     id: "genealogy",
     title: "Genealogy Research",
     content: [
-      "For roughly fifteen years I have devoted much of my spare time to two family trees—my wife’s and my own. Census records, parish registers, DNA results, and patient comparison have carried our direct lines into early America and across the Atlantic.",
-      "The work has produced veterans, immigrants, and entire branches absent from the stories we were told at home. We document them now because the paper outlasts the telling.",
-      "The combined trees hold about six hundred direct ancestors, several hundred photographs, a hundred documents worth keeping, and several thousand citations I can return to.",
+      "For roughly fifteen years I have devoted a meaningful portion of my spare time to two family trees—my wife’s and my own. Census records, parish registers, military documents, land schedules, and the patient analysis of them have carried our direct lines into early America and across the Atlantic.",
+      "The work has produced veterans, immigrants, and entire branches absent from the stories we were told at home. We document them now to preserve that history for future generations.",
+      "The combined trees hold about six hundred direct ancestors, over one thousand documents and photographs, and several thousand citations I can return to.",
     ],
   },
   {
