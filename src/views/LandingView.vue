@@ -30,7 +30,7 @@
         <div class="font-mono text-sm text-gray-400">Repositories Managed</div>
       </div>
       <div class="text-center">
-        <div class="font-heading text-3xl font-bold text-cobalt-400 mb-2">300+</div>
+        <div class="font-heading text-3xl font-bold text-cobalt-400 mb-2">350+</div>
         <div class="font-mono text-sm text-gray-400">Engineers Supported Globally</div>
       </div>
     </section>
