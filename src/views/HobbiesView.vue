@@ -95,18 +95,18 @@ const hobbies = [
     id: "journaling",
     title: "Journaling",
     content: [
-      "Each workday I keep a log in a pocket notebook, most often Field Notes: priorities for the day, notes from meetings, a short closing line for whoever opens the book tomorrow. Finished volumes receive a date range on the spine and a place on the shelf.",
-      "Longer entries go into a passport-size Traveler’s Notebook or a Midori or Moleskine. The pen is slower than the keyboard; it is also harder to mistake for urgent mail.",
+      "To counterbalance the digital nature and overstimulation of modern life, I maintain a deliberate daily journaling practice using analog tools. I journal every day, finding clarity and focus through the physical act of writing by hand. My primary setup includes a Traveler’s Company Traveler’s Notebook (passport size), Field Notes pocket notebooks, and Midori notebooks for longer reflective sessions.",
+      "For over two years, I have kept structured daily logs of my workdays: each entry captures my most important goals, notes taken throughout the day, and brief wrap-up reflections to set clear intentions for the following day. Every pocket notebook I carry—usually a Field Notes—serves as my constant companion. I index each completed notebook, label it with the date range it covers, and archive it in a birch wood box. This simple, tactile system helps me stay grounded, intentional, and present amid an increasingly screen-dominated world."
     ],
   },
   {
     id: "music",
     title: "Music",
     content: [
-      "The guitar is what I play when I play—mostly acoustic, mostly singer-songwriter and fingerstyle, with some country when the song asks for it.",
-      "Hendrix came first, in the way influence often does, before I knew what I was learning. The Goo Goo Dolls belong to childhood radio. John Mayer is the artist I return to; his sense of rhythm and melody is the standard I measure against, knowing I fall short.",
-      "I took lessons at twelve and learned enough blues to recognize the form. The rest came from practice fit around a job and a household. The instrument waits patiently; when I pick it up again it is usually late, and usually worth the trouble. I play ukulele as well, and sometimes a banjolele that belonged to my great-grandmother—a small overlap between music and family history I did not set out to make.",
-      "Guitars I return to most often:",
+      "Music has long been important to me, and the guitar is my main instrument. I play mostly singer-songwriter material, fingerpicking styles, and a few country songs, favoring the acoustic sound.",
+      "My influences come from 1960s and 1970s classic rock—especially Jimi Hendrix, who played a central role in fostering my love of the guitar—and Jack Johnson, a childhood favorite. John Mayer is my favorite artist to play, and his work continues to shape my approach to both rhythm and melody.",
+      "I took lessons at age twelve and learned basic blues techniques, but most of my progress has come from self-directed practice. Playing the guitar ebbs and flows in my life; it returns as a way to unwind, express myself creatively, and connect more deeply with music. I also play ukulele, where guitar skills transfer easily, and I occasionally play my great-grandmother’s century-old banjolele, which brings together my interests in music and family history.",
+      "Below are my favorite guitars in my collection"
     ],
     list: ["Martin D-42", "Martin 000-18", "Tacoma DF-21"],
   },
@@ -114,19 +114,22 @@ const hobbies = [
     id: "systems",
     title: "Personal System Design",
     content: [
-      "A household and a career do not organize themselves. I keep the machinery small: backups that run whether I remember them or not, one calendar my wife and I both consult, a few shared lists so we are not conducting our lives by text message.",
-      "Standard Notes for personal writing, Notion and Todoist for plans we share, Proton Calendar for the dates that recur every year. The point is not the stack; the point is to spend less attention on where things were written down.",
+      "I am deeply committed to essentialism—the disciplined pursuit of less in order to focus on what truly matters. This principle shapes my approach to personal systems design, where I build minimal, intentional structures that eliminate noise and protect time and attention for my family, work, and personal growth.",
+      "I automate data backups across devices and services, capture and organize personal ideas and logs in Standard Notes, coordinate complex family planning with my wife in Notion, manage shared household projects and tasks in Todoist, and track our family's commitments, appointments, and events (including birthdays and anniversaries) in Proton Calendar. These carefully chosen tools support clarity, reduce friction, and allow me to live and work with greater focus and simplicity."
     ],
   },
   {
     id: "reading",
     title: "Reading",
     content: [
-      "I read across engineering, history, philosophy, and Christian thought—genres that disagree on the shelf but agree that people are habitual creatures, for better and worse.",
-      "Currently reading: Digital Minimalism, by Cal Newport.",
-      "Books I finished recently and would lend:",
+      "Reading is a vital part of my life, offering both knowledge and reflection. I gravitate toward books on engineering, systems thinking, self-improvement, history, philosophy, and Christianity, with a particular interest in works that explore faith, discipline, and human nature.",
+      "These books provide insight into how we build better systems—whether technical, personal, or spiritual—and help me grow in understanding of myself and the world.",
+      "Currently reading: Who Am I, Lord? Finding Your Identity in Christ by Joe Heschmeyer.",
+      "Below are some books that I have recently read and enjoyed:"
     ],
     list: [
+      "Blink: The Power of Thinking Without Thinking by Malcom Gladwell TODO",
+      "Digital Minimalism: Choosing a Focused Life in a Noisy World by Cal Newport TODO",
       "Washington: The Indispensable Man by James Thomas Flexner — Long and unsparing; it rewards the reader who wants judgment under strain, not anecdote.",
       "What Christians Believe by Bishop Robert Barron — An orderly introduction to what Christians hold in common, without pretending the subject is simple.",
       "The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — The months before the Civil War, narrated with the pace of events that could not be stopped.",
