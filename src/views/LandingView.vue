@@ -13,9 +13,7 @@
       <p
         class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
-        Systems-minded security engineer with a builder's mindset. I design
-        secure pipelines, drive developer enablement programs, and advocate for
-        security as a shared organizational responsibility.
+        The best security systems are the ones engineers actually want to use. I’m a systems-minded security engineer dedicated to designing frictionless pipelines, enabling development teams, and transforming security from an afterthought into a core product feature.
       </p>
     </section>
 
