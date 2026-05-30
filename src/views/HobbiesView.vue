@@ -128,8 +128,8 @@ const hobbies = [
       "Below are some books that I have recently read and enjoyed:"
     ],
     list: [
-      "Blink: The Power of Thinking Without Thinking by Malcom Gladwell TODO",
-      "Digital Minimalism: Choosing a Focused Life in a Noisy World by Cal Newport TODO",
+      "Blink: The Power of Thinking Without Thinking by Malcolm Gladwell — Snap judgments examined as skill, not magic; the lesson is knowing which moments deserve the first read.",
+      "Digital Minimalism: Choosing a Focused Life in a Noisy World by Cal Newport — Technology kept on purpose, not by default; a quiet book about a noisy problem.",
       "Washington: The Indispensable Man by James Thomas Flexner — Long and unsparing; it rewards the reader who wants judgment under strain, not anecdote.",
       "What Christians Believe by Bishop Robert Barron — An orderly introduction to what Christians hold in common, without pretending the subject is simple.",
       "The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — The months before the Civil War, narrated with the pace of events that could not be stopped.",
