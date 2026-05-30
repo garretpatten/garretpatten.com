@@ -11,11 +11,9 @@
       </h2>
       <p class="font-sans text-gray-300 leading-relaxed">
         Systems-oriented security leader with a builder's mindset and eight
-        years of experience at a global, publicly traded FinTech leader. I
+        years of experience at a global, publicly traded FinTech company. I
         architect secure pipelines, drive developer enablement, and scale
-        security as a shared organizational responsibility. I bridge the gap
-        between core product engineering and enterprise-grade security
-        orchestration.
+        security as a shared organizational responsibility.
       </p>
     </section>
 
@@ -143,11 +141,11 @@ const experience = [
     start: "June '24",
     end: "Current",
     bullets: [
-      "Strategic Technical Leadership: Lead Product Security for a 4-person team to prioritize security assessments and synchronize deliverables across global divisions.",
+      "Strategic Technical Leadership: Lead Product Security for a 5-person team to prioritize and synchronize deliverables across global divisions.",
       "Roadmap and Executive Support: Co-author the security engineering roadmap and serve as the primary technical escalation point and acting lead.",
-      "Enterprise Security Orchestration: Architected automated security governance for 1,000+ repositories via GitHub Actions to enforce SSDLC standards and automated provisioning.",
-      "Supply Chain Integrity: Hardened the software supply chain through SBOM generation and automated dependency management via Orca.",
-      "Policy as Code: Engineered automated pipelines to enforce Node.js license compliance, which mitigated regulatory and compliance friction.",
+      "Enterprise Security Orchestration: Architected automated security governance for 2,000+ repositories via GitHub Actions to enforce SSDLC standards and automated provisioning.",
+      "Supply Chain Integrity: Hardened the software supply chain through package regsitry proxies, runtime configuration enforcement, and SBOM generation.",
+      "Policy as Code: Engineered automated pipelines to enforce Node.js license compliance to mitigate regulatory and compliance friction.",
       "Shift-Left Advocacy: Lead complex security reviews across diverse product lines to embed security champions and eliminate vulnerabilities pre-production.",
     ],
   },
@@ -157,9 +155,9 @@ const experience = [
     start: "May 2022",
     end: "June '24",
     bullets: [
-      "CI/CD Governance: Established enterprise-wide code ownership enforcement within CI/CD pipelines to ensure rigorous peer-reviewed deployments.",
+      "CI/CD Governance: Established enterprise-wide code ownership enforcement within CI/CD pipelines to ensure auditable accountability and rigorous peer-reviewed deployments.",
       "Data-Driven Security: Deployed Sourcegraph and DefectDojo to centralize security insights and drive executive-level, data-backed code-health metrics.",
-      "Open Source Contribution: Authored and open-sourced a Semgrep ruleset for Salesforce Apex/VisualForce to address critical ecosystem vulnerabilities.",
+      "Open Source Contribution: Authored and open-sourced a Semgrep ruleset for Salesforce Apex/VisualForce to address critical gaps in SAST ecosystem support.",
       "Offensive Operations: Conducted targeted penetration tests on core products and corporate web assets to remediate high-impact attack vectors.",
       "Scalable Consultation: Launched security office hours and support channels to scale expert consultation across the organization without increasing headcount.",
     ],
@@ -171,7 +169,7 @@ const experience = [
     end: "May 2022",
     bullets: [
       "High-Scale Product Architecture: Developed mission-critical features for a global production platform used by the world's largest financial institutions.",
-      "Global Impact: Engineered the primary application that millions of business owners used to maintain operations during the COVID-19 pandemic.",
+      "Global Impact: Engineered an online application for PPP that millions of business owners used to maintain operations during the COVID-19 pandemic.",
       "Access Control Design: Designed and deployed external permissions management systems that enforced least privilege and reduced manual configuration.",
       "Inclusive Engineering: Led the transition to WCAG 2.0 AA compliance and codified accessibility standards into the global development guide.",
       "Engineering Mentorship: Guided junior engineers through rapid organizational scaling with a focus on secure development and scalable architecture.",
