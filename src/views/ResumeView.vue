@@ -109,7 +109,7 @@ const skills = [
   // "DefectDojo",
   // "Docker",
   "Full-Stack Development",
-  "GitHub Actions & Workflow Automation",
+  // "GitHub Actions & Workflow Automation",
   "GitHub & GitLab Enterprise Administration",
   // "GitLab Administration",
   // "HTML5",

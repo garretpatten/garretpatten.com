@@ -13,7 +13,7 @@
             <div class="rounded-full bg-gray-950 p-[3px]">
               <div class="rounded-full bg-ruby-400 p-[3px]">
                 <img
-                  src="/assets/images/garret-patten.jpg"
+                  src="/assets/images/garret-patten.jpeg"
                   alt="Garret Patten"
                   class="block h-32 w-32 md:h-40 md:w-40 rounded-full object-cover"
                 />
@@ -26,10 +26,10 @@
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        I grew up on the Jersey Shore, in the New York City metro area. My first
-        computer science course, at Christian Brothers Academy in Lincroft,
-        introduced me to Python and to the modest satisfaction of a program that
-        behaves as written.
+        I grew up on the Jersey Shore in the New York City metro area. At 
+        Christian Brothers Academy, I took my first computer science course
+        which introduced me to Python and to the modest satisfaction of a
+        program that behaves as written.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
