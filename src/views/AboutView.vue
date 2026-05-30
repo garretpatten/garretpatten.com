@@ -26,54 +26,51 @@
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        I grew up on the Jersey Shore in the New York City metro area. At 
-        Christian Brothers Academy in Lincroft, I took my first computer science
-        class which introduced me to Python and to the modest satisfaction of a
-        program that behaves as written.
+        I grew up on the Jersey Shore in the New York City metro area. I
+        always loved computers growing up because it felt like they offered endless
+        possibilities: research, blogs, forums, games, art, and more. At Christian
+        Brothers Academy in Lincroft, I took my first computer science class which
+        introduced me to Python and to the satisfaction of a program that behaves
+        as written.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
         Following high school, I enrolled in Boston College’s Carroll School of
-        Management. I had enrolled
-        in the business school with the intention of pursuing a career in finance.
-        Midway through my tenure though, I did not feel so sure. Over coffee, a professor
-        recommended I try out a Computer Science course since it was something I had briefly enjoyed in high school. 
-        Over the next few semesters, programming slowly became the
-        sharper focus of my education.
+        Management. I originally intended to pursue a career in finance as I thought
+        that was the best path -- one that my father and brothers had followed.
+        Midway through my tenure, I felt unsure about it. Over coffee, a professor
+        recommended I try out a Computer Science course since it was something I had
+        enjoyed in high school. Over the next few semesters, programming slowly became
+        the sharper focus of my education.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        The summer before graduation, I accepted an offer for a QA engineering
-        internship which served as my introduction to software development as it is
+        The summer before my senior year, I accepted an offer for a QA engineering
+        internship. This experience introduced me to software development as it is
         practiced rather than taught. Working with experienced engineers, I began
-        to fall in love with the discipline as I watched features slowly
-        come together one small, expertly planned iteration at a time. After that
-        summer, finance -- while still a passion -- took a backseat.
+        to fall in love with the discipline as I watched features slowly come
+        together one small, expertly planned iteration at a time.
       </p>
 
-
       <p class="font-sans text-gray-300 leading-relaxed mb-6">
-        After securing an offer to be an associate software developer, I completed
-        my finance degree having picked up a minor in Computer Science. Following
-        graduation, I began my product
-        engineering journey not yet knowing it would lead me to security.
-        While building out a customer-facing portal environment with my first team,
-        I dealt firsthand with concepts like authentication, authorization, trust boundaries,
-        validation and sanitization; while I enjoyed the frontend work and delivering
-        smooth user experiences, I always found myself jumping to pick up the security work.
-        Over time, designing the
-        frameworks for access provisioning, auditability, and permissions
-        management shifted my focus more and more towards securing the
-        application’s core infrastructure as opposed to just shipping new features.
+        After returning to school, I completed my finance degree with a minor in
+        Computer Science. Once I graduated, I began my product engineering journey
+        not yet knowing it would lead me to security. While building out a
+        customer-facing portal, I dealt firsthand with concepts like authentication,
+        authorization, trust boundaries, validation, and sanitization. While I enjoyed
+        building out new functionality and delivering smooth user experiences, I always
+        found myself jumping to pick up the security work. When a spot opened up on
+        my company’s newly established Product Security team, I made the jump. Four
+        years later, I now serve as the team’s technical lead.
       </p>
 
       <p class="font-sans text-gray-300 leading-relaxed">
-        Today I live in Georgia with my wife, daughter, and our beagle. The same
-        systems thinking manifests in different areas: at work I build secure pipelines
-        and automations; at home I amass genealogical records, fill up notebooks,
-        and write the occasional script so that ordinary weeks require less
-        improvisation. In my spare time, I read, journal, play the guitar, and 
-        play with my daughter.
+        Working remotely, I live in Georgia with my wife, daughter, and our beagle.
+        The same systems-thinking approach manifests across my life: at work, I build
+        secure pipelines and development tooling; at home, I create systems and build
+        automations to help manage my family commitments and home projects. In my spare
+        time, I read, journal, play guitar, research genealogy, and hang out with my
+        family.
       </p>
     </div>
   </div>
