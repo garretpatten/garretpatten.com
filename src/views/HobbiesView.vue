@@ -10,7 +10,7 @@
       <select
         id="hobby-select"
         v-model="activeTab"
-        class="interactive-focus w-full px-4 py-3 text-sm font-medium bg-gray-900 border border-gray-600 rounded-lg text-gray-100 interactive-lift"
+        class="interactive-focus w-full px-4 py-3 text-base font-medium bg-gray-900 border border-gray-600 rounded-lg text-gray-100 interactive-lift"
         @change="announceHobbyChange"
       >
         <option v-for="hobby in hobbies" :key="hobby.id" :value="hobby.id">
@@ -34,12 +34,8 @@
         :aria-selected="activeTab === hobby.id"
         :aria-controls="`hobby-panel-${hobby.id}`"
         @click="selectHobby(hobby.id)"
-        class="interactive-focus px-4 py-2 text-md font-medium transition-colors duration-[230ms] interactive-lift"
-        :class="
-          activeTab === hobby.id
-            ? 'text-sun-400 border-b-2 border-torch-400'
-            : 'text-gray-300 hover:text-ruby-400'
-        "
+        class="interactive-focus px-4 py-2 text-lg font-medium transition-colors duration-[230ms] interactive-lift"
+        :class="getTabClasses(hobby.id)"
       >
         {{ hobby.title }}
       </button>
@@ -81,22 +77,40 @@ const activeTab = ref("genealogy");
 const hobbyAnnouncement = ref("");
 const isDesktopTablist = ref(false);
 
+/** All hobby tabs use the same cobalt accent for consistency. */
+const hobbyAccentClasses = {
+  reading: "text-cobalt-400",
+  genealogy: "text-cobalt-400",
+  systems: "text-cobalt-400",
+  music: "text-cobalt-400",
+  journaling: "text-cobalt-400",
+};
+
+const getTabClasses = (hobbyId) => {
+  if (activeTab.value === hobbyId) {
+    const accent = hobbyAccentClasses[hobbyId] || "text-cobalt-400";
+    const borderColor = accent.replace("text-", "border-");
+    return `${accent} border-b-2 ${borderColor}`;
+  }
+  return "text-gray-300 hover:text-cobalt-300";
+};
+
 const hobbies = [
   {
     id: "genealogy",
     title: "Genealogy Research",
     content: [
-      "For roughly fifteen years I have devoted a meaningful portion of my spare time to two family trees—my wife’s and my own. Census records, parish registers, military documents, land schedules, and the patient analysis of them have carried our direct lines into early America and across the Atlantic.",
+      "For roughly fifteen years I have devoted spare time to two family trees—my wife’s and my own. Census records, parish registers, military documents, land schedules, and patient analysis have carried our direct lines into early America and across the Atlantic.",
       "The work has produced veterans, immigrants, and entire branches absent from the stories we were told at home. We document them now to preserve that history for future generations.",
-      "The combined trees hold about six hundred direct ancestors, over one thousand documents and photographs, and several thousand citations to which I can return.",
+      "The combined trees hold about six hundred direct ancestors, over one thousand documents and photographs, and several thousand citations.",
     ],
   },
   {
     id: "journaling",
     title: "Journaling",
     content: [
-      "To counterbalance the digital nature and overstimulation of modern life, I maintain a deliberate daily journaling practice using analog tools. I journal every day, finding clarity and focus through the physical act of writing by hand. My primary setup includes a passport-size Traveler’s Notebook for daily use and a Midori A5 notebook for longer reflective sessions.",
-      "For over two years, I have kept structured daily logs of my workdays: each entry captures my most important goals, notes taken throughout the day, and brief wrap-up reflections to set clear intentions for the following day. Every pocket notebook I carry—usually a Field Notes—serves as my constant companion. I index each completed notebook, label it with the date range it covers, and archive it in a birch wood box. This simple, tactile system helps me stay grounded, intentional, and present amid an increasingly screen-dominated world."
+      "To offset the overstimulation of digital life, I keep a daily analog journaling practice. Writing by hand brings clarity and focus. My usual setup is a passport-size Traveler’s Notebook for daily entries and a Midori A5 for longer reflective sessions.",
+      "For more than two years I have kept structured workday logs: daily goals, notes, and a brief wrap-up to set intentions for the next day. Pocket notebooks—usually Field Notes—go everywhere with me. When one is full, I index it, label it with its date range, and archive it in a birch wood box. The system is tactile, simple, and grounding."
     ],
   },
   {
@@ -104,9 +118,9 @@ const hobbies = [
     title: "Music",
     content: [
       "Music has long been important to me, and the guitar is my main instrument. I play mostly singer-songwriter material, fingerpicking styles, and a few country songs, favoring the acoustic sound.",
-      "My primary influences include Jack Johnson, Jimi Hendrix, and John Mayer. Their work continues to shape my approach to both rhythm and melody.",
-      "I took lessons at age twelve and learned basic blues techniques, but most of my progress has come from self-directed practice. Playing the guitar ebbs and flows in my life; it returns as a way to unwind, express myself creatively, and connect more deeply with music. I also play ukulele, where guitar skills transfer easily, and I occasionally play my great-grandmother’s century-old banjolele, which brings together my interests in music and family history.",
-      "Below are my favorite guitars in my collection"
+      "My primary influences include Jack Johnson, Jimi Hendrix, and John Mayer. Their work continues to shape my approach to rhythm and melody.",
+      "I took lessons at age twelve and learned basic blues techniques, but most of my progress has come from self-directed practice. Guitar ebbs and flows in my life; it returns as a way to unwind, create, and connect more deeply with music. I also play ukulele, and I occasionally pick up my great-grandmother’s century-old banjolele, which brings together my interests in music and family history.",
+      "Below are my favorite guitars in my collection."
     ],
     list: ["Martin D-42", "Martin 000-18", "Tacoma DF-21"],
   },
@@ -114,23 +128,23 @@ const hobbies = [
     id: "systems",
     title: "Personal System Design",
     content: [
-      "I am deeply committed to essentialism—the disciplined pursuit of less in order to focus on what truly matters. This principle shapes my approach to personal systems design, where I build minimal, intentional structures that eliminate noise and protect time and attention for my family, work, and personal growth.",
-      "I automate system configuration and maintenance through code, capture personal ideas and logs in Standard Notes, orchestrate household projects and tasks with my wife in Notion & Todoist, and organize our family's schedule in Proton Calendar. These carefully chosen tools support clarity, reduce friction, and allow me to live and work with greater focus and simplicity."
+      "I am committed to essentialism—the disciplined pursuit of less in order to focus on what matters. That principle shapes the personal systems I build: minimal, intentional structures that eliminate noise and protect time and attention for family, work, and growth.",
+      "I automate system configuration through code, capture ideas and logs in Standard Notes, coordinate household projects with my wife in Notion and Todoist, and manage our family schedule in Proton Calendar. These tools reduce friction so I can live and work with greater focus."
     ],
   },
   {
     id: "reading",
     title: "Reading",
     content: [
-      "Reading is a vital part of my life, offering both knowledge and reflection. I gravitate toward books on engineering, systems thinking, self-improvement, history, philosophy, and Christianity, with a particular interest in works that explore faith, discipline, and human nature.",
-      "These books provide insight into how we build better systems—whether technical, personal, or spiritual—and help me grow in understanding of myself and the world.",
-      "Currently reading: Who Am I, Lord? Finding Your Identity in Christ by Joe Heschmeyer.",
-      "Below are some books that I have recently read and enjoyed:"
+      "Reading is a vital part of my life, offering both knowledge and reflection. I gravitate toward books on engineering, systems thinking, self-improvement, history, philosophy, and Christianity—especially works that explore faith, discipline, and human nature.",
+      "These books help me build better systems, whether technical, personal, or spiritual, and grow in understanding of myself and the world.",
+      "Below are some books I have recently read and enjoyed:"
     ],
+    currently: "Who Am I, Lord? Finding Your Identity in Christ by Joe Heschmeyer",
     list: [
-      "Blink: The Power of Thinking Without Thinking by Malcolm Gladwell — Snap judgments examined as skill, not magic; the lesson is knowing which moments deserve the first read.",
-      "Digital Minimalism: Choosing a Focused Life in a Noisy World by Cal Newport — Technology kept on purpose, not by default; a quiet book about a noisy problem.",
-      "Washington: The Indispensable Man by James Thomas Flexner — Long and unsparing; it rewards the reader who wants judgment under strain, not anecdote.",
+      "Blink: The Power of Thinking Without Thinking by Malcolm Gladwell — Snap judgments as a skill; the lesson is knowing when to trust the first read.",
+      "Digital Minimalism: Choosing a Focused Life in a Noisy World by Cal Newport — Technology kept on purpose, not by default.",
+      "Washington: The Indispensable Man by James Thomas Flexner — Long and unsparing; it rewards readers who want judgment under strain, not anecdote.",
       "What Christians Believe by Bishop Robert Barron — An orderly introduction to what Christians hold in common, without pretending the subject is simple.",
       "The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — The months before the Civil War, narrated with the pace of events that could not be stopped.",
       "Life Lessons: Fifty Things I Learned in My First Fifty Years by Patrick Madrid — Fifty short lessons; most of them about showing up.",

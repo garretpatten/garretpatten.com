@@ -13,7 +13,7 @@
       <p
         class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
-        The best security systems are the ones engineers actually want to use. I’m a systems-minded security engineer dedicated to designing frictionless pipelines, enabling development teams, and transforming security from an afterthought into a core product feature.
+        The best security systems are the ones engineers actually want to use. I design frictionless pipelines, enable development teams, and turn security from a blocker into a product feature.
       </p>
     </section>
 
@@ -23,15 +23,15 @@
     >
       <div class="text-center">
         <div class="font-heading text-3xl font-bold text-ruby-400 mb-2">8+</div>
-        <div class="font-mono text-sm text-gray-400">Years Experience</div>
+        <div class="font-mono text-base text-gray-400">Years Experience</div>
       </div>
       <div class="text-center">
         <div class="font-heading text-3xl font-bold text-torch-400 mb-2">3,000+</div>
-        <div class="font-mono text-sm text-gray-400">Repositories Managed</div>
+        <div class="font-mono text-base text-gray-400">Repositories Managed</div>
       </div>
       <div class="text-center">
-        <div class="font-heading text-3xl font-bold text-cobalt-400 mb-2">350+</div>
-        <div class="font-mono text-sm text-gray-400">Engineers Supported Globally</div>
+        <div class="font-heading text-3xl font-bold text-sun-400 mb-2">350+</div>
+        <div class="font-mono text-base text-gray-400">Engineers Supported Globally</div>
       </div>
     </section>
 
@@ -46,7 +46,7 @@
         </router-link>
         <router-link
           to="/projects"
-          class="interactive-focus px-6 py-3 bg-gray-800 border-2 border-gray-600 text-gray-100 rounded-lg font-medium hover:border-cobalt-400 hover:bg-gray-800/90 transition-colors duration-[230ms]"
+          class="interactive-focus px-6 py-3 bg-gray-800 border-2 border-cobalt-500/70 text-gray-100 rounded-lg font-medium hover:border-cobalt-400 hover:bg-gray-800/90 transition-colors duration-[230ms]"
         >
           View Projects
         </router-link>
