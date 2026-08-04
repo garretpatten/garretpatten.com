@@ -1,11 +1,11 @@
 <template>
   <div class="rounded-lg p-6 bg-gray-900/90 border border-gray-700">
-    <h3 class="text-xl font-bold text-gray-100 mb-4 flex items-center gap-2">
+    <h3 class="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-2">
       <!-- Reading: Open Book -->
       <svg
         aria-hidden="true"
         v-if="hobby.id === 'reading'"
-        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
+        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -21,7 +21,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'genealogy'"
-        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
+        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -43,7 +43,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'systems'"
-        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
+        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -64,7 +64,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'music'"
-        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
+        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -80,7 +80,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'journaling'"
-        :class="['w-5 h-5', getHobbyAccentClass(hobby.id)]"
+        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -95,18 +95,18 @@
       </svg>
       {{ hobby.title }}
     </h3>
-    <div class="prose prose-sm dark:prose-invert max-w-none">
+    <div class="prose prose-base dark:prose-invert max-w-none">
       <p
         v-for="(paragraph, index) in hobby.content"
         :key="index"
-        class="text-gray-300 mb-4"
+        class="text-lg text-gray-300 mb-4"
       >
         {{ paragraph }}
       </p>
 
       <ul
         v-if="hobby.list"
-        class="list-disc list-inside space-y-2 text-gray-300"
+        class="list-disc list-inside space-y-2 text-lg text-gray-300"
       >
         <li v-for="(item, index) in hobby.list" :key="index">
           {{ item }}
@@ -114,8 +114,8 @@
       </ul>
 
       <div v-if="hobby.currently" class="mt-4 p-4 bg-gray-800 rounded-lg">
-        <p class="text-sm font-semibold text-gray-100 mb-1">Currently:</p>
-        <p class="text-sm text-gray-300">
+        <p class="text-base font-semibold text-gray-100 mb-1">Currently:</p>
+        <p class="text-base text-gray-300">
           {{ hobby.currently }}
         </p>
       </div>
@@ -129,7 +129,7 @@ const hobbyAccentClasses = {
   genealogy: "text-forest-400",
   systems: "text-cobalt-400",
   music: "text-sun-400",
-  journaling: "text-torch-400",
+  journaling: "text-iris-400",
 };
 
 const getHobbyAccentClass = (id) => hobbyAccentClasses[id] || "text-gray-400";

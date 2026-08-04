@@ -12,7 +12,7 @@
         <img
           src="/cropped-monogram-gray.png"
           alt="Garret Patten"
-          class="h-12 w-auto"
+          class="h-14 w-auto"
         />
       </router-link>
 
@@ -26,7 +26,7 @@
       >
         <svg
           aria-hidden="true"
-          class="w-8 h-8"
+          class="w-9 h-9"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -53,7 +53,7 @@
         <img
           src="/cropped-monogram-gray.png"
           alt="Garret Patten"
-          class="h-14 w-auto"
+          class="h-16 w-auto"
         />
       </router-link>
 
@@ -78,11 +78,11 @@
           target="_blank"
           rel="noopener noreferrer"
           :aria-label="`${social.label} (opens in new tab)`"
-          class="interactive-focus rounded-md text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
+          class="interactive-focus rounded-md text-cobalt-400 hover:text-cobalt-300 transition-colors duration-[230ms]"
         >
           <svg
             aria-hidden="true"
-            class="w-6 h-6"
+            class="w-7 h-7"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="`${social.label} (opens in new tab)`"
-            class="interactive-focus rounded-md text-cobalt hover:text-torch-400 transition-colors duration-[230ms]"
+            class="interactive-focus rounded-md text-cobalt-400 hover:text-cobalt-300 transition-colors duration-[230ms]"
           >
             <svg
               aria-hidden="true"
@@ -210,12 +210,21 @@ const socialLinks = [
 ];
 
 const desktopRouteClasses =
-  "text-md font-medium text-gray-100 transition-colors duration-[230ms] hover:text-cobalt-400";
+  "text-lg font-medium text-gray-100 transition-colors duration-[230ms] hover:text-cobalt-300";
 const mobileRouteClasses =
-  "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-400";
+  "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-300";
+
+/** Page theme color for the active navigation item */
+const routeAccentClasses = {
+  "/": "text-sun-400 border-b-2 border-sun-400",
+  "/about": "text-ruby-400 border-b-2 border-ruby-400",
+  "/resume": "text-torch-400 border-b-2 border-torch-400",
+  "/projects": "text-forest-400 border-b-2 border-forest-400",
+  "/hobbies": "text-cobalt-400 border-b-2 border-cobalt-400",
+};
 
 const getRouteStateClasses = (path) =>
-  route.path === path ? "text-sun-400 border-b-2 border-torch-400" : "";
+  route.path === path ? routeAccentClasses[path] || "text-cobalt-400 border-b-2 border-cobalt-400" : "";
 
 const focusCloseButton = () => {
   closeMenuRef.value?.focus();

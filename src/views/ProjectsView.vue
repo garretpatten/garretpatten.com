@@ -5,7 +5,7 @@
     <section aria-labelledby="projects-grid-heading" class="soft-enter">
       <h2
         id="projects-grid-heading"
-        class="mb-6 text-lg font-semibold uppercase tracking-wider text-forest-600"
+        class="mb-6 text-2xl font-semibold uppercase tracking-wider text-forest-400"
       >
         Projects
       </h2>

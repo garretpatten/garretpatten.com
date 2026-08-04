@@ -10,7 +10,7 @@
       <select
         id="hobby-select"
         v-model="activeTab"
-        class="interactive-focus w-full px-4 py-3 text-sm font-medium bg-gray-900 border border-gray-600 rounded-lg text-gray-100 interactive-lift"
+        class="interactive-focus w-full px-4 py-3 text-base font-medium bg-gray-900 border border-gray-600 rounded-lg text-gray-100 interactive-lift"
         @change="announceHobbyChange"
       >
         <option v-for="hobby in hobbies" :key="hobby.id" :value="hobby.id">
@@ -34,12 +34,8 @@
         :aria-selected="activeTab === hobby.id"
         :aria-controls="`hobby-panel-${hobby.id}`"
         @click="selectHobby(hobby.id)"
-        class="interactive-focus px-4 py-2 text-md font-medium transition-colors duration-[230ms] interactive-lift"
-        :class="
-          activeTab === hobby.id
-            ? 'text-sun-400 border-b-2 border-torch-400'
-            : 'text-gray-300 hover:text-ruby-400'
-        "
+        class="interactive-focus px-4 py-2 text-lg font-medium transition-colors duration-[230ms] interactive-lift"
+        :class="getTabClasses(hobby.id)"
       >
         {{ hobby.title }}
       </button>
@@ -80,6 +76,24 @@ import HobbyTab from "../components/HobbyTab.vue";
 const activeTab = ref("genealogy");
 const hobbyAnnouncement = ref("");
 const isDesktopTablist = ref(false);
+
+/** Ordered accent palette for hobby categories */
+const hobbyAccentClasses = {
+  reading: "text-ruby-400",
+  genealogy: "text-forest-400",
+  systems: "text-cobalt-400",
+  music: "text-sun-400",
+  journaling: "text-iris-400",
+};
+
+const getTabClasses = (hobbyId) => {
+  if (activeTab.value === hobbyId) {
+    const accent = hobbyAccentClasses[hobbyId] || "text-cobalt-400";
+    const borderColor = accent.replace("text-", "border-");
+    return `${accent} border-b-2 ${borderColor}`;
+  }
+  return "text-gray-300 hover:text-cobalt-300";
+};
 
 const hobbies = [
   {

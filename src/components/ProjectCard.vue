@@ -6,7 +6,7 @@
       <svg
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
-        class="mt-0.5 h-4 w-4 shrink-0 text-gray-500"
+        class="mt-0.5 h-5 w-5 shrink-0 text-cobalt-400"
         viewBox="0 0 16 16"
         fill="currentColor"
       >
@@ -20,35 +20,35 @@
           :href="project.github"
           target="_blank"
           rel="noopener noreferrer"
-          class="interactive-focus truncate font-sans text-sm font-semibold text-cobalt-300 hover:text-torch-400 transition-colors duration-[230ms]"
+          class="interactive-focus truncate font-sans text-base font-semibold text-cobalt-300 hover:text-cobalt-100 transition-colors duration-[230ms]"
         >
           {{ repoName }}
         </a>
-        <span v-else class="truncate font-sans text-sm font-semibold text-gray-100">
+        <span v-else class="truncate font-sans text-base font-semibold text-gray-100">
           {{ repoName }}
         </span>
       </div>
     </div>
 
     <p
-      class="mb-3 flex-1 font-sans text-sm leading-relaxed text-gray-400 line-clamp-3"
+      class="mb-3 flex-1 font-sans text-base leading-relaxed text-gray-300 line-clamp-3"
     >
       {{ project.description }}
     </p>
 
     <footer
       v-if="project.language"
-      class="font-sans text-xs text-gray-500"
+      class="font-sans text-base text-gray-400"
     >
       <span class="inline-flex items-center gap-1.5">
         <span
-          class="h-3 w-3 rounded-full"
+          class="h-3.5 w-3.5 rounded-full"
           :class="{
             'bg-iris-600': project.language === 'Lua',
             'bg-ruby-600': project.language === 'Shell',
-            'bg-cobalt-600': project.language === 'TypeScript',
+            'bg-torch-500': project.language === 'TypeScript',
             'bg-forest-400': project.language === 'Vue',
-            'bg-gray-500':
+            'bg-cobalt-500':
               project.language &&
               !['Lua', 'Shell', 'TypeScript', 'Vue'].includes(project.language),
           }"

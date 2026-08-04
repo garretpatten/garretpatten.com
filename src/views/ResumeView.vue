@@ -5,11 +5,11 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-ruby-400 mb-4"
+        class="text-2xl font-semibold uppercase tracking-wider text-ruby-400 mb-4"
       >
         Summary
       </h2>
-      <p class="text-lg font-sans text-gray-300 leading-relaxed">
+      <p class="text-xl font-sans text-gray-300 leading-relaxed">
         I am a systems-oriented security leader with a builder's mindset and eight
         years of experience at a global, publicly traded FinTech company supporting
         over 2,700 financial institutions across more than 20 countries. I
@@ -21,7 +21,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-torch-400 mb-4"
+        class="text-2xl font-semibold uppercase tracking-wider text-torch-400 mb-4"
       >
         Skills
       </h2>
@@ -30,8 +30,7 @@
           v-for="(skill, index) in skills"
           :key="skill"
           :class="[
-            'font-mono rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-sm font-medium text-gray-200',
-            skillAccentBorders[index % skillAccentBorders.length],
+            'font-mono rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-base font-medium text-gray-200 border-torch-500/70',
           ]"
         >
           {{ skill }}
@@ -42,7 +41,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-sun-400 mb-6"
+        class="text-2xl font-semibold uppercase tracking-wider text-sun-400 mb-6"
       >
         Experience
       </h2>
@@ -58,7 +57,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-forest-400 mb-6"
+        class="text-2xl font-semibold uppercase tracking-wider text-forest-400 mb-6"
       >
         Education
       </h2>
@@ -70,17 +69,17 @@
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
           >
-            <h3 class="font-heading text-lg font-semibold text-gray-100">
+            <h3 class="font-heading text-xl font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
-            <span class="font-mono text-sm text-cobalt-400 whitespace-nowrap">
+            <span class="font-mono text-base text-cobalt-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
-          <p class="font-sans text-gray-300 mb-2">
+          <p class="font-sans text-lg text-gray-300 mb-2">
             {{ edu.degree }}
           </p>
-          <p v-if="edu.details" class="font-sans text-sm text-gray-400">
+          <p v-if="edu.details" class="font-sans text-base text-gray-400">
             {{ edu.details }}
           </p>
         </div>
@@ -91,13 +90,6 @@
 
 <script setup>
 import TimelineItem from "../components/TimelineItem.vue";
-
-/** Mirrors Landing stat accents: ruby, forest (green), cobalt — border-only on chips */
-const skillAccentBorders = [
-  "border-ruby-500/70",
-  "border-forest-500/70",
-  "border-cobalt-500/70",
-];
 
 const skills = [
   // "Apex",
