@@ -5,7 +5,7 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-ruby-400 mb-4"
+        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Summary
       </h2>
@@ -20,7 +20,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-torch-400 mb-4"
+        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Skills
       </h2>
@@ -29,7 +29,7 @@
           v-for="(skill, index) in skills"
           :key="skill"
           :class="[
-            'font-mono rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-base font-medium text-gray-200 border-torch-500/70',
+            'font-mono rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-base font-medium text-gray-200 border-cobalt-500/70',
           ]"
         >
           {{ skill }}
@@ -40,7 +40,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-sun-400 mb-6"
+        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Experience
       </h2>
