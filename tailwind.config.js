@@ -13,7 +13,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
-        heading: ['"IBM Plex Sans"', ...defaultTheme.fontFamily.sans],
+        heading: ['"Lato"', ...defaultTheme.fontFamily.sans],
         mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
       },
       colors: {
