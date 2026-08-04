@@ -26,23 +26,23 @@
     @apply font-heading;
   }
 
-  /* Gruvbox dark hard shell — matches Kitty dark0_hard / default fg */
+  /* 1976 Retro dark shell — TGH Earth Brown base */
   html.dark {
-    background-color: #1d2021;
-    color: #ebdbb2;
+    background-color: #1f120d;
+    color: #f3e7e0;
   }
 
   html.dark body {
-    background-color: #1d2021;
+    background-color: #1f120d;
     color: inherit;
   }
 
-  /* Neutralize Tailwind’s default blue ring / white ring-offset on Gruvbox surfaces */
+  /* Neutralize Tailwind’s default blue ring / white ring-offset on earth-brown surfaces */
   html.dark *,
   html.dark *::before,
   html.dark *::after {
-    --tw-ring-offset-color: #1d2021;
-    --tw-ring-color: rgb(131 165 152 / 0.45);
+    --tw-ring-offset-color: #1f120d;
+    --tw-ring-color: rgb(60 143 158 / 0.45);
   }
 }
 
