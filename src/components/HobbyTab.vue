@@ -125,11 +125,11 @@
 
 <script setup>
 const hobbyAccentClasses = {
-  reading: "text-ruby-400",
-  genealogy: "text-forest-400",
+  reading: "text-cobalt-400",
+  genealogy: "text-cobalt-400",
   systems: "text-cobalt-400",
-  music: "text-sun-400",
-  journaling: "text-iris-400",
+  music: "text-cobalt-400",
+  journaling: "text-cobalt-400",
 };
 
 const getHobbyAccentClass = (id) => hobbyAccentClasses[id] || "text-gray-400";

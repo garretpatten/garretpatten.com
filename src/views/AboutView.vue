@@ -26,42 +26,38 @@
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
-        I grew up on the Jersey Shore in the New York City metro area. I
-        always loved computers growing up because it felt like they offered endless
-        possibilities: research, blogs, forums, games, art, and more. At Christian
-        Brothers Academy in Lincroft, I took my first computer science class which
-        introduced me to Python and to the satisfaction of a program that behaves
-        as written.
+        I grew up on the Jersey Shore in the New York City metro area and fell for
+        computers early: research, blogs, forums, games, art, and more. At Christian
+        Brothers Academy in Lincroft, my first computer science class introduced me
+        to Python and to the quiet satisfaction of a program that behaves exactly as
+        written.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
         Following high school, I enrolled in Boston College’s Carroll School of
-        Management. I originally intended to pursue a career in finance as I thought
-        that was the best path — one that my father and brothers had followed.
-        Midway through my tenure, I felt unsure about it. Over coffee, a professor
-        recommended I try out a computer science course since it was something I had
-        enjoyed in high school. Over the next few semesters, programming slowly became
-        the sharper focus of my education.
+        Management and planned to pursue finance — the path my father and brothers
+        had taken. Midway through, I felt unsure. Over coffee, a professor suggested
+        I try a computer science course, remembering how much I had enjoyed it in
+        high school. Over the next few semesters, programming became the sharper
+        focus of my education.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
-        The summer before my senior year, I accepted an offer for a QA engineering
-        internship. This experience introduced me to software development as it is
-        practiced rather than taught. Working with experienced engineers, I began
-        to fall in love with the discipline as I watched features slowly come
+        The summer before my senior year, I accepted a QA engineering internship and
+        saw software development as it is practiced rather than taught. Working with
+        experienced engineers, I fell in love with the discipline as features came
         together one small, expertly planned iteration at a time.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
         After returning to school, I completed my finance degree with a minor in
-        computer science. Once I graduated, I began my product engineering journey
-        not yet knowing it would lead me to security. While building out a
-        customer-facing portal, I dealt firsthand with concepts like authentication,
-        authorization, trust boundaries, validation, and sanitization. While I enjoyed
-        building out new functionality and delivering smooth user experiences, I always
-        found myself jumping to pick up the security work. When a spot opened up on
-        my company’s newly established Product Security team, I made the jump. Four
-        years later, I now serve as the team’s technical lead.
+        computer science. Once I graduated, I began my product engineering journey not
+        yet knowing it would lead me to security. While building a customer-facing
+        portal, I dealt firsthand with authentication, authorization, trust boundaries,
+        validation, and sanitization. I enjoyed delivering smooth user experiences, but I
+        kept volunteering for the security work. When a spot opened on my company’s
+        newly established Product Security team, I made the jump. Four years later, I
+        serve as the team’s technical lead.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed">

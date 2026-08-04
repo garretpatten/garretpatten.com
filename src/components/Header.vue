@@ -214,17 +214,17 @@ const desktopRouteClasses =
 const mobileRouteClasses =
   "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-300";
 
-/** Page theme color for the active navigation item */
+/** Active navigation item is always yellow (sun) for consistency. */
 const routeAccentClasses = {
   "/": "text-sun-400 border-b-2 border-sun-400",
-  "/about": "text-ruby-400 border-b-2 border-ruby-400",
-  "/resume": "text-torch-400 border-b-2 border-torch-400",
-  "/projects": "text-forest-400 border-b-2 border-forest-400",
-  "/hobbies": "text-cobalt-400 border-b-2 border-cobalt-400",
+  "/about": "text-sun-400 border-b-2 border-sun-400",
+  "/resume": "text-sun-400 border-b-2 border-sun-400",
+  "/projects": "text-sun-400 border-b-2 border-sun-400",
+  "/hobbies": "text-sun-400 border-b-2 border-sun-400",
 };
 
 const getRouteStateClasses = (path) =>
-  route.path === path ? routeAccentClasses[path] || "text-cobalt-400 border-b-2 border-cobalt-400" : "";
+  route.path === path ? routeAccentClasses[path] || "text-sun-400 border-b-2 border-sun-400" : "";
 
 const focusCloseButton = () => {
   closeMenuRef.value?.focus();

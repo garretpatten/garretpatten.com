@@ -13,7 +13,7 @@
       <p
         class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
-        The best security systems are the ones engineers actually want to use. I’m a systems-minded security engineer dedicated to designing frictionless pipelines, enabling development teams, and transforming security from an afterthought into a core product feature.
+        The best security systems are the ones engineers actually want to use. I design frictionless pipelines, enable development teams, and turn security from a blocker into a product feature.
       </p>
     </section>
 

@@ -11,10 +11,9 @@
       </h2>
       <p class="text-xl font-sans text-gray-300 leading-relaxed">
         I am a systems-oriented security leader with a builder's mindset and eight
-        years of experience at a global, publicly traded FinTech company supporting
-        over 2,700 financial institutions across more than 20 countries. I
-        architect secure pipelines, drive developer enablement, and scale
-        security as a shared organizational responsibility.
+        years of experience at a global, publicly traded FinTech company that supports
+        over 2,700 financial institutions across more than 20 countries. I architect
+        secure pipelines, enable developers, and scale security as a shared responsibility.
       </p>
     </section>
 
@@ -57,7 +56,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-forest-400 mb-6"
+        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Education
       </h2>
@@ -133,28 +132,28 @@ const experience = [
   {
     role: "Senior Security Engineer",
     company: "nCino, Inc.",
-    start: "June '24",
-    end: "Current",
+    start: "Jun 2024",
+    end: "Present",
     bullets: [
-      "Strategic Technical Leadership: Lead Product Security for a 5-person team to prioritize and synchronize deliverables across global divisions.", 
-      "Roadmap and Executive Support: Co-author the security engineering roadmap and serve as the primary technical escalation point and acting lead.",
-      "Enterprise Security Orchestration: Architected automated security governance for 2,000+ repositories via GitHub Actions to enforce SSDLC standards and automated provisioning.",
-      "Supply Chain Integrity: Hardened the software supply chain through package regsitry proxies, runtime configuration enforcement, and SBOM generation.",
-      "Policy as Code: Engineered automated pipelines to enforce Node.js license compliance to mitigate regulatory and compliance friction.",
-      "Shift-Left Advocacy: Lead complex security reviews across diverse product lines to embed security champions and eliminate vulnerabilities pre-production.",
+      "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
+      "Co-author the security engineering roadmap and serve as the primary technical escalation point and acting team lead.",
+      "Architected automated security governance for 2,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
+      "Hardened the software supply chain through package registry proxies, runtime configuration enforcement, and SBOM generation.",
+      "Built automated license-compliance pipelines for Node.js dependencies to reduce regulatory friction.",
+      "Lead complex security reviews across product lines to embed security champions and eliminate vulnerabilities before production.",
     ],
   },
   {
     role: "Security Engineer",
     company: "nCino, Inc.",
     start: "May 2022",
-    end: "June '24",
+    end: "Jun 2024",
     bullets: [
-      "CI/CD Governance: Established enterprise-wide code ownership enforcement within CI/CD pipelines to ensure auditable accountability and rigorous peer-reviewed deployments.",
-      "Data-Driven Security: Deployed Sourcegraph and DefectDojo to centralize security insights and drive executive-level, data-backed code-health metrics.",
-      "Open Source Contribution: Authored and open-sourced a Semgrep ruleset for Salesforce Apex/VisualForce to address critical gaps in SAST ecosystem support.",
-      "Offensive Operations: Conducted targeted penetration tests on core products and corporate web assets to remediate high-impact attack vectors.",
-      "Scalable Consultation: Launched security office hours and support channels to scale expert consultation across the organization without increasing headcount.",
+      "Established enterprise-wide code-ownership enforcement in CI/CD pipelines to ensure auditable accountability and peer-reviewed deployments.",
+      "Deployed Sourcegraph and DefectDojo to centralize security insights and drive executive-level, data-backed code-health metrics.",
+      "Authored and open-sourced a Semgrep ruleset for Salesforce Apex/VisualForce to close a critical gap in SAST ecosystem support.",
+      "Conducted targeted penetration tests on core products and corporate web assets to remediate high-impact attack vectors.",
+      "Launched security office hours and support channels to scale expert consultation across the organization without increasing headcount.",
     ],
   },
   {
@@ -163,19 +162,22 @@ const experience = [
     start: "Feb 2020",
     end: "May 2022",
     bullets: [
-      "High-Scale Product Architecture: Developed mission-critical features for a global production platform used by the world's largest financial institutions.",
-      "Global Impact: Engineered an online application for PPP that millions of business owners used to maintain operations during the COVID-19 pandemic.",
-      "Access Control Design: Designed and deployed external permissions management systems that enforced least privilege and reduced manual configuration.",
-      "Inclusive Engineering: Led the transition to WCAG 2.0 AA compliance and codified accessibility standards into the global development guide.",
-      "Engineering Mentorship: Guided junior engineers through rapid organizational scaling with a focus on secure development and scalable architecture.",
+      "Developed mission-critical features for a global production platform used by the world's largest financial institutions.",
+      "Engineered an online application for PPP that millions of business owners used to maintain operations during the COVID-19 pandemic.",
+      "Designed and deployed external permissions management systems that enforced least privilege and reduced manual configuration.",
+      "Led the transition to WCAG 2.0 AA compliance and codified accessibility standards into the global development guide.",
+      "Mentored junior engineers through rapid organizational scaling with a focus on secure development and scalable architecture.",
     ],
   },
   {
     role: "Associate Software Engineer / QA Intern",
     company: "nCino, Inc.",
-    start: "June '17",
-    end: "Feb '20",
-    bullets: [],
+    start: "Jun 2017",
+    end: "Feb 2020",
+    bullets: [
+      "Built automated UI and API test suites for a cloud banking platform, reducing regression cycles and raising release confidence.",
+      "Earned a full-time engineering role by demonstrating strong debugging, customer focus, and rapid technical growth.",
+    ],
   },
 ];
 
@@ -184,7 +186,7 @@ const education = [
     school: "Boston College, Carroll School of Management",
     degree:
       "Bachelor of Science in Business Management; Concentration in Finance; Minor in Computer Science",
-    end: "Aug '14 - May '18",
+    end: "Aug 2014 - May 2018",
   },
 ];
 </script>

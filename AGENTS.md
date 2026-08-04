@@ -44,7 +44,7 @@ Reuse existing components (`ProjectCard`, `TimelineItem`, `HobbyTab`, etc.) befo
 ## Styling and UX
 
 - **Dark / theme**: `darkMode: "class"` in `tailwind.config.js`; **`index.html` + `theme.js` always add `dark`** so the pastel light shell is never used. Keep `dark:` variants where dual utilities remain.
-- **Palette**: Theme colors (`cobalt`, `iris`, `forest`, `sun`, `pine`, `navy`, **`torch`** orange, **`ruby`** red, `gray`) in `tailwind.config.js` match Gruvbox Dark Hard ANSI bright/normal pairs (dotfiles Kitty `Gruvbox-Dark-Hard.conf`). Prefer tokens over arbitrary hex.
+- **Palette**: Theme colors (`cobalt` blue, `sun` yellow, `torch` orange, `ruby` red, plus `gray` neutrals) in `tailwind.config.js` match Gruvbox Dark Hard ANSI bright/normal pairs (dotfiles Kitty `Gruvbox-Dark-Hard.conf`). Prefer tokens over arbitrary hex; keep UI accents to these four colors.
 - **Motion**: Default interaction timing is **230ms** (`duration-[230ms]`). Reuse classes like `interactive-lift`, `soft-enter`, and route/menu transitions defined in `main.css` instead of one-off animations.
 - **Layout**: `container mx-auto` with responsive padding matches `App.vue`. Keep pages readable (`max-w-*` on content sections).
 - **Accessibility**: Preserve `aria-*` on interactive controls (e.g. mobile nav in `Header.vue`).

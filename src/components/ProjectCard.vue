@@ -44,10 +44,10 @@
         <span
           class="h-3.5 w-3.5 rounded-full"
           :class="{
-            'bg-iris-600': project.language === 'Lua',
+            'bg-cobalt-500': project.language === 'Lua',
             'bg-ruby-600': project.language === 'Shell',
             'bg-torch-500': project.language === 'TypeScript',
-            'bg-forest-400': project.language === 'Vue',
+            'bg-sun-400': project.language === 'Vue',
             'bg-cobalt-500':
               project.language &&
               !['Lua', 'Shell', 'TypeScript', 'Vue'].includes(project.language),
