@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 
 /**
- * Portfolio uses Gruvbox Dark Hard only (matches terminal); system theme is ignored.
+ * Portfolio uses the Retro 1976 dark theme (TGH Earth Brown shell); system theme is ignored.
  */
 export const useThemeStore = defineStore("theme", () => {
   const isDark = ref(true);
