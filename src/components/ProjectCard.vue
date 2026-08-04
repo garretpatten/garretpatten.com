@@ -48,9 +48,6 @@
             'bg-ruby-600': project.language === 'Shell',
             'bg-torch-500': project.language === 'TypeScript',
             'bg-sun-400': project.language === 'Vue',
-            'bg-cobalt-500':
-              project.language &&
-              !['Lua', 'Shell', 'TypeScript', 'Vue'].includes(project.language),
           }"
           aria-hidden="true"
         />
