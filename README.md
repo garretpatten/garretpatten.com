@@ -22,6 +22,7 @@ npm run build
 - Vue 3 (Composition API), Vue Router, Pinia
 - Vite
 - Tailwind CSS
+- Google Fonts: Inter (body), Lato (headings), JetBrains Mono (code)
 
 ## Structure
 
