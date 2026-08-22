@@ -126,7 +126,7 @@ const experience = [
     bullets: [
       "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
       "Co-author the security engineering roadmap and serve as the primary technical escalation point and acting team lead.",
-      "Architected automated security governance for 2,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
+      "Architected automated security governance for 3,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
       "Hardened the software supply chain through package registry proxies, runtime configuration enforcement, and SBOM generation.",
       "Built automated license-compliance pipelines for Node.js dependencies to reduce regulatory friction.",
       "Lead complex security reviews across product lines to embed security champions and eliminate vulnerabilities before production.",
