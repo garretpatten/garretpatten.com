@@ -18,7 +18,7 @@
       <p
         class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
-        I define clear policies and build the tools and automation that eliminate friction, so security becomes a natural part of how teams deliver software.
+        I define clear policies and build tools and automation that eliminate friction, so security becomes a natural part of how teams deliver software.
       </p>
     </section>
 
