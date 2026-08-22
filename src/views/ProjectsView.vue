@@ -11,6 +11,10 @@
           <ProjectCard :project="project" />
         </li>
       </ul>
+
+      <p class="mt-8 text-lg text-gray-300 text-center">
+        Want to see more? Check out the rest of my projects on GitHub — the link is in the main navigation.
+      </p>
     </section>
   </div>
 </template>

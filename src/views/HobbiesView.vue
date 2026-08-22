@@ -98,8 +98,8 @@ const hobbies = [
     id: "journaling",
     title: "Journaling",
     content: [
-      "To offset the overstimulation of digital life, I keep a daily analog journaling practice. Writing by hand brings clarity and focus. My usual setup is a passport-size Traveler’s Notebook for daily entries and a Midori A5 for longer reflective sessions.",
-      "For more than two years I have kept structured workday logs: daily goals, notes, and a brief wrap-up to set intentions for the next day. Pocket notebooks—usually Field Notes—go everywhere with me. When one is full, I index it, label it with its date range, and archive it in a birch wood box. The system is tactile, simple, and grounding."
+      "To offset the overstimulation of digital life, I keep a daily analog journaling practice. Writing by hand brings clarity and focus. My usual setup is a passport-size Traveler's Notebook for daily entries and on-the-go notes, plus a Midori A5 for longer reflective sessions.",
+      "For more than two years I have kept structured workday logs: daily goals, notes, and a brief wrap-up to set intentions for the next day. When a Traveler's Notebook insert is full, I date it with its range and archive it in a birch wood box alongside the Field Notes of years past. The system is tactile, simple, and grounding."
     ],
   },
   {
@@ -118,7 +118,7 @@ const hobbies = [
     title: "Personal System Design",
     content: [
       "I am committed to essentialism—the disciplined pursuit of less in order to focus on what matters. That principle shapes the personal systems I build: minimal, intentional structures that eliminate noise and protect time and attention for family, work, and growth.",
-      "I automate system configuration through code, capture ideas and logs in Standard Notes, coordinate household projects with my wife in Notion and Todoist, and manage our family schedule in Proton Calendar. These tools reduce friction so I can live and work with greater focus."
+      "I automate system configuration through code and maintain a repository of scripts that export and back up our resources monthly to a local SSD and end-to-end encrypted cloud storage on Proton Drive. I capture ideas in physical notebooks for a tactile, distraction-free experience, build out my second brain in Obsidian, and coordinate household projects and our shared schedule with my wife in Notion and Google Calendar. These tools reduce friction so I can live and work with greater focus."
     ],
   },
   {
@@ -129,16 +129,16 @@ const hobbies = [
       "These books help me build better systems, whether technical, personal, or spiritual, and grow in understanding of myself and the world.",
       "Below are some books I have recently read and enjoyed:"
     ],
-    currently: "Who Am I, Lord? Finding Your Identity in Christ by Joe Heschmeyer",
     list: [
       "Blink: The Power of Thinking Without Thinking by Malcolm Gladwell — Snap judgments as a skill; the lesson is knowing when to trust the first read.",
+      "Dead Wake by Erik Larson — The sinking of the Lusitania, traced through the passengers, captain, and U-boat commander whose paths converged in May 1915.",
+      "Deep Work by Cal Newport — Rules for focused success in a distracted world; the case for protecting attention like a scarce resource.",
       "Digital Minimalism: Choosing a Focused Life in a Noisy World by Cal Newport — Technology kept on purpose, not by default.",
-      "Washington: The Indispensable Man by James Thomas Flexner — Long and unsparing; it rewards readers who want judgment under strain, not anecdote.",
-      "What Christians Believe by Bishop Robert Barron — An orderly introduction to what Christians hold in common, without pretending the subject is simple.",
-      "The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — The months before the Civil War, narrated with the pace of events that could not be stopped.",
-      "Life Lessons: Fifty Things I Learned in My First Fifty Years by Patrick Madrid — Fifty short lessons; most of them about showing up.",
-      "G.K. Chesterton: The Apostle of Common Sense by Dale Ahlquist — Chesterton introduced as a mind rather than a mascot.",
       "Essentialism: The Disciplined Pursuit of Less by Greg McKeown — On the discipline of refusing what does not matter.",
+      "G.K. Chesterton: The Apostle of Common Sense by Dale Ahlquist — Chesterton introduced as a mind rather than a mascot.",
+      "Life Lessons: Fifty Things I Learned in My First Fifty Years by Patrick Madrid — Fifty short lessons; most of them about showing up.",
+      "The Demon of Unrest: A Saga of Hubris, Heartbreak, and Heroism at the Dawn of the Civil War by Erik Larson — The months before the Civil War, narrated with the pace of events that could not be stopped.",
+      "Washington: The Indispensable Man by James Thomas Flexner — Long and unsparing; it rewards readers who want judgment under strain, not anecdote.",
     ],
   },
 ];
