@@ -5,7 +5,7 @@
       <svg
         aria-hidden="true"
         v-if="hobby.id === 'reading'"
-        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
+        class="w-6 h-6 text-cobalt-400"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -21,7 +21,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'genealogy'"
-        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
+        class="w-6 h-6 text-cobalt-400"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -43,7 +43,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'systems'"
-        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
+        class="w-6 h-6 text-cobalt-400"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -64,7 +64,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'music'"
-        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
+        class="w-6 h-6 text-cobalt-400"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -80,7 +80,7 @@
       <svg
         aria-hidden="true"
         v-else-if="hobby.id === 'journaling'"
-        :class="['w-6 h-6', getHobbyAccentClass(hobby.id)]"
+        class="w-6 h-6 text-cobalt-400"
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -124,16 +124,6 @@
 </template>
 
 <script setup>
-const hobbyAccentClasses = {
-  reading: "text-cobalt-400",
-  genealogy: "text-cobalt-400",
-  systems: "text-cobalt-400",
-  music: "text-cobalt-400",
-  journaling: "text-cobalt-400",
-};
-
-const getHobbyAccentClass = (id) => hobbyAccentClasses[id] || "text-gray-400";
-
 defineProps({
   hobby: {
     type: Object,

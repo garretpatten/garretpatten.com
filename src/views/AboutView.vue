@@ -2,28 +2,6 @@
   <div class="max-w-3xl mx-auto">
     <h1 tabindex="-1" class="sr-only outline-none">About</h1>
 
-    <div class="mb-8 soft-enter flex justify-center">
-      <!--
-        Ordered warm-to-cool halo as nested rings (not box-shadow). Large stacked
-        shadows ghost on real iOS WebKit during SPA route swaps; borders don't.
-      -->
-      <div class="rounded-full bg-cobalt-400 p-[3px]">
-        <div class="rounded-full bg-gray-950 p-[3px]">
-          <div class="rounded-full bg-sun-400 p-[3px]">
-            <div class="rounded-full bg-gray-950 p-[3px]">
-              <div class="rounded-full bg-ruby-400 p-[3px]">
-                <img
-                  src="/assets/images/garret-patten.jpeg"
-                  alt="Garret Patten"
-                  class="block h-32 w-32 md:h-40 md:w-40 rounded-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="max-w-none soft-enter soft-enter-delay-1">
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
         I grew up on the Jersey Shore in the New York City metro area and fell for

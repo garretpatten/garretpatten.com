@@ -9,7 +9,7 @@
       >
         Summary
       </h2>
-      <p class="text-xl font-sans text-gray-300 leading-relaxed">
+      <p class="text-lg font-sans text-gray-300 leading-relaxed">
         I am a systems-oriented security leader with a builder's mindset and eight
         years of experience at a global, publicly traded FinTech company that supports
         over 2,700 financial institutions across more than 20 countries. I architect
@@ -26,10 +26,10 @@
       </h2>
       <div class="flex flex-wrap gap-3">
         <span
-          v-for="(skill, index) in skills"
+          v-for="skill in sortedSkills"
           :key="skill"
           :class="[
-            'font-mono rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-base font-medium text-gray-200 border-cobalt-500/70',
+            'font-mono rounded-full border-2 bg-gray-900/90 px-2.5 py-1 text-sm font-medium text-gray-200 border-cobalt-500/70',
           ]"
         >
           {{ skill }}
@@ -88,27 +88,18 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import TimelineItem from "../components/TimelineItem.vue";
 
 const skills = [
-  // "Apex",
   "Application Security",
   "Bash scripting",
   "CI/CD Pipeline Design & Security",
   "Cloud Computing",
-  // "CSS3",
   "Developer Enablement & Security Awareness",
-  // "DefectDojo",
-  // "Docker",
   "Full-Stack Development",
-  // "GitHub Actions & Workflow Automation",
   "GitHub & GitLab Enterprise Administration",
-  // "GitLab Administration",
-  // "HTML5",
   "JavaScript",
-  // "Node.js",
-  // "Opengrep",
-  // "Orca Security",
   "OWASP Top 10",
   "Penetration Testing",
   "Product Development",
@@ -117,16 +108,14 @@ const skills = [
   "DAST",
   "Secrets Scanning",
   "SBOM & Software Supply Chain Security",
-  // "Secure Software Development",
-  // "Security Orchestration",
-  // "Semgrep",
   "Shift-Left Security Practices",
-  // "Software Supply Chain Security",
-  // "Sourcegraph",
   "SSDLC",
   "Threat Modeling",
-  // "VisualForce",
 ];
+
+const sortedSkills = computed(() =>
+  [...skills].sort((a, b) => a.localeCompare(b))
+);
 
 const experience = [
   {
@@ -137,7 +126,7 @@ const experience = [
     bullets: [
       "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
       "Co-author the security engineering roadmap and serve as the primary technical escalation point and acting team lead.",
-      "Architected automated security governance for 2,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
+      "Architected automated security governance for 3,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
       "Hardened the software supply chain through package registry proxies, runtime configuration enforcement, and SBOM generation.",
       "Built automated license-compliance pipelines for Node.js dependencies to reduce regulatory friction.",
       "Lead complex security reviews across product lines to embed security champions and eliminate vulnerabilities before production.",

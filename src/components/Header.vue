@@ -215,16 +215,10 @@ const mobileRouteClasses =
   "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-300";
 
 /** Active navigation item is always yellow (sun) for consistency. */
-const routeAccentClasses = {
-  "/": "text-sun-400 border-b-2 border-sun-400",
-  "/about": "text-sun-400 border-b-2 border-sun-400",
-  "/resume": "text-sun-400 border-b-2 border-sun-400",
-  "/projects": "text-sun-400 border-b-2 border-sun-400",
-  "/hobbies": "text-sun-400 border-b-2 border-sun-400",
-};
+const activeRouteClasses = "text-sun-400 border-b-2 border-sun-400";
 
 const getRouteStateClasses = (path) =>
-  route.path === path ? routeAccentClasses[path] || "text-sun-400 border-b-2 border-sun-400" : "";
+  route.path === path ? activeRouteClasses : "";
 
 const focusCloseButton = () => {
   closeMenuRef.value?.focus();
