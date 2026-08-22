@@ -11,9 +11,14 @@
     <!-- Value Proposition -->
     <section class="mb-16 soft-enter soft-enter-delay-1">
       <p
+        class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto mb-4"
+      >
+        Security only works when engineers want to use it.
+      </p>
+      <p
         class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
-        The best security systems are the ones engineers actually want to use. I design frictionless pipelines, enable development teams, and turn security from a blocker into a product feature.
+        I define clear policies and build the tools and automation that eliminate friction, so security becomes a natural part of how teams deliver software.
       </p>
     </section>
 
@@ -23,15 +28,15 @@
     >
       <div class="text-center">
         <div class="font-heading text-3xl font-bold text-ruby-400 mb-2">8+</div>
-        <div class="font-mono text-base text-gray-400">Years Experience</div>
+        <div class="font-mono text-base text-gray-400">Years of Experience</div>
       </div>
       <div class="text-center">
-        <div class="font-heading text-3xl font-bold text-torch-400 mb-2">3,000+</div>
-        <div class="font-mono text-base text-gray-400">Repositories Managed</div>
+        <div class="font-heading text-3xl font-bold text-torch-400 mb-2">2,700+</div>
+        <div class="font-mono text-base text-gray-400">Global Financial Institutions Served</div>
       </div>
       <div class="text-center">
         <div class="font-heading text-3xl font-bold text-sun-400 mb-2">350+</div>
-        <div class="font-mono text-base text-gray-400">Engineers Supported Globally</div>
+        <div class="font-mono text-base text-gray-400">Engineers Supported Worldwide</div>
       </div>
     </section>
 

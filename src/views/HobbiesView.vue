@@ -34,7 +34,7 @@
         :aria-selected="activeTab === hobby.id"
         :aria-controls="`hobby-panel-${hobby.id}`"
         @click="selectHobby(hobby.id)"
-        class="interactive-focus px-4 py-2 text-lg font-medium transition-colors duration-[230ms] interactive-lift"
+        class="interactive-focus px-4 py-2 text-lg font-medium transition-colors duration-[230ms]"
         :class="getTabClasses(hobby.id)"
       >
         {{ hobby.title }}
@@ -77,20 +77,9 @@ const activeTab = ref("genealogy");
 const hobbyAnnouncement = ref("");
 const isDesktopTablist = ref(false);
 
-/** All hobby tabs use the same cobalt accent for consistency. */
-const hobbyAccentClasses = {
-  reading: "text-cobalt-400",
-  genealogy: "text-cobalt-400",
-  systems: "text-cobalt-400",
-  music: "text-cobalt-400",
-  journaling: "text-cobalt-400",
-};
-
 const getTabClasses = (hobbyId) => {
   if (activeTab.value === hobbyId) {
-    const accent = hobbyAccentClasses[hobbyId] || "text-cobalt-400";
-    const borderColor = accent.replace("text-", "border-");
-    return `${accent} border-b-2 ${borderColor}`;
+    return "text-cobalt-400 border-b-2 border-cobalt-400";
   }
   return "text-gray-300 hover:text-cobalt-300";
 };

@@ -8,13 +8,9 @@ Requires Node.js 20.19+ (or 22.12+).
 
 ```bash
 npm install
-npm run dev
-```
-
-Build for production:
-
-```bash
-npm run build
+npm run dev      # local dev server
+npm run build    # production build → dist/
+npm run preview  # preview production build
 ```
 
 ## Stack
@@ -28,7 +24,7 @@ npm run build
 
 ```text
 src/
-├── components/    # DarkModeToggle, Header, Footer, ProjectCard, etc.
+├── components/    # Header, Footer, ProjectCard, TimelineItem, HobbyTab
 ├── views/         # LandingView, AboutView, ResumeView, ProjectsView, HobbiesView
 ├── router/        # Route definitions
 ├── stores/        # Theme store (dark mode)

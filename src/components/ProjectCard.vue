@@ -31,7 +31,7 @@
     </div>
 
     <p
-      class="mb-3 flex-1 font-sans text-base leading-relaxed text-gray-300 line-clamp-3"
+      class="mb-3 flex-1 font-sans text-base leading-relaxed text-gray-300"
     >
       {{ project.description }}
     </p>
@@ -68,10 +68,6 @@ const props = defineProps({
 });
 
 const repoName = computed(() => {
-  if (props.project.repo) {
-    return props.project.repo;
-  }
-
   const slug = props.project.github?.split("/").pop();
   return slug ?? props.project.name;
 });

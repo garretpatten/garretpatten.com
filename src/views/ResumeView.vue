@@ -26,10 +26,10 @@
       </h2>
       <div class="flex flex-wrap gap-3">
         <span
-          v-for="(skill, index) in skills"
+          v-for="skill in sortedSkills"
           :key="skill"
           :class="[
-            'font-mono rounded-full border-2 bg-gray-900/90 px-3.5 py-1.5 text-base font-medium text-gray-200 border-cobalt-500/70',
+            'font-mono rounded-full border-2 bg-gray-900/90 px-2.5 py-1 text-sm font-medium text-gray-200 border-cobalt-500/70',
           ]"
         >
           {{ skill }}
@@ -88,27 +88,18 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import TimelineItem from "../components/TimelineItem.vue";
 
 const skills = [
-  // "Apex",
   "Application Security",
   "Bash scripting",
   "CI/CD Pipeline Design & Security",
   "Cloud Computing",
-  // "CSS3",
   "Developer Enablement & Security Awareness",
-  // "DefectDojo",
-  // "Docker",
   "Full-Stack Development",
-  // "GitHub Actions & Workflow Automation",
   "GitHub & GitLab Enterprise Administration",
-  // "GitLab Administration",
-  // "HTML5",
   "JavaScript",
-  // "Node.js",
-  // "Opengrep",
-  // "Orca Security",
   "OWASP Top 10",
   "Penetration Testing",
   "Product Development",
@@ -117,16 +108,14 @@ const skills = [
   "DAST",
   "Secrets Scanning",
   "SBOM & Software Supply Chain Security",
-  // "Secure Software Development",
-  // "Security Orchestration",
-  // "Semgrep",
   "Shift-Left Security Practices",
-  // "Software Supply Chain Security",
-  // "Sourcegraph",
   "SSDLC",
   "Threat Modeling",
-  // "VisualForce",
 ];
+
+const sortedSkills = computed(() =>
+  [...skills].sort((a, b) => a.localeCompare(b))
+);
 
 const experience = [
   {
