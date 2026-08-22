@@ -9,7 +9,7 @@
       >
         Summary
       </h2>
-      <p class="text-xl font-sans text-gray-300 leading-relaxed">
+      <p class="text-lg font-sans text-gray-300 leading-relaxed">
         I am a systems-oriented security leader with a builder's mindset and eight
         years of experience at a global, publicly traded FinTech company that supports
         over 2,700 financial institutions across more than 20 countries. I architect
