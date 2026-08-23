@@ -93,13 +93,9 @@ import TimelineItem from "../components/TimelineItem.vue";
 
 const skills = [
   "Application Security",
-  "Bash scripting",
   "CI/CD Pipeline Design & Security",
-  "Cloud Computing",
   "Developer Enablement & Security Awareness",
-  "Full-Stack Development",
   "GitHub & GitLab Enterprise Administration",
-  "JavaScript",
   "OWASP Top 10",
   "Penetration Testing",
   "Product Development",
@@ -107,9 +103,10 @@ const skills = [
   "SAST",
   "DAST",
   "Secrets Scanning",
-  "SBOM & Software Supply Chain Security",
+  "SBOM",
   "Shift-Left Security Practices",
   "SSDLC",
+  "Supply Chain Security",
   "Threat Modeling",
 ];
 
