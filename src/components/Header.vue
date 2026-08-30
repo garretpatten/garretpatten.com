@@ -20,13 +20,13 @@
         ref="menuToggleRef"
         v-show="!isMenuOpen"
         @click="toggleMenu"
-        class="p-2 text-gray-100 hover:text-cobalt-400 interactive-focus rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
+        class="p-1.5 text-gray-100 hover:text-cobalt-400 interactive-focus rounded-md transition-colors duration-[230ms] relative z-50 interactive-lift"
         aria-label="Open menu"
         :aria-expanded="isMenuOpen"
       >
         <svg
           aria-hidden="true"
-          class="w-9 h-9"
+          class="w-11 h-11"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

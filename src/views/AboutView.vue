@@ -4,47 +4,47 @@
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
-        I grew up on the Jersey Shore in the New York City metro area and fell for
-        computers early: research, blogs, forums, games, art, and more. At Christian
-        Brothers Academy in Lincroft, my first computer science class introduced me
-        to Python and to the quiet satisfaction of a program that behaves exactly as
-        written.
+        At my core, I am a problem solver and a builder. There is nothing I love more
+        than taking a complex, messy problem and reducing it to a clean, simple, and
+        elegant solution. That drive is what drew me into software engineering and
+        ultimately led me into cybersecurity. It continues to shape how I approach both
+        my life and work.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
-        Following high school, I enrolled in Boston College’s Carroll School of
-        Management and planned to pursue finance — the path my father and brothers
-        had taken. Midway through, I felt unsure. Over coffee, a professor suggested
-        I try a computer science course, remembering how much I had enjoyed it in
-        high school. Over the next few semesters, programming became the sharper
-        focus of my education.
+        I grew up on the Jersey Shore in the New York metropolitan area and always had a
+        certain fascination with computers—playing games, surfing forums, reading blogs,
+        creating art, and tinkering with early projects. My first computer science class
+        at Christian Brothers Academy introduced me to Python and the quiet satisfaction
+        of a program that behaved exactly as written.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
-        The summer before my senior year, I accepted a QA engineering internship and
-        saw software development as it is practiced rather than taught. Working with
-        experienced engineers, I fell in love with the discipline as features came
-        together one small, expertly planned iteration at a time.
+        Following high school, I attended Boston College’s Carroll School of Management
+        with the plan of pursuing finance—the path my father and brother had taken.
+        Midway through, I felt unsure. While I liked the subject, I couldn't picture it
+        as my career. Over coffee, a professor suggested almost on a whim that I try a
+        computer science course as we chatted about my other interests. Before long,
+        programming became the sharper focus of my education, and I ultimately graduated
+        with a Bachelor of Science in Business Management with a concentration in Finance
+        alongside a minor in Computer Science.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
-        After returning to school, I completed my finance degree with a minor in
-        computer science. Once I graduated, I began my product engineering journey not
-        yet knowing it would lead me to security. While building a customer-facing
-        portal, I dealt firsthand with authentication, authorization, trust boundaries,
-        validation, and sanitization. I enjoyed delivering smooth user experiences, but I
-        kept volunteering for the security work. When a spot opened on my company’s
-        newly established Product Security team, I made the jump. Four years later, I
-        serve as the team’s technical lead.
+        After graduation, I relocated to North Carolina to begin my career as a software
+        engineer building customer-facing applications at nCino. Working with experienced
+        engineers, I fell in love with the discipline as features came together one small,
+        expertly planned iteration at a time. After a few years, I found myself looking
+        for a new challenge. When an opportunity opened up on our newly formed Product
+        Security team, I made the leap. These days, I work as a Senior Security Engineer
+        where I focus on delivering solutions that make security a frictionless default
+        for anyone who seeks to build.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed">
-        Working remotely, I live in Georgia with my wife, daughter, and our beagle.
-        The same systems-thinking approach manifests across my life: at work, I build
-        secure pipelines and development tooling; at home, I create systems and build
-        automations to help manage my family commitments and home projects. In my spare
-        time, I read, journal, play guitar, research genealogy, and hang out with my
-        family.
+        After getting married, my wife and I moved to Georgia to start our family—bringing
+        her back to her home state while reconnecting me with my own family roots. Today,
+        we live here with our daughter, son, and our beagle.
       </p>
     </div>
   </div>

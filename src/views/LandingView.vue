@@ -5,39 +5,15 @@
       <h1 tabindex="-1" class="text-5xl md:text-6xl font-bold text-gray-100 mb-4 outline-none">
         Garret Patten
       </h1>
-      <p class="font-sans text-xl md:text-2xl text-gray-300">Senior Security Engineer</p>
     </section>
 
     <!-- Value Proposition -->
     <section class="mb-16 soft-enter soft-enter-delay-1">
       <p
-        class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto mb-4"
-      >
-        Security only works when engineers want to use it.
-      </p>
-      <p
         class="font-sans text-lg md:text-xl text-gray-200 leading-relaxed text-center max-w-2xl mx-auto"
       >
-        I define clear policies and build tools and automation that eliminate friction, so security becomes a natural part of how teams deliver software.
+        I am a builder, problem solver, and engineer driven by a passion for reducing complex challenges into clean, elegant solutions.
       </p>
-    </section>
-
-    <!-- Key Highlights -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 soft-enter soft-enter-delay-2"
-    >
-      <div class="text-center">
-        <div class="font-heading text-3xl font-bold text-ruby-400 mb-2">8+</div>
-        <div class="font-mono text-base text-gray-400">Years of Experience</div>
-      </div>
-      <div class="text-center">
-        <div class="font-heading text-3xl font-bold text-torch-400 mb-2">2,700+</div>
-        <div class="font-mono text-base text-gray-400">Global Financial Institutions Served</div>
-      </div>
-      <div class="text-center">
-        <div class="font-heading text-3xl font-bold text-sun-400 mb-2">350+</div>
-        <div class="font-mono text-base text-gray-400">Engineers Supported Worldwide</div>
-      </div>
     </section>
 
     <!-- Calls to Action -->
@@ -51,7 +27,7 @@
         </router-link>
         <router-link
           to="/projects"
-          class="interactive-focus px-6 py-3 bg-gray-800 border-2 border-cobalt-500/70 text-gray-100 rounded-lg font-medium hover:border-cobalt-400 hover:bg-gray-800/90 transition-colors duration-[230ms]"
+          class="interactive-focus px-6 py-3 bg-cobalt-400 text-gray-950 hover:bg-cobalt-300 rounded-lg font-medium transition-colors duration-[230ms]"
         >
           View Projects
         </router-link>

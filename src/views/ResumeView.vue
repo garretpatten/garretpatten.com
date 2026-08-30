@@ -10,10 +10,13 @@
         Summary
       </h2>
       <p class="text-lg font-sans text-gray-300 leading-relaxed">
-        I am a systems-oriented security leader with a builder's mindset and eight
-        years of experience at a global, publicly traded FinTech company that supports
-        over 2,700 financial institutions across more than 20 countries. I architect
-        secure pipelines, enable developers, and scale security as a shared responsibility.
+        I am a systems-oriented security leader with eight years of experience driving
+        end-to-end security strategy and operations at a global FinTech company supporting
+        over 2,700 financial institutions across 20+ countries. Supporting 350+ engineers
+        globally, I manage comprehensive security programs that span hands-on penetration
+        testing, architectural consultation, customer security inquiries, and automated
+        compliance. My focus is building clear policies and low-friction automation that
+        integrate security into the core software delivery lifecycle.
       </p>
     </section>
 
