@@ -1,5 +1,5 @@
 <template>
-  <header class="mb-8 pb-6 relative z-20 px-4 py-3">
+  <header class="mb-8 pb-6 relative z-20 py-3">
     <!-- Mobile Header: Logo and Hamburger -->
     <div class="flex items-center justify-between md:hidden">
       <router-link
