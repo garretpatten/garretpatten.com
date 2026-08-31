@@ -19,11 +19,11 @@
       </select>
     </div>
 
-    <!-- Desktop: Tab Navigation -->
+    <!-- Desktop: Pill Navigation -->
     <div
       role="tablist"
       aria-label="Hobby categories"
-      class="hidden md:flex flex-wrap gap-2 mb-8 border-b border-gray-700 soft-enter soft-enter-delay-1"
+      class="hidden md:flex flex-wrap gap-3 mb-8 soft-enter soft-enter-delay-1"
     >
       <button
         v-for="hobby in hobbies"
@@ -34,7 +34,7 @@
         :aria-selected="activeTab === hobby.id"
         :aria-controls="`hobby-panel-${hobby.id}`"
         @click="selectHobby(hobby.id)"
-        class="interactive-focus px-4 py-2 text-lg font-medium transition-colors duration-[230ms]"
+        class="interactive-focus px-4 py-2.5 text-base font-medium rounded-lg border transition-colors duration-[230ms]"
         :class="getTabClasses(hobby.id)"
       >
         {{ hobby.title }}
@@ -42,12 +42,8 @@
     </div>
 
     <!-- Tab Content -->
-    <div class="hobby-content">
-      <div
-        aria-live="polite"
-        aria-atomic="true"
-        class="sr-only"
-      >
+    <div class="hobby-content soft-enter soft-enter-delay-2">
+      <div aria-live="polite" aria-atomic="true" class="sr-only">
         {{ hobbyAnnouncement }}
       </div>
 
@@ -79,15 +75,15 @@ const isDesktopTablist = ref(false);
 
 const getTabClasses = (hobbyId) => {
   if (activeTab.value === hobbyId) {
-    return "text-cobalt-400 border-b-2 border-cobalt-400";
+    return "text-sun-400 border-sun-400 bg-sun-400/10";
   }
-  return "text-gray-300 hover:text-cobalt-300";
+  return "text-gray-300 border-gray-700 bg-gray-800/60 hover:border-gray-600 hover:bg-gray-800";
 };
 
 const hobbies = [
   {
     id: "genealogy",
-    title: "Genealogy Research",
+    title: "Genealogy",
     content: [
       "For roughly fifteen years I have devoted spare time to two family trees—my wife’s and my own. Census records, parish registers, military documents, land schedules, and patient analysis have carried our direct lines into early America and across the Atlantic.",
       "The work has produced veterans, immigrants, and entire branches absent from the stories we were told at home. We document them now to preserve that history for future generations.",
@@ -112,14 +108,6 @@ const hobbies = [
       "Below are my favorite guitars in my collection."
     ],
     list: ["Martin D-42", "Martin 000-18", "Tacoma DF-21"],
-  },
-  {
-    id: "systems",
-    title: "Personal System Design",
-    content: [
-      "I am committed to essentialism—the disciplined pursuit of less in order to focus on what matters. That principle shapes the personal systems I build: minimal, intentional structures that eliminate noise and protect time and attention for family, work, and growth.",
-      "I automate system configuration through code and maintain a repository of scripts that export and back up our resources monthly to a local SSD and end-to-end encrypted cloud storage on Proton Drive. I capture ideas in physical notebooks for a tactile, distraction-free experience, build out my second brain in Obsidian, and coordinate household projects and our shared schedule with my wife in Notion and Google Calendar. These tools reduce friction so I can live and work with greater focus."
-    ],
   },
   {
     id: "reading",

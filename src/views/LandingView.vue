@@ -16,23 +16,5 @@
         I like difficult problems and the work of solving them as simply as they allow—at work and in my personal life.
       </p>
     </section>
-
-    <!-- Calls to Action -->
-    <section class="text-center mb-12 soft-enter soft-enter-delay-2">
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <router-link
-          to="/resume"
-          class="interactive-focus px-6 py-3 bg-sun-400 text-gray-950 hover:bg-sun-300 rounded-lg font-medium transition-colors duration-[230ms]"
-        >
-          View Resume
-        </router-link>
-        <router-link
-          to="/projects"
-          class="interactive-focus px-6 py-3 bg-cobalt-400 text-gray-950 hover:bg-cobalt-300 rounded-lg font-medium transition-colors duration-[230ms]"
-        >
-          View Projects
-        </router-link>
-      </div>
-    </section>
   </div>
 </template>
