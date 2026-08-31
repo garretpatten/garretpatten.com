@@ -5,7 +5,7 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
+        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Summary
       </h2>
@@ -23,7 +23,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
+        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Skills
       </h2>
@@ -43,7 +43,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Experience
       </h2>
@@ -59,7 +59,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-2xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Education
       </h2>

@@ -20,18 +20,18 @@
           :href="project.github"
           target="_blank"
           rel="noopener noreferrer"
-          class="interactive-focus truncate font-sans text-base font-semibold text-cobalt-300 hover:text-cobalt-100 transition-colors duration-[230ms]"
+          class="interactive-focus truncate font-sans text-lg font-semibold text-cobalt-300 hover:text-cobalt-100 transition-colors duration-[230ms]"
         >
           {{ repoName }}
         </a>
-        <span v-else class="truncate font-sans text-base font-semibold text-gray-100">
+        <span v-else class="truncate font-sans text-lg font-semibold text-gray-100">
           {{ repoName }}
         </span>
       </div>
     </div>
 
     <p
-      class="mb-3 flex-1 font-sans text-base leading-relaxed text-gray-300"
+      class="mb-3 flex-1 font-sans text-lg leading-relaxed text-gray-300"
     >
       {{ project.description }}
     </p>
