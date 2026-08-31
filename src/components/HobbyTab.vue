@@ -45,7 +45,7 @@
         :id="`hobby-content-${hobby.id}`"
         role="region"
         :aria-labelledby="`hobby-heading-${hobby.id}`"
-        class="px-6 pb-6 overflow-hidden"
+        class="px-6 pt-4 pb-6 overflow-hidden"
       >
         <div class="prose prose-base dark:prose-invert max-w-none">
           <p

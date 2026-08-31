@@ -25,7 +25,7 @@
 import { ref } from "vue";
 import HobbyTab from "../components/HobbyTab.vue";
 
-const activeHobbyId = ref("genealogy");
+const activeHobbyId = ref(null);
 
 const toggleHobby = (hobbyId) => {
   activeHobbyId.value = activeHobbyId.value === hobbyId ? null : hobbyId;
