@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-5xl mx-auto">
+  <div class="w-full max-w-5xl mx-auto">
     <h1 tabindex="-1" class="sr-only outline-none">Projects</h1>
 
     <section class="soft-enter">

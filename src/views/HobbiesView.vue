@@ -1,83 +1,34 @@
 <template>
-  <div class="max-w-4xl mx-auto">
+  <div class="w-full max-w-4xl mx-auto">
     <h1 id="hobbies-page-title" tabindex="-1" class="sr-only outline-none">
       Hobbies
     </h1>
 
-    <!-- Mobile: Dropdown Navigation -->
-    <div class="md:hidden mb-6 soft-enter">
-      <label for="hobby-select" class="sr-only">Hobby category</label>
-      <select
-        id="hobby-select"
-        v-model="activeTab"
-        class="interactive-focus w-full px-4 py-3 text-base font-medium bg-gray-900 border border-gray-600 rounded-lg text-gray-100 interactive-lift"
-        @change="announceHobbyChange"
-      >
-        <option v-for="hobby in hobbies" :key="hobby.id" :value="hobby.id">
-          {{ hobby.title }}
-        </option>
-      </select>
-    </div>
-
-    <!-- Desktop: Pill Navigation -->
-    <div
-      role="tablist"
-      aria-label="Hobby categories"
-      class="hidden md:flex flex-wrap gap-3 mb-8 soft-enter soft-enter-delay-1"
-    >
-      <button
-        v-for="hobby in hobbies"
+    <div class="space-y-4">
+      <HobbyTab
+        v-for="(hobby, index) in hobbies"
         :key="hobby.id"
-        type="button"
-        role="tab"
-        :id="`hobby-tab-${hobby.id}`"
-        :aria-selected="activeTab === hobby.id"
-        :aria-controls="`hobby-panel-${hobby.id}`"
-        @click="selectHobby(hobby.id)"
-        class="interactive-focus px-4 py-2.5 text-base font-medium rounded-lg border transition-colors duration-[230ms]"
-        :class="getTabClasses(hobby.id)"
-      >
-        {{ hobby.title }}
-      </button>
-    </div>
-
-    <!-- Tab Content -->
-    <div class="hobby-content soft-enter soft-enter-delay-2">
-      <div aria-live="polite" aria-atomic="true" class="sr-only">
-        {{ hobbyAnnouncement }}
-      </div>
-
-      <Transition name="hobby-swap" mode="out-in">
-        <div
-          :id="`hobby-panel-${activeHobby.id}`"
-          role="tabpanel"
-          :aria-labelledby="
-            isDesktopTablist
-              ? `hobby-tab-${activeHobby.id}`
-              : 'hobbies-page-title'
-          "
-          :key="activeHobby.id"
-        >
-          <HobbyTab :hobby="activeHobby" />
-        </div>
-      </Transition>
+        :hobby="hobby"
+        :is-expanded="activeHobbyId === hobby.id"
+        @toggle="toggleHobby(hobby.id)"
+        :class="[
+          'soft-enter',
+          index === 0 && 'soft-enter-delay-1',
+          index === 1 && 'soft-enter-delay-2',
+        ]"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { ref } from "vue";
 import HobbyTab from "../components/HobbyTab.vue";
 
-const activeTab = ref("genealogy");
-const hobbyAnnouncement = ref("");
-const isDesktopTablist = ref(false);
+const activeHobbyId = ref("genealogy");
 
-const getTabClasses = (hobbyId) => {
-  if (activeTab.value === hobbyId) {
-    return "text-sun-400 border-sun-400 bg-sun-400/10";
-  }
-  return "text-gray-300 border-gray-700 bg-gray-800/60 hover:border-gray-600 hover:bg-gray-800";
+const toggleHobby = (hobbyId) => {
+  activeHobbyId.value = activeHobbyId.value === hobbyId ? null : hobbyId;
 };
 
 const hobbies = [
@@ -130,65 +81,4 @@ const hobbies = [
     ],
   },
 ];
-
-const activeHobby = computed(() => {
-  return hobbies.find((h) => h.id === activeTab.value) || hobbies[0];
-});
-
-const announceHobby = (hobbyId) => {
-  const hobby = hobbies.find((h) => h.id === hobbyId);
-  if (hobby) {
-    hobbyAnnouncement.value = `${hobby.title} selected`;
-  }
-};
-
-const selectHobby = (hobbyId) => {
-  activeTab.value = hobbyId;
-  announceHobby(hobbyId);
-};
-
-const announceHobbyChange = () => {
-  announceHobby(activeTab.value);
-};
-
-const updateTablistMode = () => {
-  isDesktopTablist.value = window.matchMedia("(min-width: 768px)").matches;
-};
-
-onMounted(() => {
-  updateTablistMode();
-  window.addEventListener("resize", updateTablistMode);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("resize", updateTablistMode);
-});
-
 </script>
-
-<style scoped>
-.hobby-content {
-  position: relative;
-}
-
-.hobby-swap-enter-active {
-  transition: opacity 220ms var(--motion-ease-standard);
-}
-
-.hobby-swap-enter-from {
-  opacity: 0;
-}
-
-.hobby-swap-leave-active {
-  transition: opacity 120ms linear;
-  pointer-events: none;
-}
-
-.hobby-swap-leave-from {
-  opacity: 1;
-}
-
-.hobby-swap-leave-to {
-  opacity: 0;
-}
-</style>

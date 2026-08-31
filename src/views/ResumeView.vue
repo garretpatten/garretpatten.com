@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl mx-auto">
+  <div class="w-full max-w-4xl mx-auto">
     <h1 tabindex="-1" class="sr-only outline-none">Resume</h1>
 
     <!-- Summary Section -->

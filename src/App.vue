@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-gray-950 text-gray-100 transition-colors duration-[230ms]"
+    class="min-h-screen flex flex-col bg-gray-950 text-gray-100 transition-colors duration-[230ms]"
   >
     <a
       href="#main-content"
@@ -17,10 +17,16 @@
       {{ announcement }}
     </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div
+      class="container mx-auto px-6 sm:px-6 lg:px-8 py-8 md:py-12 flex-grow flex flex-col"
+    >
       <Header />
 
-      <main id="main-content" tabindex="-1" class="mt-8 outline-none">
+      <main
+        id="main-content"
+        tabindex="-1"
+        class="mt-8 outline-none flex-grow flex flex-col"
+      >
         <router-view v-slot="{ Component, route }">
           <Transition name="route-swap" mode="out-in">
             <component :is="Component" :key="route.fullPath" />

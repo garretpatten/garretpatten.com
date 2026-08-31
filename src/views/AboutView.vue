@@ -1,8 +1,13 @@
 <template>
-  <div class="max-w-3xl mx-auto">
+  <div class="w-full max-w-3xl mx-auto">
     <h1 tabindex="-1" class="sr-only outline-none">About</h1>
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
+      <img
+        src="/images/garret-patten.jpeg"
+        alt="Garret Patten"
+        class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-8 border-4 border-gray-700 shadow-lg"
+      />
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
         At my core, I am a problem solver and a builder. There is nothing I love more
         than taking a complex, messy problem and reducing it to a clean, simple, and
