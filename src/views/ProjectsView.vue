@@ -39,6 +39,13 @@ const projects = ref([
     language: "Lua",
   },
   {
+    name: "finandnance.com",
+    description:
+      "Source for finandnance.com — Vue 3 portfolio SPA with Vite, Tailwind CSS, Vue Router, and Pinia. Deployed on Cloudflare Pages."
+    github: "https://github.com/garretpatten/finandnance.com",
+    language: "Vue",
+  },
+  {
     name: "garretpatten.com",
     description:
       "Source for garretpatten.com — Vue 3 portfolio SPA with Vite, Tailwind CSS, Vue Router, and Pinia. Deployed on Cloudflare Pages.",
@@ -51,6 +58,13 @@ const projects = ref([
       "Bash automation for macOS: Homebrew package installs, macOS defaults, shell/terminal configuration, and optional dotfiles—modular install and config workflows with GitHub Actions CI.",
     github: "https://github.com/garretpatten/macOS-setup-scripts",
     language: "Shell",
+  },
+  {
+    name: "Security Guardrails",
+    description:
+      "Reusable GitHub Actions guardrails for pull requests: OpenGrep SAST, verified TruffleHog secrets, dependency review, and Trivy supply-chain checks — high signal, low noise.",
+    github: "https://github.com/garretpatten/security-guardrails",
+    language: "YAML",
   },
   {
     name: "System Scripts",
