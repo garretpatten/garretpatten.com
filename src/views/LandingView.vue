@@ -6,7 +6,7 @@
         Garret Patten
       </h1>
       <p class="font-sans text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-        Husband and Father. Senior Security Engineer.
+        Husband & Father. Senior Security Engineer.
       </p>
     </section>
 
