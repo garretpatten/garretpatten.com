@@ -45,6 +45,7 @@
           class="h-3.5 w-3.5 rounded-full"
           :class="{
             'bg-cobalt-500': project.language === 'Lua',
+            'bg-cobalt-600': project.language === 'YAML',
             'bg-ruby-600': project.language === 'Shell',
             'bg-torch-500': project.language === 'TypeScript',
             'bg-sun-400': project.language === 'Vue',

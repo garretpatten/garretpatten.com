@@ -41,7 +41,7 @@ const projects = ref([
   {
     name: "finandnance.com",
     description:
-      "Source for finandnance.com — Vue 3 portfolio SPA with Vite, Tailwind CSS, Vue Router, and Pinia. Deployed on Cloudflare Pages."
+      "Source for finandnance.com — Vue 3 portfolio SPA with Vite, Tailwind CSS, Vue Router, and Pinia. Deployed on Cloudflare Pages.",
     github: "https://github.com/garretpatten/finandnance.com",
     language: "Vue",
   },
@@ -69,7 +69,7 @@ const projects = ref([
   {
     name: "System Scripts",
     description:
-      "Personal macOS/Linux automation: back up GitHub, GitLab, Notion, Obsidian, calendars, and tasks; clone and sync repositories; flatten nested Google Takeout export directories; apply runtime package-manager settings; and manage tmux sessions."
+      "Personal macOS/Linux automation: back up GitHub, GitLab, Notion, Obsidian, calendars, and tasks; clone and sync repositories; flatten nested Google Takeout export directories; apply runtime package-manager settings; and manage tmux sessions.",
     github: "https://github.com/garretpatten/system-scripts",
     language: "Shell",
   },
