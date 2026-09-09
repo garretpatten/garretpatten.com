@@ -4,7 +4,7 @@ Personal portfolio site ([garretpatten.com](https://garretpatten.com)). Vue 3 + 
 
 ## Commands
 
-Requires Node.js **20.19+** or **22.12+** (see `.nvmrc` / `package.json` engines).
+Requires Node.js **24+** (see `.nvmrc` / `package.json` engines).
 
 ```bash
 npm install
