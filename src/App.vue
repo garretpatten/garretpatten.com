@@ -25,10 +25,10 @@
       <main
         id="main-content"
         tabindex="-1"
-        class="relative mt-8 outline-none flex-grow flex flex-col"
+        class="mt-8 outline-none flex-grow flex flex-col"
       >
         <router-view v-slot="{ Component, route }">
-          <Transition name="route-swap" mode="out-in" @after-enter="focusPageHeading">
+          <Transition name="route-swap" mode="out-in">
             <component :is="Component" :key="route.fullPath" />
           </Transition>
         </router-view>
@@ -51,20 +51,10 @@ const { announcement } = useRouteAnnouncer();
 themeStore.initTheme();
 
 /**
- * With `mode="out-in"`, the incoming view is mounted after the outgoing view
- * finishes its leave transition. `after-enter` therefore fires once the new
- * view is actually in the DOM, so focus lands on its heading instead of on
- * the removed element (which used to throw focus back to <body>).
- *
- * The sr-only page headings reveal as a visible chip on focus (see
- * `.page-heading-reveal` in main.css), so keyboard users keep a visible
- * focus anchor at the top of the new view.
+ * Focus is never moved programmatically on client-side navigation: the header
+ * persists across views, so the activated nav link keeps focus after the new
+ * view renders. Readonly content (headings, text) is never focused; the skip
+ * link is the only path that programmatically focuses `#main-content`, and
+ * route changes are announced through the aria-live region above.
  */
-const focusPageHeading = (view) => {
-  const heading =
-    view instanceof HTMLElement ? view.querySelector("h1") : null;
-  const target = heading ?? document.getElementById("main-content");
-  target?.focus({ preventScroll: true });
-};
-
 </script>

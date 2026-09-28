@@ -1,8 +1,6 @@
 <template>
   <div class="w-full max-w-4xl mx-auto">
-    <h1 id="hobbies-page-title" tabindex="-1" class="page-heading-reveal">
-      Hobbies
-    </h1>
+    <h1 id="hobbies-page-title" class="sr-only">Hobbies</h1>
 
     <div class="space-y-4">
       <HobbyTab

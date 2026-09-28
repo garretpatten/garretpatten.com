@@ -52,7 +52,7 @@ test.describe("interactive states", () => {
     await page.assertAxeClean("mobile-menu:open");
   });
 
-  test("focus moves to the new page heading after navigation", async ({
+  test("focus stays on the activated nav link after navigation", async ({
     page,
   }) => {
     const isMobile = test.info().project.name.startsWith("mobile");
@@ -61,26 +61,73 @@ test.describe("interactive states", () => {
       page.getByRole("heading", { name: "Garret Patten", exact: true }),
     ).toBeVisible();
 
+    // Full refresh: focus starts at the document, never on readonly content.
+    const initialFocus = await page.evaluate(
+      () => document.activeElement?.tagName,
+    );
+    expect(initialFocus).toBe("BODY");
+
     if (isMobile) {
       await page.getByRole("button", { name: "Open menu" }).click();
     }
-    await page.getByRole("link", { name: "About" }).first().click();
+    const aboutLink = page.getByRole("link", { name: "About" }).first();
+    await aboutLink.click();
     await expect(page).toHaveURL(/\/about$/);
-    const aboutHeading = page.getByRole("heading", {
-      name: "About",
-      exact: true,
-    });
-    await expect(aboutHeading).toBeVisible();
-    await expect(aboutHeading).toBeFocused();
 
-    // The sr-only heading must reveal as a visible chip while focused, so
-    // sighted keyboard users keep a visible anchor after navigating.
-    const revealed = await aboutHeading.evaluate(
-      (heading) => heading.getBoundingClientRect().width > 10,
+    if (isMobile) {
+      // The menu (and its links) unmounts; focus lands on the persistent
+      // menu toggle instead of being lost.
+      await expect(
+        page.getByRole("button", { name: "Open menu" }),
+      ).toBeFocused();
+    } else {
+      // The header persists across views, so focus stays on the link the
+      // user activated.
+      await expect(aboutLink).toBeFocused();
+    }
+
+    // Readonly content must never hold focus after navigation.
+    const activeTag = await page.evaluate(
+      () => document.activeElement?.tagName,
     );
-    expect(revealed, "focused page heading should be visually revealed").toBe(
-      true,
+    expect(activeTag, "focus must not fall on readonly content").not.toBe(
+      "H1",
     );
+    await settle(page);
+  });
+
+  test("focus follows successive navigations through the nav", async ({
+    page,
+  }) => {
+    const isMobile = test.info().project.name.startsWith("mobile");
+    await page.goto("/");
+
+    const openMenuIfMobile = async () => {
+      if (isMobile) {
+        await page.getByRole("button", { name: "Open menu" }).click();
+      }
+    };
+    const expectFocusAfterNav = async (linkName) => {
+      if (isMobile) {
+        await expect(
+          page.getByRole("button", { name: "Open menu" }),
+        ).toBeFocused();
+      } else {
+        await expect(
+          page.getByRole("link", { name: linkName }).first(),
+        ).toBeFocused();
+      }
+    };
+
+    await openMenuIfMobile();
+    await page.getByRole("link", { name: "Projects" }).first().click();
+    await expect(page).toHaveURL(/\/projects$/);
+    await expectFocusAfterNav("Projects");
+
+    await openMenuIfMobile();
+    await page.getByRole("link", { name: "Resume" }).first().click();
+    await expect(page).toHaveURL(/\/resume$/);
+    await expectFocusAfterNav("Resume");
     await settle(page);
   });
   test("keyboard tab order reaches main content", async ({ page }) => {

@@ -39,9 +39,11 @@ a11y/              # Playwright + axe-core audit (all routes, desktop + mobile)
 
 An axe-core audit runs in Chromium on every PR and weekly (see
 `.github/workflows/a11y-audit.yaml`), covering each route and interactive state
-(mobile menu, hobby accordion) plus navigation focus behavior. The fixed focus
-flow: after client-side navigation, focus moves to the new page heading once
-the route-swap transition completes, announced via a polite aria-live region.
+(mobile menu, hobby accordion) plus navigation focus behavior. Focus policy:
+focus is never moved to readonly content — on client-side navigation it stays
+on the activated navigation control (the header persists across views), route
+changes are announced via a polite aria-live region, and the skip link is the
+keyboard path into main content.
 
 ## License
 

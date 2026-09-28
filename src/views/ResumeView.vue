@@ -1,6 +1,6 @@
 <template>
   <div class="w-full max-w-4xl mx-auto">
-    <h1 tabindex="-1" class="page-heading-reveal">Resume</h1>
+    <h1 class="sr-only">Resume</h1>
 
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">

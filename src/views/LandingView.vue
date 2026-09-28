@@ -2,10 +2,7 @@
   <div class="w-full max-w-4xl mx-auto flex-grow flex flex-col justify-center">
     <!-- Hero Section -->
     <section class="text-center mb-10 soft-enter">
-      <h1
-        tabindex="-1"
-        class="text-5xl md:text-6xl font-bold text-gray-100 mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-cobalt-500 focus:ring-offset-2 focus:ring-offset-gray-950"
-      >
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-100 mb-4">
         Garret Patten
       </h1>
       <p class="font-sans text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
