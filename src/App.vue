@@ -25,7 +25,7 @@
       <main
         id="main-content"
         tabindex="-1"
-        class="mt-8 outline-none flex-grow flex flex-col"
+        class="relative mt-8 outline-none flex-grow flex flex-col"
       >
         <router-view v-slot="{ Component, route }">
           <Transition name="route-swap" mode="out-in" @after-enter="focusPageHeading">
@@ -55,14 +55,16 @@ themeStore.initTheme();
  * finishes its leave transition. `after-enter` therefore fires once the new
  * view is actually in the DOM, so focus lands on its heading instead of on
  * the removed element (which used to throw focus back to <body>).
+ *
+ * The sr-only page headings reveal as a visible chip on focus (see
+ * `.page-heading-reveal` in main.css), so keyboard users keep a visible
+ * focus anchor at the top of the new view.
  */
-const focusPageHeading = (event) => {
-  const view = event instanceof HTMLElement ? event : document.querySelector("main > div");
-  const heading = view?.querySelector("h1");
-  const target = heading ?? view;
-  if (target instanceof HTMLElement) {
-    target.focus({ preventScroll: true });
-  }
+const focusPageHeading = (view) => {
+  const heading =
+    view instanceof HTMLElement ? view.querySelector("h1") : null;
+  const target = heading ?? document.getElementById("main-content");
+  target?.focus({ preventScroll: true });
 };
 
 </script>

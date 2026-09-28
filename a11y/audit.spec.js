@@ -72,6 +72,15 @@ test.describe("interactive states", () => {
     });
     await expect(aboutHeading).toBeVisible();
     await expect(aboutHeading).toBeFocused();
+
+    // The sr-only heading must reveal as a visible chip while focused, so
+    // sighted keyboard users keep a visible anchor after navigating.
+    const revealed = await aboutHeading.evaluate(
+      (heading) => heading.getBoundingClientRect().width > 10,
+    );
+    expect(revealed, "focused page heading should be visually revealed").toBe(
+      true,
+    );
     await settle(page);
   });
   test("keyboard tab order reaches main content", async ({ page }) => {

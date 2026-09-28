@@ -1,6 +1,6 @@
 <template>
   <div class="w-full max-w-4xl mx-auto">
-    <h1 id="hobbies-page-title" tabindex="-1" class="sr-only outline-none">
+    <h1 id="hobbies-page-title" tabindex="-1" class="page-heading-reveal">
       Hobbies
     </h1>
 
