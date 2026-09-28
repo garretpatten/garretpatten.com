@@ -1,6 +1,6 @@
 <template>
   <div class="w-full max-w-3xl mx-auto">
-    <h1 tabindex="-1" class="sr-only outline-none">About</h1>
+    <h1 class="sr-only">About</h1>
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
       <img

@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:a11y": "playwright test",
+    "test": "npm run build && npm run test:a11y"
   },
   "dependencies": {
     "@vueuse/core": "^10.9.0",
@@ -17,8 +19,11 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
     "@vitejs/plugin-vue": "^6.0.4",
     "autoprefixer": "^10.4.18",
+    "playwright": "^1.63.0",
     "postcss": "^8.5.25",
     "tailwindcss": "^3.4.1",
     "vite": "^8.0.16"

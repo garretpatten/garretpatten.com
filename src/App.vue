@@ -49,4 +49,12 @@ const themeStore = useThemeStore();
 const { announcement } = useRouteAnnouncer();
 
 themeStore.initTheme();
+
+/**
+ * Focus is never moved programmatically on client-side navigation: the header
+ * persists across views, so the activated nav link keeps focus after the new
+ * view renders. Readonly content (headings, text) is never focused; the skip
+ * link is the only path that programmatically focuses `#main-content`, and
+ * route changes are announced through the aria-live region above.
+ */
 </script>

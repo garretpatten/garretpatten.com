@@ -8,12 +8,13 @@ Requires Node.js **24+** (see `.nvmrc` / `package.json` engines).
 
 ```bash
 npm install
-npm run dev      # local dev server
-npm run build    # production build → dist/
-npm run preview  # preview production build
+npm run dev        # local dev server
+npm run build      # production build → dist/
+npm run preview    # preview production build
+npm run test:a11y  # axe-core accessibility audit (Playwright; see a11y/)
 ```
 
-There is no test script. Verify changes manually in the browser after `npm run dev` or `npm run preview`.
+There is no unit test suite. `npm run test:a11y` verifies the production build in Chromium (desktop + mobile) with axe-core across all routes and interactive states (mobile menu, hobby accordion), plus navigation focus regression checks. A GitHub Actions workflow (`.github/workflows/a11y-audit.yaml`) runs the same audit on PRs, pushes to main, and weekly. Verify visual changes manually in the browser after `npm run dev` or `npm run preview`.
 
 ## Project layout
 
@@ -26,6 +27,7 @@ src/
 ├── assets/css/    # Tailwind layers + motion utilities (main.css)
 ├── App.vue        # Shell: Header, router-view transition, Footer, theme init
 └── main.js        # App bootstrap
+a11y/               # Playwright + @axe-core/playwright audit (run with npm run test:a11y)
 public/             # Static assets served at site root (images, _redirects)
 ```
 
