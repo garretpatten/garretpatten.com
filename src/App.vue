@@ -28,7 +28,7 @@
         class="mt-8 outline-none flex-grow flex flex-col"
       >
         <router-view v-slot="{ Component, route }">
-          <Transition name="route-swap" mode="out-in">
+          <Transition name="route-swap" mode="out-in" @after-enter="focusPageHeading">
             <component :is="Component" :key="route.fullPath" />
           </Transition>
         </router-view>
@@ -49,4 +49,20 @@ const themeStore = useThemeStore();
 const { announcement } = useRouteAnnouncer();
 
 themeStore.initTheme();
+
+/**
+ * With `mode="out-in"`, the incoming view is mounted after the outgoing view
+ * finishes its leave transition. `after-enter` therefore fires once the new
+ * view is actually in the DOM, so focus lands on its heading instead of on
+ * the removed element (which used to throw focus back to <body>).
+ */
+const focusPageHeading = (event) => {
+  const view = event instanceof HTMLElement ? event : document.querySelector("main > div");
+  const heading = view?.querySelector("h1");
+  const target = heading ?? view;
+  if (target instanceof HTMLElement) {
+    target.focus({ preventScroll: true });
+  }
+};
+
 </script>

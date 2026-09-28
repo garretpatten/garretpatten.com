@@ -1,0 +1,52 @@
+---
+name: "Accessibility Audit"
+
+on:
+  pull_request:
+  push:
+    branches: [master, main]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  axe-core:
+    name: "axe-core (Playwright)"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium system dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Run axe-core audit against all routes and viewports
+        run: npm run test:a11y
+
+      - name: Upload axe-core results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-core-results
+          path: a11y/results/
+          if-no-files-found: ignore
+          retention-days: 14

@@ -106,7 +106,7 @@
 
   <!-- Mobile Menu: Navigation Links -->
   <Transition name="menu">
-    <nav
+    <div
       v-if="isMenuOpen"
       ref="mobileMenuRef"
       role="dialog"
@@ -140,7 +140,7 @@
           </svg>
         </button>
       </div>
-      <div class="flex flex-col items-center gap-4 px-6 pb-6">
+      <nav class="flex flex-col items-center gap-4 px-6 pb-6" aria-label="Menu">
         <router-link
           v-for="navRoute in routes"
           :key="navRoute.path"
@@ -172,8 +172,8 @@
             </svg>
           </a>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </Transition>
 </template>
 
