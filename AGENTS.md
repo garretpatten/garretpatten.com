@@ -80,3 +80,9 @@ PRs run the reusable **Security Checks** workflow (Semgrep, Trufflehog). Avoid i
 | Global CSS & motion            | `src/assets/css/main.css`   |
 | Tailwind theme                 | `tailwind.config.js`        |
 | Vite / build                   | `vite.config.js`            |
+
+## GitHub Actions
+
+Whenever a GitHub workflow is added, all GitHub Action pins in that workflow
+should be updated to point to the full-length commit SHA of the most recent
+release.
