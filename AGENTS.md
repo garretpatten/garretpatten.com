@@ -8,22 +8,31 @@ Requires Node.js **24+** (see `.nvmrc` / `package.json` engines).
 
 ```bash
 npm install
-npm run dev        # local dev server
-npm run build      # production build → dist/
-npm run preview    # preview production build
-npm run test:a11y  # axe-core accessibility audit (Playwright; see a11y/)
+npm run dev               # local dev server
+npm run build             # production build → dist/
+npm run preview           # preview production build
+npm run test:unit         # Vitest unit tests (run once)
+npm run test:unit:watch   # Vitest unit tests (watch mode)
+npm run test:unit:coverage  # Vitest unit tests with V8 coverage report
+npm run test:a11y         # axe-core accessibility audit (Playwright; see a11y/)
 ```
 
-There is no unit test suite. `npm run test:a11y` verifies the production build in Chromium (desktop + mobile) with axe-core across all routes and interactive states (mobile menu, hobby accordion), plus navigation focus regression checks. A GitHub Actions workflow (`.github/workflows/a11y-audit.yaml`) runs the same audit on PRs, pushes to main, and weekly. Verify visual changes manually in the browser after `npm run dev` or `npm run preview`.
+`npm run test:unit` runs the Vitest suite (colocated under `src/**/__tests__/`), covering the theme store, router, components (Header incl. mobile-nav `aria-*`, Footer, ProjectCard, TimelineItem, HobbyTab, HobbyIcon), and per-route view smoke tests. Component tests mount with `@vue/test-utils` in a jsdom environment (see `vitest.config.js`; shared setup in `src/test-setup.js`). A GitHub Actions workflow (`.github/workflows/unit-tests.yaml`) gates PRs and pushes to main on the unit tests; a **required status check** (Settings → Branches → branch protection → require status checks → *Unit Tests / Vitest unit tests*).
+
+`npm run test:a11y` verifies the production build in Chromium (desktop + mobile) with axe-core across all routes and interactive states (mobile menu, hobby accordion), plus navigation focus regression checks. A GitHub Actions workflow (`.github/workflows/a11y-audit.yaml`) runs the same audit on PRs, pushes to main, and weekly. Verify visual changes manually in the browser after `npm run dev` or `npm run preview`.
 
 ## Project layout
 
 ```text
 src/
 ├── components/    # Header, Footer, ProjectCard, TimelineItem, HobbyTab, …
+│   └── __tests__/ # Vitest component tests (colocated)
 ├── views/         # LandingView, AboutView, ResumeView, ProjectsView, HobbiesView
+│   └── __tests__/ # Vitest view smoke tests (colocated)
 ├── router/        # Route definitions (createWebHistory)
+│   └── __tests__/
 ├── stores/        # Pinia stores (theme / dark mode)
+│   └── __tests__/
 ├── assets/css/    # Tailwind layers + motion utilities (main.css)
 ├── App.vue        # Shell: Header, router-view transition, Footer, theme init
 └── main.js        # App bootstrap
