@@ -27,3 +27,6 @@ dist-ssr
 a11y/results
 test-results
 playwright-report
+
+# Vitest
+coverage
