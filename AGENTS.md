@@ -76,7 +76,7 @@ PRs run the reusable **Security Checks** workflow (Semgrep, Trufflehog). Avoid i
 - Keep diffs focused on the requested task. No drive-by refactors or unrelated file edits.
 - Do not edit generated output (`dist/`) or commit unless the user asks.
 - Content changes (copy, resume bullets, project lists) usually belong in the relevant view or component under `src/views/` or `src/components/`.
-- License: all rights reserved — do not add permissive open-source licensing without explicit direction.
+- License: MIT — see [LICENSE](./LICENSE).
 
 ## Canonical references
 
