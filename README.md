@@ -1,5 +1,8 @@
 # [garretpatten.com](https://garretpatten.com/)
 
+[![License: MIT](https://img.shields.io/github/license/garretpatten/garretpatten.com?style=flat-square)](./LICENSE)
+[![Tests](https://img.shields.io/github/actions/workflow/status/garretpatten/garretpatten.com/unit-tests.yaml?branch=master&label=tests&logo=github&style=flat-square)](https://github.com/garretpatten/garretpatten.com/actions/workflows/unit-tests.yaml)
+
 Personal portfolio site. Vue 3 + Vite + Tailwind CSS.
 
 ## Setup
