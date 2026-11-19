@@ -129,7 +129,7 @@ const experience = [
     ],
   },
   {
-    role: "Senior Product Security Engineer (P3)",
+    role: "Senior Product Security Engineer",
     company: "nCino, Inc.",
     start: "Jun 2024",
     end: "Dec 2026",
@@ -142,7 +142,7 @@ const experience = [
     ],
   },
   {
-    role: "Product Security Engineer (P2)",
+    role: "Product Security Engineer",
     company: "nCino, Inc.",
     start: "May 2022",
     end: "Jun 2024",
