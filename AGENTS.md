@@ -17,7 +17,7 @@ npm run test:unit:coverage  # Vitest unit tests with V8 coverage report
 npm run test:a11y         # axe-core accessibility audit (Playwright; see a11y/)
 ```
 
-`npm run test:unit` runs the Vitest suite (colocated under `src/**/__tests__/`), covering the theme store, router, components (Header incl. mobile-nav `aria-*`, Footer, ProjectCard, TimelineItem, HobbyTab, HobbyIcon), and per-route view smoke tests. Component tests mount with `@vue/test-utils` in a jsdom environment (see `vitest.config.js`; shared setup in `src/test-setup.js`). A GitHub Actions workflow (`.github/workflows/unit-tests.yaml`) gates PRs and pushes to master on the unit tests; a **required status check** (Settings → Branches → branch protection → require status checks → *Unit Tests / Vitest unit tests*).
+`npm run test:unit` runs the Vitest suite (colocated under `src/**/__tests__/`), covering the theme store, router, components (Header incl. mobile-nav `aria-*`, Footer, ProjectCard, TimelineItem, HobbyTab, HobbyIcon), and per-route view smoke tests. Component tests mount with `@vue/test-utils` in a jsdom environment (see `vitest.config.js`; shared setup in `src/test-setup.js`). A GitHub Actions workflow (`.github/workflows/unit-tests.yaml`) gates PRs and pushes to master on the unit tests; a **required status check** (Settings → Branches → branch protection → require status checks → _Unit Tests / Vitest unit tests_).
 
 `npm run test:a11y` verifies the production build in Chromium (desktop + mobile) with axe-core across all routes and interactive states (mobile menu, hobby accordion), plus navigation focus regression checks. A GitHub Actions workflow (`.github/workflows/a11y-audit.yaml`) runs the same audit on PRs, pushes to main, and weekly. Verify visual changes manually in the browser after `npm run dev` or `npm run preview`.
 
@@ -70,6 +70,25 @@ Reuse existing components (`ProjectCard`, `TimelineItem`, `HobbyTab`, etc.) befo
 ## Pull requests and security
 
 PRs run the reusable **Security Checks** workflow (Semgrep, Trufflehog). Avoid introducing secrets, credentials, or sensitive personal data in the repo.
+
+## Pre-push lint checks
+
+PRs run the reusable [quality-checks](https://github.com/garretpatten/quality-checks) **Linters** workflow. Run the same checks locally before pushing to avoid unnecessary CI failures (this repo has no `lint:*` npm scripts; CI uses tool defaults):
+
+```bash
+pip install yamllint                       # one-time setup
+
+yamllint .github/dependabot.yaml .github/workflows/*.yaml   # YAML (most common failure)
+npx prettier --check "**/*.md" "**/*.{js,css,json}"         # formatting
+npx markdownlint-cli2 "**/*.md"                             # Markdown structure
+jq empty file.json                                          # JSON syntax, per file
+```
+
+Notes:
+
+- **YAML is the most common failure**: yamllint (defaults) errors on lines longer than 80 characters. When pinning actions to full commit SHAs, a `uses:` line plus a trailing version comment exceeds 80 — put the `# vX.Y` comment on its own line above the `uses:` line (see `.github/workflows/unit-tests.yaml`).
+- This repo has no `.yamllint` config, so local `yamllint` defaults match CI exactly.
+- The quality-checks repo also provides `./scripts/lint-changed.sh` for repos that opt into it, but it must be run from the quality-checks checkout and does not apply to this repo.
 
 ## Scope and changes
 
