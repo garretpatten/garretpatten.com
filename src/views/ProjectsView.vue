@@ -5,7 +5,6 @@
     <section class="soft-enter">
       <ul
         class="grid grid-cols-1 gap-4 auto-rows-[minmax(min-content,1fr)] md:grid-cols-2"
-        role="list"
       >
         <li v-for="project in projects" :key="project.name">
           <ProjectCard :project="project" />
@@ -13,17 +12,17 @@
       </ul>
 
       <p class="mt-8 text-lg text-gray-300 text-center">
-        Want to see more? Check out the rest of my projects on GitHub — the link is in the main navigation.
+        Want to see more? Check out the rest of my projects on GitHub — the link
+        is in the main navigation.
       </p>
     </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
 import ProjectCard from "../components/ProjectCard.vue";
 
-const projects = ref([
+const projects = [
   {
     name: "Codeowners Enforcer",
     description:
@@ -80,5 +79,5 @@ const projects = ref([
     github: "https://github.com/garretpatten/ubuntu-setup-scripts",
     language: "Shell",
   },
-]);
+];
 </script>

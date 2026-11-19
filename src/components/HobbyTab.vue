@@ -4,12 +4,12 @@
     :class="{ 'border-sun-400/50': isExpanded }"
   >
     <button
+      :id="`hobby-heading-${hobby.id}`"
       type="button"
       class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left rounded-lg transition-colors duration-[230ms] hover:bg-gray-800 focus-visible:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-sun-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-      @click="toggle"
       :aria-expanded="isExpanded"
       :aria-controls="`hobby-content-${hobby.id}`"
-      :id="`hobby-heading-${hobby.id}`"
+      @click="toggle"
     >
       <span class="text-xl font-bold flex items-center gap-2" :class="titleClasses">
         <HobbyIcon :hobby-id="hobby.id" :icon-class="iconClasses" />

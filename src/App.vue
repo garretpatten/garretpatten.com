@@ -9,11 +9,7 @@
       Skip to main content
     </a>
 
-    <div
-      aria-live="polite"
-      aria-atomic="true"
-      class="sr-only"
-    >
+    <div aria-live="polite" aria-atomic="true" class="sr-only">
       {{ announcement }}
     </div>
 
@@ -25,6 +21,7 @@
       <main
         id="main-content"
         tabindex="-1"
+        :inert="isMobileMenuOpen ? true : undefined"
         class="mt-8 outline-none flex-grow flex flex-col"
       >
         <router-view v-slot="{ Component, route }">
@@ -34,21 +31,19 @@
         </router-view>
       </main>
 
-      <Footer />
+      <Footer :inert="isMobileMenuOpen ? true : undefined" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { useThemeStore } from "./stores/theme";
-import { useRouteAnnouncer } from "./composables/useRouteAnnouncer";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+import { useRouteAnnouncer } from "./composables/useRouteAnnouncer";
+import { useMobileMenu } from "./composables/useMobileMenu";
 
-const themeStore = useThemeStore();
 const { announcement } = useRouteAnnouncer();
-
-themeStore.initTheme();
+const { isMobileMenuOpen } = useMobileMenu();
 
 /**
  * Focus is never moved programmatically on client-side navigation: the header

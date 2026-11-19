@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { mount, RouterLinkStub } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import AboutView from "@/views/AboutView.vue";
 
 describe("AboutView", () => {
@@ -15,6 +15,7 @@ describe("AboutView", () => {
     const wrapper = mount(AboutView);
 
     const img = wrapper.get("img");
+    expect(img.attributes("src")).toBe("/garret.jpeg");
     expect(img.attributes("alt")).toBe("Garret Patten");
   });
 

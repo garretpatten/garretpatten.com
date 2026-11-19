@@ -1,8 +1,8 @@
 <template>
-  <div class="relative my-8 pl-8 first:mt-0 last:mb-0">
+  <div class="group relative my-8 pl-8 first:mt-0 last:mb-0">
     <!-- Timeline line -->
     <div
-      class="absolute left-3 top-6 bottom-0 w-0.5 bg-cobalt-400 last:hidden"
+      class="absolute left-3 top-6 bottom-0 w-0.5 bg-cobalt-400 group-last:hidden"
     ></div>
 
     <!-- Timeline dot -->

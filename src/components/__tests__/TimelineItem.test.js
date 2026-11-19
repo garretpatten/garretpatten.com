@@ -3,7 +3,7 @@ import { mount } from "@vue/test-utils";
 import TimelineItem from "@/components/TimelineItem.vue";
 
 const item = {
-  role: "Senior Security Engineer",
+  role: "Principal Product Security Engineer",
   company: "Acme Corp",
   location: "Remote",
   start: "2020",
@@ -57,5 +57,14 @@ describe("TimelineItem", () => {
     });
 
     expect(wrapper.text()).not.toContain("·");
+  });
+
+  it("applies group-last so the connector line can hide on the final item", () => {
+    const wrapper = mount(TimelineItem, { props: { item } });
+
+    expect(wrapper.classes()).toContain("group");
+    expect(wrapper.get(".bg-cobalt-400").classes()).toContain(
+      "group-last:hidden",
+    );
   });
 });
