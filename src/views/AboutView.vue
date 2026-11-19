@@ -41,9 +41,9 @@
         engineers, I fell in love with the discipline as features came together one small,
         expertly planned iteration at a time. After a few years, I found myself looking
         for a new challenge. When an opportunity opened up on our newly formed Product
-        Security team, I made the leap. These days, I work as a Senior Security Engineer
-        where I focus on delivering solutions that make security a frictionless default
-        for anyone who seeks to build.
+        Security team, I made the leap. These days, I work as a Principal Product
+        Security Engineer where I focus on delivering solutions that make security a
+        frictionless default for anyone who seeks to build.
       </p>
 
       <p class="font-sans text-lg text-gray-300 leading-relaxed">

@@ -119,13 +119,22 @@ const sortedSkills = computed(() =>
 
 const experience = [
   {
-    role: "Senior Security Engineer",
+    role: "Principal Product Security Engineer",
     company: "nCino, Inc.",
-    start: "Jun 2024",
+    start: "Dec 2026",
     end: "Present",
     bullets: [
+      "Promoted to Principal Product Security Engineer, leading technical strategy for the 5-person Product Security team and serving as the primary escalation point across global divisions.",
+      "Co-author the security engineering roadmap and champion the long-term product security vision.",
+    ],
+  },
+  {
+    role: "Senior Product Security Engineer (P3)",
+    company: "nCino, Inc.",
+    start: "Jun 2024",
+    end: "Dec 2026",
+    bullets: [
       "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
-      "Co-author the security engineering roadmap and serve as the primary technical escalation point and acting team lead.",
       "Architected automated security governance for 3,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
       "Hardened the software supply chain through package registry proxies, runtime configuration enforcement, and SBOM generation.",
       "Built automated license-compliance pipelines for Node.js dependencies to reduce regulatory friction.",
@@ -133,7 +142,7 @@ const experience = [
     ],
   },
   {
-    role: "Security Engineer",
+    role: "Product Security Engineer (P2)",
     company: "nCino, Inc.",
     start: "May 2022",
     end: "Jun 2024",

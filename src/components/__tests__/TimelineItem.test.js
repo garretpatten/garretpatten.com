@@ -3,7 +3,7 @@ import { mount } from "@vue/test-utils";
 import TimelineItem from "@/components/TimelineItem.vue";
 
 const item = {
-  role: "Senior Security Engineer",
+  role: "Principal Product Security Engineer",
   company: "Acme Corp",
   location: "Remote",
   start: "2020",

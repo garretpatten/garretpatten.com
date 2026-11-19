@@ -11,7 +11,7 @@ describe("LandingView", () => {
     const wrapper = mountView();
 
     expect(wrapper.get("h1").text()).toBe("Garret Patten");
-    expect(wrapper.text()).toContain("Senior Security Engineer");
+    expect(wrapper.text()).toContain("Principal Product Security Engineer");
   });
 
   it("renders a value proposition section", () => {
