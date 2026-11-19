@@ -1,6 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { mount, RouterLinkStub } from "@vue/test-utils";
-import { createRouter, createMemoryHistory } from "vue-router";
+import { mount } from "@vue/test-utils";
 
 import LandingView from "@/views/LandingView.vue";
 

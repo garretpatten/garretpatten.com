@@ -8,12 +8,12 @@
         :key="hobby.id"
         :hobby="hobby"
         :is-expanded="activeHobbyId === hobby.id"
-        @toggle="toggleHobby(hobby.id)"
         :class="[
           'soft-enter',
           index === 0 && 'soft-enter-delay-1',
           index === 1 && 'soft-enter-delay-2',
         ]"
+        @toggle="toggleHobby(hobby.id)"
       />
     </div>
   </div>

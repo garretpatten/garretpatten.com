@@ -3,6 +3,15 @@
     <h1 class="sr-only">About</h1>
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
+      <img
+        src="/cropped-monogram-gray.png"
+        alt=""
+        width="128"
+        height="128"
+        loading="lazy"
+        decoding="async"
+        class="w-28 h-28 md:w-32 md:h-32 mx-auto mb-8 rounded-full border-4 border-cobalt-400 shadow-lg"
+      />
       <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
         At my core, I am a problem solver and a builder. There is nothing I love more
         than taking a complex, messy problem and reducing it to a clean, simple, and

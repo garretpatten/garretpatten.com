@@ -1,8 +1,8 @@
 <template>
   <!-- Reading: Open Book -->
   <svg
-    aria-hidden="true"
     v-if="hobbyId === 'reading'"
+    aria-hidden="true"
     :class="iconClass"
     fill="none"
     stroke="currentColor"
@@ -18,8 +18,8 @@
 
   <!-- Genealogy: Leaf -->
   <svg
-    aria-hidden="true"
     v-else-if="hobbyId === 'genealogy'"
+    aria-hidden="true"
     :class="iconClass"
     fill="none"
     stroke="currentColor"
@@ -41,8 +41,8 @@
 
   <!-- Personal System Design: Gear -->
   <svg
-    aria-hidden="true"
     v-else-if="hobbyId === 'systems'"
+    aria-hidden="true"
     :class="iconClass"
     fill="none"
     stroke="currentColor"
@@ -63,8 +63,8 @@
 
   <!-- Music: Musical Note -->
   <svg
-    aria-hidden="true"
     v-else-if="hobbyId === 'music'"
+    aria-hidden="true"
     :class="iconClass"
     fill="none"
     stroke="currentColor"
@@ -80,8 +80,8 @@
 
   <!-- Journaling: Notebook -->
   <svg
-    aria-hidden="true"
     v-else-if="hobbyId === 'journaling'"
+    aria-hidden="true"
     :class="iconClass"
     fill="none"
     stroke="currentColor"

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { mount, RouterLinkStub } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import AboutView from "@/views/AboutView.vue";
 
 describe("AboutView", () => {
@@ -11,10 +11,12 @@ describe("AboutView", () => {
     expect(h1.classes()).toContain("sr-only");
   });
 
-  it("renders the About page without a portrait image", () => {
+  it("renders a decorative monogram image", () => {
     const wrapper = mount(AboutView);
 
-    expect(wrapper.find("img").exists()).toBe(false);
+    const img = wrapper.get("img");
+    expect(img.attributes("src")).toBe("/cropped-monogram-gray.png");
+    expect(img.attributes("alt")).toBe("");
   });
 
   it("renders bio paragraphs", () => {

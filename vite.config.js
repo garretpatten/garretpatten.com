@@ -14,12 +14,5 @@ export default defineConfig({
   build: {
     // Explicitly set output directory
     outDir: "dist",
-    // Ensure proper module resolution in production
-    rollupOptions: {
-      output: {
-        // Ensure consistent chunk naming
-        manualChunks: undefined,
-      },
-    },
   },
 });

@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingView from "../views/LandingView.vue";
-import AboutView from "../views/AboutView.vue";
-import ResumeView from "../views/ResumeView.vue";
-import ProjectsView from "../views/ProjectsView.vue";
-import HobbiesView from "../views/HobbiesView.vue";
 
 const routes = [
   {
@@ -15,25 +11,25 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    component: AboutView,
+    component: () => import("../views/AboutView.vue"),
     meta: { title: "About" },
   },
   {
     path: "/resume",
     name: "Resume",
-    component: ResumeView,
+    component: () => import("../views/ResumeView.vue"),
     meta: { title: "Resume" },
   },
   {
     path: "/projects",
     name: "Projects",
-    component: ProjectsView,
+    component: () => import("../views/ProjectsView.vue"),
     meta: { title: "Projects" },
   },
   {
     path: "/hobbies",
     name: "Hobbies",
-    component: HobbiesView,
+    component: () => import("../views/HobbiesView.vue"),
     meta: { title: "Hobbies" },
   },
 ];
