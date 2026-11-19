@@ -11,11 +11,10 @@ describe("AboutView", () => {
     expect(h1.classes()).toContain("sr-only");
   });
 
-  it("renders the portrait image with alt text", () => {
+  it("renders the About page without a portrait image", () => {
     const wrapper = mount(AboutView);
 
-    const img = wrapper.get("img");
-    expect(img.attributes("alt")).toBe("Garret Patten");
+    expect(wrapper.find("img").exists()).toBe(false);
   });
 
   it("renders bio paragraphs", () => {
