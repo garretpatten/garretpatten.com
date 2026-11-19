@@ -11,10 +11,12 @@ describe("AboutView", () => {
     expect(h1.classes()).toContain("sr-only");
   });
 
-  it("renders the About page without a portrait image", () => {
+  it("renders the portrait image with alt text", () => {
     const wrapper = mount(AboutView);
 
-    expect(wrapper.find("img").exists()).toBe(false);
+    const img = wrapper.get("img");
+    expect(img.attributes("src")).toBe("/garret.jpeg");
+    expect(img.attributes("alt")).toBe("Garret Patten");
   });
 
   it("renders bio paragraphs", () => {
