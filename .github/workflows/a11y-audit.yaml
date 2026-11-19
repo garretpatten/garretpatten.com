@@ -44,7 +44,8 @@ jobs:
 
       - name: Upload axe-core results
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        # v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: axe-core-results
           path: a11y/results/
