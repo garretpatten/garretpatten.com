@@ -10,13 +10,12 @@
         Summary
       </h2>
       <p class="text-base font-sans text-gray-300 leading-relaxed">
-        I am a systems-oriented security leader with eight years of experience driving
-        end-to-end security strategy and operations at a global FinTech company supporting
-        over 2,700 financial institutions across 20+ countries. Supporting 350+ engineers
-        globally, I manage comprehensive security programs that span hands-on penetration
-        testing, architectural consultation, customer security inquiries, and automated
-        compliance. My focus is building clear policies and low-friction automation that
-        integrate security into the core software delivery lifecycle.
+        Principal Product Security Engineer at nCino with eight years of
+        experience spanning software engineering and product security at a
+        global FinTech serving 2,700+ financial institutions. I lead security
+        initiatives for 350+ engineers through hands-on penetration testing,
+        architectural reviews, and automated compliance that build security into
+        the delivery pipeline.
       </p>
     </section>
 
