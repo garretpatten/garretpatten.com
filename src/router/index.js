@@ -26,12 +26,6 @@ const routes = [
     component: () => import("../views/ProjectsView.vue"),
     meta: { title: "Projects" },
   },
-  {
-    path: "/hobbies",
-    name: "Hobbies",
-    component: () => import("../views/HobbiesView.vue"),
-    meta: { title: "Hobbies" },
-  },
 ];
 
 const router = createRouter({

@@ -3,8 +3,8 @@ import { test, expect, settle } from "./setup.js";
 /**
  * Full-site accessibility audit.
  *
- * Every route is audited at rest on its own; interactive states (mobile menu,
- * hobby accordion) are audited after interaction. Playwright runs the whole
+ * Every route is audited at rest on its own; interactive states (mobile menu)
+ * are audited after interaction. Playwright runs the whole
  * suite once per project defined in playwright.config.js (currently desktop
  * and mobile Chromium).
  */
@@ -15,7 +15,6 @@ test.describe("static routes", () => {
     { path: "/about", heading: "About", label: "about" },
     { path: "/resume", heading: "Resume", label: "resume" },
     { path: "/projects", heading: "Projects", label: "projects" },
-    { path: "/hobbies", heading: "Hobbies", label: "hobbies" },
   ]) {
     test(`${label} page has no axe violations`, async ({ page }) => {
       await page.goto(path);
@@ -31,16 +30,6 @@ test.describe("static routes", () => {
 });
 
 test.describe("interactive states", () => {
-  test("hobby accordion expanded has no axe violations", async ({ page }) => {
-    await page.goto("/hobbies");
-    const genealogyToggle = page.getByRole("button", { name: "Genealogy" });
-    await genealogyToggle.click();
-    const panel = page.getByRole("region", { name: "Genealogy" });
-    await expect(panel).toBeVisible();
-    await settle(page);
-    await page.assertAxeClean("hobbies:accordion-open");
-  });
-
   test("mobile menu open has no axe violations", async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
     await page.goto("/");
