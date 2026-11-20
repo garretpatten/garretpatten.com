@@ -4,7 +4,7 @@
 
     <section class="soft-enter">
       <ul
-        class="grid grid-cols-1 gap-4 auto-rows-[minmax(min-content,1fr)] md:grid-cols-2"
+        class="grid grid-cols-1 gap-4 auto-rows-min items-start md:grid-cols-2"
       >
         <li v-for="project in projects" :key="project.name">
           <ProjectCard :project="project" />
