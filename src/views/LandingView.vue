@@ -6,7 +6,7 @@
         Garret Patten
       </h1>
       <p class="font-sans text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-        Principal Product Security Engineer.
+        Principal Product Security Engineer
       </p>
     </section>
   </div>
