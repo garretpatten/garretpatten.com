@@ -4,14 +4,14 @@
 
     <section class="soft-enter">
       <ul
-        class="grid grid-cols-1 gap-4 auto-rows-[minmax(min-content,1fr)] md:grid-cols-2"
+        class="grid grid-cols-1 gap-3 auto-rows-[minmax(min-content,1fr)] md:grid-cols-2"
       >
         <li v-for="project in projects" :key="project.name">
           <ProjectCard :project="project" />
         </li>
       </ul>
 
-      <p class="mt-8 text-base text-gray-300 text-center">
+      <p class="mt-6 text-sm text-gray-300 text-center">
         Want to see more? Check out the rest of my projects on GitHub — the link
         is in the main navigation.
       </p>
