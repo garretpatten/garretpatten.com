@@ -1,6 +1,6 @@
 <template>
   <article
-    class="flex flex-col rounded-md border border-gray-700 bg-gray-900/90 p-4 transition-shadow duration-[230ms] hover:shadow-lg"
+    class="h-full flex flex-col rounded-md border border-gray-700 bg-gray-900/90 p-4 transition-shadow duration-[230ms] hover:shadow-lg"
   >
     <div class="mb-3 flex items-start gap-2">
       <svg
