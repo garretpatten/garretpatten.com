@@ -123,7 +123,7 @@ const experience = [
     start: "Dec 2026",
     end: "Present",
     bullets: [
-      "Promoted to Principal Product Security Engineer, leading technical strategy for the 5-person Product Security team and serving as the primary escalation point across global divisions.",
+      "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
       "Co-author the security engineering roadmap and champion the long-term product security vision.",
     ],
   },
@@ -133,7 +133,6 @@ const experience = [
     start: "Jun 2024",
     end: "Dec 2026",
     bullets: [
-      "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
       "Architected automated security governance for 3,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
       "Hardened the software supply chain through package registry proxies, runtime configuration enforcement, and SBOM generation.",
       "Built automated license-compliance pipelines for Node.js dependencies to reduce regulatory friction.",
@@ -171,10 +170,6 @@ const experience = [
     company: "nCino, Inc.",
     start: "Jun 2017",
     end: "Feb 2020",
-    bullets: [
-      "Built automated UI and API test suites for a cloud banking platform, reducing regression cycles and raising release confidence.",
-      "Earned a full-time engineering role by demonstrating strong debugging, customer focus, and rapid technical growth.",
-    ],
   },
 ];
 
