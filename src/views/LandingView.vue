@@ -13,7 +13,7 @@
     <!-- Value Proposition -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <p class="font-sans text-base md:text-lg text-gray-200 leading-relaxed text-center max-w-2xl mx-auto">
-        I like difficult problems and the work of solving them as simply as they allow—at work and in my personal life.
+        I like difficult problems and the work of solving them as simply as they allow.
       </p>
     </section>
   </div>
