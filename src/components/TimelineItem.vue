@@ -15,7 +15,7 @@
         class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3"
       >
         <div>
-          <h3 class="font-heading text-xl font-semibold text-gray-100">
+          <h3 class="font-heading text-lg font-semibold text-gray-100">
             {{ item.role }}
           </h3>
           <p class="font-sans text-base text-gray-300">
@@ -30,7 +30,7 @@
 
       <ul
         v-if="item.bullets && item.bullets.length"
-        class="font-sans list-disc list-inside space-y-2 text-lg leading-relaxed text-gray-300 marker:text-cobalt-400 ml-2"
+        class="font-sans list-disc list-inside space-y-2 text-base leading-relaxed text-gray-300 marker:text-cobalt-400 ml-2"
       >
         <li v-for="(bullet, index) in item.bullets" :key="index">
           {{ bullet }}

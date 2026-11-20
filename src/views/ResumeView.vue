@@ -5,25 +5,24 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Summary
       </h2>
-      <p class="text-lg font-sans text-gray-300 leading-relaxed">
-        I am a systems-oriented security leader with eight years of experience driving
-        end-to-end security strategy and operations at a global FinTech company supporting
-        over 2,700 financial institutions across 20+ countries. Supporting 350+ engineers
-        globally, I manage comprehensive security programs that span hands-on penetration
-        testing, architectural consultation, customer security inquiries, and automated
-        compliance. My focus is building clear policies and low-friction automation that
-        integrate security into the core software delivery lifecycle.
+      <p class="text-base font-sans text-gray-300 leading-relaxed">
+        Principal Product Security Engineer at nCino with eight years of
+        experience spanning software engineering and product security at a
+        global FinTech serving 2,700+ financial institutions. I lead security
+        initiatives for 350+ engineers through hands-on penetration testing,
+        architectural reviews, and automated compliance that build security into
+        the delivery pipeline.
       </p>
     </section>
 
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Skills
       </h2>
@@ -43,7 +42,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Experience
       </h2>
@@ -59,7 +58,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Education
       </h2>
@@ -71,14 +70,14 @@
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
           >
-            <h3 class="font-heading text-xl font-semibold text-gray-100">
+            <h3 class="font-heading text-lg font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
             <span class="font-mono text-base text-cobalt-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
-          <p class="font-sans text-lg text-gray-300 mb-2">
+          <p class="font-sans text-base text-gray-300 mb-2">
             {{ edu.degree }}
           </p>
           <p v-if="edu.details" class="font-sans text-base text-gray-400">
@@ -124,7 +123,7 @@ const experience = [
     start: "Dec 2026",
     end: "Present",
     bullets: [
-      "Promoted to Principal Product Security Engineer, leading technical strategy for the 5-person Product Security team and serving as the primary escalation point across global divisions.",
+      "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
       "Co-author the security engineering roadmap and champion the long-term product security vision.",
     ],
   },
@@ -134,7 +133,6 @@ const experience = [
     start: "Jun 2024",
     end: "Dec 2026",
     bullets: [
-      "Lead Product Security for a 5-person team, prioritizing and synchronizing deliverables across global divisions.",
       "Architected automated security governance for 3,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
       "Hardened the software supply chain through package registry proxies, runtime configuration enforcement, and SBOM generation.",
       "Built automated license-compliance pipelines for Node.js dependencies to reduce regulatory friction.",
@@ -172,10 +170,6 @@ const experience = [
     company: "nCino, Inc.",
     start: "Jun 2017",
     end: "Feb 2020",
-    bullets: [
-      "Built automated UI and API test suites for a cloud banking platform, reducing regression cycles and raising release confidence.",
-      "Earned a full-time engineering role by demonstrating strong debugging, customer focus, and rapid technical growth.",
-    ],
   },
 ];
 

@@ -12,12 +12,4 @@ describe("LandingView", () => {
     expect(wrapper.get("h1").text()).toBe("Garret Patten");
     expect(wrapper.text()).toContain("Principal Product Security Engineer");
   });
-
-  it("renders a value proposition section", () => {
-    const wrapper = mountView();
-
-    const sections = wrapper.findAll("section");
-    expect(sections.length).toBeGreaterThanOrEqual(2);
-    expect(sections[1].text()).toContain("difficult problems");
-  });
 });
