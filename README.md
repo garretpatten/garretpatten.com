@@ -28,8 +28,8 @@ npm run test:a11y  # axe-core accessibility audit (Playwright)
 
 ```text
 src/
-├── components/    # Header, Footer, ProjectCard, TimelineItem, HobbyTab
-├── views/         # LandingView, AboutView, ResumeView, ProjectsView, HobbiesView
+├── components/    # Header, Footer, ProjectCard, TimelineItem
+├── views/         # LandingView, AboutView, ResumeView, ProjectsView
 ├── router/        # Route definitions
 ├── stores/        # Theme store (dark mode)
 ├── assets/css/    # Global styles
@@ -42,7 +42,7 @@ a11y/              # Playwright + axe-core audit (all routes, desktop + mobile)
 
 An axe-core audit runs in Chromium on every PR and weekly (see
 `.github/workflows/a11y-audit.yaml`), covering each route and interactive state
-(mobile menu, hobby accordion) plus navigation focus behavior. Focus policy:
+(mobile menu) plus navigation focus behavior. Focus policy:
 focus is never moved to readonly content — on client-side navigation it stays
 on the activated navigation control (the header persists across views), route
 changes are announced via a polite aria-live region, and the skip link is the

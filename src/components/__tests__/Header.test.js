@@ -16,11 +16,6 @@ const renderHeader = async (path = "/") => {
         name: "Projects",
         component: { template: "<div />" },
       },
-      {
-        path: "/hobbies",
-        name: "Hobbies",
-        component: { template: "<div />" },
-      },
     ],
   });
   router.push(path);
@@ -115,7 +110,7 @@ describe("Header", () => {
 
     const links = nav.findAll("a").filter((a) => a.text().trim());
     const labels = links.map((a) => a.text().trim());
-    expect(labels).toEqual(["Home", "About", "Resume", "Projects", "Hobbies"]);
+    expect(labels).toEqual(["Home", "About", "Resume", "Projects"]);
   });
 
   it("renders social links with descriptive aria labels", async () => {
