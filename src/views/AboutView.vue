@@ -3,14 +3,6 @@
     <h1 class="sr-only">About</h1>
 
     <div class="max-w-none soft-enter soft-enter-delay-1">
-      <img
-        src="/garret.jpeg"
-        alt="Garret Patten"
-        width="512"
-        height="512"
-        decoding="async"
-        class="w-32 md:w-40 aspect-[4/5] rounded-xl object-cover mx-auto mb-8 border-4 border-cobalt-400 shadow-lg"
-      />
       <p class="font-sans text-base text-gray-300 leading-relaxed mb-6">
         At my core, I am a problem solver and a builder. There is nothing I love
         more than taking a complex, messy problem and reducing it to a clean,
