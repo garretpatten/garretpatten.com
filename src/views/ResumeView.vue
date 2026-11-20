@@ -5,11 +5,11 @@
     <!-- Summary Section -->
     <section class="mb-12 soft-enter">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Summary
       </h2>
-      <p class="text-lg font-sans text-gray-300 leading-relaxed">
+      <p class="text-base font-sans text-gray-300 leading-relaxed">
         I am a systems-oriented security leader with eight years of experience driving
         end-to-end security strategy and operations at a global FinTech company supporting
         over 2,700 financial institutions across 20+ countries. Supporting 350+ engineers
@@ -23,7 +23,7 @@
     <!-- Skills Section -->
     <section class="mb-12 soft-enter soft-enter-delay-1">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
         Skills
       </h2>
@@ -43,7 +43,7 @@
     <!-- Experience Section -->
     <section class="mb-12">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Experience
       </h2>
@@ -59,7 +59,7 @@
     <!-- Education Section -->
     <section class="soft-enter soft-enter-delay-2">
       <h2
-        class="text-xl font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >
         Education
       </h2>
@@ -71,14 +71,14 @@
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
           >
-            <h3 class="font-heading text-xl font-semibold text-gray-100">
+            <h3 class="font-heading text-lg font-semibold text-gray-100">
               {{ edu.school }}
             </h3>
             <span class="font-mono text-base text-cobalt-400 whitespace-nowrap">
               {{ edu.end }}
             </span>
           </div>
-          <p class="font-sans text-lg text-gray-300 mb-2">
+          <p class="font-sans text-base text-gray-300 mb-2">
             {{ edu.degree }}
           </p>
           <p v-if="edu.details" class="font-sans text-base text-gray-400">

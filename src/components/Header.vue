@@ -171,9 +171,9 @@ const routes = router.options.routes.filter(
 );
 
 const desktopRouteClasses =
-  "text-lg font-medium text-gray-100 transition-colors duration-[230ms] hover:text-cobalt-300";
+  "text-base font-medium text-gray-100 transition-colors duration-[230ms] hover:text-cobalt-300";
 const mobileRouteClasses =
-  "text-xl font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-300";
+  "text-lg font-medium transition-colors duration-[230ms] py-3 text-center w-full text-gray-100 hover:text-cobalt-300";
 
 /** Active navigation item is always yellow (sun) for consistency. */
 const activeRouteClasses = "text-sun-400 border-b-2 border-sun-400";

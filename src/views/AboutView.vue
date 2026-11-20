@@ -9,9 +9,9 @@
         width="512"
         height="512"
         decoding="async"
-        class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-8 border-4 border-cobalt-400 shadow-lg"
+        class="w-32 md:w-40 aspect-[4/5] rounded-xl object-cover mx-auto mb-8 border-4 border-cobalt-400 shadow-lg"
       />
-      <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
+      <p class="font-sans text-base text-gray-300 leading-relaxed mb-6">
         At my core, I am a problem solver and a builder. There is nothing I love
         more than taking a complex, messy problem and reducing it to a clean,
         simple, and elegant solution. That drive is what drew me into software
@@ -19,7 +19,7 @@
         shape how I approach both my life and work.
       </p>
 
-      <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
+      <p class="font-sans text-base text-gray-300 leading-relaxed mb-6">
         I grew up on the Jersey Shore in the New York metropolitan area and
         always had a certain fascination with computers—playing games, surfing
         forums, reading blogs, creating art, and tinkering with early projects.
@@ -28,7 +28,7 @@
         exactly as written.
       </p>
 
-      <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
+      <p class="font-sans text-base text-gray-300 leading-relaxed mb-6">
         Following high school, I attended Boston College’s Carroll School of
         Management with the plan of pursuing finance—the path my father and
         brother had taken. Midway through, I felt unsure. While I liked the
@@ -40,7 +40,7 @@
         Finance alongside a minor in Computer Science.
       </p>
 
-      <p class="font-sans text-lg text-gray-300 leading-relaxed mb-6">
+      <p class="font-sans text-base text-gray-300 leading-relaxed mb-6">
         After graduation, I relocated to North Carolina to begin my career as a
         software engineer building customer-facing applications at nCino.
         Working with experienced engineers, I fell in love with the discipline
@@ -52,7 +52,7 @@
         frictionless default for anyone who seeks to build.
       </p>
 
-      <p class="font-sans text-lg text-gray-300 leading-relaxed">
+      <p class="font-sans text-base text-gray-300 leading-relaxed">
         After getting married, my wife and I moved to Georgia to start our
         family—bringing her back to her home state while reconnecting me with my
         own family roots. Today, we live here with our daughter, son, and our
