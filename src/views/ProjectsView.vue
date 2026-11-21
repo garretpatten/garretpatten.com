@@ -2,7 +2,7 @@
   <div class="w-full max-w-5xl mx-auto">
     <h1 class="sr-only">Projects</h1>
 
-    <section class="soft-enter">
+    <section>
       <ul
         class="grid grid-cols-1 gap-3 auto-rows-[minmax(min-content,1fr)] md:grid-cols-2"
       >

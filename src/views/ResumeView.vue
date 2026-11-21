@@ -3,7 +3,7 @@
     <h1 class="sr-only">Resume</h1>
 
     <!-- Summary Section -->
-    <section class="mb-12 soft-enter">
+    <section class="mb-12">
       <h2
         class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
@@ -20,7 +20,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="mb-12 soft-enter soft-enter-delay-1">
+    <section class="mb-12">
       <h2
         class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
       >
@@ -56,7 +56,7 @@
     </section>
 
     <!-- Education Section -->
-    <section class="soft-enter soft-enter-delay-2">
+    <section>
       <h2
         class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-6"
       >

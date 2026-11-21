@@ -2,12 +2,12 @@
   <div class="w-full max-w-3xl mx-auto">
     <h1 class="sr-only">About</h1>
 
-    <div class="max-w-none soft-enter soft-enter-delay-1">
+    <div class="max-w-none">
       <img
-        src="/garret-avatar.jpeg"
+        src="/garret-avatar.webp"
         alt="Illustrated portrait of Garret Patten"
-        width="512"
-        height="512"
+        width="320"
+        height="320"
         decoding="async"
         class="w-32 md:w-40 aspect-square rounded-full object-cover mx-auto mb-8 border-4 border-cobalt-400 shadow-lg"
       />
