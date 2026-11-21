@@ -15,7 +15,7 @@ describe("AboutView", () => {
     const wrapper = mount(AboutView);
 
     const img = wrapper.get("img");
-    expect(img.attributes("src")).toBe("/garret-avatar.jpeg");
+    expect(img.attributes("src")).toBe("/garret-avatar.webp");
     expect(img.attributes("alt")).toBe("Illustrated portrait of Garret Patten");
   });
 
