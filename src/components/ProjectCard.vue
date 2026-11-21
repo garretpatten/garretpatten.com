@@ -47,6 +47,7 @@
             'bg-ruby-600': project.language === 'Shell',
             'bg-torch-500': project.language === 'TypeScript',
             'bg-sun-400': project.language === 'Vue',
+            'bg-plum-600': project.language === 'Markdown',
           }"
           aria-hidden="true"
         />

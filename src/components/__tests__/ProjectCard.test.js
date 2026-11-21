@@ -91,6 +91,7 @@ describe("ProjectCard", () => {
     ["Shell", "bg-ruby-600"],
     ["TypeScript", "bg-torch-500"],
     ["Vue", "bg-sun-400"],
+    ["Markdown", "bg-plum-600"],
   ])("maps %s to the %s language dot", (language, colorClass) => {
     const wrapper = mount(ProjectCard, {
       props: { project: { ...baseProject, language } },

@@ -52,6 +52,20 @@ const projects = [
     language: "Vue",
   },
   {
+    name: "GitHub Standards",
+    description:
+      "Canonical source of truth for Garret Patten's GitHub repository standards.",
+    github: "https://github.com/garretpatten/github-standards",
+    language: "Markdown",
+  },
+  {
+    name: "Google MCP Server",
+    description:
+      "Model Context Protocol server for Google Calendar and Google Tasks (read/write) using my published Google OAuth app; consumed by opencode.",
+    github: "https://github.com/garretpatten/google-mcp-server",
+    language: "TypeScript",
+  },
+  {
     name: "macOS Setup Scripts",
     description:
       "Bash automation for macOS: Homebrew package installs, macOS defaults, shell/terminal configuration, and optional dotfiles—modular install and config workflows with GitHub Actions CI.",
