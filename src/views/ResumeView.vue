@@ -96,8 +96,7 @@ import TimelineItem from "../components/TimelineItem.vue";
 const skills = [
   "Application Security",
   "CI/CD Pipeline Design & Security",
-  "Developer Enablement & Security Awareness",
-  "GitHub & GitLab Enterprise Administration",
+  "Developer Enablement",
   "OWASP Top 10",
   "Penetration Testing",
   "Product Development",
@@ -105,11 +104,13 @@ const skills = [
   "SAST",
   "DAST",
   "Secrets Scanning",
+  "Security Awareness",
   "SBOM",
   "Shift-Left Security Practices",
   "SSDLC",
   "Supply Chain Security",
   "Threat Modeling",
+  "Version Control Administration",
 ];
 
 const sortedSkills = computed(() =>
@@ -136,7 +137,7 @@ const experience = [
       "Architected automated security governance for 3,000+ repositories via GitHub Actions to enforce SSDLC standards and self-service provisioning.",
       "Hardened the software supply chain through package registry proxies, runtime configuration enforcement, and SBOM generation.",
       "Built automated license-compliance pipelines for Node.js dependencies to reduce regulatory friction.",
-      "Lead complex security reviews across product lines to embed security champions and eliminate vulnerabilities before production.",
+      "Led complex security reviews across product lines to embed security champions and eliminate vulnerabilities before production.",
     ],
   },
   {
