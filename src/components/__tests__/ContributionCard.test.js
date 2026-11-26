@@ -5,7 +5,6 @@ import ContributionCard from "@/components/ContributionCard.vue";
 const baseContribution = {
   name: "My Contribution",
   description: "A sample contribution description.",
-  status: "Merged",
   primaryUrl: "https://example.com/pull/1",
   primaryLabel: "View pull request",
 };
@@ -92,28 +91,5 @@ describe("ContributionCard", () => {
     expect(secondary.attributes("target")).toBe("_blank");
     expect(secondary.attributes("rel")).toContain("noopener");
     expect(secondary.text()).toBe("Source repository");
-  });
-
-  it("renders the status chip", () => {
-    const wrapper = mount(ContributionCard, {
-      props: { contribution: baseContribution },
-    });
-
-    const chip = wrapper.get("article .rounded-full");
-    expect(chip.text()).toBe("Merged");
-  });
-
-  it.each([
-    ["Merged", "text-cobalt-300"],
-    ["Selected", "text-sun-300"],
-    ["Verified", "text-torch-300"],
-  ])("maps the %s status to the %s tone", (status, toneClass) => {
-    const wrapper = mount(ContributionCard, {
-      props: { contribution: { ...baseContribution, status } },
-    });
-
-    const chip = wrapper.get("article .rounded-full");
-    expect(chip.text()).toBe(status);
-    expect(chip.classes()).toContain(toneClass);
   });
 });

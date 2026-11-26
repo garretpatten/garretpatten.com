@@ -1,11 +1,16 @@
 <template>
   <div class="w-full max-w-5xl mx-auto">
-    <h1 class="sr-only">Open Source Contributions</h1>
+    <h1 class="sr-only">Contributions</h1>
 
     <section>
+      <h2
+        class="text-lg font-semibold uppercase tracking-wider text-cobalt-400 mb-4"
+      >
+        Open Source Contributions
+      </h2>
       <p class="mb-6 text-sm text-gray-300">
-        Work accepted into other projects and registries — each entry links to
-        the live artifact.
+        Work accepted into other open source projects and registries — each
+        entry links to the live artifact.
       </p>
 
       <ol
@@ -33,7 +38,6 @@ const contributions = [
     description:
       "Authored the Apex and VisualForce ruleset accepted into Semgrep's SAST rules — live for Salesforce Apex and VisualForce scanning.",
     attribution: "Contributed under my work GitHub account, garret-at-ncino.",
-    status: "Merged",
     primaryUrl: "https://github.com/semgrep/semgrep-rules/pull/3085",
     primaryLabel: "Merged pull request #3085",
   },
@@ -41,7 +45,6 @@ const contributions = [
     name: "system-scripts in the Xerj Corpus Hub",
     description:
       "Contributed a module to system-scripts that was selected for the Xerj Corpus Hub — signed, pinned corpora that AI coding agents search as reference memory.",
-    status: "Selected",
     primaryUrl: "https://hub.xerj.org/contributors/garretpatten",
     primaryLabel: "Xerj contributor page",
     secondaryUrl: "https://github.com/garretpatten/system-scripts",
@@ -51,7 +54,6 @@ const contributions = [
     name: "Google MCP Server (Calendar and Tasks)",
     description:
       "Built an open-source MCP server for Google Calendar and Tasks on my published Google OAuth app; listed on the M8ven Trust Index as a verified publisher. Practical agent tooling rather than a novel project.",
-    status: "Verified",
     primaryUrl: "https://m8ven.ai/mcp/garretpatten/google-mcp-server",
     primaryLabel: "M8ven Trust Index listing",
     secondaryUrl: "https://github.com/garretpatten/google-mcp-server",

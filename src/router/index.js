@@ -32,7 +32,7 @@ const routes = [
   },
   {
     path: "/contributions",
-    name: "Open Source",
+    name: "Contributions",
     component: ContributionsView,
     meta: { title: "Open Source Contributions" },
   },

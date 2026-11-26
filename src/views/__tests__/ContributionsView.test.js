@@ -3,12 +3,16 @@ import { mount } from "@vue/test-utils";
 import ContributionsView from "@/views/ContributionsView.vue";
 
 describe("ContributionsView", () => {
-  it("renders the sr-only page title", () => {
+  it("renders the sr-only page title and the visible open source heading", () => {
     const wrapper = mount(ContributionsView);
 
     const h1 = wrapper.get("h1");
-    expect(h1.text()).toBe("Open Source Contributions");
+    expect(h1.text()).toBe("Contributions");
     expect(h1.classes()).toContain("sr-only");
+
+    const h2 = wrapper.get("h2");
+    expect(h2.text()).toBe("Open Source Contributions");
+    expect(h2.classes()).not.toContain("sr-only");
   });
 
   it("renders a card for every contribution in an ordered list", () => {

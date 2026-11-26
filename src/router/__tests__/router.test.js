@@ -11,7 +11,7 @@ describe("router", () => {
       { path: "/projects", name: "Projects", title: "Projects" },
       {
         path: "/contributions",
-        name: "Open Source",
+        name: "Contributions",
         title: "Open Source Contributions",
       },
     ];

@@ -18,7 +18,7 @@ const renderHeader = async (path = "/") => {
       },
       {
         path: "/contributions",
-        name: "Open Source",
+        name: "Contributions",
         component: { template: "<div />" },
       },
     ],
@@ -120,7 +120,7 @@ describe("Header", () => {
       "About",
       "Resume",
       "Projects",
-      "Open Source",
+      "Contributions",
     ]);
   });
 
