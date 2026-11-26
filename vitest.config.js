@@ -17,10 +17,7 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["src/**"],
-      exclude: [
-        "src/main.js",
-        "src/assets/**",
-      ],
+      exclude: ["src/main.js", "src/assets/**"],
     },
   },
 });
