@@ -1,6 +1,30 @@
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
+import { createRouter, createMemoryHistory } from "vue-router";
 import ProjectCard from "@/components/ProjectCard.vue";
+
+const renderCard = async (project) => {
+  const router = createRouter({
+    history: createMemoryHistory(),
+    routes: [
+      { path: "/", name: "Home", component: { template: "<div />" } },
+      {
+        path: "/contributions",
+        name: "Contributions",
+        component: { template: "<div />" },
+      },
+    ],
+  });
+  router.push("/");
+  await router.isReady();
+
+  return mount(ProjectCard, {
+    props: { project },
+    global: {
+      plugins: [router],
+    },
+  });
+};
 
 const baseProject = {
   name: "My Project",
@@ -65,14 +89,6 @@ describe("ProjectCard", () => {
     expect(wrapper.text()).toContain("A sample project description.");
   });
 
-  it("omits the language footer when language is missing", () => {
-    const wrapper = mount(ProjectCard, {
-      props: { project: baseProject },
-    });
-
-    expect(wrapper.find("article footer").exists()).toBe(false);
-  });
-
   it("renders the language with a color mapping", () => {
     const wrapper = mount(ProjectCard, {
       props: { project: { ...baseProject, language: "TypeScript" } },
@@ -83,6 +99,31 @@ describe("ProjectCard", () => {
 
     const dot = footer.find(".rounded-full");
     expect(dot.classes()).toContain("bg-torch-500");
+  });
+
+  it("cross-references the contributions page when a related path is set", async () => {
+    const wrapper = await renderCard({
+      ...baseProject,
+      github: "https://github.com/garretpatten/repo",
+      language: "TypeScript",
+      relatedPath: "/contributions",
+      relatedLabel: "Also on the Contributions page",
+    });
+
+    const related = wrapper.find('article footer a[href="/contributions"]');
+    expect(related.exists()).toBe(true);
+    expect(related.text()).toBe("Also on the Contributions page");
+
+    // Internal navigation stays in the same tab.
+    expect(related.attributes("target")).toBeUndefined();
+  });
+
+  it("omits the footer when language and related path are missing", () => {
+    const wrapper = mount(ProjectCard, {
+      props: { project: baseProject },
+    });
+
+    expect(wrapper.find("article footer").exists()).toBe(false);
   });
 
   it.each([

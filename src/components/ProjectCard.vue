@@ -37,8 +37,11 @@
       {{ project.description }}
     </p>
 
-    <footer v-if="project.language" class="font-sans text-sm text-gray-400">
-      <span class="inline-flex items-center gap-1.5">
+    <footer
+      v-if="project.language || project.relatedPath"
+      class="flex flex-wrap items-center gap-x-3 gap-y-1 font-sans text-sm text-gray-400"
+    >
+      <span v-if="project.language" class="inline-flex items-center gap-1.5">
         <span
           class="h-3 w-3 rounded-full"
           :class="{
@@ -53,6 +56,13 @@
         />
         {{ project.language }}
       </span>
+      <router-link
+        v-if="project.relatedPath"
+        :to="project.relatedPath"
+        class="interactive-focus hover:text-cobalt-300 transition-colors duration-[230ms]"
+      >
+        {{ project.relatedLabel }}
+      </router-link>
     </footer>
   </article>
 </template>

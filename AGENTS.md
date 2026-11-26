@@ -56,7 +56,7 @@ npm run lint              # ESLint (flat config incl. vue & vuejs-accessibility)
 src/
 ├── components/    # Header, Footer, ProjectCard, TimelineItem, …
 │   └── __tests__/ # Vitest component tests (colocated)
-├── views/         # LandingView, AboutView, ResumeView, ProjectsView
+├── views/         # LandingView, AboutView, ResumeView, ProjectsView, ContributionsView
 │   └── __tests__/ # Vitest view smoke tests (colocated)
 ├── router/        # Route definitions (createWebHistory, lazy view imports)
 │   └── __tests__/

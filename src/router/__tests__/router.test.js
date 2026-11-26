@@ -9,6 +9,11 @@ describe("router", () => {
       { path: "/about", name: "About", title: "About" },
       { path: "/resume", name: "Resume", title: "Resume" },
       { path: "/projects", name: "Projects", title: "Projects" },
+      {
+        path: "/contributions",
+        name: "Contributions",
+        title: "Open Source Contributions",
+      },
     ];
 
     for (const { path, name, title } of expectations) {
@@ -21,7 +26,7 @@ describe("router", () => {
   it("routes are dynamically registered in expected order", () => {
     const paths = router.getRoutes().map((r) => r.path);
     expect(paths.sort()).toEqual(
-      ["/", "/about", "/resume", "/projects"].sort(),
+      ["/", "/about", "/resume", "/projects", "/contributions"].sort(),
     );
   });
 

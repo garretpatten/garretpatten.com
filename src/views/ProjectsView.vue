@@ -64,6 +64,8 @@ const projects = [
       "Model Context Protocol server for Google Calendar and Google Tasks (read/write) using my published Google OAuth app; consumed by opencode.",
     github: "https://github.com/garretpatten/google-mcp-server",
     language: "TypeScript",
+    relatedPath: "/contributions",
+    relatedLabel: "Also on the Contributions page",
   },
   {
     name: "macOS Setup Scripts",
@@ -85,6 +87,8 @@ const projects = [
       "Personal macOS/Linux automation: back up GitHub, GitLab, Notion, Obsidian, calendars, and tasks; clone and sync repositories; flatten nested Google Takeout export directories; apply runtime package-manager settings; and manage tmux sessions.",
     github: "https://github.com/garretpatten/system-scripts",
     language: "Shell",
+    relatedPath: "/contributions",
+    relatedLabel: "Also on the Contributions page",
   },
   {
     name: "Ubuntu Setup Scripts",
