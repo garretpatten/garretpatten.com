@@ -15,12 +15,7 @@ describe("ResumeView", () => {
     const wrapper = mount(ResumeView);
 
     const headings = wrapper.findAll("h2").map((h) => h.text());
-    expect(headings).toEqual([
-      "Summary",
-      "Skills",
-      "Experience",
-      "Education",
-    ]);
+    expect(headings).toEqual(["Summary", "Skills", "Experience", "Education"]);
   });
 
   it("renders skill tags", () => {

@@ -80,5 +80,8 @@ export function formatViolation(violation, label) {
 }
 
 function slug(label) {
-  return label.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 100);
+  return label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .slice(0, 100);
 }
