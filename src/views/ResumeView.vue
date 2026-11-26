@@ -63,10 +63,7 @@
         Education
       </h2>
       <div class="space-y-6">
-        <div
-          v-for="(edu, index) in education"
-          :key="`${edu.school}-${index}`"
-        >
+        <div v-for="(edu, index) in education" :key="`${edu.school}-${index}`">
           <div
             class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2"
           >
@@ -114,7 +111,7 @@ const skills = [
 ];
 
 const sortedSkills = computed(() =>
-  [...skills].sort((a, b) => a.localeCompare(b))
+  [...skills].sort((a, b) => a.localeCompare(b)),
 );
 
 const experience = [
