@@ -2,10 +2,10 @@
 
 ## Supported versions
 
-| Version / branch | Supported          |
-| ------------------ | ------------------ |
-| `master` (latest)  | :white_check_mark: |
-| older deployments  | :x:                |
+| Version / branch  | Supported          |
+| ----------------- | ------------------ |
+| `master` (latest) | :white_check_mark: |
+| older deployments | :x:                |
 
 Security fixes apply to the default branch and whatever is currently deployed at [garretpatten.com](https://garretpatten.com).
 
