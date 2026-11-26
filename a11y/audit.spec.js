@@ -15,6 +15,11 @@ test.describe("static routes", () => {
     { path: "/about", heading: "About", label: "about" },
     { path: "/resume", heading: "Resume", label: "resume" },
     { path: "/projects", heading: "Projects", label: "projects" },
+    {
+      path: "/contributions",
+      heading: "Open Source Contributions",
+      label: "open-source",
+    },
   ]) {
     test(`${label} page has no axe violations`, async ({ page }) => {
       await page.goto(path);
@@ -79,9 +84,7 @@ test.describe("interactive states", () => {
     const activeTag = await page.evaluate(
       () => document.activeElement?.tagName,
     );
-    expect(activeTag, "focus must not fall on readonly content").not.toBe(
-      "H1",
-    );
+    expect(activeTag, "focus must not fall on readonly content").not.toBe("H1");
     await settle(page);
   });
 
@@ -122,7 +125,9 @@ test.describe("interactive states", () => {
   test("keyboard tab order reaches main content", async ({ page }) => {
     await page.goto("/");
     await page.keyboard.press("Tab"); // skip link
-    await expect(page.getByRole("link", { name: "Skip to main content" })).toBeFocused();
+    await expect(
+      page.getByRole("link", { name: "Skip to main content" }),
+    ).toBeFocused();
     await page.keyboard.press("Enter");
     await expect(page).toHaveURL(/#main-content/);
     await expect(page.locator("#main-content")).toBeFocused();
