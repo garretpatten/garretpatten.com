@@ -29,7 +29,7 @@ npm run test:a11y  # axe-core accessibility audit (Playwright)
 ```text
 src/
 ├── components/    # Header, Footer, ProjectCard, TimelineItem
-├── views/         # LandingView, AboutView, ResumeView, ProjectsView
+├── views/         # LandingView, AboutView, ResumeView, ProjectsView, ContributionsView
 ├── router/        # Route definitions
 ├── stores/        # Theme store (dark mode)
 ├── assets/css/    # Global styles

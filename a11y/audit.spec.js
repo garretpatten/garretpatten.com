@@ -15,6 +15,11 @@ test.describe("static routes", () => {
     { path: "/about", heading: "About", label: "about" },
     { path: "/resume", heading: "Resume", label: "resume" },
     { path: "/projects", heading: "Projects", label: "projects" },
+    {
+      path: "/contributions",
+      heading: "Open Source Contributions",
+      label: "open-source",
+    },
   ]) {
     test(`${label} page has no axe violations`, async ({ page }) => {
       await page.goto(path);

@@ -3,6 +3,7 @@ import LandingView from "../views/LandingView.vue";
 import AboutView from "../views/AboutView.vue";
 import ResumeView from "../views/ResumeView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
+import ContributionsView from "../views/ContributionsView.vue";
 
 const routes = [
   {
@@ -28,6 +29,12 @@ const routes = [
     name: "Projects",
     component: ProjectsView,
     meta: { title: "Projects" },
+  },
+  {
+    path: "/contributions",
+    name: "Contributions",
+    component: ContributionsView,
+    meta: { title: "Open Source Contributions" },
   },
 ];
 
