@@ -12,9 +12,9 @@
         class="font-sans text-base text-gray-300 leading-relaxed max-w-2xl mx-auto mt-6"
       >
         Product security engineer, open source contributor, perpetual builder.
-        Whether it's product security or a weekend side project, I'm
-        chasing the same thing: the simplest way to turn a messy problem into a
-        clean, automated solution.
+        Whether it's product security or a weekend side project, I'm chasing the
+        same thing: the simplest way to turn a messy problem into a clean,
+        automated solution.
       </p>
     </section>
   </div>

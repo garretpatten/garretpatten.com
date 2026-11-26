@@ -24,7 +24,10 @@
         >
           {{ repoName }}
         </a>
-        <span v-else class="truncate font-sans text-sm font-semibold text-gray-100">
+        <span
+          v-else
+          class="truncate font-sans text-sm font-semibold text-gray-100"
+        >
           {{ repoName }}
         </span>
       </div>
@@ -34,10 +37,7 @@
       {{ project.description }}
     </p>
 
-    <footer
-      v-if="project.language"
-      class="font-sans text-sm text-gray-400"
-    >
+    <footer v-if="project.language" class="font-sans text-sm text-gray-400">
       <span class="inline-flex items-center gap-1.5">
         <span
           class="h-3 w-3 rounded-full"
