@@ -15,7 +15,7 @@ describe("ContributionsView", () => {
     expect(h2.classes()).not.toContain("sr-only");
   });
 
-  it("renders a card for every contribution in an ordered list", () => {
+  it("renders a ledger row for every contribution in an ordered list", () => {
     const wrapper = mount(ContributionsView);
 
     const cards = wrapper.findAllComponents({ name: "ContributionCard" });
@@ -38,13 +38,57 @@ describe("ContributionsView", () => {
     ]);
   });
 
-  it("leads with the highest-signal contribution across the desktop grid", () => {
+  it("numbers the ledger rows so the signal order reads visually", () => {
     const wrapper = mount(ContributionsView);
 
-    const listItems = wrapper.findAll("ol > li");
-    expect(listItems[0].classes()).toContain("md:col-span-2");
-    expect(listItems[1].classes()).not.toContain("md:col-span-2");
-    expect(listItems[2].classes()).not.toContain("md:col-span-2");
+    const ranks = wrapper
+      .findAll("ol > li article > span")
+      .map((rank) => rank.text());
+    expect(ranks).toEqual(["01", "02", "03"]);
+  });
+
+  it("labels each entry with the third party that accepted it", () => {
+    const wrapper = mount(ContributionsView);
+
+    const verifiers = wrapper
+      .findAll("article p.font-mono")
+      .map((line) => line.text());
+    expect(verifiers).toEqual([
+      "Semgrep rules · merged #3085",
+      "Xerj Corpus Hub · selected",
+      "M8ven Trust Index · verified publisher",
+    ]);
+  });
+
+  it("links each contribution title to its live artifact exactly once", () => {
+    const wrapper = mount(ContributionsView);
+
+    const rows = wrapper.findAll("ol > li");
+    const artifacts = [
+      "https://github.com/semgrep/semgrep-rules/pull/3085",
+      "https://hub.xerj.org/contributors/garretpatten",
+      "https://m8ven.ai/mcp/garretpatten/google-mcp-server",
+    ];
+
+    artifacts.forEach((url, index) => {
+      const title = rows[index].get("a");
+      expect(title.attributes("href")).toBe(url);
+
+      const linksToArtifact = rows[index]
+        .findAll("a")
+        .filter((link) => link.attributes("href") === url);
+      expect(linksToArtifact).toHaveLength(1);
+    });
+  });
+
+  it("links the repositories behind the accepted work", () => {
+    const wrapper = mount(ContributionsView);
+
+    const hrefs = wrapper.findAll("a").map((link) => link.attributes("href"));
+    expect(hrefs).toContain("https://github.com/garretpatten/system-scripts");
+    expect(hrefs).toContain(
+      "https://github.com/garretpatten/google-mcp-server",
+    );
   });
 
   it("attributes the Semgrep contribution to the work GitHub account", () => {
@@ -57,26 +101,13 @@ describe("ContributionsView", () => {
     expect(attributed.props("contribution").name).toBe(
       "Apex/VisualForce Semgrep ruleset",
     );
-    expect(attributed.props("contribution").attribution).toContain(
-      "garret-at-ncino",
-    );
-  });
 
-  it("links each contribution to its live artifact", () => {
-    const wrapper = mount(ContributionsView);
-
-    const hrefs = wrapper.findAll("a").map((link) => link.attributes("href"));
-    expect(hrefs).toContain(
-      "https://github.com/semgrep/semgrep-rules/pull/3085",
+    const account = attributed.get("p.font-sans.text-xs a");
+    expect(attributed.text()).toContain("work GitHub account");
+    expect(account.attributes("href")).toBe(
+      `https://github.com/${account.text()}`,
     );
-    expect(hrefs).toContain("https://hub.xerj.org/contributors/garretpatten");
-    expect(hrefs).toContain(
-      "https://m8ven.ai/mcp/garretpatten/google-mcp-server",
-    );
-    expect(hrefs).toContain("https://github.com/garretpatten/system-scripts");
-    expect(hrefs).toContain(
-      "https://github.com/garretpatten/google-mcp-server",
-    );
+    expect(account.attributes("target")).toBe("_blank");
   });
 
   it("opens every external link in a new tab safely", () => {
