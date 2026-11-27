@@ -24,6 +24,13 @@ import ProjectCard from "../components/ProjectCard.vue";
 
 const projects = [
   {
+    name: "Backup Manager",
+    description:
+      "TypeScript backup tooling: GitHub repository archives, GitLab mirrors, Notion and Obsidian exports, browser bookmarks, and Google service exports, run individually or through one orchestrator.",
+    github: "https://github.com/garretpatten/backup-manager",
+    language: "TypeScript",
+  },
+  {
     name: "Codeowners Enforcer",
     description:
       "A TypeScript GitHub Action that blocks pull requests unless every changed file has an effective owner in .github/CODEOWNERS, making code reviews auditable and accountable.",
@@ -75,6 +82,13 @@ const projects = [
     language: "Shell",
   },
   {
+    name: "Quality Checks",
+    description:
+      "Reusable GitHub Actions for pull requests: opt-in linters on changed files (Prettier, markdownlint, yamllint, Ruff, and more) plus axe-core and Lighthouse accessibility audits.",
+    github: "https://github.com/garretpatten/quality-checks",
+    language: "Shell",
+  },
+  {
     name: "Security Guardrails",
     description:
       "Reusable GitHub Actions guardrails for pull requests: OpenGrep SAST, verified TruffleHog secrets, dependency review, and Trivy supply-chain checks — high signal, low noise.",
@@ -84,7 +98,7 @@ const projects = [
   {
     name: "System Scripts",
     description:
-      "Personal macOS/Linux automation: back up GitHub, GitLab, Notion, Obsidian, calendars, and tasks; clone and sync repositories; flatten nested Google Takeout export directories; apply runtime package-manager settings; and manage tmux sessions.",
+      "Personal macOS/Linux automation: GitHub security reports, repository clone/sync utilities, Google Takeout export flattening, runtime package-manager settings, and tmux session management. Incubates small automation concepts until they graduate into their own repositories, replaced by submodules (backups graduated to backup-manager).",
     github: "https://github.com/garretpatten/system-scripts",
     language: "Shell",
     relatedPath: "/contributions",
